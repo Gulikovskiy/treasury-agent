@@ -36,16 +36,12 @@ export async function collectPrices(): Promise<PricesFixture> {
   const chains = {} as ChainMap<ChainPricesFixture>
 
   for (const chain of Object.values(CHAINS)) {
-    // Output remains keyed by the held ERC-20 contract. Liability wrappers are
-    // priced using their underlying reserve asset.
-    const tokens = new Map<Address, Address>()
+    const tokens = new Set<Address>()
 
     for (const walletData of Object.values(balances.chains[chain.id])) {
       if (!walletData) continue
       for (const token of walletData.erc20) {
-        if (token.contractAddress && !token.error) {
-          tokens.set(token.contractAddress, token.underlyingAsset ?? token.contractAddress)
-        }
+        if (token.contractAddress && !token.error) tokens.add(token.contractAddress)
       }
     }
 
@@ -65,11 +61,11 @@ export async function collectPrices(): Promise<PricesFixture> {
       chainOut.native = { error: String(error) }
     }
 
-    for (const [address, pricingAddress] of tokens) {
+    for (const address of tokens) {
       try {
         chainOut.tokens[address] = await historicalPrice({
           network: chain.alchemyNetwork,
-          address: pricingAddress,
+          address,
           startTime: start,
           endTime: end,
           interval: '1h',

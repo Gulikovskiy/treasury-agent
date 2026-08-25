@@ -10,7 +10,7 @@ The collector is TypeScript-first: run source directly with `tsx`, or compile it
 
 - `manifest.json` — snapshot timestamp + one pinned block per chain
 - `wallets.json` — treasury-controlled addresses by chain
-- `balances.json` — native + ERC-20 balances read at the pinned block, with explicit asset/liability treatment
+- `balances.json` — native + spot ERC-20 balances read at the pinned block
 - `transactions.json` — normal transactions, ERC-20 transfers, Alchemy transfers where supported, and receipts
 - `prices.json` — historical prices around the snapshot timestamp
 - `defi_positions.json` — Aave V3 user reserve state at the pinned block
@@ -73,10 +73,14 @@ It is intentionally a per-chain map rather than `ADDRESSES × CHAINS`, because t
 
 `alchemy_getTokenBalances` is used only to discover ERC-20 contracts. For each discovered contract, the collector performs `balanceOf(wallet)` at the block pinned in `manifest.json`; native balances are read at that same block. This prevents current-head balances from leaking into a historical fixture.
 
-Aave variable-debt tokens are retained as raw ERC-20 evidence, but their balance
-records have `positionType: "liability"`, `protocol: "aave_v3"`, and the reserve's
-`underlyingAsset`. NAV consumers must subtract liabilities and must not also
-subtract the matching debt in `defi_positions.json`.
+Aave V3 aTokens and variable-debt tokens for markets represented in
+`defi_positions.json` are excluded from the canonical `erc20` arrays in
+`balances.json`. The DeFi fixture is the canonical source for those supplied
+assets and debts, so NAV consumers must not add the wrapper-token balances a
+second time. `discoveryRaw` is provenance only and is never an accounting input.
+Wrappers for an unqueried market remain spot evidence because there is no
+duplicate DeFi position. This policy is machine-readable in
+`manifest.json.accountingPolicy.nav`.
 
 ## Transactions
 

@@ -27,9 +27,27 @@ export async function collectManifest(): Promise<FixtureManifest> {
 
   const manifest: FixtureManifest = {
     fixtureId: basename(FIXTURE_DIR),
-    schemaVersion: 1,
+    schemaVersion: 2,
     snapshotTimestamp: requested,
     lookbackDays: LOOKBACK_DAYS,
+    accountingPolicy: {
+      nav: {
+        spotBalanceSource: 'balances.json',
+        spotBalancePath: 'chains.<chainId>.<wallet>.erc20',
+        canonicalAaveV3Source: 'defi_positions.json',
+        aaveV3Scope: 'Configured Aave V3 markets queried in defi_positions.json',
+        excludedFromSpotBalances: [
+          'aave_v3_a_token',
+          'aave_v3_variable_debt_token',
+        ],
+        rules: [
+          'Use currentATokenBalance from defi_positions.json as the Aave V3 supplied asset.',
+          'Subtract currentStableDebt and currentVariableDebt from defi_positions.json as Aave V3 liabilities.',
+          'Never add wrapper ERC-20 balances for Aave V3 markets represented in defi_positions.json; those wrappers are excluded from the canonical erc20 arrays in balances.json.',
+          'discoveryRaw in balances.json is provider provenance only and is never an accounting input.',
+        ],
+      },
+    },
     chains,
     sources: {
       rpc: 'Alchemy JSON-RPC',

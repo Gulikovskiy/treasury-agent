@@ -1,4 +1,4 @@
-import { formatEther, toHex } from 'viem'
+import { formatEther, toHex, type Address } from 'viem'
 import { CHAINS, TREASURY_WALLETS } from '../config.js'
 import { collectManifest } from './manifest.js'
 import { discoverErc20s, getTokenMetadata, publicClient } from '../lib/alchemy.js'
@@ -18,10 +18,12 @@ export async function collectBalances(): Promise<BalancesFixture> {
 
   for (const chain of Object.values(CHAINS)) {
     const client = publicClient(chain.id)
-    const aaveVariableDebtTokens = new Map(
-      Object.values(chain.aave.ASSETS ?? {})
-        .filter((asset) => asset.V_TOKEN)
-        .map((asset) => [asset.V_TOKEN!.toLowerCase(), asset.UNDERLYING] as const),
+    const aavePositionTokens = new Set(
+      Object.values(chain.aave.ASSETS ?? {}).flatMap((asset) =>
+        [asset.A_TOKEN, asset.V_TOKEN]
+          .filter((address): address is Address => address !== undefined)
+          .map((address) => address.toLowerCase()),
+      ),
     )
     const blockNumber = BigInt(manifest.chains[chain.id].blockNumber)
     chains[chain.id] = {}
@@ -33,8 +35,11 @@ export async function collectBalances(): Promise<BalancesFixture> {
       const erc20: Erc20BalanceFixture[] = []
 
       for (const contractAddress of discovery.contracts) {
+        // Aave wrapper balances are canonicalized in defi_positions.json. Keeping
+        // them here as spot ERC-20s would count the same position twice.
+        if (aavePositionTokens.has(contractAddress.toLowerCase())) continue
+
         try {
-          const debtUnderlying = aaveVariableDebtTokens.get(contractAddress.toLowerCase())
           const balance = await client.readContract({
             address: contractAddress,
             abi: ERC20_ABI,
@@ -54,24 +59,13 @@ export async function collectBalances(): Promise<BalancesFixture> {
 
           erc20.push({
             contractAddress,
-            positionType: debtUnderlying ? 'liability' : 'asset',
-            ...(debtUnderlying && {
-              protocol: 'aave_v3',
-              underlyingAsset: debtUnderlying,
-            }),
             tokenBalance: toHex(balance),
             tokenBalanceDecimal: balance.toString(),
             metadata,
           })
         } catch (error) {
-          const debtUnderlying = aaveVariableDebtTokens.get(contractAddress.toLowerCase())
           erc20.push({
             contractAddress,
-            positionType: debtUnderlying ? 'liability' : 'asset',
-            ...(debtUnderlying && {
-              protocol: 'aave_v3',
-              underlyingAsset: debtUnderlying,
-            }),
             error: String(error),
           })
         }

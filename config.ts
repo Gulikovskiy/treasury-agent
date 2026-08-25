@@ -33,6 +33,7 @@ type AaveAddressBook = {
   ORACLE?: Address
   ASSETS?: Record<string, {
     UNDERLYING: Address
+    A_TOKEN?: Address
     V_TOKEN?: Address
   }>
 }

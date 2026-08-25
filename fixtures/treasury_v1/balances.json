@@ -98,20 +98,6 @@
             }
           },
           {
-            "contractAddress": "0x786dbff3f1292ae8f92ea68cf93c30b34b1ed04b",
-            "positionType": "liability",
-            "protocol": "aave_v3",
-            "underlyingAsset": "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
-            "tokenBalance": "0x35eafec1e2f688805ee7f",
-            "tokenBalanceDecimal": "4073925102535101603245695",
-            "metadata": {
-              "decimals": 18,
-              "logo": null,
-              "name": "Aave Ethereum Variable Debt GHO",
-              "symbol": "variableDebtEthGHO"
-            }
-          },
-          {
             "contractAddress": "0x83819bf7e906bcf57e9f5b20453a2eff43f3845c",
             "tokenBalance": "0xde0b6b3a7640000",
             "tokenBalanceDecimal": "1000000000000000000",
@@ -120,17 +106,6 @@
               "logo": null,
               "name": "DePORT",
               "symbol": "PORT"
-            }
-          },
-          {
-            "contractAddress": "0x98c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c",
-            "tokenBalance": "0x129c858a561",
-            "tokenBalanceDecimal": "1278966539617",
-            "metadata": {
-              "decimals": 6,
-              "logo": null,
-              "name": "Aave Ethereum USDC",
-              "symbol": "aEthUSDC"
             }
           },
           {
@@ -153,17 +128,6 @@
               "logo": null,
               "name": "Peaches.Finance",
               "symbol": "PCHS"
-            }
-          },
-          {
-            "contractAddress": "0xa700b4eb416be35b2911fd5dee80678ff64ff6c9",
-            "tokenBalance": "0x32eda8773e9216cc843f",
-            "tokenBalanceDecimal": "240502341729069193528383",
-            "metadata": {
-              "decimals": 18,
-              "logo": null,
-              "name": "Aave Ethereum AAVE",
-              "symbol": "aEthAAVE"
             }
           },
           {
@@ -479,17 +443,6 @@
               "logo": null,
               "name": "✅NEVERSOL NFT AIRDROP",
               "symbol": "NEVERSOL | fli.so/NEVER | visit to claim"
-            }
-          },
-          {
-            "contractAddress": "0x067ae75628177fd257c2b1e500993e1a0babcbd1",
-            "tokenBalance": "0xa71fb565d384aa370f",
-            "tokenBalanceDecimal": "3082891104654593767183",
-            "metadata": {
-              "decimals": 18,
-              "logo": null,
-              "name": "Aave Base GHO",
-              "symbol": "aBasGHO"
             }
           },
           {
@@ -1065,17 +1018,6 @@
             }
           },
           {
-            "contractAddress": "0x99cbc45ea5bb7ef3a5bc08fb1b7e56bb2442ef0d",
-            "tokenBalance": "0x35f1f1b72f66fd6",
-            "tokenBalanceDecimal": "242947107654627286",
-            "metadata": {
-              "decimals": 18,
-              "logo": null,
-              "name": "Aave Base wstETH",
-              "symbol": "aBaswstETH"
-            }
-          },
-          {
             "contractAddress": "0x9dcad047f20ec7750ac9de87837b209261960d1c",
             "tokenBalance": "0x1",
             "tokenBalanceDecimal": "1",
@@ -1205,17 +1147,6 @@
               "logo": null,
               "name": "✅$UЅDС TOKEN DISTRIBUTION",
               "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 14.07.25"
-            }
-          },
-          {
-            "contractAddress": "0xbdb9300b7cde636d9cd4aff00f6f009ffbbc8ee6",
-            "tokenBalance": "0x839a740",
-            "tokenBalanceDecimal": "137996096",
-            "metadata": {
-              "decimals": 8,
-              "logo": null,
-              "name": "Aave Base cbBTC",
-              "symbol": "aBascbBTC"
             }
           },
           {
@@ -1918,41 +1849,7 @@
           "tokenBalanceDecimal": "4644064515219506",
           "formatted": "0.004644064515219506"
         },
-        "erc20": [
-          {
-            "contractAddress": "0x513c7e3a9c69ca3e22550ef58ac1c0088e918fff",
-            "tokenBalance": "0x1a7061d48e",
-            "tokenBalanceDecimal": "113554609294",
-            "metadata": {
-              "decimals": 18,
-              "logo": null,
-              "name": "Aave Arbitrum wstETH",
-              "symbol": "aArbwstETH"
-            }
-          },
-          {
-            "contractAddress": "0x6ab707aca953edaefbc4fd23ba73294241490620",
-            "tokenBalance": "0x34ba73c",
-            "tokenBalanceDecimal": "55289660",
-            "metadata": {
-              "decimals": 6,
-              "logo": null,
-              "name": "Aave Arbitrum USDT",
-              "symbol": "aArbUSDT"
-            }
-          },
-          {
-            "contractAddress": "0x724dc807b04555b71ed48a6896b6f41593b8c637",
-            "tokenBalance": "0x729ee47",
-            "tokenBalanceDecimal": "120188487",
-            "metadata": {
-              "decimals": 6,
-              "logo": null,
-              "name": "Aave Arbitrum USDCn",
-              "symbol": "aArbUSDCn"
-            }
-          }
-        ],
+        "erc20": [],
         "discoveryRaw": [
           {
             "address": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
@@ -2023,17 +1920,6 @@
             }
           },
           {
-            "contractAddress": "0x82e64f49ed5ec1bc6e43dad4fc8af9bb3a2312ee",
-            "tokenBalance": "0x2495a9bb66ba2ab15f4a4",
-            "tokenBalanceDecimal": "2764255819719244349043876",
-            "metadata": {
-              "decimals": 18,
-              "logo": null,
-              "name": "Aave Avalanche DAI",
-              "symbol": "aAvaDAI"
-            }
-          },
-          {
             "contractAddress": "0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664",
             "tokenBalance": "0x20a78d2a800",
             "tokenBalanceDecimal": "2244000000000",
@@ -2053,17 +1939,6 @@
               "logo": null,
               "name": "Tether USD",
               "symbol": "USDT.e"
-            }
-          },
-          {
-            "contractAddress": "0xe50fa9b3c56ffb159cb0fca61f5c9d750e8128c8",
-            "tokenBalance": "0xcedd789de00959e32",
-            "tokenBalanceDecimal": "238499247378081881650",
-            "metadata": {
-              "decimals": 18,
-              "logo": null,
-              "name": "Aave Avalanche WETH",
-              "symbol": "aAvaWETH"
             }
           }
         ],

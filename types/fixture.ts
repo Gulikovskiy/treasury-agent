@@ -19,6 +19,18 @@ export interface FixtureManifest {
   schemaVersion: number
   snapshotTimestamp: string
   lookbackDays: number
+  accountingPolicy: {
+    nav: {
+      spotBalanceSource: 'balances.json'
+      spotBalancePath: 'chains.<chainId>.<wallet>.erc20'
+      canonicalAaveV3Source: 'defi_positions.json'
+      aaveV3Scope: string
+      excludedFromSpotBalances: Array<
+        'aave_v3_a_token' | 'aave_v3_variable_debt_token'
+      >
+      rules: string[]
+    }
+  }
   chains: ChainMap<ChainSnapshot>
   sources: {
     rpc: string
@@ -42,10 +54,6 @@ export interface NativeBalanceFixture {
 
 export interface Erc20BalanceFixture {
   contractAddress: Address
-  /** Economic treatment for NAV. Debt-token balances are liabilities, not assets. */
-  positionType?: 'asset' | 'liability'
-  protocol?: string
-  underlyingAsset?: Address
   tokenBalance?: `0x${string}`
   tokenBalanceDecimal?: string
   metadata?: unknown
