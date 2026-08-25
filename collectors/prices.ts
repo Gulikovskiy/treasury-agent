@@ -5,6 +5,7 @@ import { historicalPrice } from '../lib/alchemy.js'
 import { fixturePath, isMain, readJson, writeJson } from '../lib/io.js'
 import type { BalancesFixture, ChainMap } from '../types/fixture.js'
 import type { DefiPositionsFixture } from './defi-positions.js'
+import type { TransactionsFixture } from './transactions.js'
 
 const NATIVE_SYMBOL: ChainMap<string> = {
   1: 'ETH',
@@ -20,7 +21,9 @@ interface PriceOrError {
 
 export interface ChainPricesFixture {
   native: unknown | { error: string }
+  nativeHistory: unknown | { error: string }
   tokens: Record<string, unknown | { error: string }>
+  tokenHistory: Record<string, unknown | { error: string }>
 }
 
 export interface PricesFixture {
@@ -30,9 +33,10 @@ export interface PricesFixture {
 
 export async function collectPrices(): Promise<PricesFixture> {
   const manifest = await collectManifest()
-  const [balances, defiPositions] = await Promise.all([
+  const [balances, defiPositions, transactions] = await Promise.all([
     readJson<BalancesFixture>(fixturePath('balances.json')),
     readJson<DefiPositionsFixture>(fixturePath('defi_positions.json')),
+    readJson<TransactionsFixture>(fixturePath('transactions.json')),
   ])
   const t = new Date(manifest.snapshotTimestamp)
   const start = new Date(t.getTime() - 60 * 60_000).toISOString()
@@ -40,7 +44,9 @@ export async function collectPrices(): Promise<PricesFixture> {
   const chains = {} as ChainMap<ChainPricesFixture>
 
   for (const chain of Object.values(CHAINS)) {
-    const tokens = new Set<Address>()
+    // Normalize contract keys once: checksum casing is display formatting, not
+    // identity, and spot/Aave sources may represent the same address differently.
+    const snapshotTokens = new Set<string>()
 
     for (const walletData of Object.values(balances.chains[chain.id])) {
       if (!walletData) continue
@@ -49,20 +55,50 @@ export async function collectPrices(): Promise<PricesFixture> {
           token.contractAddress
           && !token.error
           && NAV_TOKEN_ALLOWLIST[chain.id][token.contractAddress.toLowerCase()]
-        ) tokens.add(token.contractAddress)
+        ) snapshotTokens.add(token.contractAddress.toLowerCase())
       }
     }
 
     const aaveChain = defiPositions.protocols.aave_v3[chain.id]
     if (aaveChain) {
       for (const positions of Object.values(aaveChain.wallets)) {
-        for (const position of positions) tokens.add(position.underlyingAsset)
+        for (const position of positions) {
+          snapshotTokens.add(position.underlyingAsset.toLowerCase())
+        }
       }
     }
 
-    const chainOut: ChainPricesFixture = { native: null, tokens: {} }
+    // Flow valuation needs assets that moved during the history window even if
+    // the treasury no longer holds them at the snapshot. Contract-only joins do
+    // not import attacker-controlled token labels into the price fixture.
+    const historyTokens = new Set(snapshotTokens)
+    for (const walletTransactions of Object.values(transactions.chains[chain.id])) {
+      for (const transfer of walletTransactions.erc20Transfers.items) {
+        if (transfer.contractAddress) {
+          historyTokens.add(transfer.contractAddress.toLowerCase())
+        }
+      }
+      if (walletTransactions.alchemyTransfers) {
+        for (const transfer of [
+          ...walletTransactions.alchemyTransfers.outgoing,
+          ...walletTransactions.alchemyTransfers.incoming,
+        ]) {
+          const address = transfer.rawContract?.address
+          if (address) historyTokens.add(address.toLowerCase())
+        }
+      }
+    }
+
+    const chainOut: ChainPricesFixture = {
+      native: null,
+      nativeHistory: null,
+      tokens: {},
+      tokenHistory: {},
+    }
     chains[chain.id] = chainOut
-    console.log(`prices ${chain.name}: ${tokens.size} ERC20s`)
+    console.log(
+      `prices ${chain.name}: ${snapshotTokens.size} snapshot ERC20s, ${historyTokens.size} flow ERC20s`,
+    )
 
     try {
       chainOut.native = await historicalPrice({
@@ -76,11 +112,23 @@ export async function collectPrices(): Promise<PricesFixture> {
       chainOut.native = { error: String(error) }
     }
 
-    for (const address of tokens) {
+    try {
+      chainOut.nativeHistory = await historicalPrice({
+        symbol: NATIVE_SYMBOL[chain.id],
+        startTime: manifest.historyFromTimestamp,
+        endTime: manifest.snapshotTimestamp,
+        interval: '1d',
+        withMarketData: false,
+      })
+    } catch (error) {
+      chainOut.nativeHistory = { error: String(error) }
+    }
+
+    for (const address of snapshotTokens) {
       try {
         chainOut.tokens[address] = await historicalPrice({
           network: chain.alchemyNetwork,
-          address,
+          address: address as Address,
           startTime: start,
           endTime: end,
           interval: '1h',
@@ -88,6 +136,21 @@ export async function collectPrices(): Promise<PricesFixture> {
         })
       } catch (error) {
         chainOut.tokens[address] = { error: String(error) }
+      }
+    }
+
+    for (const address of historyTokens) {
+      try {
+        chainOut.tokenHistory[address] = await historicalPrice({
+          network: chain.alchemyNetwork,
+          address: address as Address,
+          startTime: manifest.historyFromTimestamp,
+          endTime: manifest.snapshotTimestamp,
+          interval: '1d',
+          withMarketData: false,
+        })
+      } catch (error) {
+        chainOut.tokenHistory[address] = { error: String(error) }
       }
     }
   }

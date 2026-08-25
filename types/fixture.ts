@@ -54,15 +54,46 @@ export interface FixtureManifest {
       spotBalancePath: 'chains.<chainId>.<wallet>.erc20'
       canonicalAaveV3Source: 'defi_positions.json'
       aaveV3Scope: string
-      excludedFromSpotBalances: Array<
+      excludedFromNav: Array<
         'aave_v3_a_token' | 'aave_v3_variable_debt_token'
       >
       rules: string[]
     }
+    flows: {
+      canonicalSource: 'transactions.json'
+      transactionIdentityKey: 'chainId + transactionHash'
+      transferIdentityKey: string
+      transferEventSource: ChainMap<'alchemyTransfers' | 'erc20Transfers'>
+      controlledWalletSource: 'wallets.json'
+      labelSource: 'address_labels.json'
+      historicalPriceSource: 'prices.json nativeHistory/tokenHistory'
+      classificationOrder: string[]
+      rules: string[]
+      externalFlow: {
+        windowDays: number
+        usdPricing: 'nearest historical asset price to transaction timestamp'
+      }
+      operatingSpend: {
+        timezone: 'UTC'
+        monthlyWindow: 'calendar_month'
+      }
+      burnRate: {
+        timezone: 'UTC'
+        monthlyWindow: 'calendar_month'
+        trailingMonths: number
+        includeCurrentMonth: true
+      }
+      gas: {
+        nativeAmountFormula: 'gasUsed * effectiveGasPrice'
+        include: 'successful outgoing treasury transactions only'
+        usdPricing: 'nearest historical native price to block timestamp'
+        windowDays: number
+      }
+    }
   }
   inputTrustPolicy: {
     tokenIdentity: 'chainId + contractAddress'
-    tokenDisplayMetadata: 'untrusted and excluded unless canonicalized'
+    tokenDisplayMetadata: 'untrusted; retained in raw balances only; excluded from normalized views'
     transactionProjection: 'explicit field allowlist'
     discardedFields: string[]
   }
@@ -73,6 +104,16 @@ export interface FixtureManifest {
       chainIds: ChainId[]
       ownerSetAndThresholdMatch: boolean
     }>
+    organizationalAttribution: {
+      status: 'publicly_attested'
+      organization: 'Aave Finance Committee'
+      wallet: Address
+      chainIds: ChainId[]
+      evidenceType: 'primary_governance_record'
+      sourceUrl: string
+      statement: string
+      limitation: string
+    }
   }
   sources: {
     rpc: string
@@ -105,9 +146,10 @@ export interface NativeBalanceFixture {
 
 export interface Erc20BalanceFixture {
   contractAddress: Address
-  asset: CanonicalAsset
   tokenBalance?: `0x${string}`
   tokenBalanceDecimal?: string
+  metadata?: unknown
+  metadataTrust?: 'untrusted'
   error?: string
 }
 
@@ -115,10 +157,7 @@ export interface WalletBalanceFixture {
   blockNumber: string
   native: NativeBalanceFixture
   erc20: Erc20BalanceFixture[]
-  discovery: {
-    contractCount: number
-    pageCount: number
-  }
+  discoveryRaw: unknown[]
 }
 
 export interface BalancesFixture {

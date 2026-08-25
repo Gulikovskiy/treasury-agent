@@ -26,7 +26,7 @@ const NORMAL_TRANSACTION_FIELDS = [
 ] as const
 const ERC20_TRANSFER_FIELDS = [
   'hash', 'from', 'to', 'contractAddress', 'value', 'tokenDecimal',
-  'blockNumber', 'timeStamp',
+  'blockNumber', 'timeStamp', 'transactionIndex', 'logIndex',
 ] as const
 
 function pickFields(
@@ -41,12 +41,13 @@ function pickFields(
 function safeAccountHistory<T>(
   result: { items: T[]; pages: unknown[] },
   fields: readonly string[],
+  includeProviderEventIndex = false,
 ): AccountHistoryFixtureResult<T> {
   return {
-    items: result.items.map((item) => pickFields(
-      item as Record<string, unknown>,
-      fields,
-    ) as T),
+    items: result.items.map((item, providerEventIndex) => ({
+      ...pickFields(item as Record<string, unknown>, fields),
+      ...(includeProviderEventIndex ? { providerEventIndex } : {}),
+    }) as T),
     pageCount: result.pages.length,
   }
 }
@@ -59,7 +60,11 @@ export interface SafeAssetTransfer {
   from?: Address
   to?: Address
   value?: number
-  rawContract?: { address?: Address | null; decimal?: string | null }
+  rawContract?: {
+    address?: Address | null
+    decimal?: string | null
+    value?: `0x${string}` | null
+  }
   metadata?: { blockTimestamp?: string }
 }
 
@@ -69,7 +74,7 @@ function safeAssetTransfers(pages: AssetTransferPage[]): SafeAssetTransfer[] {
       'uniqueId', 'category', 'blockNum', 'hash', 'from', 'to', 'value',
     ]),
     ...(transfer.rawContract && {
-      rawContract: pickFields(transfer.rawContract, ['address', 'decimal']),
+      rawContract: pickFields(transfer.rawContract, ['address', 'decimal', 'value']),
     }),
     ...(transfer.metadata && typeof transfer.metadata === 'object' ? {
       metadata: pickFields(
@@ -131,7 +136,11 @@ export async function collectTransactions(): Promise<TransactionsFixture> {
       const erc20Raw = useBlockscout
         ? await blockscoutErc20Transfers(chain.id, wallet, range)
         : await routescanErc20Transfers(chain.id, wallet, range)
-      const erc20 = safeAccountHistory<Erc20Transfer>(erc20Raw, ERC20_TRANSFER_FIELDS)
+      const erc20 = safeAccountHistory<Erc20Transfer>(
+        erc20Raw,
+        ERC20_TRANSFER_FIELDS,
+        true,
+      )
 
       let alchemyTransfers: WalletTransactionsFixture['alchemyTransfers'] = null
       if (ALCHEMY_TRANSFER_CHAINS.has(chain.id)) {

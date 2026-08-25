@@ -10,13 +10,13 @@ The collector is TypeScript-first: run source directly with `tsx`, or compile it
 
 - `manifest.json` — snapshot metadata, pinned history ranges, source routing, NAV policy, and wallet-control evidence
 - `wallets.json` — treasury-controlled addresses by chain
-- `balances.json` — native + spot ERC-20 balances read at the pinned block
+- `balances.json` — raw ERC-20 discovery evidence plus balances read at the pinned block
 - `transactions.json` — normal transactions, ERC-20 transfers, Alchemy transfers where supported, and receipts
-- `prices.json` — historical prices around the snapshot timestamp
+- `prices.json` — snapshot and transaction-window historical prices
 - `defi_positions.json` — Aave V3 user reserve state at the pinned block
 - `nav_positions.json` — canonical priced positions after allowlist and dust filters
 - `address_labels.json` — controlled/manual/known-protocol labels
-- `contracts.json` — code presence + token metadata for encountered addresses
+- `contracts.json` — code presence, runtime code hash, and runtime code size
 - `protocols.json` — known Aave V3 contracts by chain
 
 ## Install and run
@@ -79,25 +79,27 @@ the treasury.
 ## Why balances are collected in two stages
 
 `alchemy_getTokenBalances` is used only to discover ERC-20 contracts. Only
-contract addresses in `NAV_TOKEN_ALLOWLIST` proceed to pinned-block `balanceOf`
-collection; native balances are read at that same block. Discovery is retained
-as counts only. This prevents spam airdrops and current-head balances from
-entering model-facing holdings.
+nonzero balances survive the subsequent pinned-block `balanceOf` read; native
+balances are read at that same block. The complete nonzero ERC-20 array and the
+provider's raw discovery pages are retained in `balances.json`. This matters
+because token discovery is a current-state indexer call and cannot be reproduced
+from the pinned block later. Collection records what was observed; NAV applies
+accounting policy in a separate projection.
 
 Token identity is always `chainId + contractAddress`. Symbols and names are
-attacker-controlled display strings, so provider/on-chain token metadata is not
-stored in model-facing fixtures. Allowlisted assets receive canonical labels
-from configuration; configured Aave reserves receive labels from the pinned
-address-book package.
+attacker-controlled display strings. Raw metadata is retained only with
+`metadataTrust: "untrusted"` for provenance, spam analysis, and adversarial evals;
+it must not be treated as an instruction or emitted by normalized holdings tools.
+Allowlisted assets receive canonical labels from configuration; configured Aave
+reserves receive labels from the pinned address-book package.
 
-Aave V3 aTokens and variable-debt tokens for markets represented in
-`defi_positions.json` are excluded from the canonical `erc20` arrays in
-`balances.json`. The DeFi fixture is the canonical source for those supplied
-assets and debts, so NAV consumers must not add the wrapper-token balances a
-second time. `discoveryRaw` is provenance only and is never an accounting input.
-Wrappers for an unqueried market remain spot evidence because there is no
-duplicate DeFi position. This policy is machine-readable in
-`manifest.json.accountingPolicy.nav`.
+Aave V3 aTokens and variable-debt tokens remain visible in raw balances, but are
+not spot NAV assets. The DeFi fixture is the canonical source for supplied assets
+and debts in configured markets, so NAV consumers must not add wrapper balances a
+second time. A wrapper from an unqueried market therefore remains auditable as a
+`not_allowlisted` exclusion instead of disappearing or being misreported as a
+clean position. `discoveryRaw` is provenance only and is never an accounting
+input. This policy is machine-readable in `manifest.json.accountingPolicy.nav`.
 
 ## Transactions
 
@@ -111,13 +113,24 @@ The fixture preserves bounded transaction evidence instead of pre-classifying tr
 Transaction provider responses are projected through explicit field allowlists.
 Token names, symbols, Alchemy `asset` labels, raw provider pages, and other
 open-ended metadata are discarded before writing the fixture, preventing token
-metadata from becoming prompt-injection content.
+metadata from becoming prompt-injection content. Transfer event IDs or stable
+provider ordinals and exact raw contract amounts are retained so distinct events
+inside one transaction are not collapsed during deduplication.
 
 Both ends of every transaction range are pinned in `manifest.json`: the snapshot
 block and `chains.<chainId>.historyFrom`. Transaction collection consumes those
 block numbers directly and performs no runtime lookback-block search.
 
 The downstream eval tool should infer bridge/internal-transfer/expense/DeFi-deposit semantics. The collector should not bake those conclusions into the raw fixture.
+
+`manifest.json.accountingPolicy.flows` governs that inference: transaction
+deduplication, classification order, internal/bridge/DeFi exclusions, 30-day
+external-flow and gas windows, UTC calendar-month spend, trailing three-month
+burn, and historical pricing by contract address are explicit rather than
+left to each ground-truth implementation. It also names one canonical transfer
+event source per chain, so overlapping provider lists are corroboration rather
+than amounts to add together. Expense is a secondary classification of external
+outflow, and missing prices must be disclosed rather than treated as zero.
 
 ## Aave positions
 
@@ -135,7 +148,11 @@ The configured treasury is a Safe proxy. Manifest collection reads its runtime
 code hash, version, owner set, and threshold at each chain's pinned block. The
 fixture also records whether the owner set and threshold match across chains;
 owner order is ignored. This verifies the on-chain control configuration rather
-than relying on the same address appearing on several networks.
+than relying on the same address appearing on several networks. Organizational
+attribution is a separate claim: the manifest links the primary Aave governance
+record that identifies the wallet as the Aave Finance Committee spender on all
+four chains and states that this is public attribution, not proof of legal
+beneficial ownership.
 
 ## Contract metadata
 
@@ -146,16 +163,20 @@ pinned block.
 ## Prices
 
 Prices are frozen with Alchemy's historical price API around
-`snapshotTimestamp`. Spot prices are requested only for address-allowlisted
-assets. Aave positions are priced by `underlyingAsset`, never by their aToken or
-debt-token wrapper. If retrieval fails, the fixture records the error instead of
-inventing a value.
+`snapshotTimestamp`, with daily address-keyed histories covering the transaction
+window. Snapshot NAV chooses the observation nearest `snapshotTimestamp` rather
+than the midpoint of the request window. Spot prices are requested only for
+address-allowlisted assets. Aave positions are priced by `underlyingAsset`, never
+by their aToken or debt-token wrapper. If retrieval fails, the fixture records
+the error instead of inventing a value.
 
 `nav_positions.json` is the canonical accounting projection. A position appears
 there only when its address is trusted (explicit spot allowlist or configured
 Aave reserve), it has a historical price, and its absolute value is at least the
 manifest's `minimumUsdValue`. Excluded positions retain only an identity and an
-explicit `unpriced` or `below_dust` reason.
+explicit `not_allowlisted`, `collection_error`, `unpriced`, or `below_dust`
+reason, plus a pointer back to the raw balance when applicable. USD values are
+calculated with integer fixed-point arithmetic and rounded half-up to cents.
 
 ## Type boundaries
 

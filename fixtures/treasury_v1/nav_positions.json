@@ -38,8 +38,8 @@
       "source": "spot",
       "positionType": "asset",
       "amount": "79000",
-      "priceUsd": "1.2025934158",
-      "valueUsd": "95004.88"
+      "priceUsd": "1.2027129244",
+      "valueUsd": "95014.32"
     },
     {
       "chainId": 8453,
@@ -252,15 +252,1151 @@
   ],
   "excluded": [
     {
+      "chainId": 1,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "1:0x00e2b6d170740c15bf9fb01d0b6e77c0d4510e32",
+      "contractAddress": "0x00e2b6d170740c15bf9fb01d0b6e77c0d4510e32",
+      "source": "spot",
+      "rawAmount": "1000000000000000000",
+      "balanceRef": "balances.json#/chains/1/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/0",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 1,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "1:0x16613999219f9b56bededbf3722e44c4c2045300",
+      "contractAddress": "0x16613999219f9b56bededbf3722e44c4c2045300",
+      "source": "spot",
+      "rawAmount": "1000000000000000000",
+      "balanceRef": "balances.json#/chains/1/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/1",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 1,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "1:0x18efe565a5373f430e2f809b97de30335b3ad96a",
+      "contractAddress": "0x18efe565a5373f430e2f809b97de30335b3ad96a",
+      "source": "spot",
+      "rawAmount": "118284474539761334",
+      "balanceRef": "balances.json#/chains/1/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/2",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 1,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "1:0x1bab804803159ad84b8854581aa53ac72455614e",
+      "contractAddress": "0x1bab804803159ad84b8854581aa53ac72455614e",
+      "source": "spot",
+      "rawAmount": "10",
+      "balanceRef": "balances.json#/chains/1/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/3",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 1,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "1:0x2b591e99afe9f32eaa6214f7b7629768c40eeb39",
+      "contractAddress": "0x2b591e99afe9f32eaa6214f7b7629768c40eeb39",
+      "source": "spot",
+      "rawAmount": "100000000",
+      "balanceRef": "balances.json#/chains/1/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/4",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 1,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "1:0x43afe27f3b7c12ff1c36c7721d5a5bdbc34758f3",
+      "contractAddress": "0x43afe27f3b7c12ff1c36c7721d5a5bdbc34758f3",
+      "source": "spot",
+      "rawAmount": "2700000000000000000",
+      "balanceRef": "balances.json#/chains/1/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/6",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 1,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "1:0x53fdca91fd33b9131b5ceade42a3edbd9b38edff",
+      "contractAddress": "0x53fdca91fd33b9131b5ceade42a3edbd9b38edff",
+      "source": "spot",
+      "rawAmount": "1000000000000000000",
+      "balanceRef": "balances.json#/chains/1/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/7",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 1,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "1:0x786dbff3f1292ae8f92ea68cf93c30b34b1ed04b",
+      "contractAddress": "0x786dbff3f1292ae8f92ea68cf93c30b34b1ed04b",
+      "source": "spot",
+      "rawAmount": "4073925102535101603245695",
+      "balanceRef": "balances.json#/chains/1/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/8",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 1,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "1:0x83819bf7e906bcf57e9f5b20453a2eff43f3845c",
+      "contractAddress": "0x83819bf7e906bcf57e9f5b20453a2eff43f3845c",
+      "source": "spot",
+      "rawAmount": "1000000000000000000",
+      "balanceRef": "balances.json#/chains/1/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/9",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 1,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "1:0x98c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c",
+      "contractAddress": "0x98c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c",
+      "source": "spot",
+      "rawAmount": "1278966539617",
+      "balanceRef": "balances.json#/chains/1/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/10",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 1,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "1:0xa3e7833775a9cc022db2c72eb900378f90ce89b4",
+      "contractAddress": "0xa3e7833775a9cc022db2c72eb900378f90ce89b4",
+      "source": "spot",
+      "rawAmount": "2094616024640",
+      "balanceRef": "balances.json#/chains/1/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/11",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 1,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "1:0xa4c6984e817c086ddc3ebaeedbdcc01469586918",
+      "contractAddress": "0xa4c6984e817c086ddc3ebaeedbdcc01469586918",
+      "source": "spot",
+      "rawAmount": "49234531000000000000",
+      "balanceRef": "balances.json#/chains/1/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/12",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 1,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "1:0xa700b4eb416be35b2911fd5dee80678ff64ff6c9",
+      "contractAddress": "0xa700b4eb416be35b2911fd5dee80678ff64ff6c9",
+      "source": "spot",
+      "rawAmount": "240502341729069193528383",
+      "balanceRef": "balances.json#/chains/1/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/13",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 1,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "1:0xd3e8695d2bef061eab38b5ef526c0f714108119c",
+      "contractAddress": "0xd3e8695d2bef061eab38b5ef526c0f714108119c",
+      "source": "spot",
+      "rawAmount": "100000000000000",
+      "balanceRef": "balances.json#/chains/1/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/14",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 1,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "1:0xf82d598ce6fce9f2d46f046fc46653e3284040aa",
+      "contractAddress": "0xf82d598ce6fce9f2d46f046fc46653e3284040aa",
+      "source": "spot",
+      "rawAmount": "1000000000000000000",
+      "balanceRef": "balances.json#/chains/1/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/16",
+      "reason": "not_allowlisted"
+    },
+    {
       "chainId": 8453,
       "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
       "assetId": "8453:native",
+      "contractAddress": null,
+      "source": "native",
+      "rawAmount": "0",
       "reason": "below_dust"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x05b38ae87331a0f113b6d6694fab70dfc56f40a2",
+      "contractAddress": "0x05b38ae87331a0f113b6d6694fab70dfc56f40a2",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/0",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x067ae75628177fd257c2b1e500993e1a0babcbd1",
+      "contractAddress": "0x067ae75628177fd257c2b1e500993e1a0babcbd1",
+      "source": "spot",
+      "rawAmount": "3082891104654593767183",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/1",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x07d15798a67253d76cea61f0ea6f57aedc59dffb",
+      "contractAddress": "0x07d15798a67253d76cea61f0ea6f57aedc59dffb",
+      "source": "spot",
+      "rawAmount": "777000000000000000000",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/2",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x0b873b3214c76bb29fc4ce164497b88a5b6e67f6",
+      "contractAddress": "0x0b873b3214c76bb29fc4ce164497b88a5b6e67f6",
+      "source": "spot",
+      "rawAmount": "194000000000000000000",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/3",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x112921370c1b8eb3f296f90d7c3086b34ca29446",
+      "contractAddress": "0x112921370c1b8eb3f296f90d7c3086b34ca29446",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/4",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x13c9c2305965641024069f22350d23dcb837237b",
+      "contractAddress": "0x13c9c2305965641024069f22350d23dcb837237b",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/5",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x13ced7f82072327a5bc9ebb9437304f605e253b2",
+      "contractAddress": "0x13ced7f82072327a5bc9ebb9437304f605e253b2",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/6",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x158a07d7b2e76d37d9e88bf1681fc2695c32715d",
+      "contractAddress": "0x158a07d7b2e76d37d9e88bf1681fc2695c32715d",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/7",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x182214259d6a36db5dad514f4e737afb2dec816d",
+      "contractAddress": "0x182214259d6a36db5dad514f4e737afb2dec816d",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/8",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x1be50e8c9cd7a797bfb2392cc0ab84dbbe09f7fb",
+      "contractAddress": "0x1be50e8c9cd7a797bfb2392cc0ab84dbbe09f7fb",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/9",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x1c58ea20c133a71d3bd08cad23984558a57e0fc2",
+      "contractAddress": "0x1c58ea20c133a71d3bd08cad23984558a57e0fc2",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/10",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x20f446806d5636d1d38817d082754dc51476af5c",
+      "contractAddress": "0x20f446806d5636d1d38817d082754dc51476af5c",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/11",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x215b01b32cfa0fdb04bd60e0bc7a3e80589d34cf",
+      "contractAddress": "0x215b01b32cfa0fdb04bd60e0bc7a3e80589d34cf",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/12",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x234db7de3f8bd97fa00da767e0f67256377be688",
+      "contractAddress": "0x234db7de3f8bd97fa00da767e0f67256377be688",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/13",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x24dbba447dfc01185762e1cdd51ff6d6a813fc86",
+      "contractAddress": "0x24dbba447dfc01185762e1cdd51ff6d6a813fc86",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/14",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x24e8c42c62df54d5122cc5c1edd74f7ba1931520",
+      "contractAddress": "0x24e8c42c62df54d5122cc5c1edd74f7ba1931520",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/15",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x268f2f00b8a181b9322c61772be19d3c5032b435",
+      "contractAddress": "0x268f2f00b8a181b9322c61772be19d3c5032b435",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/16",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x289d874d6d3ed6569fd7c0b03b7c3b25dbb60cf2",
+      "contractAddress": "0x289d874d6d3ed6569fd7c0b03b7c3b25dbb60cf2",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/17",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x29fd86c905ddbbcecf4377e90bdeb0ad0c322cb7",
+      "contractAddress": "0x29fd86c905ddbbcecf4377e90bdeb0ad0c322cb7",
+      "source": "spot",
+      "rawAmount": "1000000000000000000",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/18",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x36fa9cf0ccb9c594b74231073790f62044e7f681",
+      "contractAddress": "0x36fa9cf0ccb9c594b74231073790f62044e7f681",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/19",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x373f019d535a34f33b263803bb73fc1cdab694e0",
+      "contractAddress": "0x373f019d535a34f33b263803bb73fc1cdab694e0",
+      "source": "spot",
+      "rawAmount": "618000000000000000000",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/20",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x39cb303dabf7195a623b9156633d42c2e3fe8609",
+      "contractAddress": "0x39cb303dabf7195a623b9156633d42c2e3fe8609",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/21",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x3b30669ccd34a0978ff5bac17f7d275cfedf358e",
+      "contractAddress": "0x3b30669ccd34a0978ff5bac17f7d275cfedf358e",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/22",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x3ff0560e81e36c9390b7d8903e510defc7e433ca",
+      "contractAddress": "0x3ff0560e81e36c9390b7d8903e510defc7e433ca",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/23",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x40211d8fea6c75c4e670615ecc2039c63fb0d8d2",
+      "contractAddress": "0x40211d8fea6c75c4e670615ecc2039c63fb0d8d2",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/24",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x41a0e0437e2906abd15c4878f4e7d6371167a4a5",
+      "contractAddress": "0x41a0e0437e2906abd15c4878f4e7d6371167a4a5",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/25",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x42036d129cd0af0e44570731cbe8354350785ef8",
+      "contractAddress": "0x42036d129cd0af0e44570731cbe8354350785ef8",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/26",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x4290ec58920e8804fcbb2156329396cf82737eeb",
+      "contractAddress": "0x4290ec58920e8804fcbb2156329396cf82737eeb",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/27",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x454dd5a557375295134c4859f853196f5fb8e144",
+      "contractAddress": "0x454dd5a557375295134c4859f853196f5fb8e144",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/28",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x49d687ecab7df32265325538e9cb28031f191556",
+      "contractAddress": "0x49d687ecab7df32265325538e9cb28031f191556",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/29",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x5048cab7c4dcc9211b5363f6666824fdd1619819",
+      "contractAddress": "0x5048cab7c4dcc9211b5363f6666824fdd1619819",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/30",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x5345a70e247748979c8b59a0db42f4ed913b1334",
+      "contractAddress": "0x5345a70e247748979c8b59a0db42f4ed913b1334",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/31",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x55cdcf24515c5d39b2545dfa29f55cdcd6a815ad",
+      "contractAddress": "0x55cdcf24515c5d39b2545dfa29f55cdcd6a815ad",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/32",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x588ed47a681b6ff38a5a4f185e004b458f8106ef",
+      "contractAddress": "0x588ed47a681b6ff38a5a4f185e004b458f8106ef",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/33",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x5d845fe04e28ccf79b204cb3b8f48641baf93199",
+      "contractAddress": "0x5d845fe04e28ccf79b204cb3b8f48641baf93199",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/34",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x5e119c7c8ffc6c927b4122ef4ff511ea1aaddb97",
+      "contractAddress": "0x5e119c7c8ffc6c927b4122ef4ff511ea1aaddb97",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/35",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x5e730f83d72a76cc8602f6f83e322629e2443f80",
+      "contractAddress": "0x5e730f83d72a76cc8602f6f83e322629e2443f80",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/36",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x6207f1af1f45f19107fa6afade1e85a65bf25c6a",
+      "contractAddress": "0x6207f1af1f45f19107fa6afade1e85a65bf25c6a",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/37",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x63272cd2f76be73219b68ab5f775db5eeb4a8f6e",
+      "contractAddress": "0x63272cd2f76be73219b68ab5f775db5eeb4a8f6e",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/38",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x65755ed15ea1285172db2bca5b8af93e1fccf31f",
+      "contractAddress": "0x65755ed15ea1285172db2bca5b8af93e1fccf31f",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/39",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x65eec38a7af4e847e853dc5a56e15f75bdce95f7",
+      "contractAddress": "0x65eec38a7af4e847e853dc5a56e15f75bdce95f7",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/40",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x6abc46cb32d8dff95b0af7b746a2fa5d0d8b25ae",
+      "contractAddress": "0x6abc46cb32d8dff95b0af7b746a2fa5d0d8b25ae",
+      "source": "spot",
+      "rawAmount": "1000000000000000000",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/41",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x718dfc2e31934b94f19add0cc272fe7be8cf572a",
+      "contractAddress": "0x718dfc2e31934b94f19add0cc272fe7be8cf572a",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/42",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x742e682ee9460f4f4c0ef624cd5023cf20ce0d06",
+      "contractAddress": "0x742e682ee9460f4f4c0ef624cd5023cf20ce0d06",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/43",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x75e5c9689495a857dc13dcd5fa5fcf641fa2dccb",
+      "contractAddress": "0x75e5c9689495a857dc13dcd5fa5fcf641fa2dccb",
+      "source": "spot",
+      "rawAmount": "618000000000000000000",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/44",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x857fa5b01b5452ee69e1a254bd04197e46703b90",
+      "contractAddress": "0x857fa5b01b5452ee69e1a254bd04197e46703b90",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/46",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x8af8c1ab8186bbc201a5a4a0f45d63ee6e96d57c",
+      "contractAddress": "0x8af8c1ab8186bbc201a5a4a0f45d63ee6e96d57c",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/47",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x8c7efd01fa59f7228b5168413088db25041f7d4a",
+      "contractAddress": "0x8c7efd01fa59f7228b5168413088db25041f7d4a",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/48",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x90a5788e5beee076c26b962908be67c7640dfdc7",
+      "contractAddress": "0x90a5788e5beee076c26b962908be67c7640dfdc7",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/49",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x911e13a63b7ed0e4ed38dbebc1bbf8027f2c5699",
+      "contractAddress": "0x911e13a63b7ed0e4ed38dbebc1bbf8027f2c5699",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/50",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x9227a86cfc950783810a84aa13fb8980bc30830b",
+      "contractAddress": "0x9227a86cfc950783810a84aa13fb8980bc30830b",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/51",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x977d49d6c0b0008c07025ddaea2dd906cc5b5db1",
+      "contractAddress": "0x977d49d6c0b0008c07025ddaea2dd906cc5b5db1",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/52",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x993d713926edff2b19b0899b5a3b911f124aedd6",
+      "contractAddress": "0x993d713926edff2b19b0899b5a3b911f124aedd6",
+      "source": "spot",
+      "rawAmount": "37000000000000000000",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/53",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x99cbc45ea5bb7ef3a5bc08fb1b7e56bb2442ef0d",
+      "contractAddress": "0x99cbc45ea5bb7ef3a5bc08fb1b7e56bb2442ef0d",
+      "source": "spot",
+      "rawAmount": "242947107654627286",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/54",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0x9dcad047f20ec7750ac9de87837b209261960d1c",
+      "contractAddress": "0x9dcad047f20ec7750ac9de87837b209261960d1c",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/55",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xa1ca6299ba48366af1845a9a8ae59b87ff0d5c01",
+      "contractAddress": "0xa1ca6299ba48366af1845a9a8ae59b87ff0d5c01",
+      "source": "spot",
+      "rawAmount": "200000000000000000000",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/56",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xa3415b7bee1a6942c64bc9752896a074069b580b",
+      "contractAddress": "0xa3415b7bee1a6942c64bc9752896a074069b580b",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/57",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xa91e1fa3dd9861eed4e86f5f3cdf8085df2db810",
+      "contractAddress": "0xa91e1fa3dd9861eed4e86f5f3cdf8085df2db810",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/58",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xab3d4c02e1361ca799dbbaaa98c84b7d0233e9e0",
+      "contractAddress": "0xab3d4c02e1361ca799dbbaaa98c84b7d0233e9e0",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/59",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xac8584710490fbb73d03e863fb6d74ac917134c4",
+      "contractAddress": "0xac8584710490fbb73d03e863fb6d74ac917134c4",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/60",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xad03e2e457ebe290f364c9aa8133dcd0cda30c4e",
+      "contractAddress": "0xad03e2e457ebe290f364c9aa8133dcd0cda30c4e",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/61",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xb03f237a6ae3860eab575aff3e329a9092a5c975",
+      "contractAddress": "0xb03f237a6ae3860eab575aff3e329a9092a5c975",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/62",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xb5314bb0074071b8da6e552b4f9a081f227553f6",
+      "contractAddress": "0xb5314bb0074071b8da6e552b4f9a081f227553f6",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/63",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xb5796ddf28dd1e52b69742cbbd041c9616d8d1cf",
+      "contractAddress": "0xb5796ddf28dd1e52b69742cbbd041c9616d8d1cf",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/64",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xb9e5e7296466c7daea8133289fbb29e493e72956",
+      "contractAddress": "0xb9e5e7296466c7daea8133289fbb29e493e72956",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/65",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xbd1f1776472d4e5125a08d33ce7f38a63deb471c",
+      "contractAddress": "0xbd1f1776472d4e5125a08d33ce7f38a63deb471c",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/66",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xbdb9300b7cde636d9cd4aff00f6f009ffbbc8ee6",
+      "contractAddress": "0xbdb9300b7cde636d9cd4aff00f6f009ffbbc8ee6",
+      "source": "spot",
+      "rawAmount": "137996096",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/67",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xc10ddf977778cfc3f0368cc4c27ba783fdbd019e",
+      "contractAddress": "0xc10ddf977778cfc3f0368cc4c27ba783fdbd019e",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/68",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xc206eff912c71f4383b974ea745af2bbd721daa2",
+      "contractAddress": "0xc206eff912c71f4383b974ea745af2bbd721daa2",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/69",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xca21091ffa0f3af00191686f553aae6848ee75b8",
+      "contractAddress": "0xca21091ffa0f3af00191686f553aae6848ee75b8",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/70",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xca2771eb2b137bbfd5e259b38b44b5ff9817d9e9",
+      "contractAddress": "0xca2771eb2b137bbfd5e259b38b44b5ff9817d9e9",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/71",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xd63149fc85ea400db18da0a5e8e2a0e8bb7b64b1",
+      "contractAddress": "0xd63149fc85ea400db18da0a5e8e2a0e8bb7b64b1",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/72",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xd8163cca0a1f3704c93c20cf2fe974db770a7695",
+      "contractAddress": "0xd8163cca0a1f3704c93c20cf2fe974db770a7695",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/73",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xda270e006536009718ca21eac86bfa2bfeec8b2d",
+      "contractAddress": "0xda270e006536009718ca21eac86bfa2bfeec8b2d",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/74",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xdd2e30c43bd10b4546b67e47d2a4473c821ee31d",
+      "contractAddress": "0xdd2e30c43bd10b4546b67e47d2a4473c821ee31d",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/75",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xdfd99d61de60492210aafb22bf2c24408b6f54f5",
+      "contractAddress": "0xdfd99d61de60492210aafb22bf2c24408b6f54f5",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/76",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xe0709519519033300c01028401cdfe0ab6d2fa6c",
+      "contractAddress": "0xe0709519519033300c01028401cdfe0ab6d2fa6c",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/77",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xe132499880311b5d1dbe6c3a45402126eea05597",
+      "contractAddress": "0xe132499880311b5d1dbe6c3a45402126eea05597",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/78",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xe267043a08e299710783cf58a42624c5b661bda5",
+      "contractAddress": "0xe267043a08e299710783cf58a42624c5b661bda5",
+      "source": "spot",
+      "rawAmount": "39822106114340663536",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/79",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xe584dec61a182e49fe264940e88844920c9f6005",
+      "contractAddress": "0xe584dec61a182e49fe264940e88844920c9f6005",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/80",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xe70e0e706d59e5c9bbad57e5bcbc8fb3362891f8",
+      "contractAddress": "0xe70e0e706d59e5c9bbad57e5bcbc8fb3362891f8",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/81",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xea385fa52d4377360cdebc9395146605bfcc81d1",
+      "contractAddress": "0xea385fa52d4377360cdebc9395146605bfcc81d1",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/82",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xea435cce2ff482ee2e7b4e3795383f2ec2e2e8bc",
+      "contractAddress": "0xea435cce2ff482ee2e7b4e3795383f2ec2e2e8bc",
+      "source": "spot",
+      "rawAmount": "1000000000000000000",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/83",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xeac7e768d5f13d262182ab8e77f1678de53b1bc6",
+      "contractAddress": "0xeac7e768d5f13d262182ab8e77f1678de53b1bc6",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/84",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xeead9debe00b6ccaf669e2c203f5c3d7c33fd9e7",
+      "contractAddress": "0xeead9debe00b6ccaf669e2c203f5c3d7c33fd9e7",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/85",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xef0adbfcc0552f9b2cb1d2fe55600f0075c653ee",
+      "contractAddress": "0xef0adbfcc0552f9b2cb1d2fe55600f0075c653ee",
+      "source": "spot",
+      "rawAmount": "618000000000000000000",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/86",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xf17ac6912534f73dc572d97962cb9c9ba92bb9cf",
+      "contractAddress": "0xf17ac6912534f73dc572d97962cb9c9ba92bb9cf",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/87",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xf4152e1ecb4991a30208e04ad5003bd38b925313",
+      "contractAddress": "0xf4152e1ecb4991a30208e04ad5003bd38b925313",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/88",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xf7b957dd81890ae5a77b7b592252adc25fa48c5d",
+      "contractAddress": "0xf7b957dd81890ae5a77b7b592252adc25fa48c5d",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/89",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xf9de01f707a81d2cfb03e6f806ce744be02dac70",
+      "contractAddress": "0xf9de01f707a81d2cfb03e6f806ce744be02dac70",
+      "source": "spot",
+      "rawAmount": "39822106114340663536",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/90",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xfa2c3b559d6056343b8548420c95657a62ecfd0d",
+      "contractAddress": "0xfa2c3b559d6056343b8548420c95657a62ecfd0d",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/91",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xfaf87e196a29969094be35dfb0ab9d0b8518db84",
+      "contractAddress": "0xfaf87e196a29969094be35dfb0ab9d0b8518db84",
+      "source": "spot",
+      "rawAmount": "100",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/92",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 8453,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "8453:0xfdaa4c3d4372e5d123416c1ed4e9374292dd9307",
+      "contractAddress": "0xfdaa4c3d4372e5d123416c1ed4e9374292dd9307",
+      "source": "spot",
+      "rawAmount": "1",
+      "balanceRef": "balances.json#/chains/8453/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/93",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 42161,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "42161:0x513c7e3a9c69ca3e22550ef58ac1c0088e918fff",
+      "contractAddress": "0x513c7e3a9c69ca3e22550ef58ac1c0088e918fff",
+      "source": "spot",
+      "rawAmount": "113554609294",
+      "balanceRef": "balances.json#/chains/42161/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/0",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 42161,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "42161:0x6ab707aca953edaefbc4fd23ba73294241490620",
+      "contractAddress": "0x6ab707aca953edaefbc4fd23ba73294241490620",
+      "source": "spot",
+      "rawAmount": "55289660",
+      "balanceRef": "balances.json#/chains/42161/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/1",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 42161,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "42161:0x724dc807b04555b71ed48a6896b6f41593b8c637",
+      "contractAddress": "0x724dc807b04555b71ed48a6896b6f41593b8c637",
+      "source": "spot",
+      "rawAmount": "120188487",
+      "balanceRef": "balances.json#/chains/42161/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/2",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 43114,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "43114:0x82e64f49ed5ec1bc6e43dad4fc8af9bb3a2312ee",
+      "contractAddress": "0x82e64f49ed5ec1bc6e43dad4fc8af9bb3a2312ee",
+      "source": "spot",
+      "rawAmount": "2764255819719244349043876",
+      "balanceRef": "balances.json#/chains/43114/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/1",
+      "reason": "not_allowlisted"
+    },
+    {
+      "chainId": 43114,
+      "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+      "assetId": "43114:0xe50fa9b3c56ffb159cb0fca61f5c9d750e8128c8",
+      "contractAddress": "0xe50fa9b3c56ffb159cb0fca61f5c9d750e8128c8",
+      "source": "spot",
+      "rawAmount": "238499247378081881650",
+      "balanceRef": "balances.json#/chains/43114/0x22740deba78d5a0c24c58c740e3715ec29de1bfa/erc20/4",
+      "reason": "not_allowlisted"
     },
     {
       "chainId": 42161,
       "wallet": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
       "assetId": "42161:0x5979d7b546e38e414f7e9822514be443a4800529",
+      "contractAddress": "0x5979D7b546E38E414F7E9822514be443A4800529",
+      "source": "aave_v3",
+      "rawAmount": "113554609294",
       "reason": "below_dust"
     }
   ]

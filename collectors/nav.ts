@@ -23,7 +23,11 @@ interface ExcludedPosition {
   chainId: ChainId
   wallet: string
   assetId: string
-  reason: 'unpriced' | 'below_dust'
+  contractAddress: Address | null
+  source: 'native' | 'spot' | 'aave_v3'
+  rawAmount?: string
+  balanceRef?: string
+  reason: 'not_allowlisted' | 'collection_error' | 'unpriced' | 'below_dust'
 }
 
 interface NavPositionsFixture {
@@ -49,12 +53,41 @@ function decimalAmount(raw: bigint, decimals: number): string {
   return `${negative ? '-' : ''}${integer}${fraction ? `.${fraction}` : ''}`
 }
 
-function historicalPriceValue(value: unknown): string | null {
+function historicalPriceValue(value: unknown, targetTimestamp: string): string | null {
   if (!value || typeof value !== 'object') return null
   const data = (value as { data?: Array<{ value?: unknown; timestamp?: string }> }).data
   if (!Array.isArray(data) || data.length === 0) return null
-  const middle = data[Math.floor(data.length / 2)]?.value
-  return typeof middle === 'string' && Number.isFinite(Number(middle)) ? middle : null
+  const target = new Date(targetTimestamp).getTime()
+  const nearest = data
+    .filter((point) => typeof point.value === 'string' && point.timestamp)
+    .map((point) => ({
+      ...point,
+      distance: Math.abs(new Date(point.timestamp!).getTime() - target),
+    }))
+    .sort((a, b) => a.distance - b.distance)[0]
+  return typeof nearest?.value === 'string' && Number.isFinite(Number(nearest.value))
+    ? nearest.value
+    : null
+}
+
+// Prices and token units are multiplied as integers, with half-up rounding to
+// cents. This keeps the accounting output deterministic and avoids IEEE-754
+// drift even for large positions; Number is used only to validate price text.
+function usdValueCents(rawAmount: bigint, decimals: number, priceUsd: string): bigint {
+  const match = /^(\d+)(?:\.(\d+))?$/.exec(priceUsd)
+  if (!match) throw new Error(`Invalid USD price: ${priceUsd}`)
+  const fractional = match[2] ?? ''
+  const priceUnits = BigInt(`${match[1]}${fractional}`)
+  const denominator = 10n ** BigInt(decimals + fractional.length)
+  const numerator = rawAmount * priceUnits * 100n
+  return (numerator + denominator / 2n) / denominator
+}
+
+function formatUsdCents(cents: bigint): string {
+  const negative = cents < 0n
+  const absolute = negative ? -cents : cents
+  return `${negative ? '-' : ''}${absolute / 100n}.${(absolute % 100n)
+    .toString().padStart(2, '0')}`
 }
 
 export async function collectNavPositions(): Promise<NavPositionsFixture> {
@@ -72,34 +105,40 @@ export async function collectNavPositions(): Promise<NavPositionsFixture> {
   }): void {
     const { rawAmount, price, ...base } = input
     const amount = decimalAmount(rawAmount, base.decimals)
-    const priceUsd = historicalPriceValue(price)
+    const priceUsd = historicalPriceValue(price, prices.snapshotTimestamp)
     if (!priceUsd) {
       excluded.push({
         chainId: base.chainId,
         wallet: base.wallet,
         assetId: base.assetId,
+        contractAddress: base.contractAddress,
+        source: base.source,
+        rawAmount: rawAmount.toString(),
         reason: 'unpriced',
       })
       return
     }
-    const unsignedValue = Number(amount) * Number(priceUsd)
-    if (Math.abs(unsignedValue) < NAV_DUST_USD) {
+    const unsignedValueCents = usdValueCents(rawAmount, base.decimals, priceUsd)
+    if (unsignedValueCents < BigInt(Math.round(NAV_DUST_USD * 100))) {
       excluded.push({
         chainId: base.chainId,
         wallet: base.wallet,
         assetId: base.assetId,
+        contractAddress: base.contractAddress,
+        source: base.source,
+        rawAmount: rawAmount.toString(),
         reason: 'below_dust',
       })
       return
     }
-    const signedValue = base.positionType === 'liability'
-      ? -Math.abs(unsignedValue)
-      : Math.abs(unsignedValue)
+    const signedValueCents = base.positionType === 'liability'
+      ? -unsignedValueCents
+      : unsignedValueCents
     positions.push({
       ...base,
       amount,
       priceUsd,
-      valueUsd: signedValue.toFixed(2),
+      valueUsd: formatUsdCents(signedValueCents),
     })
   }
 
@@ -120,20 +159,46 @@ export async function collectNavPositions(): Promise<NavPositionsFixture> {
         price: prices.chains[chainId].native,
       })
 
-      for (const token of balance.erc20) {
+      for (const [tokenIndex, token] of balance.erc20.entries()) {
         const address = token.contractAddress.toLowerCase()
-        if (!NAV_TOKEN_ALLOWLIST[chainId][address] || !token.tokenBalanceDecimal) continue
+        const asset = NAV_TOKEN_ALLOWLIST[chainId][address]
+        const balanceRef = `balances.json#/chains/${chainId}/${wallet}/erc20/${tokenIndex}`
+        if (!asset) {
+          excluded.push({
+            chainId,
+            wallet,
+            assetId: `${chainId}:${address}`,
+            contractAddress: token.contractAddress,
+            source: 'spot',
+            rawAmount: token.tokenBalanceDecimal,
+            balanceRef,
+            reason: 'not_allowlisted',
+          })
+          continue
+        }
+        if (!token.tokenBalanceDecimal) {
+          excluded.push({
+            chainId,
+            wallet,
+            assetId: `${chainId}:${address}`,
+            contractAddress: token.contractAddress,
+            source: 'spot',
+            balanceRef,
+            reason: 'collection_error',
+          })
+          continue
+        }
         addPosition({
           chainId,
           wallet,
           assetId: `${chainId}:${address}`,
           contractAddress: token.contractAddress,
-          canonicalSymbol: token.asset.canonicalSymbol,
-          decimals: token.asset.decimals,
+          canonicalSymbol: asset.canonicalSymbol,
+          decimals: asset.decimals,
           source: 'spot',
           positionType: 'asset',
           rawAmount: BigInt(token.tokenBalanceDecimal),
-          price: prices.chains[chainId].tokens[token.contractAddress],
+          price: prices.chains[chainId].tokens[address],
         })
       }
     }
@@ -152,7 +217,7 @@ export async function collectNavPositions(): Promise<NavPositionsFixture> {
           canonicalSymbol: position.canonicalSymbol,
           decimals: position.decimals,
           source: 'aave_v3' as const,
-          price: prices.chains[chainId].tokens[position.underlyingAsset],
+          price: prices.chains[chainId].tokens[position.underlyingAsset.toLowerCase()],
         }
         const supplied = BigInt(position.currentATokenBalance)
         if (supplied > 0n) addPosition({
