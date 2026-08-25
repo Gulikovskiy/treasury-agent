@@ -18,6 +18,11 @@ export async function collectBalances(): Promise<BalancesFixture> {
 
   for (const chain of Object.values(CHAINS)) {
     const client = publicClient(chain.id)
+    const aaveVariableDebtTokens = new Map(
+      Object.values(chain.aave.ASSETS ?? {})
+        .filter((asset) => asset.V_TOKEN)
+        .map((asset) => [asset.V_TOKEN!.toLowerCase(), asset.UNDERLYING] as const),
+    )
     const blockNumber = BigInt(manifest.chains[chain.id].blockNumber)
     chains[chain.id] = {}
 
@@ -29,6 +34,7 @@ export async function collectBalances(): Promise<BalancesFixture> {
 
       for (const contractAddress of discovery.contracts) {
         try {
+          const debtUnderlying = aaveVariableDebtTokens.get(contractAddress.toLowerCase())
           const balance = await client.readContract({
             address: contractAddress,
             abi: ERC20_ABI,
@@ -48,12 +54,26 @@ export async function collectBalances(): Promise<BalancesFixture> {
 
           erc20.push({
             contractAddress,
+            positionType: debtUnderlying ? 'liability' : 'asset',
+            ...(debtUnderlying && {
+              protocol: 'aave_v3',
+              underlyingAsset: debtUnderlying,
+            }),
             tokenBalance: toHex(balance),
             tokenBalanceDecimal: balance.toString(),
             metadata,
           })
         } catch (error) {
-          erc20.push({ contractAddress, error: String(error) })
+          const debtUnderlying = aaveVariableDebtTokens.get(contractAddress.toLowerCase())
+          erc20.push({
+            contractAddress,
+            positionType: debtUnderlying ? 'liability' : 'asset',
+            ...(debtUnderlying && {
+              protocol: 'aave_v3',
+              underlyingAsset: debtUnderlying,
+            }),
+            error: String(error),
+          })
         }
       }
 

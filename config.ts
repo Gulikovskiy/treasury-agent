@@ -31,6 +31,10 @@ type AaveAddressBook = {
   COLLECTOR?: Address
   POOL_ADDRESSES_PROVIDER?: Address
   ORACLE?: Address
+  ASSETS?: Record<string, {
+    UNDERLYING: Address
+    V_TOKEN?: Address
+  }>
 }
 
 export interface ChainConfig {

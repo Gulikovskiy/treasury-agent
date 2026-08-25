@@ -99,6 +99,9 @@
           },
           {
             "contractAddress": "0x786dbff3f1292ae8f92ea68cf93c30b34b1ed04b",
+            "positionType": "liability",
+            "protocol": "aave_v3",
+            "underlyingAsset": "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
             "tokenBalance": "0x35eafec1e2f688805ee7f",
             "tokenBalanceDecimal": "4073925102535101603245695",
             "metadata": {

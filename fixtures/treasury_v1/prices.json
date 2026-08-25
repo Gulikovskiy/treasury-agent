@@ -93,9 +93,25 @@
         "0x53fdca91fd33b9131b5ceade42a3edbd9b38edff": {
           "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x53fdca91fd33b9131b5ceade42a3edbd9b38edff\"}}"
         },
-        "0x786dbff3f1292ae8f92ea68cf93c30b34b1ed04b": {
-          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x786dbff3f1292ae8f92ea68cf93c30b34b1ed04b\"}}"
-        },
+      "0x786dbff3f1292ae8f92ea68cf93c30b34b1ed04b": {
+        "network": "eth-mainnet",
+        "address": "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f",
+        "currency": "usd",
+        "data": [
+          {
+            "value": "0.9987325163",
+            "timestamp": "2026-08-24T14:00:00Z"
+          },
+          {
+            "value": "0.9987647182",
+            "timestamp": "2026-08-24T15:00:00Z"
+          },
+          {
+            "value": "0.9989007703",
+            "timestamp": "2026-08-24T16:00:00Z"
+          }
+        ]
+      },
         "0x83819bf7e906bcf57e9f5b20453a2eff43f3845c": {
           "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x83819bf7e906bcf57e9f5b20453a2eff43f3845c\"}}"
         },

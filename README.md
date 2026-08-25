@@ -10,7 +10,7 @@ The collector is TypeScript-first: run source directly with `tsx`, or compile it
 
 - `manifest.json` — snapshot timestamp + one pinned block per chain
 - `wallets.json` — treasury-controlled addresses by chain
-- `balances.json` — native + ERC-20 balances read at the pinned block
+- `balances.json` — native + ERC-20 balances read at the pinned block, with explicit asset/liability treatment
 - `transactions.json` — normal transactions, ERC-20 transfers, Alchemy transfers where supported, and receipts
 - `prices.json` — historical prices around the snapshot timestamp
 - `defi_positions.json` — Aave V3 user reserve state at the pinned block
@@ -72,6 +72,11 @@ It is intentionally a per-chain map rather than `ADDRESSES × CHAINS`, because t
 ## Why balances are collected in two stages
 
 `alchemy_getTokenBalances` is used only to discover ERC-20 contracts. For each discovered contract, the collector performs `balanceOf(wallet)` at the block pinned in `manifest.json`; native balances are read at that same block. This prevents current-head balances from leaking into a historical fixture.
+
+Aave variable-debt tokens are retained as raw ERC-20 evidence, but their balance
+records have `positionType: "liability"`, `protocol: "aave_v3"`, and the reserve's
+`underlyingAsset`. NAV consumers must subtract liabilities and must not also
+subtract the matching debt in `defi_positions.json`.
 
 ## Transactions
 

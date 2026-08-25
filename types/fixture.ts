@@ -42,6 +42,10 @@ export interface NativeBalanceFixture {
 
 export interface Erc20BalanceFixture {
   contractAddress: Address
+  /** Economic treatment for NAV. Debt-token balances are liabilities, not assets. */
+  positionType?: 'asset' | 'liability'
+  protocol?: string
+  underlyingAsset?: Address
   tokenBalance?: `0x${string}`
   tokenBalanceDecimal?: string
   metadata?: unknown
