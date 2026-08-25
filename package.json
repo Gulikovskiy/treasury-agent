@@ -1,0 +1,30 @@
+{
+  "name": "treasury-agent",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "collect": "tsx collect-all.ts",
+    "manifest": "tsx collectors/manifest.ts",
+    "balances": "tsx collectors/balances.ts",
+    "transactions": "tsx collectors/transactions.ts",
+    "prices": "tsx collectors/prices.ts",
+    "defi": "tsx collectors/defi-positions.ts",
+    "metadata": "tsx collectors/metadata.ts",
+    "labels": "tsx collectors/labels.ts"
+  },
+  "dependencies": {
+    "@aave-dao/aave-address-book": "4.66.0",
+    "dotenv": "17.2.2",
+    "viem": "2.55.19"
+  },
+  "devDependencies": {
+    "@types/node": "24.3.0",
+    "tsx": "4.20.5",
+    "typescript": "5.9.2"
+  }
+}
