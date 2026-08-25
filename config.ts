@@ -25,6 +25,22 @@ export const TREASURY_WALLETS = {
   8453: [EXAMPLE_TREASURY],
 } satisfies ChainMap<readonly Address[]>
 
+// Eval-only wallet identifiers from questions.jsonl. These are deliberate
+// non-address sentinels and must never be sent to an RPC or added to treasury
+// ownership lists.
+export const TEST_ADDRESSES = {
+  q25: {
+    wallet: '0xEmptyWalletAddress',
+    controlled: false,
+    behavior: 'empty_data',
+  },
+  q26: {
+    wallet: '0xExternalWallet',
+    controlled: false,
+    behavior: 'external_entity',
+  },
+} as const
+
 type AaveAddressBook = {
   AAVE_PROTOCOL_DATA_PROVIDER?: Address
   POOL?: Address

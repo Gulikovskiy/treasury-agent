@@ -1,8 +1,7 @@
 import type { Address } from 'viem'
-import { CHAINS, LOOKBACK_DAYS, TREASURY_WALLETS } from '../config.js'
+import { CHAINS, TREASURY_WALLETS } from '../config.js'
 import { collectManifest } from './manifest.js'
 import { getAssetTransfersAll, rpc, type AssetTransferPage } from '../lib/alchemy.js'
-import { blockAtOrBefore } from '../lib/blocks.js'
 import { fixturePath, isMain, writeJson } from '../lib/io.js'
 import {
   blockscoutErc20Transfers,
@@ -42,15 +41,12 @@ export interface TransactionsFixture {
 
 export async function collectTransactions(): Promise<TransactionsFixture> {
   const manifest = await collectManifest()
-  const fromTime = new Date(
-    new Date(manifest.snapshotTimestamp).getTime() - LOOKBACK_DAYS * 86_400_000,
-  ).toISOString()
+  const fromTime = manifest.historyFromTimestamp
 
   const chains = {} as ChainMap<Record<string, WalletTransactionsFixture>>
 
   for (const chain of Object.values(CHAINS)) {
-    const fromBlockInfo = await blockAtOrBefore(chain.id, fromTime)
-    const fromBlock = BigInt(fromBlockInfo.blockNumber)
+    const fromBlock = BigInt(manifest.chains[chain.id].historyFrom.blockNumber)
     const toBlock = BigInt(manifest.chains[chain.id].blockNumber)
     chains[chain.id] = {}
 

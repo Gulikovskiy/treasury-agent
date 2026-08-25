@@ -8,7 +8,7 @@ The collector is TypeScript-first: run source directly with `tsx`, or compile it
 
 `FIXTURE_DIR` receives:
 
-- `manifest.json` — snapshot timestamp + one pinned block per chain
+- `manifest.json` — snapshot metadata, pinned history ranges, source routing, NAV policy, and wallet-control evidence
 - `wallets.json` — treasury-controlled addresses by chain
 - `balances.json` — native + spot ERC-20 balances read at the pinned block
 - `transactions.json` — normal transactions, ERC-20 transfers, Alchemy transfers where supported, and receipts
@@ -69,6 +69,12 @@ export const TREASURY_WALLETS = {
 
 It is intentionally a per-chain map rather than `ADDRESSES × CHAINS`, because treasury-controlled addresses can differ by network.
 
+`TEST_ADDRESSES` contains the non-address sentinels used by q25/q26 in
+`questions.jsonl`. They are emitted under `wallets.json.testAddresses`, always
+have `controlled: false`, and are never passed to RPC collectors. q25 explicitly
+models empty data; q26 models an external entity that must not be attributed to
+the treasury.
+
 ## Why balances are collected in two stages
 
 `alchemy_getTokenBalances` is used only to discover ERC-20 contracts. For each discovered contract, the collector performs `balanceOf(wallet)` at the block pinned in `manifest.json`; native balances are read at that same block. This prevents current-head balances from leaking into a historical fixture.
@@ -87,9 +93,13 @@ duplicate DeFi position. This policy is machine-readable in
 The fixture preserves raw evidence instead of pre-classifying treasury semantics:
 
 1. normal account transactions for zero-value calls/calldata,
-2. ERC-20 transfer history,
+2. ERC-20 transfer history (Routescan on Ethereum/Avalanche; Blockscout on Arbitrum/Base),
 3. Alchemy asset transfers on configured supported chains,
 4. receipts for outgoing normal transactions so gas can be calculated exactly.
+
+Both ends of every transaction range are pinned in `manifest.json`: the snapshot
+block and `chains.<chainId>.historyFrom`. Transaction collection consumes those
+block numbers directly and performs no runtime lookback-block search.
 
 The downstream eval tool should infer bridge/internal-transfer/expense/DeFi-deposit semantics. The collector should not bake those conclusions into the raw fixture.
 
@@ -102,6 +112,20 @@ Bigints are written as decimal strings by `writeJson`, so fixture files remain o
 ## Labels
 
 Known Aave contracts are labeled from the pinned address-book dependency. Organization, exchange, vendor, payroll, or other labels should be explicitly added to `MANUAL_LABELS` in `config.ts`; do not infer EOA identity during collection.
+
+## Wallet control
+
+The configured treasury is a Safe proxy. Manifest collection reads its runtime
+code hash, version, owner set, and threshold at each chain's pinned block. The
+fixture also records whether the owner set and threshold match across chains;
+owner order is ignored. This verifies the on-chain control configuration rather
+than relying on the same address appearing on several networks.
+
+## Contract metadata
+
+`contracts.json` stores `runtimeCodeHash` and `runtimeCodeSize`, not deployed
+bytecode. The hash is Keccak-256 over the exact runtime code returned at the
+pinned block.
 
 ## Prices
 

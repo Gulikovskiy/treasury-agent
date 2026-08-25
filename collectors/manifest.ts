@@ -1,35 +1,141 @@
 import { basename } from 'node:path'
-import { CHAINS, FIXTURE_DIR, LOOKBACK_DAYS, TREASURY_WALLETS } from '../config.js'
+import { keccak256 } from 'viem'
+import {
+  CHAINS,
+  FIXTURE_DIR,
+  LOOKBACK_DAYS,
+  TEST_ADDRESSES,
+  TREASURY_WALLETS,
+} from '../config.js'
+import { SAFE_ABI } from '../lib/abis.js'
+import { publicClient } from '../lib/alchemy.js'
 import { blockAtOrBefore } from '../lib/blocks.js'
 import { exists, fixturePath, isMain, readJson, writeJson } from '../lib/io.js'
-import type { ChainMap, ChainSnapshot, FixtureManifest, WalletsFixture } from '../types/fixture.js'
+import type {
+  ChainMap,
+  ChainSnapshot,
+  FixtureManifest,
+  WalletOwnershipEvidence,
+  WalletsFixture,
+} from '../types/fixture.js'
 
 export async function collectManifest(): Promise<FixtureManifest> {
   const path = fixturePath('manifest.json')
+  const wallets: WalletsFixture = {
+    chains: TREASURY_WALLETS,
+    testAddresses: TEST_ADDRESSES,
+  }
   if (await exists(path) && process.env.RESET_SNAPSHOT !== '1') {
     console.log(`reusing pinned snapshot from ${path}`)
+    await writeJson(fixturePath('wallets.json'), wallets)
     return readJson<FixtureManifest>(path)
   }
 
   const requested = process.env.SNAPSHOT_TIMESTAMP
     ?? new Date(Date.now() - 5 * 60_000).toISOString()
+  const historyFromTimestamp = new Date(
+    new Date(requested).getTime() - LOOKBACK_DAYS * 86_400_000,
+  ).toISOString()
 
   const chains = {} as ChainMap<ChainSnapshot>
 
   for (const chain of Object.values(CHAINS)) {
     console.log(`pinning ${chain.name} at ${requested}`)
+    const [snapshot, historyFrom] = await Promise.all([
+      blockAtOrBefore(chain.id, requested),
+      blockAtOrBefore(chain.id, historyFromTimestamp),
+    ])
     chains[chain.id] = {
       chainId: chain.id,
       name: chain.name,
-      ...(await blockAtOrBefore(chain.id, requested)),
+      ...snapshot,
+      historyFrom,
+    }
+  }
+
+  const ownershipChains = {} as ChainMap<Record<string, WalletOwnershipEvidence>>
+  for (const chain of Object.values(CHAINS)) {
+    ownershipChains[chain.id] = {}
+    const client = publicClient(chain.id)
+    const blockNumber = BigInt(chains[chain.id].blockNumber)
+
+    for (const wallet of TREASURY_WALLETS[chain.id]) {
+      try {
+        const [code, owners, threshold, version] = await Promise.all([
+          client.getCode({ address: wallet, blockNumber }),
+          client.readContract({
+            address: wallet,
+            abi: SAFE_ABI,
+            functionName: 'getOwners',
+            blockNumber,
+          }),
+          client.readContract({
+            address: wallet,
+            abi: SAFE_ABI,
+            functionName: 'getThreshold',
+            blockNumber,
+          }),
+          client.readContract({
+            address: wallet,
+            abi: SAFE_ABI,
+            functionName: 'VERSION',
+            blockNumber,
+          }),
+        ])
+
+        if (!code || code === '0x') throw new Error('Configured treasury is not a contract')
+        ownershipChains[chain.id][wallet.toLowerCase()] = {
+          verified: true,
+          kind: 'safe',
+          blockNumber: blockNumber.toString(),
+          method: 'Safe getOwners/getThreshold/VERSION at pinned block',
+          runtimeCodeHash: keccak256(code),
+          owners: [...owners],
+          threshold: threshold.toString(),
+          version,
+        }
+      } catch (error) {
+        ownershipChains[chain.id][wallet.toLowerCase()] = {
+          verified: false,
+          kind: 'unverified',
+          blockNumber: blockNumber.toString(),
+          method: 'Safe getOwners/getThreshold/VERSION at pinned block',
+          error: String(error),
+        }
+      }
+    }
+  }
+
+  const crossChainConsistency: FixtureManifest['walletOwnership']['crossChainConsistency'] = {}
+  const configuredWallets = new Set(
+    Object.values(TREASURY_WALLETS).flat().map((wallet) => wallet.toLowerCase()),
+  )
+  for (const wallet of configuredWallets) {
+    const evidence = Object.values(CHAINS)
+      .filter((chain) => TREASURY_WALLETS[chain.id].some(
+        (candidate) => candidate.toLowerCase() === wallet,
+      ))
+      .map((chain) => ({
+        chainId: chain.id,
+        evidence: ownershipChains[chain.id][wallet],
+      }))
+    const configurations = evidence.map(({ evidence: item }) => item?.verified
+      ? `${[...(item.owners ?? [])].map((owner) => owner.toLowerCase()).sort().join(',')}:${item.threshold}`
+      : null)
+
+    crossChainConsistency[wallet] = {
+      chainIds: evidence.map(({ chainId }) => chainId),
+      ownerSetAndThresholdMatch: configurations.every(Boolean)
+        && new Set(configurations).size === 1,
     }
   }
 
   const manifest: FixtureManifest = {
     fixtureId: basename(FIXTURE_DIR),
-    schemaVersion: 2,
+    schemaVersion: 3,
     snapshotTimestamp: requested,
     lookbackDays: LOOKBACK_DAYS,
+    historyFromTimestamp,
     accountingPolicy: {
       nav: {
         spotBalanceSource: 'balances.json',
@@ -49,17 +155,29 @@ export async function collectManifest(): Promise<FixtureManifest> {
       },
     },
     chains,
+    walletOwnership: {
+      chains: ownershipChains,
+      crossChainConsistency,
+    },
     sources: {
       rpc: 'Alchemy JSON-RPC',
       tokenDiscovery: 'alchemy_getTokenBalances',
-      transactions: 'Alchemy Transfers API; Routescan account APIs',
+      transactions: {
+        accountHistory: {
+          1: 'Routescan',
+          43114: 'Routescan',
+          42161: 'Blockscout',
+          8453: 'Blockscout',
+        },
+        alchemyTransfers: [1, 42161, 8453],
+        receipts: 'Alchemy JSON-RPC',
+      },
       prices: 'Alchemy Historical Prices API',
       defi: 'Aave V3 ProtocolDataProvider at pinned block',
       aaveAddressBook: '@aave-dao/aave-address-book@4.66.0',
     },
   }
 
-  const wallets: WalletsFixture = { chains: TREASURY_WALLETS }
   await writeJson(path, manifest)
   await writeJson(fixturePath('wallets.json'), wallets)
   return manifest

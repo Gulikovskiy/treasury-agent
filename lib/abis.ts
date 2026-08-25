@@ -6,6 +6,12 @@ export const ERC20_ABI = parseAbi([
   'function symbol() view returns (string)',
 ])
 
+export const SAFE_ABI = parseAbi([
+  'function getOwners() view returns (address[])',
+  'function getThreshold() view returns (uint256)',
+  'function VERSION() view returns (string)',
+])
+
 export const AAVE_DATA_PROVIDER_ABI = [
   {
     type: 'function',

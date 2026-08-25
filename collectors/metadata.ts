@@ -1,4 +1,4 @@
-import type { Address, Hex } from 'viem'
+import { keccak256, type Address, type Hex } from 'viem'
 import { CHAINS } from '../config.js'
 import { collectManifest } from './manifest.js'
 import { getTokenMetadata, publicClient } from '../lib/alchemy.js'
@@ -8,7 +8,8 @@ import type { TransactionsFixture } from './transactions.js'
 
 interface ContractMetadataFixture {
   isContract?: boolean
-  codeHashInput?: Hex | null
+  runtimeCodeHash?: Hex | null
+  runtimeCodeSize?: number | null
   tokenMetadata?: unknown
   error?: string
 }
@@ -89,7 +90,8 @@ export async function collectMetadata(): Promise<ContractsFixture> {
 
         chainOut[address] = {
           isContract,
-          codeHashInput: isContract ? code ?? null : null,
+          runtimeCodeHash: isContract && code ? keccak256(code) : null,
+          runtimeCodeSize: isContract && code ? (code.length - 2) / 2 : null,
           tokenMetadata,
         }
       } catch (error) {

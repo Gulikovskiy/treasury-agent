@@ -10,8 +10,9 @@ import type { ChainId } from '../types/fixture.js'
 
 const BLOCKSCOUT_CHAIN_IDS = [42161, 8453] as const satisfies readonly ChainId[]
 
-const key = process.env.BLOCKSCOUT_API_KEY
-if (!key) throw new Error('BLOCKSCOUT_API_KEY is required')
+const configuredKey = process.env.BLOCKSCOUT_API_KEY
+if (!configuredKey) throw new Error('BLOCKSCOUT_API_KEY is required')
+const key: string = configuredKey
 const REQUEST_INTERVAL_MS = 1050
 
 let requestQueue = Promise.resolve()

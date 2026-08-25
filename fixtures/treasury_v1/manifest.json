@@ -1,8 +1,9 @@
 {
   "fixtureId": "treasury_v1",
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "snapshotTimestamp": "2026-08-24T15:00:00Z",
   "lookbackDays": 90,
+  "historyFromTimestamp": "2026-05-26T15:00:00.000Z",
   "accountingPolicy": {
     "nav": {
       "spotBalanceSource": "balances.json",
@@ -27,34 +28,146 @@
       "name": "ethereum",
       "blockNumber": "25825794",
       "blockHash": "0xc7f9969ca22535e9c706bc76eb73add9ddf391a634cdf03903c36780c9c7b490",
-      "blockTimestamp": "2026-08-24T14:59:59.000Z"
+      "blockTimestamp": "2026-08-24T14:59:59.000Z",
+      "historyFrom": {
+        "blockNumber": "25180248",
+        "blockHash": "0xb5653821770257e6180ea9b0b70cc772199eb839d743ab76e6234e64003b4b41",
+        "blockTimestamp": "2026-05-26T14:59:59.000Z"
+      }
     },
     "8453": {
       "chainId": 8453,
       "name": "base",
       "blockNumber": "50397126",
       "blockHash": "0x3e23c6afb89ac57306d0601513cd68a7c7898db2894615a020e78ab60c6619db",
-      "blockTimestamp": "2026-08-24T14:59:59.000Z"
+      "blockTimestamp": "2026-08-24T14:59:59.000Z",
+      "historyFrom": {
+        "blockNumber": "46509126",
+        "blockHash": "0xb87cf0b512f2aa4224b35d2d2d4731d31a0db65c8f5d8b36b1f86c5877aeee92",
+        "blockTimestamp": "2026-05-26T14:59:59.000Z"
+      }
     },
     "42161": {
       "chainId": 42161,
       "name": "arbitrum",
       "blockNumber": "497926604",
       "blockHash": "0x1852f8f552951076c02007c94b28963d28ce6754b3076b23196d4c35a53d1c19",
-      "blockTimestamp": "2026-08-24T15:00:00.000Z"
+      "blockTimestamp": "2026-08-24T15:00:00.000Z",
+      "historyFrom": {
+        "blockNumber": "466898740",
+        "blockHash": "0xc7dcaadd60742a444b48cdff64574faea977025e28da9447a2d9ca94dbd52e4b",
+        "blockTimestamp": "2026-05-26T15:00:00.000Z"
+      }
     },
     "43114": {
       "chainId": 43114,
       "name": "avalanche",
       "blockNumber": "93582550",
       "blockHash": "0xca13b2935d302278e986e5658769287556b71a1e8c8e333ddb8eea26d1aec63b",
-      "blockTimestamp": "2026-08-24T15:00:00.000Z"
+      "blockTimestamp": "2026-08-24T15:00:00.000Z",
+      "historyFrom": {
+        "blockNumber": "86427129",
+        "blockHash": "0x7adf612573f6386dcf59adb278902c48dd364eb8c02780fa668be1ab459d8303",
+        "blockTimestamp": "2026-05-26T15:00:00.000Z"
+      }
+    }
+  },
+  "walletOwnership": {
+    "chains": {
+      "1": {
+        "0x22740deba78d5a0c24c58c740e3715ec29de1bfa": {
+          "verified": true,
+          "kind": "safe",
+          "blockNumber": "25825794",
+          "method": "Safe getOwners/getThreshold/VERSION at pinned block",
+          "runtimeCodeHash": "0xb89c1b3bdf2cf8827818646bce9a8f6e372885f8c55e5c07acbd307cb133b000",
+          "owners": [
+            "0x9DE1d45e2786b03498289959203F25b29B4D1193",
+            "0x4b752551fC6345A7de82F76fd7a5015CA16d1a74",
+            "0xb291232F480F41c75802C4a60F1D2AC03404Afef"
+          ],
+          "threshold": "2",
+          "version": "1.4.1"
+        }
+      },
+      "8453": {
+        "0x22740deba78d5a0c24c58c740e3715ec29de1bfa": {
+          "verified": true,
+          "kind": "safe",
+          "blockNumber": "50397126",
+          "method": "Safe getOwners/getThreshold/VERSION at pinned block",
+          "runtimeCodeHash": "0xb89c1b3bdf2cf8827818646bce9a8f6e372885f8c55e5c07acbd307cb133b000",
+          "owners": [
+            "0x4b752551fC6345A7de82F76fd7a5015CA16d1a74",
+            "0x9DE1d45e2786b03498289959203F25b29B4D1193",
+            "0xb291232F480F41c75802C4a60F1D2AC03404Afef"
+          ],
+          "threshold": "2",
+          "version": "1.4.1"
+        }
+      },
+      "42161": {
+        "0x22740deba78d5a0c24c58c740e3715ec29de1bfa": {
+          "verified": true,
+          "kind": "safe",
+          "blockNumber": "497926604",
+          "method": "Safe getOwners/getThreshold/VERSION at pinned block",
+          "runtimeCodeHash": "0xb89c1b3bdf2cf8827818646bce9a8f6e372885f8c55e5c07acbd307cb133b000",
+          "owners": [
+            "0x9DE1d45e2786b03498289959203F25b29B4D1193",
+            "0x4b752551fC6345A7de82F76fd7a5015CA16d1a74",
+            "0xb291232F480F41c75802C4a60F1D2AC03404Afef"
+          ],
+          "threshold": "2",
+          "version": "1.4.1"
+        }
+      },
+      "43114": {
+        "0x22740deba78d5a0c24c58c740e3715ec29de1bfa": {
+          "verified": true,
+          "kind": "safe",
+          "blockNumber": "93582550",
+          "method": "Safe getOwners/getThreshold/VERSION at pinned block",
+          "runtimeCodeHash": "0xb89c1b3bdf2cf8827818646bce9a8f6e372885f8c55e5c07acbd307cb133b000",
+          "owners": [
+            "0x4b752551fC6345A7de82F76fd7a5015CA16d1a74",
+            "0x9DE1d45e2786b03498289959203F25b29B4D1193",
+            "0xb291232F480F41c75802C4a60F1D2AC03404Afef"
+          ],
+          "threshold": "2",
+          "version": "1.4.1"
+        }
+      }
+    },
+    "crossChainConsistency": {
+      "0x22740deba78d5a0c24c58c740e3715ec29de1bfa": {
+        "chainIds": [
+          1,
+          43114,
+          42161,
+          8453
+        ],
+        "ownerSetAndThresholdMatch": true
+      }
     }
   },
   "sources": {
     "rpc": "Alchemy JSON-RPC",
     "tokenDiscovery": "alchemy_getTokenBalances",
-    "transactions": "Alchemy Transfers API; Routescan account APIs",
+    "transactions": {
+      "accountHistory": {
+        "1": "Routescan",
+        "8453": "Blockscout",
+        "42161": "Blockscout",
+        "43114": "Routescan"
+      },
+      "alchemyTransfers": [
+        1,
+        42161,
+        8453
+      ],
+      "receipts": "Alchemy JSON-RPC"
+    },
     "prices": "Alchemy Historical Prices API",
     "defi": "Aave V3 ProtocolDataProvider at pinned block",
     "aaveAddressBook": "@aave-dao/aave-address-book@4.66.0"

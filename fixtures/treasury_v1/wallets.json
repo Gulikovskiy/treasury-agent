@@ -12,5 +12,17 @@
     "43114": [
       "0x22740deBa78d5a0c24C58C740e3715ec29de1bFa"
     ]
+  },
+  "testAddresses": {
+    "q25": {
+      "wallet": "0xEmptyWalletAddress",
+      "controlled": false,
+      "behavior": "empty_data"
+    },
+    "q26": {
+      "wallet": "0xExternalWallet",
+      "controlled": false,
+      "behavior": "external_entity"
+    }
   }
 }

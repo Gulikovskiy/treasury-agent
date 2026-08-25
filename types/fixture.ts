@@ -12,6 +12,23 @@ export interface ChainSnapshot {
   blockNumber: string
   blockHash: `0x${string}` | null
   blockTimestamp: string
+  historyFrom: {
+    blockNumber: string
+    blockHash: `0x${string}` | null
+    blockTimestamp: string
+  }
+}
+
+export interface WalletOwnershipEvidence {
+  verified: boolean
+  kind: 'safe' | 'unverified'
+  blockNumber: string
+  method: string
+  runtimeCodeHash?: `0x${string}`
+  owners?: Address[]
+  threshold?: string
+  version?: string
+  error?: string
 }
 
 export interface FixtureManifest {
@@ -19,6 +36,7 @@ export interface FixtureManifest {
   schemaVersion: number
   snapshotTimestamp: string
   lookbackDays: number
+  historyFromTimestamp: string
   accountingPolicy: {
     nav: {
       spotBalanceSource: 'balances.json'
@@ -32,10 +50,21 @@ export interface FixtureManifest {
     }
   }
   chains: ChainMap<ChainSnapshot>
+  walletOwnership: {
+    chains: ChainMap<Record<string, WalletOwnershipEvidence>>
+    crossChainConsistency: Record<string, {
+      chainIds: ChainId[]
+      ownerSetAndThresholdMatch: boolean
+    }>
+  }
   sources: {
     rpc: string
     tokenDiscovery: string
-    transactions: string
+    transactions: {
+      accountHistory: ChainMap<'Routescan' | 'Blockscout'>
+      alchemyTransfers: ChainId[]
+      receipts: 'Alchemy JSON-RPC'
+    }
     prices: string
     defi: string
     aaveAddressBook: string
@@ -44,6 +73,11 @@ export interface FixtureManifest {
 
 export interface WalletsFixture {
   chains: ChainMap<readonly Address[]>
+  testAddresses: Record<'q25' | 'q26', {
+    wallet: string
+    controlled: false
+    behavior: 'empty_data' | 'external_entity'
+  }>
 }
 
 export interface NativeBalanceFixture {
