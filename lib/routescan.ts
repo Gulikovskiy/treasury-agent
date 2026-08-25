@@ -37,7 +37,6 @@ async function etherscanAccount<T>(
 
   while (true) {
     const url = new URL(`https://api.routescan.io/v2/network/mainnet/evm/${chainId}/etherscan/api`)
-    // const url = new URL(`https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api\?module=account&action=balance\&address=0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae&tag=latest`)
     url.searchParams.set('module', 'account')
     url.searchParams.set('action', action)
     url.searchParams.set('page', String(page))

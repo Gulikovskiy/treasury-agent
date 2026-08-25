@@ -1,0 +1,607 @@
+{
+  "snapshotTimestamp": "2026-08-24T15:00:00Z",
+  "chains": {
+    "1": {
+      "native": {
+        "symbol": "ETH",
+        "currency": "usd",
+        "data": [
+          {
+            "value": "2497.0587695995",
+            "timestamp": "2026-08-24T14:00:00Z"
+          },
+          {
+            "value": "2515.0311425758",
+            "timestamp": "2026-08-24T15:00:00Z"
+          },
+          {
+            "value": "2490.7372277649",
+            "timestamp": "2026-08-24T16:00:00Z"
+          }
+        ]
+      },
+      "tokens": {
+        "0x00e2b6d170740c15bf9fb01d0b6e77c0d4510e32": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x00e2b6d170740c15bf9fb01d0b6e77c0d4510e32\"}}"
+        },
+        "0x16613999219f9b56bededbf3722e44c4c2045300": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x16613999219f9b56bededbf3722e44c4c2045300\"}}"
+        },
+        "0x18efe565a5373f430e2f809b97de30335b3ad96a": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x18efe565a5373f430e2f809b97de30335b3ad96a\"}}"
+        },
+        "0x1bab804803159ad84b8854581aa53ac72455614e": {
+          "network": "eth-mainnet",
+          "address": "0x1bab804803159ad84b8854581aa53ac72455614e",
+          "currency": "usd",
+          "data": [
+            {
+              "value": "0.009192395",
+              "timestamp": "2026-08-24T14:00:00Z"
+            },
+            {
+              "value": "0.0091877886",
+              "timestamp": "2026-08-24T15:00:00Z"
+            },
+            {
+              "value": "0.0091785841",
+              "timestamp": "2026-08-24T16:00:00Z"
+            }
+          ]
+        },
+        "0x2b591e99afe9f32eaa6214f7b7629768c40eeb39": {
+          "network": "eth-mainnet",
+          "address": "0x2b591e99afe9f32eaa6214f7b7629768c40eeb39",
+          "currency": "usd",
+          "data": [
+            {
+              "value": "0.0015394426",
+              "timestamp": "2026-08-24T14:00:00Z"
+            },
+            {
+              "value": "0.0015123922",
+              "timestamp": "2026-08-24T15:00:00Z"
+            },
+            {
+              "value": "0.0015244192",
+              "timestamp": "2026-08-24T16:00:00Z"
+            }
+          ]
+        },
+        "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f": {
+          "network": "eth-mainnet",
+          "address": "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f",
+          "currency": "usd",
+          "data": [
+            {
+              "value": "0.9987325163",
+              "timestamp": "2026-08-24T14:00:00Z"
+            },
+            {
+              "value": "0.9987647182",
+              "timestamp": "2026-08-24T15:00:00Z"
+            },
+            {
+              "value": "0.9989007703",
+              "timestamp": "2026-08-24T16:00:00Z"
+            }
+          ]
+        },
+        "0x43afe27f3b7c12ff1c36c7721d5a5bdbc34758f3": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x43afe27f3b7c12ff1c36c7721d5a5bdbc34758f3\"}}"
+        },
+        "0x53fdca91fd33b9131b5ceade42a3edbd9b38edff": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x53fdca91fd33b9131b5ceade42a3edbd9b38edff\"}}"
+        },
+        "0x786dbff3f1292ae8f92ea68cf93c30b34b1ed04b": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x786dbff3f1292ae8f92ea68cf93c30b34b1ed04b\"}}"
+        },
+        "0x83819bf7e906bcf57e9f5b20453a2eff43f3845c": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x83819bf7e906bcf57e9f5b20453a2eff43f3845c\"}}"
+        },
+        "0x98c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c": {
+          "network": "eth-mainnet",
+          "address": "0x98c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c",
+          "currency": "usd",
+          "data": [
+            {
+              "value": "0.99986388",
+              "timestamp": "2026-08-24T14:00:00Z"
+            },
+            {
+              "value": "0.99986388",
+              "timestamp": "2026-08-24T15:00:00Z"
+            },
+            {
+              "value": "0.99986388",
+              "timestamp": "2026-08-24T16:00:00Z"
+            }
+          ]
+        },
+        "0xa3e7833775a9cc022db2c72eb900378f90ce89b4": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0xa3e7833775a9cc022db2c72eb900378f90ce89b4\"}}"
+        },
+        "0xa4c6984e817c086ddc3ebaeedbdcc01469586918": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0xa4c6984e817c086ddc3ebaeedbdcc01469586918\"}}"
+        },
+        "0xa700b4eb416be35b2911fd5dee80678ff64ff6c9": {
+          "network": "eth-mainnet",
+          "address": "0xa700b4eb416be35b2911fd5dee80678ff64ff6c9",
+          "currency": "usd",
+          "data": [
+            {
+              "value": "134.9674",
+              "timestamp": "2026-08-24T14:00:00Z"
+            },
+            {
+              "value": "136.35244439",
+              "timestamp": "2026-08-24T15:00:00Z"
+            },
+            {
+              "value": "134.91364",
+              "timestamp": "2026-08-24T16:00:00Z"
+            }
+          ]
+        },
+        "0xd3e8695d2bef061eab38b5ef526c0f714108119c": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0xd3e8695d2bef061eab38b5ef526c0f714108119c\"}}"
+        },
+        "0xdb25f211ab05b1c97d595516f45794528a807ad8": {
+          "network": "eth-mainnet",
+          "address": "0xdb25f211ab05b1c97d595516f45794528a807ad8",
+          "currency": "usd",
+          "data": [
+            {
+              "value": "1.2027129244",
+              "timestamp": "2026-08-24T15:00:00Z"
+            },
+            {
+              "value": "1.2025934158",
+              "timestamp": "2026-08-24T16:00:00Z"
+            }
+          ]
+        },
+        "0xf82d598ce6fce9f2d46f046fc46653e3284040aa": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0xf82d598ce6fce9f2d46f046fc46653e3284040aa\"}}"
+        }
+      }
+    },
+    "8453": {
+      "native": {
+        "symbol": "ETH",
+        "currency": "usd",
+        "data": [
+          {
+            "value": "2497.0587695995",
+            "timestamp": "2026-08-24T14:00:00Z"
+          },
+          {
+            "value": "2515.0311425758",
+            "timestamp": "2026-08-24T15:00:00Z"
+          },
+          {
+            "value": "2490.7372277649",
+            "timestamp": "2026-08-24T16:00:00Z"
+          }
+        ]
+      },
+      "tokens": {
+        "0x05b38ae87331a0f113b6d6694fab70dfc56f40a2": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x05b38ae87331a0f113b6d6694fab70dfc56f40a2\"}}"
+        },
+        "0x067ae75628177fd257c2b1e500993e1a0babcbd1": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x067ae75628177fd257c2b1e500993e1a0babcbd1\"}}"
+        },
+        "0x07d15798a67253d76cea61f0ea6f57aedc59dffb": {
+          "network": "base-mainnet",
+          "address": "0x07d15798a67253d76cea61f0ea6f57aedc59dffb",
+          "currency": "usd",
+          "data": [
+            {
+              "value": "0.0000028527",
+              "timestamp": "2026-08-24T14:00:00Z"
+            },
+            {
+              "value": "0.0000028729",
+              "timestamp": "2026-08-24T15:00:00Z"
+            },
+            {
+              "value": "0.0000028658",
+              "timestamp": "2026-08-24T16:00:00Z"
+            }
+          ]
+        },
+        "0x0b873b3214c76bb29fc4ce164497b88a5b6e67f6": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x0b873b3214c76bb29fc4ce164497b88a5b6e67f6\"}}"
+        },
+        "0x112921370c1b8eb3f296f90d7c3086b34ca29446": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x112921370c1b8eb3f296f90d7c3086b34ca29446\"}}"
+        },
+        "0x13c9c2305965641024069f22350d23dcb837237b": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x13c9c2305965641024069f22350d23dcb837237b\"}}"
+        },
+        "0x13ced7f82072327a5bc9ebb9437304f605e253b2": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x13ced7f82072327a5bc9ebb9437304f605e253b2\"}}"
+        },
+        "0x158a07d7b2e76d37d9e88bf1681fc2695c32715d": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x158a07d7b2e76d37d9e88bf1681fc2695c32715d\"}}"
+        },
+        "0x182214259d6a36db5dad514f4e737afb2dec816d": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x182214259d6a36db5dad514f4e737afb2dec816d\"}}"
+        },
+        "0x1be50e8c9cd7a797bfb2392cc0ab84dbbe09f7fb": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x1be50e8c9cd7a797bfb2392cc0ab84dbbe09f7fb\"}}"
+        },
+        "0x1c58ea20c133a71d3bd08cad23984558a57e0fc2": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x1c58ea20c133a71d3bd08cad23984558a57e0fc2\"}}"
+        },
+        "0x20f446806d5636d1d38817d082754dc51476af5c": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x20f446806d5636d1d38817d082754dc51476af5c\"}}"
+        },
+        "0x215b01b32cfa0fdb04bd60e0bc7a3e80589d34cf": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x215b01b32cfa0fdb04bd60e0bc7a3e80589d34cf\"}}"
+        },
+        "0x234db7de3f8bd97fa00da767e0f67256377be688": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x234db7de3f8bd97fa00da767e0f67256377be688\"}}"
+        },
+        "0x24dbba447dfc01185762e1cdd51ff6d6a813fc86": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x24dbba447dfc01185762e1cdd51ff6d6a813fc86\"}}"
+        },
+        "0x24e8c42c62df54d5122cc5c1edd74f7ba1931520": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x24e8c42c62df54d5122cc5c1edd74f7ba1931520\"}}"
+        },
+        "0x268f2f00b8a181b9322c61772be19d3c5032b435": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x268f2f00b8a181b9322c61772be19d3c5032b435\"}}"
+        },
+        "0x289d874d6d3ed6569fd7c0b03b7c3b25dbb60cf2": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x289d874d6d3ed6569fd7c0b03b7c3b25dbb60cf2\"}}"
+        },
+        "0x29fd86c905ddbbcecf4377e90bdeb0ad0c322cb7": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x29fd86c905ddbbcecf4377e90bdeb0ad0c322cb7\"}}"
+        },
+        "0x36fa9cf0ccb9c594b74231073790f62044e7f681": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x36fa9cf0ccb9c594b74231073790f62044e7f681\"}}"
+        },
+        "0x373f019d535a34f33b263803bb73fc1cdab694e0": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x373f019d535a34f33b263803bb73fc1cdab694e0\"}}"
+        },
+        "0x39cb303dabf7195a623b9156633d42c2e3fe8609": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x39cb303dabf7195a623b9156633d42c2e3fe8609\"}}"
+        },
+        "0x3b30669ccd34a0978ff5bac17f7d275cfedf358e": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x3b30669ccd34a0978ff5bac17f7d275cfedf358e\"}}"
+        },
+        "0x3ff0560e81e36c9390b7d8903e510defc7e433ca": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x3ff0560e81e36c9390b7d8903e510defc7e433ca\"}}"
+        },
+        "0x40211d8fea6c75c4e670615ecc2039c63fb0d8d2": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x40211d8fea6c75c4e670615ecc2039c63fb0d8d2\"}}"
+        },
+        "0x41a0e0437e2906abd15c4878f4e7d6371167a4a5": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x41a0e0437e2906abd15c4878f4e7d6371167a4a5\"}}"
+        },
+        "0x42036d129cd0af0e44570731cbe8354350785ef8": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x42036d129cd0af0e44570731cbe8354350785ef8\"}}"
+        },
+        "0x4290ec58920e8804fcbb2156329396cf82737eeb": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x4290ec58920e8804fcbb2156329396cf82737eeb\"}}"
+        },
+        "0x454dd5a557375295134c4859f853196f5fb8e144": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x454dd5a557375295134c4859f853196f5fb8e144\"}}"
+        },
+        "0x49d687ecab7df32265325538e9cb28031f191556": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x49d687ecab7df32265325538e9cb28031f191556\"}}"
+        },
+        "0x5048cab7c4dcc9211b5363f6666824fdd1619819": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x5048cab7c4dcc9211b5363f6666824fdd1619819\"}}"
+        },
+        "0x5345a70e247748979c8b59a0db42f4ed913b1334": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x5345a70e247748979c8b59a0db42f4ed913b1334\"}}"
+        },
+        "0x55cdcf24515c5d39b2545dfa29f55cdcd6a815ad": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x55cdcf24515c5d39b2545dfa29f55cdcd6a815ad\"}}"
+        },
+        "0x588ed47a681b6ff38a5a4f185e004b458f8106ef": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x588ed47a681b6ff38a5a4f185e004b458f8106ef\"}}"
+        },
+        "0x5d845fe04e28ccf79b204cb3b8f48641baf93199": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x5d845fe04e28ccf79b204cb3b8f48641baf93199\"}}"
+        },
+        "0x5e119c7c8ffc6c927b4122ef4ff511ea1aaddb97": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x5e119c7c8ffc6c927b4122ef4ff511ea1aaddb97\"}}"
+        },
+        "0x5e730f83d72a76cc8602f6f83e322629e2443f80": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x5e730f83d72a76cc8602f6f83e322629e2443f80\"}}"
+        },
+        "0x6207f1af1f45f19107fa6afade1e85a65bf25c6a": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x6207f1af1f45f19107fa6afade1e85a65bf25c6a\"}}"
+        },
+        "0x63272cd2f76be73219b68ab5f775db5eeb4a8f6e": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x63272cd2f76be73219b68ab5f775db5eeb4a8f6e\"}}"
+        },
+        "0x65755ed15ea1285172db2bca5b8af93e1fccf31f": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x65755ed15ea1285172db2bca5b8af93e1fccf31f\"}}"
+        },
+        "0x65eec38a7af4e847e853dc5a56e15f75bdce95f7": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x65eec38a7af4e847e853dc5a56e15f75bdce95f7\"}}"
+        },
+        "0x6abc46cb32d8dff95b0af7b746a2fa5d0d8b25ae": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x6abc46cb32d8dff95b0af7b746a2fa5d0d8b25ae\"}}"
+        },
+        "0x718dfc2e31934b94f19add0cc272fe7be8cf572a": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x718dfc2e31934b94f19add0cc272fe7be8cf572a\"}}"
+        },
+        "0x742e682ee9460f4f4c0ef624cd5023cf20ce0d06": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x742e682ee9460f4f4c0ef624cd5023cf20ce0d06\"}}"
+        },
+        "0x75e5c9689495a857dc13dcd5fa5fcf641fa2dccb": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x75e5c9689495a857dc13dcd5fa5fcf641fa2dccb\"}}"
+        },
+        "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913": {
+          "network": "base-mainnet",
+          "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "currency": "usd",
+          "data": [
+            {
+              "value": "0.9997984016",
+              "timestamp": "2026-08-24T14:00:00Z"
+            },
+            {
+              "value": "0.9998422018",
+              "timestamp": "2026-08-24T15:00:00Z"
+            },
+            {
+              "value": "0.9999217042",
+              "timestamp": "2026-08-24T16:00:00Z"
+            }
+          ]
+        },
+        "0x857fa5b01b5452ee69e1a254bd04197e46703b90": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x857fa5b01b5452ee69e1a254bd04197e46703b90\"}}"
+        },
+        "0x8af8c1ab8186bbc201a5a4a0f45d63ee6e96d57c": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x8af8c1ab8186bbc201a5a4a0f45d63ee6e96d57c\"}}"
+        },
+        "0x8c7efd01fa59f7228b5168413088db25041f7d4a": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x8c7efd01fa59f7228b5168413088db25041f7d4a\"}}"
+        },
+        "0x90a5788e5beee076c26b962908be67c7640dfdc7": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x90a5788e5beee076c26b962908be67c7640dfdc7\"}}"
+        },
+        "0x911e13a63b7ed0e4ed38dbebc1bbf8027f2c5699": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x911e13a63b7ed0e4ed38dbebc1bbf8027f2c5699\"}}"
+        },
+        "0x9227a86cfc950783810a84aa13fb8980bc30830b": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x9227a86cfc950783810a84aa13fb8980bc30830b\"}}"
+        },
+        "0x977d49d6c0b0008c07025ddaea2dd906cc5b5db1": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x977d49d6c0b0008c07025ddaea2dd906cc5b5db1\"}}"
+        },
+        "0x993d713926edff2b19b0899b5a3b911f124aedd6": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x993d713926edff2b19b0899b5a3b911f124aedd6\"}}"
+        },
+        "0x99cbc45ea5bb7ef3a5bc08fb1b7e56bb2442ef0d": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x99cbc45ea5bb7ef3a5bc08fb1b7e56bb2442ef0d\"}}"
+        },
+        "0x9dcad047f20ec7750ac9de87837b209261960d1c": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0x9dcad047f20ec7750ac9de87837b209261960d1c\"}}"
+        },
+        "0xa1ca6299ba48366af1845a9a8ae59b87ff0d5c01": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0xa1ca6299ba48366af1845a9a8ae59b87ff0d5c01\"}}"
+        },
+        "0xa3415b7bee1a6942c64bc9752896a074069b580b": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0xa3415b7bee1a6942c64bc9752896a074069b580b\"}}"
+        },
+        "0xa91e1fa3dd9861eed4e86f5f3cdf8085df2db810": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0xa91e1fa3dd9861eed4e86f5f3cdf8085df2db810\"}}"
+        },
+        "0xab3d4c02e1361ca799dbbaaa98c84b7d0233e9e0": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0xab3d4c02e1361ca799dbbaaa98c84b7d0233e9e0\"}}"
+        },
+        "0xac8584710490fbb73d03e863fb6d74ac917134c4": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0xac8584710490fbb73d03e863fb6d74ac917134c4\"}}"
+        },
+        "0xad03e2e457ebe290f364c9aa8133dcd0cda30c4e": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0xad03e2e457ebe290f364c9aa8133dcd0cda30c4e\"}}"
+        },
+        "0xb03f237a6ae3860eab575aff3e329a9092a5c975": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Token not found: 0xb03f237a6ae3860eab575aff3e329a9092a5c975\"}}"
+        },
+        "0xb5314bb0074071b8da6e552b4f9a081f227553f6": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        },
+        "0xb5796ddf28dd1e52b69742cbbd041c9616d8d1cf": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        },
+        "0xb9e5e7296466c7daea8133289fbb29e493e72956": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        },
+        "0xbd1f1776472d4e5125a08d33ce7f38a63deb471c": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        },
+        "0xbdb9300b7cde636d9cd4aff00f6f009ffbbc8ee6": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        },
+        "0xc10ddf977778cfc3f0368cc4c27ba783fdbd019e": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        },
+        "0xc206eff912c71f4383b974ea745af2bbd721daa2": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        },
+        "0xca21091ffa0f3af00191686f553aae6848ee75b8": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        },
+        "0xca2771eb2b137bbfd5e259b38b44b5ff9817d9e9": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        },
+        "0xd63149fc85ea400db18da0a5e8e2a0e8bb7b64b1": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        },
+        "0xd8163cca0a1f3704c93c20cf2fe974db770a7695": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        },
+        "0xda270e006536009718ca21eac86bfa2bfeec8b2d": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        },
+        "0xdd2e30c43bd10b4546b67e47d2a4473c821ee31d": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        },
+        "0xdfd99d61de60492210aafb22bf2c24408b6f54f5": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        },
+        "0xe0709519519033300c01028401cdfe0ab6d2fa6c": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        },
+        "0xe132499880311b5d1dbe6c3a45402126eea05597": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        },
+        "0xe267043a08e299710783cf58a42624c5b661bda5": {
+          "error": "SyntaxError: Unexpected end of JSON input"
+        },
+        "0xe584dec61a182e49fe264940e88844920c9f6005": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        },
+        "0xe70e0e706d59e5c9bbad57e5bcbc8fb3362891f8": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        },
+        "0xea385fa52d4377360cdebc9395146605bfcc81d1": {
+          "error": "SyntaxError: Unexpected end of JSON input"
+        },
+        "0xea435cce2ff482ee2e7b4e3795383f2ec2e2e8bc": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        },
+        "0xeac7e768d5f13d262182ab8e77f1678de53b1bc6": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        },
+        "0xeead9debe00b6ccaf669e2c203f5c3d7c33fd9e7": {
+          "error": "SyntaxError: Unexpected end of JSON input"
+        },
+        "0xef0adbfcc0552f9b2cb1d2fe55600f0075c653ee": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        },
+        "0xf17ac6912534f73dc572d97962cb9c9ba92bb9cf": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        },
+        "0xf4152e1ecb4991a30208e04ad5003bd38b925313": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        },
+        "0xf7b957dd81890ae5a77b7b592252adc25fa48c5d": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        },
+        "0xf9de01f707a81d2cfb03e6f806ce744be02dac70": {
+          "error": "SyntaxError: Unexpected end of JSON input"
+        },
+        "0xfa2c3b559d6056343b8548420c95657a62ecfd0d": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        },
+        "0xfaf87e196a29969094be35dfb0ab9d0b8518db84": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        },
+        "0xfdaa4c3d4372e5d123416c1ed4e9374292dd9307": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        }
+      }
+    },
+    "42161": {
+      "native": {
+        "error": "SyntaxError: Unexpected end of JSON input"
+      },
+      "tokens": {
+        "0x513c7e3a9c69ca3e22550ef58ac1c0088e918fff": {
+          "error": "SyntaxError: Unexpected end of JSON input"
+        },
+        "0x6ab707aca953edaefbc4fd23ba73294241490620": {
+          "error": "SyntaxError: Unexpected end of JSON input"
+        },
+        "0x724dc807b04555b71ed48a6896b6f41593b8c637": {
+          "network": "arb-mainnet",
+          "address": "0x724dc807b04555b71ed48a6896b6f41593b8c637",
+          "currency": "usd",
+          "data": [
+            {
+              "value": "0.99986388",
+              "timestamp": "2026-08-24T14:00:00Z"
+            },
+            {
+              "value": "0.99986388",
+              "timestamp": "2026-08-24T15:00:00Z"
+            },
+            {
+              "value": "0.99986388",
+              "timestamp": "2026-08-24T16:00:00Z"
+            }
+          ]
+        }
+      }
+    },
+    "43114": {
+      "native": {
+        "symbol": "AVAX",
+        "currency": "usd",
+        "data": [
+          {
+            "value": "7.5239818611",
+            "timestamp": "2026-08-24T14:00:00Z"
+          },
+          {
+            "value": "7.5798025536",
+            "timestamp": "2026-08-24T15:00:00Z"
+          },
+          {
+            "value": "7.5524693036",
+            "timestamp": "2026-08-24T16:00:00Z"
+          }
+        ]
+      },
+      "tokens": {
+        "0x152b9d0fdc40c096757f570a51e494bd4b943e50": {
+          "network": "avax-mainnet",
+          "address": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+          "currency": "usd",
+          "data": [
+            {
+              "value": "78767.5991039707",
+              "timestamp": "2026-08-24T14:00:00Z"
+            },
+            {
+              "value": "79504.1700184063",
+              "timestamp": "2026-08-24T15:00:00Z"
+            },
+            {
+              "value": "79264.292237504",
+              "timestamp": "2026-08-24T16:00:00Z"
+            }
+          ]
+        },
+        "0x82e64f49ed5ec1bc6e43dad4fc8af9bb3a2312ee": {
+          "error": "SyntaxError: Unexpected end of JSON input"
+        },
+        "0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664": {
+          "network": "avax-mainnet",
+          "address": "0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664",
+          "currency": "usd",
+          "data": [
+            {
+              "value": "0.9997984016",
+              "timestamp": "2026-08-24T14:00:00Z"
+            },
+            {
+              "value": "0.9998422018",
+              "timestamp": "2026-08-24T15:00:00Z"
+            },
+            {
+              "value": "0.9999217042",
+              "timestamp": "2026-08-24T16:00:00Z"
+            }
+          ]
+        },
+        "0xc7198437980c041c805a1edcba50c1ce5db95118": {
+          "error": "Error: Alchemy Prices API failed: {\"error\":{\"message\":\"Your free app has exceeded its limit of 300 token_price requests per 1 hours. Please upgrade or contact support for additional quota.\"}}"
+        },
+        "0xe50fa9b3c56ffb159cb0fca61f5c9d750e8128c8": {
+          "error": "SyntaxError: Unexpected end of JSON input"
+        }
+      }
+    }
+  }
+}

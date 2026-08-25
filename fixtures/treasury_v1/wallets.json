@@ -1,0 +1,16 @@
+{
+  "chains": {
+    "1": [
+      "0x22740deBa78d5a0c24C58C740e3715ec29de1bFa"
+    ],
+    "8453": [
+      "0x22740deBa78d5a0c24C58C740e3715ec29de1bFa"
+    ],
+    "42161": [
+      "0x22740deBa78d5a0c24C58C740e3715ec29de1bFa"
+    ],
+    "43114": [
+      "0x22740deBa78d5a0c24C58C740e3715ec29de1bFa"
+    ]
+  }
+}

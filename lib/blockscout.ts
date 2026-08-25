@@ -8,12 +8,11 @@ import type {
 } from './account-history.js'
 import type { ChainId } from '../types/fixture.js'
 
-const BLOCKSCOUT_HOSTS = {
-  42161: 'arbitrum.blockscout.com',
-  8453: 'base.blockscout.com',
-} as const satisfies Partial<Record<ChainId, string>>
+const BLOCKSCOUT_CHAIN_IDS = [42161, 8453] as const satisfies readonly ChainId[]
 
-const REQUEST_INTERVAL_MS = 250
+const key = process.env.BLOCKSCOUT_API_KEY
+if (!key) throw new Error('BLOCKSCOUT_API_KEY is required')
+const REQUEST_INTERVAL_MS = 1050
 
 let requestQueue = Promise.resolve()
 let lastRequestStartedAt = 0
@@ -35,8 +34,8 @@ async function blockscoutAccount<T>(
   address: Address,
   { fromBlock, toBlock }: AccountHistoryRange,
 ): Promise<AccountHistoryResult<T>> {
-  const host = BLOCKSCOUT_HOSTS[chainId as keyof typeof BLOCKSCOUT_HOSTS]
-  if (!host) throw new Error(`Blockscout is not configured for chain ${chainId}`)
+  if (!(BLOCKSCOUT_CHAIN_IDS as readonly ChainId[]).includes(chainId))
+    throw new Error(`Blockscout is not configured for chain ${chainId}`)
 
   const all: T[] = []
   const pages: AccountPage<T>[] = []
@@ -44,7 +43,8 @@ async function blockscoutAccount<T>(
   let page = 1
 
   while (true) {
-    const url = new URL(`https://${host}/api`)
+    const url = new URL('https://api.blockscout.com/v2/api')
+    url.searchParams.set('chain_id', String(chainId))
     url.searchParams.set('module', 'account')
     url.searchParams.set('action', action)
     url.searchParams.set('address', address)
@@ -53,6 +53,7 @@ async function blockscoutAccount<T>(
     url.searchParams.set('page', String(page))
     url.searchParams.set('offset', String(offset))
     url.searchParams.set('sort', 'asc')
+    url.searchParams.set('apikey', key)
 
     await waitForRateLimit()
     const response = await fetch(url)

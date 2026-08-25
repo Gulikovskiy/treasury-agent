@@ -1,0 +1,181 @@
+{
+  "protocols": {
+    "aave_v3": {
+      "1": {
+        "dataProvider": "0x0a16f2FCC0D44FaE41cc54e079281D84A363bECD",
+        "blockNumber": "25825794",
+        "wallets": {
+          "0x22740deba78d5a0c24c58c740e3715ec29de1bfa": [
+            {
+              "symbol": "USDC",
+              "underlyingAsset": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+              "currentATokenBalance": "1278966539617",
+              "currentStableDebt": "0",
+              "currentVariableDebt": "0",
+              "principalStableDebt": "0",
+              "scaledVariableDebt": "0",
+              "stableBorrowRate": "0",
+              "liquidityRate": "38850006919935541257015250",
+              "stableRateLastUpdated": 0,
+              "usageAsCollateralEnabled": true
+            },
+            {
+              "symbol": "AAVE",
+              "underlyingAsset": "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
+              "currentATokenBalance": "240502341729069193528383",
+              "currentStableDebt": "0",
+              "currentVariableDebt": "0",
+              "principalStableDebt": "0",
+              "scaledVariableDebt": "0",
+              "stableBorrowRate": "0",
+              "liquidityRate": "0",
+              "stableRateLastUpdated": 0,
+              "usageAsCollateralEnabled": true
+            },
+            {
+              "symbol": "GHO",
+              "underlyingAsset": "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
+              "currentATokenBalance": "0",
+              "currentStableDebt": "0",
+              "currentVariableDebt": "4073925102535101603245695",
+              "principalStableDebt": "0",
+              "scaledVariableDebt": "3402266603264254823332521",
+              "stableBorrowRate": "0",
+              "liquidityRate": "0",
+              "stableRateLastUpdated": 0,
+              "usageAsCollateralEnabled": false
+            }
+          ]
+        }
+      },
+      "8453": {
+        "dataProvider": "0x0F43731EB8d45A581f4a36DD74F5f358bc90C73A",
+        "blockNumber": "50397126",
+        "wallets": {
+          "0x22740deba78d5a0c24c58c740e3715ec29de1bfa": [
+            {
+              "symbol": "wstETH",
+              "underlyingAsset": "0xc1CBa3fCea344f92D9239c08C0568f6F2F0ee452",
+              "currentATokenBalance": "242947107654627286",
+              "currentStableDebt": "0",
+              "currentVariableDebt": "0",
+              "principalStableDebt": "0",
+              "scaledVariableDebt": "0",
+              "stableBorrowRate": "0",
+              "liquidityRate": "5279994845782594123790",
+              "stableRateLastUpdated": 0,
+              "usageAsCollateralEnabled": false
+            },
+            {
+              "symbol": "cbBTC",
+              "underlyingAsset": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+              "currentATokenBalance": "137996096",
+              "currentStableDebt": "0",
+              "currentVariableDebt": "0",
+              "principalStableDebt": "0",
+              "scaledVariableDebt": "0",
+              "stableBorrowRate": "0",
+              "liquidityRate": "107248503828883813860679",
+              "stableRateLastUpdated": 0,
+              "usageAsCollateralEnabled": true
+            },
+            {
+              "symbol": "GHO",
+              "underlyingAsset": "0x6Bb7a212910682DCFdbd5BCBb3e28FB4E8da10Ee",
+              "currentATokenBalance": "3082891104654593767183",
+              "currentStableDebt": "0",
+              "currentVariableDebt": "0",
+              "principalStableDebt": "0",
+              "scaledVariableDebt": "0",
+              "stableBorrowRate": "0",
+              "liquidityRate": "33763515416642853609374908",
+              "stableRateLastUpdated": 0,
+              "usageAsCollateralEnabled": false
+            }
+          ]
+        }
+      },
+      "42161": {
+        "dataProvider": "0x243Aa95cAC2a25651eda86e80bEe66114413c43b",
+        "blockNumber": "497926604",
+        "wallets": {
+          "0x22740deba78d5a0c24c58c740e3715ec29de1bfa": [
+            {
+              "symbol": "USD₮0",
+              "underlyingAsset": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+              "currentATokenBalance": "55289660",
+              "currentStableDebt": "0",
+              "currentVariableDebt": "0",
+              "principalStableDebt": "0",
+              "scaledVariableDebt": "0",
+              "stableBorrowRate": "0",
+              "liquidityRate": "31679806248146918045596524",
+              "stableRateLastUpdated": 0,
+              "usageAsCollateralEnabled": false
+            },
+            {
+              "symbol": "wstETH",
+              "underlyingAsset": "0x5979D7b546E38E414F7E9822514be443A4800529",
+              "currentATokenBalance": "113554609294",
+              "currentStableDebt": "0",
+              "currentVariableDebt": "0",
+              "principalStableDebt": "0",
+              "scaledVariableDebt": "0",
+              "stableBorrowRate": "0",
+              "liquidityRate": "248256734366944040515",
+              "stableRateLastUpdated": 0,
+              "usageAsCollateralEnabled": false
+            },
+            {
+              "symbol": "USDC",
+              "underlyingAsset": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+              "currentATokenBalance": "120188487",
+              "currentStableDebt": "0",
+              "currentVariableDebt": "0",
+              "principalStableDebt": "0",
+              "scaledVariableDebt": "0",
+              "stableBorrowRate": "0",
+              "liquidityRate": "21483490814582425750114801",
+              "stableRateLastUpdated": 0,
+              "usageAsCollateralEnabled": false
+            }
+          ]
+        }
+      },
+      "43114": {
+        "dataProvider": "0x243Aa95cAC2a25651eda86e80bEe66114413c43b",
+        "blockNumber": "93582550",
+        "wallets": {
+          "0x22740deba78d5a0c24c58c740e3715ec29de1bfa": [
+            {
+              "symbol": "DAI.e",
+              "underlyingAsset": "0xd586E7F844cEa2F87f50152665BCbc2C279D8d70",
+              "currentATokenBalance": "2764255819719244349043876",
+              "currentStableDebt": "0",
+              "currentVariableDebt": "0",
+              "principalStableDebt": "0",
+              "scaledVariableDebt": "0",
+              "stableBorrowRate": "0",
+              "liquidityRate": "16618403915515714275176535",
+              "stableRateLastUpdated": 0,
+              "usageAsCollateralEnabled": false
+            },
+            {
+              "symbol": "WETH.e",
+              "underlyingAsset": "0x49D5c2BdFfac6CE2BFdB6640F4F80f226bc10bAB",
+              "currentATokenBalance": "238499247378081881650",
+              "currentStableDebt": "0",
+              "currentVariableDebt": "0",
+              "principalStableDebt": "0",
+              "scaledVariableDebt": "0",
+              "stableBorrowRate": "0",
+              "liquidityRate": "14479569043320598122510169",
+              "stableRateLastUpdated": 0,
+              "usageAsCollateralEnabled": true
+            }
+          ]
+        }
+      }
+    }
+  }
+}
