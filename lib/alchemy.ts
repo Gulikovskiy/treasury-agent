@@ -83,11 +83,19 @@ export async function discoverErc20s(chainId: ChainId, address: Address): Promis
   return { contracts: [...contracts], pages }
 }
 
+export async function getTokenMetadata(chainId: ChainId, contractAddress: Address): Promise<unknown> {
+  return rpc(chainId, 'alchemy_getTokenMetadata', [contractAddress])
+}
+
 export interface AssetTransferPage {
   transfers?: Array<{
     from?: Address
     to?: Address
-    rawContract?: { address?: Address | null }
+    rawContract?: {
+      address?: Address | null
+      decimal?: string | null
+      value?: `0x${string}` | null
+    }
     [key: string]: unknown
   }>
   pageKey?: string

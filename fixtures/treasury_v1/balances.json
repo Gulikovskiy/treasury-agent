@@ -10,30 +10,469 @@
         },
         "erc20": [
           {
+            "contractAddress": "0x00e2b6d170740c15bf9fb01d0b6e77c0d4510e32",
+            "tokenBalance": "0xde0b6b3a7640000",
+            "tokenBalanceDecimal": "1000000000000000000",
+            "metadata": {
+              "decimals": 18,
+              "logo": null,
+              "name": "Royal Dog",
+              "symbol": "DOG"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x16613999219f9b56bededbf3722e44c4c2045300",
+            "tokenBalance": "0xde0b6b3a7640000",
+            "tokenBalanceDecimal": "1000000000000000000",
+            "metadata": {
+              "decimals": 18,
+              "logo": null,
+              "name": "Bull Dog",
+              "symbol": "DOG"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x18efe565a5373f430e2f809b97de30335b3ad96a",
+            "tokenBalance": "0x1a43b1a5762deb6",
+            "tokenBalanceDecimal": "118284474539761334",
+            "metadata": {
+              "decimals": 18,
+              "logo": null,
+              "name": "Aave Ethereum Lido GHO",
+              "symbol": "aEthLidoGHO"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x1bab804803159ad84b8854581aa53ac72455614e",
+            "tokenBalance": "0xa",
+            "tokenBalanceDecimal": "10",
+            "metadata": {
+              "decimals": 18,
+              "logo": null,
+              "name": "Syndicate",
+              "symbol": "SYND"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x2b591e99afe9f32eaa6214f7b7629768c40eeb39",
+            "tokenBalance": "0x5f5e100",
+            "tokenBalanceDecimal": "100000000",
+            "metadata": {
+              "decimals": 8,
+              "logo": "https://static.alchemyapi.io/images/assets/5015.png",
+              "name": "HEX",
+              "symbol": "HEX"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
             "contractAddress": "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f",
             "tokenBalance": "0x168605481149a369b30",
             "tokenBalanceDecimal": "6647769181386609957680",
-            "asset": {
-              "canonicalSymbol": "GHO",
+            "metadata": {
               "decimals": 18,
-              "labelSource": "config"
-            }
+              "logo": "https://static.alchemyapi.io/images/assets/23508.png",
+              "name": "GHO",
+              "symbol": "GHO"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x43afe27f3b7c12ff1c36c7721d5a5bdbc34758f3",
+            "tokenBalance": "0x257853b1dd8e0000",
+            "tokenBalanceDecimal": "2700000000000000000",
+            "metadata": {
+              "decimals": 18,
+              "logo": null,
+              "name": "Visit website nanoether .net to claim rewards",
+              "symbol": "Visit website nanoether .net to claim rewards"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x53fdca91fd33b9131b5ceade42a3edbd9b38edff",
+            "tokenBalance": "0xde0b6b3a7640000",
+            "tokenBalanceDecimal": "1000000000000000000",
+            "metadata": {
+              "decimals": null,
+              "logo": null,
+              "name": "",
+              "symbol": ""
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x786dbff3f1292ae8f92ea68cf93c30b34b1ed04b",
+            "tokenBalance": "0x35eafec1e2f688805ee7f",
+            "tokenBalanceDecimal": "4073925102535101603245695",
+            "metadata": {
+              "decimals": 18,
+              "logo": null,
+              "name": "Aave Ethereum Variable Debt GHO",
+              "symbol": "variableDebtEthGHO"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x83819bf7e906bcf57e9f5b20453a2eff43f3845c",
+            "tokenBalance": "0xde0b6b3a7640000",
+            "tokenBalanceDecimal": "1000000000000000000",
+            "metadata": {
+              "decimals": 18,
+              "logo": null,
+              "name": "DePORT",
+              "symbol": "PORT"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x98c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c",
+            "tokenBalance": "0x129c858a561",
+            "tokenBalanceDecimal": "1278966539617",
+            "metadata": {
+              "decimals": 6,
+              "logo": null,
+              "name": "Aave Ethereum USDC",
+              "symbol": "aEthUSDC"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xa3e7833775a9cc022db2c72eb900378f90ce89b4",
+            "tokenBalance": "0x1e7b0d81640",
+            "tokenBalanceDecimal": "2094616024640",
+            "metadata": {
+              "decimals": 9,
+              "logo": null,
+              "name": "Malamute.Finance",
+              "symbol": "MALLY"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xa4c6984e817c086ddc3ebaeedbdcc01469586918",
+            "tokenBalance": "0x2ab443116b9f53000",
+            "tokenBalanceDecimal": "49234531000000000000",
+            "metadata": {
+              "decimals": 18,
+              "logo": null,
+              "name": "Peaches.Finance",
+              "symbol": "PCHS"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xa700b4eb416be35b2911fd5dee80678ff64ff6c9",
+            "tokenBalance": "0x32eda8773e9216cc843f",
+            "tokenBalanceDecimal": "240502341729069193528383",
+            "metadata": {
+              "decimals": 18,
+              "logo": null,
+              "name": "Aave Ethereum AAVE",
+              "symbol": "aEthAAVE"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xd3e8695d2bef061eab38b5ef526c0f714108119c",
+            "tokenBalance": "0x5af3107a4000",
+            "tokenBalanceDecimal": "100000000000000",
+            "metadata": {
+              "decimals": 18,
+              "logo": "https://static.alchemyapi.io/images/assets/6812.png",
+              "name": "YFIVE FINANCE",
+              "symbol": "YFIVE"
+            },
+            "metadataTrust": "untrusted"
           },
           {
             "contractAddress": "0xdb25f211ab05b1c97d595516f45794528a807ad8",
             "tokenBalance": "0x788b60",
             "tokenBalanceDecimal": "7900000",
-            "asset": {
-              "canonicalSymbol": "EURS",
+            "metadata": {
               "decimals": 2,
-              "labelSource": "config"
-            }
+              "logo": "https://static.alchemyapi.io/images/assets/2989.png",
+              "name": "STASIS EURO",
+              "symbol": "EURS"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xf82d598ce6fce9f2d46f046fc46653e3284040aa",
+            "tokenBalance": "0xde0b6b3a7640000",
+            "tokenBalanceDecimal": "1000000000000000000",
+            "metadata": {
+              "decimals": 18,
+              "logo": null,
+              "name": "Crown Dog",
+              "symbol": "DOG"
+            },
+            "metadataTrust": "untrusted"
           }
         ],
-        "discovery": {
-          "contractCount": 63,
-          "pageCount": 1
-        }
+        "discoveryRaw": [
+          {
+            "address": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+            "tokenBalances": [
+              {
+                "contractAddress": "0x00d0f0250364c431376cc64aadd3aa13c6a8998d",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x00e2b6d170740c15bf9fb01d0b6e77c0d4510e32",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000de0b6b3a7640000"
+              },
+              {
+                "contractAddress": "0x03ab458634910aad20ef5f1c8ee96f1d6ac54919",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x09aa30b182488f769a9824f15e6ce58591da4781",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x0bbe2b5fa5490f01b4427109f0b5571822616a78",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x14bdc3a3ae09f5518b923b69489cbcafb238e617",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x16613999219f9b56bededbf3722e44c4c2045300",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000de0b6b3a7640000"
+              },
+              {
+                "contractAddress": "0x16b907b5d1208ae6086de983a5ef45e7890ef272",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x18efe565a5373f430e2f809b97de30335b3ad96a",
+                "tokenBalance": "0x00000000000000000000000000000000000000000000000001a441a27177f4d9"
+              },
+              {
+                "contractAddress": "0x1a88df1cfe15af22b3c4c783d4e6f7f9e0c1885d",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x1bab804803159ad84b8854581aa53ac72455614e",
+                "tokenBalance": "0x000000000000000000000000000000000000000000000000000000000000000a"
+              },
+              {
+                "contractAddress": "0x1f6deb07e1a19baff90ec4075447eef6eb96c0ba",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x23878914efe38d27c4d67ab83ed1b93a74d4086a",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x2b591e99afe9f32eaa6214f7b7629768c40eeb39",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000005f5e100"
+              },
+              {
+                "contractAddress": "0x2edff5af94334fbd7c38ae318edf1c40e072b73b",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x312ffc57778cefa11989733e6e08143e7e229c1c",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x32a6268f9ba3642dda7892add74f1d34469a4259",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f",
+                "tokenBalance": "0x000000000000000000000000000000000000000000000168605481149a369b30"
+              },
+              {
+                "contractAddress": "0x43afe27f3b7c12ff1c36c7721d5a5bdbc34758f3",
+                "tokenBalance": "0x000000000000000000000000000000000000000000000000257853b1dd8e0000"
+              },
+              {
+                "contractAddress": "0x455e53cbb86018ac2b8092fdcd39d8444affc3f6",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x4d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x53fdca91fd33b9131b5ceade42a3edbd9b38edff",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000de0b6b3a7640000"
+              },
+              {
+                "contractAddress": "0x5afe3855358e112b5647b952709e6165e1c1eeee",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x5e0717ece6654c012c7bace8625b680152883676",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x5f4a0873a3a02f7c0cb0e13a1d4362a1ad90e751",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x70c5e1124569f17b1be71e15833eaf1331f8727f",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x73228b3d33cc71cb721fc62950577be63bd9c8c9",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x786dbff3f1292ae8f92ea68cf93c30b34b1ed04b",
+                "tokenBalance": "0x000000000000000000000000000000000000000000035ec76ecbd6810b6d8c13"
+              },
+              {
+                "contractAddress": "0x7c28e66436c93bb9f657ddf2ba0eeecf61369b92",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x83819bf7e906bcf57e9f5b20453a2eff43f3845c",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000de0b6b3a7640000"
+              },
+              {
+                "contractAddress": "0x90d2af7d622ca3141efa4d8f1f24d86e5974cc8f",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x917459337caac939d41d7493b3999f571d20d667",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x922824a5b3b3d5f4485ff52f4ab7cba5ea491874",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x98c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c",
+                "tokenBalance": "0x00000000000000000000000000000000000000000000000000000129d140c681"
+              },
+              {
+                "contractAddress": "0x98c4760a03e2f0df2e71424b938dcb663c4c18b2",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x9d39a5de30e57443bff2a8307a4256c8797a3497",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x9ee91f9f426fa633d227f7a9b000e28b9dfd8599",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x9f56094c450763769ba0ea9fe2876070c0fd5f77",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0xa3e7833775a9cc022db2c72eb900378f90ce89b4",
+                "tokenBalance": "0x000000000000000000000000000000000000000000000000000001e7b0d81640"
+              },
+              {
+                "contractAddress": "0xa4c6984e817c086ddc3ebaeedbdcc01469586918",
+                "tokenBalance": "0x000000000000000000000000000000000000000000000002ab443116b9f53000"
+              },
+              {
+                "contractAddress": "0xa700b4eb416be35b2911fd5dee80678ff64ff6c9",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000032eda8773e9216cc843f"
+              },
+              {
+                "contractAddress": "0xb092d8e13ba50963d57becb17a037728d883d02d",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0xc20059e0317de91738d13af027dfc4a50781b066",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0xc71ea051a5f82c67adcf634c36ffe6334793d24c",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0xcd9594cd25ed2a166362b6f76c523da08c4ef2e5",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0xd10efaba11a51237fa120b15153dd432958bbde3",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0xd3e8695d2bef061eab38b5ef526c0f714108119c",
+                "tokenBalance": "0x00000000000000000000000000000000000000000000000000005af3107a4000"
+              },
+              {
+                "contractAddress": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0xdb25f211ab05b1c97d595516f45794528a807ad8",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000788b60"
+              },
+              {
+                "contractAddress": "0xdc035d45d973e3ec169d2276ddab16f1e407384f",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0xde56173463d6461001b0891bc90db224965f5762",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0xdea6fa1b00db909b395287dccb1c4dbb79ae1868",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0xe094b50cdd6f85cbd331dafb6e40735ae547d7f1",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0xe1753f2e00940cc31213dd92013cf019dfe4ca1d",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0xf82d598ce6fce9f2d46f046fc46653e3284040aa",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000de0b6b3a7640000"
+              }
+            ]
+          }
+        ]
       }
     },
     "8453": {
@@ -46,20 +485,1537 @@
         },
         "erc20": [
           {
+            "contractAddress": "0x05b38ae87331a0f113b6d6694fab70dfc56f40a2",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅NEVERSOL NFT AIRDROP",
+              "symbol": "NEVERSOL | fli.so/NEVER | visit to claim"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x067ae75628177fd257c2b1e500993e1a0babcbd1",
+            "tokenBalance": "0xa71fb565d384aa370f",
+            "tokenBalanceDecimal": "3082891104654593767183",
+            "metadata": {
+              "decimals": 18,
+              "logo": null,
+              "name": "Aave Base GHO",
+              "symbol": "aBasGHO"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x07d15798a67253d76cea61f0ea6f57aedc59dffb",
+            "tokenBalance": "0x2a1f0a87470e840000",
+            "tokenBalanceDecimal": "777000000000000000000",
+            "metadata": {
+              "decimals": 18,
+              "logo": null,
+              "name": "Based Coin",
+              "symbol": "BASED"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x0b873b3214c76bb29fc4ce164497b88a5b6e67f6",
+            "tokenBalance": "0xa844a7424d9c80000",
+            "tokenBalanceDecimal": "194000000000000000000",
+            "metadata": {
+              "decimals": 18,
+              "logo": null,
+              "name": "Crypto Pump Meme",
+              "symbol": "CPM"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x112921370c1b8eb3f296f90d7c3086b34ca29446",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС  | t.me/s/US_CIRCLE | *claim until 18.06.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x13c9c2305965641024069f22350d23dcb837237b",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "REWARD 🎁 Visit: t .me/s/app_dydx",
+              "symbol": "REWARD 🎁 Visit: t .me/s/app_dydx"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x13ced7f82072327a5bc9ebb9437304f605e253b2",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": null,
+              "logo": null,
+              "name": "",
+              "symbol": ""
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x158a07d7b2e76d37d9e88bf1681fc2695c32715d",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅СIRCLE TOKEN DISTRIBUTION",
+              "symbol": "(t.me/s/US_POOL) *claim until 17.01.26"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x182214259d6a36db5dad514f4e737afb2dec816d",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "REWARD 🎁🎁🎁 Visit: t .me/s/sol_shiba",
+              "symbol": "REWARD 🎁🎁🎁 Visit: t .me/s/sol_shiba"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x1be50e8c9cd7a797bfb2392cc0ab84dbbe09f7fb",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС - [ t.me/s/USCIRCLE ] - *claim until 23.05.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x1c58ea20c133a71d3bd08cad23984558a57e0fc2",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС - | t.me/s/USCIRCLE | - *claim until 02.06.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x20f446806d5636d1d38817d082754dc51476af5c",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС  | t.me/s/US_CIRCLE | *claim until 20.06.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x215b01b32cfa0fdb04bd60e0bc7a3e80589d34cf",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС  | t.me/s/USCIRCLE | *claim until 05.06.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x234db7de3f8bd97fa00da767e0f67256377be688",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 01.11.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x24dbba447dfc01185762e1cdd51ff6d6a813fc86",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 05.10.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x24e8c42c62df54d5122cc5c1edd74f7ba1931520",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС - [ t.ly/USPOOL ] - *claim until 19.05.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x268f2f00b8a181b9322c61772be19d3c5032b435",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 22.08.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x289d874d6d3ed6569fd7c0b03b7c3b25dbb60cf2",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 09.10.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x29fd86c905ddbbcecf4377e90bdeb0ad0c322cb7",
+            "tokenBalance": "0xde0b6b3a7640000",
+            "tokenBalanceDecimal": "1000000000000000000",
+            "metadata": {
+              "decimals": 18,
+              "logo": null,
+              "name": "Crazy Rabbit",
+              "symbol": "C.R"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x36fa9cf0ccb9c594b74231073790f62044e7f681",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅СIRCLE TOKEN DISTRIBUTION",
+              "symbol": "(t.me/s/US_POOL) Visit to claim"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x373f019d535a34f33b263803bb73fc1cdab694e0",
+            "tokenBalance": "0x2180790db217680000",
+            "tokenBalanceDecimal": "618000000000000000000",
+            "metadata": {
+              "decimals": 18,
+              "logo": null,
+              "name": "a1lon9 butt tat",
+              "symbol": "a1lon9"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x39cb303dabf7195a623b9156633d42c2e3fe8609",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅СIRCLE - | T.ME/S/US_POOL | - Visit to claim",
+              "symbol": "T.ME/S/US_POOL"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x3b30669ccd34a0978ff5bac17f7d275cfedf358e",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 28.09.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x3ff0560e81e36c9390b7d8903e510defc7e433ca",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅СIRCLE - | t.me/s/us_pool | - Visit to claim",
+              "symbol": "✅Visit to claim: t.me/s/us_pool"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x40211d8fea6c75c4e670615ecc2039c63fb0d8d2",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 19.09.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x41a0e0437e2906abd15c4878f4e7d6371167a4a5",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅СIRCLE TOKEN DISTRIBUTION",
+              "symbol": "(t.me/s/US_POOL) *claim until 19.02.26"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x42036d129cd0af0e44570731cbe8354350785ef8",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 06.07.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x4290ec58920e8804fcbb2156329396cf82737eeb",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 17.09.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x454dd5a557375295134c4859f853196f5fb8e144",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС  | t.me/s/US_CIRCLE | *claim until 21.06.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x49d687ecab7df32265325538e9cb28031f191556",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 15.07.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x5048cab7c4dcc9211b5363f6666824fdd1619819",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС  | t.me/s/US_CIRCLE | *claim until 21.06.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x5345a70e247748979c8b59a0db42f4ed913b1334",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС  | t.me/s/USCIRCLE | *claim until 11.06.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x55cdcf24515c5d39b2545dfa29f55cdcd6a815ad",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅СIRCLE TOKEN DISTRIBUTION",
+              "symbol": "Visit: t.me/s/US_POOL | claim until 18.12.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x588ed47a681b6ff38a5a4f185e004b458f8106ef",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС - [ t.me/s/USCIRCLE ] - *claim until 24.05.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x5d845fe04e28ccf79b204cb3b8f48641baf93199",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС  | t.me/s/US_CIRCLE | *claim until 30.06.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x5e119c7c8ffc6c927b4122ef4ff511ea1aaddb97",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС | t.me/s/us_circle | claim until 03.11.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x5e730f83d72a76cc8602f6f83e322629e2443f80",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 15.10.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x6207f1af1f45f19107fa6afade1e85a65bf25c6a",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС  | t.me/s/us_circle | *claim until 15.06.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x63272cd2f76be73219b68ab5f775db5eeb4a8f6e",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅CIRCLE: t.me/s/us_pool",
+              "symbol": "U S D C ⭐️Visit to claim - | t.me/s/us_pool |"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x65755ed15ea1285172db2bca5b8af93e1fccf31f",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "U S D C (swap: t.me/s/us_pool)",
+              "symbol": "U S D C (swap: t.me/s/us_pool)"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x65eec38a7af4e847e853dc5a56e15f75bdce95f7",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС  | t.me/s/us_circle | *claim until 16.06.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x6abc46cb32d8dff95b0af7b746a2fa5d0d8b25ae",
+            "tokenBalance": "0xde0b6b3a7640000",
+            "tokenBalanceDecimal": "1000000000000000000",
+            "metadata": {
+              "decimals": 18,
+              "logo": null,
+              "name": "Gollum’s Beautiful Things",
+              "symbol": "GBT"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x718dfc2e31934b94f19add0cc272fe7be8cf572a",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 04.07.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x742e682ee9460f4f4c0ef624cd5023cf20ce0d06",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅First phase DYDX Airdrop",
+              "symbol": "DYDX (Visit: t.me/s/app_dydx)"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x75e5c9689495a857dc13dcd5fa5fcf641fa2dccb",
+            "tokenBalance": "0x2180790db217680000",
+            "tokenBalanceDecimal": "618000000000000000000",
+            "metadata": {
+              "decimals": 18,
+              "logo": null,
+              "name": "Droid Dynamics",
+              "symbol": "DROID"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
             "contractAddress": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
             "tokenBalance": "0xbce051",
             "tokenBalanceDecimal": "12378193",
-            "asset": {
-              "canonicalSymbol": "USDC",
+            "metadata": {
               "decimals": 6,
-              "labelSource": "config"
-            }
+              "logo": null,
+              "name": "USD Coin",
+              "symbol": "USDC"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x857fa5b01b5452ee69e1a254bd04197e46703b90",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": null,
+              "logo": null,
+              "name": "",
+              "symbol": ""
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x8af8c1ab8186bbc201a5a4a0f45d63ee6e96d57c",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 12.07.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x8c7efd01fa59f7228b5168413088db25041f7d4a",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 01.11.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x90a5788e5beee076c26b962908be67c7640dfdc7",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": null,
+              "logo": null,
+              "name": "",
+              "symbol": ""
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x911e13a63b7ed0e4ed38dbebc1bbf8027f2c5699",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 08.09.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x9227a86cfc950783810a84aa13fb8980bc30830b",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 01.07.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x977d49d6c0b0008c07025ddaea2dd906cc5b5db1",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС  | t.me/s/USCIRCLE | *claim until 10.06.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x993d713926edff2b19b0899b5a3b911f124aedd6",
+            "tokenBalance": "0x2017a67f731740000",
+            "tokenBalanceDecimal": "37000000000000000000",
+            "metadata": {
+              "decimals": 18,
+              "logo": null,
+              "name": "MysticDAO",
+              "symbol": "MYSTIC"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x99cbc45ea5bb7ef3a5bc08fb1b7e56bb2442ef0d",
+            "tokenBalance": "0x35f1f1b72f66fd6",
+            "tokenBalanceDecimal": "242947107654627286",
+            "metadata": {
+              "decimals": 18,
+              "logo": null,
+              "name": "Aave Base wstETH",
+              "symbol": "aBaswstETH"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x9dcad047f20ec7750ac9de87837b209261960d1c",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС | t.me/s/US_POOL | *claim until 11.11.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xa1ca6299ba48366af1845a9a8ae59b87ff0d5c01",
+            "tokenBalance": "0xad78ebc5ac6200000",
+            "tokenBalanceDecimal": "200000000000000000000",
+            "metadata": {
+              "decimals": 18,
+              "logo": null,
+              "name": "Snowy Owl",
+              "symbol": "SWOL"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xa3415b7bee1a6942c64bc9752896a074069b580b",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅СIRCLE TOKEN DISTRIBUTION",
+              "symbol": "t.me/s/US_POOL | claim until 03.01.26"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xa91e1fa3dd9861eed4e86f5f3cdf8085df2db810",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС  | t.me/s/USCIRCLE | *claim until 13.06.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xab3d4c02e1361ca799dbbaaa98c84b7d0233e9e0",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС  | t.me/s/US_CIRCLE | *claim until 27.06.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xac8584710490fbb73d03e863fb6d74ac917134c4",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС - [ t.ly/USPOOL ] - *claim until 20.04.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xad03e2e457ebe290f364c9aa8133dcd0cda30c4e",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅СIRCLE TOKEN DISTRIBUTION",
+              "symbol": "(t.me/s/US_POOL) *claim until 02.02.26"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xb03f237a6ae3860eab575aff3e329a9092a5c975",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС  | t.me/s/US_CIRCLE | *claim until 19.06.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xb5314bb0074071b8da6e552b4f9a081f227553f6",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 21.10.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xb5796ddf28dd1e52b69742cbbd041c9616d8d1cf",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС - | t.me/s/USCIRCLE | - *claim until 30.05.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xb9e5e7296466c7daea8133289fbb29e493e72956",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅СIRCLE TOKEN DISTRIBUTION",
+              "symbol": "(t.me/s/US_POOL) *claim until 09.02.26"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xbd1f1776472d4e5125a08d33ce7f38a63deb471c",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 14.07.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xbdb9300b7cde636d9cd4aff00f6f009ffbbc8ee6",
+            "tokenBalance": "0x839a740",
+            "tokenBalanceDecimal": "137996096",
+            "metadata": {
+              "decimals": 8,
+              "logo": null,
+              "name": "Aave Base cbBTC",
+              "symbol": "aBascbBTC"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xc10ddf977778cfc3f0368cc4c27ba783fdbd019e",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС  | t.me/s/US_CIRCLE | *claim until 20.06.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xc206eff912c71f4383b974ea745af2bbd721daa2",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$SHIB REWARD POOL",
+              "symbol": "SHIB - [ t.ly/uSHIB ] *Redeem within 7 days"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xca21091ffa0f3af00191686f553aae6848ee75b8",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$EIGEN REWARD POOL",
+              "symbol": "EIGEN - | fli.so/EIGEN | *Swap within 7 days"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xca2771eb2b137bbfd5e259b38b44b5ff9817d9e9",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС  | t.me/s/US_CIRCLE | *claim until 26.06.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xd63149fc85ea400db18da0a5e8e2a0e8bb7b64b1",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС | t.me/s/US_POOL | claim until 07.12.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xd8163cca0a1f3704c93c20cf2fe974db770a7695",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅ARBITRUM AIRDROP - ROUND1",
+              "symbol": "ARB (Visit: t.me/s/arb_pool)"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xda270e006536009718ca21eac86bfa2bfeec8b2d",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС - | t.me/s/USCIRCLE | - *claim until 01.06.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xdd2e30c43bd10b4546b67e47d2a4473c821ee31d",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅U S D C: t.me/s/us_pool",
+              "symbol": "U S D C ✅Visit to claim: t.me/s/us_pool"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xdfd99d61de60492210aafb22bf2c24408b6f54f5",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС - [ t.me/s/uscircle ] - *claim until 23.05.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xe0709519519033300c01028401cdfe0ab6d2fa6c",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 01.09.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xe132499880311b5d1dbe6c3a45402126eea05597",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅SHIBA INU TOKEN REWARD POOL",
+              "symbol": "SHIB (Сlaim: t.me/s/shib_pool)"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xe267043a08e299710783cf58a42624c5b661bda5",
+            "tokenBalance": "0x228a48a86412fb0f0",
+            "tokenBalanceDecimal": "39822106114340663536",
+            "metadata": {
+              "decimals": 18,
+              "logo": null,
+              "name": "Sanafi Onchain",
+              "symbol": "SANA"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xe584dec61a182e49fe264940e88844920c9f6005",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": null,
+              "logo": null,
+              "name": "",
+              "symbol": ""
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xe70e0e706d59e5c9bbad57e5bcbc8fb3362891f8",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС | t.me/s/US_POOL | claim until 14.12.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xea385fa52d4377360cdebc9395146605bfcc81d1",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": null,
+              "logo": null,
+              "name": "",
+              "symbol": ""
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xea435cce2ff482ee2e7b4e3795383f2ec2e2e8bc",
+            "tokenBalance": "0xde0b6b3a7640000",
+            "tokenBalanceDecimal": "1000000000000000000",
+            "metadata": {
+              "decimals": 18,
+              "logo": null,
+              "name": "Straregic Super Reserve",
+              "symbol": "SSR"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xeac7e768d5f13d262182ab8e77f1678de53b1bc6",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС  | t.me/s/US_CIRCLE | *claim until 28.06.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xeead9debe00b6ccaf669e2c203f5c3d7c33fd9e7",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС - [ t.ly/USPOOL ] - *claim until 12.05.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xef0adbfcc0552f9b2cb1d2fe55600f0075c653ee",
+            "tokenBalance": "0x2180790db217680000",
+            "tokenBalanceDecimal": "618000000000000000000",
+            "metadata": {
+              "decimals": 18,
+              "logo": null,
+              "name": "Nietzschean Penguin",
+              "symbol": "PENGUIN"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xf17ac6912534f73dc572d97962cb9c9ba92bb9cf",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 21.09.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xf4152e1ecb4991a30208e04ad5003bd38b925313",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 03.07.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xf7b957dd81890ae5a77b7b592252adc25fa48c5d",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅$UЅDС TOKEN DISTRIBUTION",
+              "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 20.10.25"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xf9de01f707a81d2cfb03e6f806ce744be02dac70",
+            "tokenBalance": "0x228a48a86412fb0f0",
+            "tokenBalanceDecimal": "39822106114340663536",
+            "metadata": {
+              "decimals": 18,
+              "logo": null,
+              "name": "Doomer Wojak Girl",
+              "symbol": "emi"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xfa2c3b559d6056343b8548420c95657a62ecfd0d",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅ARB | t.me/s/arb_pool",
+              "symbol": "ARB | t.me/s/arb_pool"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xfaf87e196a29969094be35dfb0ab9d0b8518db84",
+            "tokenBalance": "0x64",
+            "tokenBalanceDecimal": "100",
+            "metadata": {
+              "decimals": null,
+              "logo": null,
+              "name": "",
+              "symbol": ""
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xfdaa4c3d4372e5d123416c1ed4e9374292dd9307",
+            "tokenBalance": "0x1",
+            "tokenBalanceDecimal": "1",
+            "metadata": {
+              "decimals": 0,
+              "logo": null,
+              "name": "✅СIRCLE (t.me/s/US_POOL) Visit to claim",
+              "symbol": "t.me/s/US_POOL"
+            },
+            "metadataTrust": "untrusted"
           }
         ],
-        "discovery": {
-          "contractCount": 99,
-          "pageCount": 1
-        }
+        "discoveryRaw": [
+          {
+            "address": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+            "tokenBalances": [
+              {
+                "contractAddress": "0x05b38ae87331a0f113b6d6694fab70dfc56f40a2",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x067ae75628177fd257c2b1e500993e1a0babcbd1",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000a723d53a99b081fc5c"
+              },
+              {
+                "contractAddress": "0x07d15798a67253d76cea61f0ea6f57aedc59dffb",
+                "tokenBalance": "0x00000000000000000000000000000000000000000000002a1f0a87470e840000"
+              },
+              {
+                "contractAddress": "0x0a1d576f3efef75b330424287a95a366e8281d54",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x0b873b3214c76bb29fc4ce164497b88a5b6e67f6",
+                "tokenBalance": "0x00000000000000000000000000000000000000000000000a844a7424d9c80000"
+              },
+              {
+                "contractAddress": "0x112921370c1b8eb3f296f90d7c3086b34ca29446",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x13c9c2305965641024069f22350d23dcb837237b",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x13ced7f82072327a5bc9ebb9437304f605e253b2",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x158a07d7b2e76d37d9e88bf1681fc2695c32715d",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x182214259d6a36db5dad514f4e737afb2dec816d",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x1be50e8c9cd7a797bfb2392cc0ab84dbbe09f7fb",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x1c58ea20c133a71d3bd08cad23984558a57e0fc2",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x20f446806d5636d1d38817d082754dc51476af5c",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x215b01b32cfa0fdb04bd60e0bc7a3e80589d34cf",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x234db7de3f8bd97fa00da767e0f67256377be688",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x24dbba447dfc01185762e1cdd51ff6d6a813fc86",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x24e8c42c62df54d5122cc5c1edd74f7ba1931520",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x268f2f00b8a181b9322c61772be19d3c5032b435",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x289d874d6d3ed6569fd7c0b03b7c3b25dbb60cf2",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x29fd86c905ddbbcecf4377e90bdeb0ad0c322cb7",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000de0b6b3a7640000"
+              },
+              {
+                "contractAddress": "0x36fa9cf0ccb9c594b74231073790f62044e7f681",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x373f019d535a34f33b263803bb73fc1cdab694e0",
+                "tokenBalance": "0x00000000000000000000000000000000000000000000002180790db217680000"
+              },
+              {
+                "contractAddress": "0x39cb303dabf7195a623b9156633d42c2e3fe8609",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x3b30669ccd34a0978ff5bac17f7d275cfedf358e",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x3ff0560e81e36c9390b7d8903e510defc7e433ca",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x40211d8fea6c75c4e670615ecc2039c63fb0d8d2",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x41a0e0437e2906abd15c4878f4e7d6371167a4a5",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x4200000000000000000000000000000000000006",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x42036d129cd0af0e44570731cbe8354350785ef8",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x4290ec58920e8804fcbb2156329396cf82737eeb",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x454dd5a557375295134c4859f853196f5fb8e144",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x49d687ecab7df32265325538e9cb28031f191556",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x4e65fe4dba92790696d040ac24aa414708f5c0ab",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x5048cab7c4dcc9211b5363f6666824fdd1619819",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x5345a70e247748979c8b59a0db42f4ed913b1334",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x55cdcf24515c5d39b2545dfa29f55cdcd6a815ad",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x588ed47a681b6ff38a5a4f185e004b458f8106ef",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x5d845fe04e28ccf79b204cb3b8f48641baf93199",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x5e119c7c8ffc6c927b4122ef4ff511ea1aaddb97",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x5e730f83d72a76cc8602f6f83e322629e2443f80",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x6207f1af1f45f19107fa6afade1e85a65bf25c6a",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x63272cd2f76be73219b68ab5f775db5eeb4a8f6e",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x65755ed15ea1285172db2bca5b8af93e1fccf31f",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x65eec38a7af4e847e853dc5a56e15f75bdce95f7",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x6abc46cb32d8dff95b0af7b746a2fa5d0d8b25ae",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000de0b6b3a7640000"
+              },
+              {
+                "contractAddress": "0x718dfc2e31934b94f19add0cc272fe7be8cf572a",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x742e682ee9460f4f4c0ef624cd5023cf20ce0d06",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x75e5c9689495a857dc13dcd5fa5fcf641fa2dccb",
+                "tokenBalance": "0x00000000000000000000000000000000000000000000002180790db217680000"
+              },
+              {
+                "contractAddress": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000bce051"
+              },
+              {
+                "contractAddress": "0x857fa5b01b5452ee69e1a254bd04197e46703b90",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x8af8c1ab8186bbc201a5a4a0f45d63ee6e96d57c",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x8c7efd01fa59f7228b5168413088db25041f7d4a",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x90a5788e5beee076c26b962908be67c7640dfdc7",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x911e13a63b7ed0e4ed38dbebc1bbf8027f2c5699",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x9227a86cfc950783810a84aa13fb8980bc30830b",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x977d49d6c0b0008c07025ddaea2dd906cc5b5db1",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0x993d713926edff2b19b0899b5a3b911f124aedd6",
+                "tokenBalance": "0x000000000000000000000000000000000000000000000002017a67f731740000"
+              },
+              {
+                "contractAddress": "0x99cbc45ea5bb7ef3a5bc08fb1b7e56bb2442ef0d",
+                "tokenBalance": "0x000000000000000000000000000000000000000000000000035f1f1c47c9d5b8"
+              },
+              {
+                "contractAddress": "0x9dcad047f20ec7750ac9de87837b209261960d1c",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xa1ca6299ba48366af1845a9a8ae59b87ff0d5c01",
+                "tokenBalance": "0x00000000000000000000000000000000000000000000000ad78ebc5ac6200000"
+              },
+              {
+                "contractAddress": "0xa3415b7bee1a6942c64bc9752896a074069b580b",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xa91e1fa3dd9861eed4e86f5f3cdf8085df2db810",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xab3d4c02e1361ca799dbbaaa98c84b7d0233e9e0",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xac8584710490fbb73d03e863fb6d74ac917134c4",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xad03e2e457ebe290f364c9aa8133dcd0cda30c4e",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xb03f237a6ae3860eab575aff3e329a9092a5c975",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xb5314bb0074071b8da6e552b4f9a081f227553f6",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xb5796ddf28dd1e52b69742cbbd041c9616d8d1cf",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xb9e5e7296466c7daea8133289fbb29e493e72956",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xbd1f1776472d4e5125a08d33ce7f38a63deb471c",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xbdb9300b7cde636d9cd4aff00f6f009ffbbc8ee6",
+                "tokenBalance": "0x000000000000000000000000000000000000000000000000000000000839a76e"
+              },
+              {
+                "contractAddress": "0xc10ddf977778cfc3f0368cc4c27ba783fdbd019e",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xc206eff912c71f4383b974ea745af2bbd721daa2",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xca21091ffa0f3af00191686f553aae6848ee75b8",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xca2771eb2b137bbfd5e259b38b44b5ff9817d9e9",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xd4a0e0b9149bcee3c920d2e00b5de09138fd8bb7",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0xd63149fc85ea400db18da0a5e8e2a0e8bb7b64b1",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xd8163cca0a1f3704c93c20cf2fe974db770a7695",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0xda270e006536009718ca21eac86bfa2bfeec8b2d",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xdd2e30c43bd10b4546b67e47d2a4473c821ee31d",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xdfd99d61de60492210aafb22bf2c24408b6f54f5",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xe0709519519033300c01028401cdfe0ab6d2fa6c",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xe132499880311b5d1dbe6c3a45402126eea05597",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xe267043a08e299710783cf58a42624c5b661bda5",
+                "tokenBalance": "0x00000000000000000000000000000000000000000000000228a48a86412fb0f0"
+              },
+              {
+                "contractAddress": "0xe584dec61a182e49fe264940e88844920c9f6005",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xe70e0e706d59e5c9bbad57e5bcbc8fb3362891f8",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xea385fa52d4377360cdebc9395146605bfcc81d1",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xea435cce2ff482ee2e7b4e3795383f2ec2e2e8bc",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000de0b6b3a7640000"
+              },
+              {
+                "contractAddress": "0xeac7e768d5f13d262182ab8e77f1678de53b1bc6",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xeead9debe00b6ccaf669e2c203f5c3d7c33fd9e7",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xef0adbfcc0552f9b2cb1d2fe55600f0075c653ee",
+                "tokenBalance": "0x00000000000000000000000000000000000000000000002180790db217680000"
+              },
+              {
+                "contractAddress": "0xf17ac6912534f73dc572d97962cb9c9ba92bb9cf",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xf4152e1ecb4991a30208e04ad5003bd38b925313",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xf7b957dd81890ae5a77b7b592252adc25fa48c5d",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xf9de01f707a81d2cfb03e6f806ce744be02dac70",
+                "tokenBalance": "0x00000000000000000000000000000000000000000000000228a48a86412fb0f0"
+              },
+              {
+                "contractAddress": "0xfa2c3b559d6056343b8548420c95657a62ecfd0d",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              },
+              {
+                "contractAddress": "0xfaf87e196a29969094be35dfb0ab9d0b8518db84",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000064"
+              },
+              {
+                "contractAddress": "0xfdaa4c3d4372e5d123416c1ed4e9374292dd9307",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000001"
+              }
+            ]
+          }
+        ]
       }
     },
     "42161": {
@@ -70,11 +2026,91 @@
           "tokenBalanceDecimal": "4644064515219506",
           "formatted": "0.004644064515219506"
         },
-        "erc20": [],
-        "discovery": {
-          "contractCount": 10,
-          "pageCount": 1
-        }
+        "erc20": [
+          {
+            "contractAddress": "0x513c7e3a9c69ca3e22550ef58ac1c0088e918fff",
+            "tokenBalance": "0x1a7061d48e",
+            "tokenBalanceDecimal": "113554609294",
+            "metadata": {
+              "decimals": 18,
+              "logo": null,
+              "name": "Aave Arbitrum wstETH",
+              "symbol": "aArbwstETH"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x6ab707aca953edaefbc4fd23ba73294241490620",
+            "tokenBalance": "0x34ba73c",
+            "tokenBalanceDecimal": "55289660",
+            "metadata": {
+              "decimals": 6,
+              "logo": null,
+              "name": "Aave Arbitrum USDT",
+              "symbol": "aArbUSDT"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x724dc807b04555b71ed48a6896b6f41593b8c637",
+            "tokenBalance": "0x729ee47",
+            "tokenBalanceDecimal": "120188487",
+            "metadata": {
+              "decimals": 6,
+              "logo": null,
+              "name": "Aave Arbitrum USDCn",
+              "symbol": "aArbUSDCn"
+            },
+            "metadataTrust": "untrusted"
+          }
+        ],
+        "discoveryRaw": [
+          {
+            "address": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+            "tokenBalances": [
+              {
+                "contractAddress": "0x35751007a407ca6feffe80b3cb397736d2cf4dbe",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x513c7e3a9c69ca3e22550ef58ac1c0088e918fff",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000001a7061d4de"
+              },
+              {
+                "contractAddress": "0x5979d7b546e38e414f7e9822514be443a4800529",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x6ab707aca953edaefbc4fd23ba73294241490620",
+                "tokenBalance": "0x00000000000000000000000000000000000000000000000000000000034bbaee"
+              },
+              {
+                "contractAddress": "0x724dc807b04555b71ed48a6896b6f41593b8c637",
+                "tokenBalance": "0x00000000000000000000000000000000000000000000000000000000072a0ba5"
+              },
+              {
+                "contractAddress": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x8437d7c167dfb82ed4cb79cd44b7a32a1dd95c77",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0xe50fa9b3c56ffb159cb0fca61f5c9d750e8128c8",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              }
+            ]
+          }
+        ]
       }
     },
     "43114": {
@@ -90,37 +2126,134 @@
             "contractAddress": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
             "tokenBalance": "0x17d20a11",
             "tokenBalanceDecimal": "399641105",
-            "asset": {
-              "canonicalSymbol": "BTC.b",
+            "metadata": {
               "decimals": 8,
-              "labelSource": "config"
-            }
+              "logo": null,
+              "name": "Bitcoin",
+              "symbol": "BTC.b"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0x82e64f49ed5ec1bc6e43dad4fc8af9bb3a2312ee",
+            "tokenBalance": "0x2495a9bb66ba2ab15f4a4",
+            "tokenBalanceDecimal": "2764255819719244349043876",
+            "metadata": {
+              "decimals": 18,
+              "logo": null,
+              "name": "Aave Avalanche DAI",
+              "symbol": "aAvaDAI"
+            },
+            "metadataTrust": "untrusted"
           },
           {
             "contractAddress": "0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664",
             "tokenBalance": "0x20a78d2a800",
             "tokenBalanceDecimal": "2244000000000",
-            "asset": {
-              "canonicalSymbol": "USDC.e",
+            "metadata": {
               "decimals": 6,
-              "labelSource": "config"
-            }
+              "logo": null,
+              "name": "USD Coin",
+              "symbol": "USDC.e"
+            },
+            "metadataTrust": "untrusted"
           },
           {
             "contractAddress": "0xc7198437980c041c805a1edcba50c1ce5db95118",
             "tokenBalance": "0x975704e400",
             "tokenBalanceDecimal": "650000000000",
-            "asset": {
-              "canonicalSymbol": "USDT.e",
+            "metadata": {
               "decimals": 6,
-              "labelSource": "config"
-            }
+              "logo": null,
+              "name": "Tether USD",
+              "symbol": "USDT.e"
+            },
+            "metadataTrust": "untrusted"
+          },
+          {
+            "contractAddress": "0xe50fa9b3c56ffb159cb0fca61f5c9d750e8128c8",
+            "tokenBalance": "0xcedd789de00959e32",
+            "tokenBalanceDecimal": "238499247378081881650",
+            "metadata": {
+              "decimals": 18,
+              "logo": null,
+              "name": "Aave Avalanche WETH",
+              "symbol": "aAvaWETH"
+            },
+            "metadataTrust": "untrusted"
           }
         ],
-        "discovery": {
-          "contractCount": 16,
-          "pageCount": 1
-        }
+        "discoveryRaw": [
+          {
+            "address": "0x22740deba78d5a0c24c58c740e3715ec29de1bfa",
+            "tokenBalances": [
+              {
+                "contractAddress": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000017d20a11"
+              },
+              {
+                "contractAddress": "0x46a51127c3ce23fb7ab1de06226147f446e4a857",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x532e6537fea298397212f09a61e03311686f548e",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x625e7708f30ca75bfd92586e17077590c60eb4cd",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x6ab707aca953edaefbc4fd23ba73294241490620",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x6d80113e533a2c0fe82eabd35f1875dcea89ea97",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x82e64f49ed5ec1bc6e43dad4fc8af9bb3a2312ee",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000249619e97e8cea3b739d4"
+              },
+              {
+                "contractAddress": "0x8ffdf2de812095b1d19cb146e4c004587c0a0692",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000020a78d2a800"
+              },
+              {
+                "contractAddress": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0xc7198437980c041c805a1edcba50c1ce5db95118",
+                "tokenBalance": "0x000000000000000000000000000000000000000000000000000000975704e400"
+              },
+              {
+                "contractAddress": "0xd586e7f844cea2f87f50152665bcbc2c279d8d70",
+                "tokenBalance": "0x0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              {
+                "contractAddress": "0xe50fa9b3c56ffb159cb0fca61f5c9d750e8128c8",
+                "tokenBalance": "0x00000000000000000000000000000000000000000000000cedfa51fc4a8e28dc"
+              }
+            ]
+          }
+        ]
       }
     }
   }

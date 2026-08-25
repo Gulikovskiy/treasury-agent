@@ -31,6 +31,9 @@ export interface Erc20Transfer {
   value?: string
   blockNumber?: string
   timeStamp?: string
+  transactionIndex?: string
+  logIndex?: string
+  providerEventIndex?: number
   [key: string]: unknown
 }
 

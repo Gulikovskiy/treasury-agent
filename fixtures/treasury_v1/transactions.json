@@ -437,7 +437,9 @@
               "value": "100000000000000000000000",
               "tokenDecimal": "18",
               "blockNumber": "25182194",
-              "timeStamp": "1779831023"
+              "timeStamp": "1779831023",
+              "transactionIndex": "67",
+              "providerEventIndex": 0
             },
             {
               "hash": "0xbf2c34c0eec3aa8c12b25c11fc475e33a198e81ff5a470155fa993d8034f28a7",
@@ -447,7 +449,9 @@
               "value": "100000000000000000000000",
               "tokenDecimal": "18",
               "blockNumber": "25182194",
-              "timeStamp": "1779831023"
+              "timeStamp": "1779831023",
+              "transactionIndex": "67",
+              "providerEventIndex": 1
             },
             {
               "hash": "0xf1fa6e7e419d1c70e1b39f85f32f5b90c6689b18ae2413221409829ee6b17863",
@@ -457,7 +461,9 @@
               "value": "150000000000000000000000",
               "tokenDecimal": "18",
               "blockNumber": "25245730",
-              "timeStamp": "1780596695"
+              "timeStamp": "1780596695",
+              "transactionIndex": "204",
+              "providerEventIndex": 2
             },
             {
               "hash": "0xb721455dca954f15d715ba243d5cd73b4462b0a70284b028f14c5e9202b9ec6e",
@@ -467,7 +473,9 @@
               "value": "11240332981271703750527",
               "tokenDecimal": "18",
               "blockNumber": "25324767",
-              "timeStamp": "1781548967"
+              "timeStamp": "1781548967",
+              "transactionIndex": "64",
+              "providerEventIndex": 3
             },
             {
               "hash": "0xb721455dca954f15d715ba243d5cd73b4462b0a70284b028f14c5e9202b9ec6e",
@@ -477,7 +485,9 @@
               "value": "100226345227",
               "tokenDecimal": "6",
               "blockNumber": "25324767",
-              "timeStamp": "1781548967"
+              "timeStamp": "1781548967",
+              "transactionIndex": "64",
+              "providerEventIndex": 4
             },
             {
               "hash": "0x5c6a4e3d05b66fb94ed33678e6c0f012f039d4a61974aa95b162184385bc4e71",
@@ -487,7 +497,9 @@
               "value": "786996302316",
               "tokenDecimal": "6",
               "blockNumber": "25324895",
-              "timeStamp": "1781550503"
+              "timeStamp": "1781550503",
+              "transactionIndex": "96",
+              "providerEventIndex": 5
             },
             {
               "hash": "0x1b66ca0d2071200cb4c5e3626dc18238f0c6b57b30382da12a7db6ee427da576",
@@ -497,7 +509,9 @@
               "value": "175000000000",
               "tokenDecimal": "6",
               "blockNumber": "25325297",
-              "timeStamp": "1781555327"
+              "timeStamp": "1781555327",
+              "transactionIndex": "44",
+              "providerEventIndex": 6
             },
             {
               "hash": "0x8f266ccb57af0f616e4d0c122b4672f74f04470e0ec0a27cf06b2f44abca9bbb",
@@ -507,7 +521,9 @@
               "value": "10000000",
               "tokenDecimal": "6",
               "blockNumber": "25331827",
-              "timeStamp": "1781633867"
+              "timeStamp": "1781633867",
+              "transactionIndex": "200",
+              "providerEventIndex": 7
             },
             {
               "hash": "0x4f007edfa6cdb8a4f3b96df10235867d97e87fdd29e54b2679c625aa637bc7c8",
@@ -517,7 +533,9 @@
               "value": "150000000000000000",
               "tokenDecimal": "18",
               "blockNumber": "25331836",
-              "timeStamp": "1781633975"
+              "timeStamp": "1781633975",
+              "transactionIndex": "289",
+              "providerEventIndex": 8
             },
             {
               "hash": "0xed69196deb1f63d27362bbef0f8a9d3c61e8e570f7ac58948cbcf40147f08c42",
@@ -527,7 +545,9 @@
               "value": "500000000000000000000000",
               "tokenDecimal": "18",
               "blockNumber": "25341457",
-              "timeStamp": "1781749667"
+              "timeStamp": "1781749667",
+              "transactionIndex": "14",
+              "providerEventIndex": 9
             },
             {
               "hash": "0xed69196deb1f63d27362bbef0f8a9d3c61e8e570f7ac58948cbcf40147f08c42",
@@ -537,7 +557,9 @@
               "value": "250000000000000000000000",
               "tokenDecimal": "18",
               "blockNumber": "25341457",
-              "timeStamp": "1781749667"
+              "timeStamp": "1781749667",
+              "transactionIndex": "14",
+              "providerEventIndex": 10
             },
             {
               "hash": "0x9193878f40ca5bf6531897ef4bf1b59920a37e04c1efa31f5328d55a4e3920ae",
@@ -547,7 +569,9 @@
               "value": "1062232647543",
               "tokenDecimal": "6",
               "blockNumber": "25344108",
-              "timeStamp": "1781781599"
+              "timeStamp": "1781781599",
+              "transactionIndex": "102",
+              "providerEventIndex": 11
             },
             {
               "hash": "0x9193878f40ca5bf6531897ef4bf1b59920a37e04c1efa31f5328d55a4e3920ae",
@@ -557,7 +581,9 @@
               "value": "1077910764079",
               "tokenDecimal": "6",
               "blockNumber": "25344108",
-              "timeStamp": "1781781599"
+              "timeStamp": "1781781599",
+              "transactionIndex": "102",
+              "providerEventIndex": 12
             },
             {
               "hash": "0x9193878f40ca5bf6531897ef4bf1b59920a37e04c1efa31f5328d55a4e3920ae",
@@ -567,7 +593,9 @@
               "value": "1062232647543",
               "tokenDecimal": "6",
               "blockNumber": "25344108",
-              "timeStamp": "1781781599"
+              "timeStamp": "1781781599",
+              "transactionIndex": "102",
+              "providerEventIndex": 13
             },
             {
               "hash": "0x9193878f40ca5bf6531897ef4bf1b59920a37e04c1efa31f5328d55a4e3920ae",
@@ -577,7 +605,9 @@
               "value": "12805966538159070569401",
               "tokenDecimal": "18",
               "blockNumber": "25344108",
-              "timeStamp": "1781781599"
+              "timeStamp": "1781781599",
+              "transactionIndex": "102",
+              "providerEventIndex": 14
             },
             {
               "hash": "0x9193878f40ca5bf6531897ef4bf1b59920a37e04c1efa31f5328d55a4e3920ae",
@@ -587,7 +617,9 @@
               "value": "12805966538159070569401",
               "tokenDecimal": "18",
               "blockNumber": "25344108",
-              "timeStamp": "1781781599"
+              "timeStamp": "1781781599",
+              "transactionIndex": "102",
+              "providerEventIndex": 15
             },
             {
               "hash": "0x36546918d7ec64b1d41fa8070c87acde75b5866fd8f9220f27b0af1a5325e316",
@@ -597,7 +629,9 @@
               "value": "45000000000",
               "tokenDecimal": "6",
               "blockNumber": "25345078",
-              "timeStamp": "1781793311"
+              "timeStamp": "1781793311",
+              "transactionIndex": "101",
+              "providerEventIndex": 16
             },
             {
               "hash": "0xffc575cb8426d4f4b6929163b1a32a3e12e62f13adea765a18cac57f51f156c5",
@@ -607,7 +641,9 @@
               "value": "39972598748876479472",
               "tokenDecimal": "18",
               "blockNumber": "25352130",
-              "timeStamp": "1781878199"
+              "timeStamp": "1781878199",
+              "transactionIndex": "81",
+              "providerEventIndex": 17
             },
             {
               "hash": "0x66bd3b43f4d1724468374e458793406339ac7ba7f661818d47f03f7c105383cb",
@@ -617,7 +653,9 @@
               "value": "122964106400",
               "tokenDecimal": "6",
               "blockNumber": "25352182",
-              "timeStamp": "1781878823"
+              "timeStamp": "1781878823",
+              "transactionIndex": "293",
+              "providerEventIndex": 18
             },
             {
               "hash": "0x5f0eb1680b85e6cc360865dfb8bee0ee2f7b83c971c436d9723fd10b2d3c8499",
@@ -627,7 +665,9 @@
               "value": "26990204814957291525",
               "tokenDecimal": "18",
               "blockNumber": "25352201",
-              "timeStamp": "1781879051"
+              "timeStamp": "1781879051",
+              "transactionIndex": "8",
+              "providerEventIndex": 19
             },
             {
               "hash": "0x3cb34c8dc2b761d081a06690a2ee21ab835dd18a12f32197c7a82d7bedcd9bab",
@@ -637,7 +677,9 @@
               "value": "123863542884",
               "tokenDecimal": "6",
               "blockNumber": "25352206",
-              "timeStamp": "1781879111"
+              "timeStamp": "1781879111",
+              "transactionIndex": "120",
+              "providerEventIndex": 20
             },
             {
               "hash": "0x00119cc0951242a55810f2a7fd3de2e8dee31eeafad5a356bde3aa976b4d723d",
@@ -647,7 +689,9 @@
               "value": "37217553892",
               "tokenDecimal": "6",
               "blockNumber": "25352240",
-              "timeStamp": "1781879519"
+              "timeStamp": "1781879519",
+              "transactionIndex": "8",
+              "providerEventIndex": 21
             },
             {
               "hash": "0x0ea1863f10a4646e1357a7650b12db19705180f2d1f0d8c5a07a3d5564ba472a",
@@ -657,7 +701,9 @@
               "value": "205181660292",
               "tokenDecimal": "6",
               "blockNumber": "25353139",
-              "timeStamp": "1781890331"
+              "timeStamp": "1781890331",
+              "transactionIndex": "58",
+              "providerEventIndex": 22
             },
             {
               "hash": "0x0ea1863f10a4646e1357a7650b12db19705180f2d1f0d8c5a07a3d5564ba472a",
@@ -667,7 +713,9 @@
               "value": "205550760297",
               "tokenDecimal": "6",
               "blockNumber": "25353139",
-              "timeStamp": "1781890331"
+              "timeStamp": "1781890331",
+              "transactionIndex": "58",
+              "providerEventIndex": 23
             },
             {
               "hash": "0x0ea1863f10a4646e1357a7650b12db19705180f2d1f0d8c5a07a3d5564ba472a",
@@ -677,7 +725,9 @@
               "value": "205181660292",
               "tokenDecimal": "6",
               "blockNumber": "25353139",
-              "timeStamp": "1781890331"
+              "timeStamp": "1781890331",
+              "transactionIndex": "58",
+              "providerEventIndex": 24
             },
             {
               "hash": "0x0ea1863f10a4646e1357a7650b12db19705180f2d1f0d8c5a07a3d5564ba472a",
@@ -687,7 +737,9 @@
               "value": "123863542884",
               "tokenDecimal": "6",
               "blockNumber": "25353139",
-              "timeStamp": "1781890331"
+              "timeStamp": "1781890331",
+              "transactionIndex": "58",
+              "providerEventIndex": 25
             },
             {
               "hash": "0x0ea1863f10a4646e1357a7650b12db19705180f2d1f0d8c5a07a3d5564ba472a",
@@ -697,7 +749,9 @@
               "value": "123863542883",
               "tokenDecimal": "6",
               "blockNumber": "25353139",
-              "timeStamp": "1781890331"
+              "timeStamp": "1781890331",
+              "transactionIndex": "58",
+              "providerEventIndex": 26
             },
             {
               "hash": "0x0ea1863f10a4646e1357a7650b12db19705180f2d1f0d8c5a07a3d5564ba472a",
@@ -707,7 +761,9 @@
               "value": "123863542883",
               "tokenDecimal": "6",
               "blockNumber": "25353139",
-              "timeStamp": "1781890331"
+              "timeStamp": "1781890331",
+              "transactionIndex": "58",
+              "providerEventIndex": 27
             },
             {
               "hash": "0x0ea1863f10a4646e1357a7650b12db19705180f2d1f0d8c5a07a3d5564ba472a",
@@ -717,7 +773,9 @@
               "value": "66962803563833770997",
               "tokenDecimal": "18",
               "blockNumber": "25353139",
-              "timeStamp": "1781890331"
+              "timeStamp": "1781890331",
+              "transactionIndex": "58",
+              "providerEventIndex": 28
             },
             {
               "hash": "0x0ea1863f10a4646e1357a7650b12db19705180f2d1f0d8c5a07a3d5564ba472a",
@@ -727,7 +785,9 @@
               "value": "66962803563833770996",
               "tokenDecimal": "18",
               "blockNumber": "25353139",
-              "timeStamp": "1781890331"
+              "timeStamp": "1781890331",
+              "transactionIndex": "58",
+              "providerEventIndex": 29
             },
             {
               "hash": "0x0ea1863f10a4646e1357a7650b12db19705180f2d1f0d8c5a07a3d5564ba472a",
@@ -737,7 +797,9 @@
               "value": "66962803563833770996",
               "tokenDecimal": "18",
               "blockNumber": "25353139",
-              "timeStamp": "1781890331"
+              "timeStamp": "1781890331",
+              "transactionIndex": "58",
+              "providerEventIndex": 30
             },
             {
               "hash": "0xc8ec048914b138379c83b97d1d560eeba5d6f80cfdb33d4442c82996991115ff",
@@ -747,7 +809,9 @@
               "value": "1405000000000000000000",
               "tokenDecimal": "18",
               "blockNumber": "25389415",
-              "timeStamp": "1782327563"
+              "timeStamp": "1782327563",
+              "transactionIndex": "292",
+              "providerEventIndex": 31
             },
             {
               "hash": "0x83b9aa3e1fb6c557d6a7c186eca675f47918325e9638ac5b9ebefc7c9ec50ac2",
@@ -757,7 +821,9 @@
               "value": "132739000000",
               "tokenDecimal": "6",
               "blockNumber": "25389418",
-              "timeStamp": "1782327599"
+              "timeStamp": "1782327599",
+              "transactionIndex": "192",
+              "providerEventIndex": 32
             },
             {
               "hash": "0xdc38f874d16b7cbb75268b7d375f82ac17ff91ef606532ac72144d7d06827fd0",
@@ -767,7 +833,9 @@
               "value": "5983000000000000000000",
               "tokenDecimal": "18",
               "blockNumber": "25389421",
-              "timeStamp": "1782327635"
+              "timeStamp": "1782327635",
+              "transactionIndex": "206",
+              "providerEventIndex": 33
             },
             {
               "hash": "0xe8f46845506c55ecfec2d09b0fa45ac98bb0b96dd9c3c9bad319f11655562fdc",
@@ -777,7 +845,9 @@
               "value": "1338225535980619272655",
               "tokenDecimal": "18",
               "blockNumber": "25390288",
-              "timeStamp": "1782338099"
+              "timeStamp": "1782338099",
+              "transactionIndex": "136",
+              "providerEventIndex": 34
             },
             {
               "hash": "0xe8f46845506c55ecfec2d09b0fa45ac98bb0b96dd9c3c9bad319f11655562fdc",
@@ -787,7 +857,9 @@
               "value": "1338225535980619272655",
               "tokenDecimal": "18",
               "blockNumber": "25390288",
-              "timeStamp": "1782338099"
+              "timeStamp": "1782338099",
+              "transactionIndex": "136",
+              "providerEventIndex": 35
             },
             {
               "hash": "0x3333cd52c0f55fca91ade84249836424aa6d11983a578fba8052b19e12ad73fd",
@@ -797,7 +869,9 @@
               "value": "150000000000000000000000",
               "tokenDecimal": "18",
               "blockNumber": "25393493",
-              "timeStamp": "1782376679"
+              "timeStamp": "1782376679",
+              "transactionIndex": "116",
+              "providerEventIndex": 36
             },
             {
               "hash": "0x3c049b8e025fc7dd77c5e1f41c0bebee155be96c728697aa106b1f1efbcbc9f5",
@@ -807,7 +881,9 @@
               "value": "7388000000000000000000",
               "tokenDecimal": "18",
               "blockNumber": "25426139",
-              "timeStamp": "1782770051"
+              "timeStamp": "1782770051",
+              "transactionIndex": "38",
+              "providerEventIndex": 37
             },
             {
               "hash": "0x3c049b8e025fc7dd77c5e1f41c0bebee155be96c728697aa106b1f1efbcbc9f5",
@@ -817,7 +893,9 @@
               "value": "7388000000000000000000",
               "tokenDecimal": "18",
               "blockNumber": "25426139",
-              "timeStamp": "1782770051"
+              "timeStamp": "1782770051",
+              "transactionIndex": "38",
+              "providerEventIndex": 38
             },
             {
               "hash": "0x3c049b8e025fc7dd77c5e1f41c0bebee155be96c728697aa106b1f1efbcbc9f5",
@@ -827,7 +905,9 @@
               "value": "132739000000",
               "tokenDecimal": "6",
               "blockNumber": "25426139",
-              "timeStamp": "1782770051"
+              "timeStamp": "1782770051",
+              "transactionIndex": "38",
+              "providerEventIndex": 39
             },
             {
               "hash": "0x3c049b8e025fc7dd77c5e1f41c0bebee155be96c728697aa106b1f1efbcbc9f5",
@@ -837,7 +917,9 @@
               "value": "135808895866",
               "tokenDecimal": "6",
               "blockNumber": "25426139",
-              "timeStamp": "1782770051"
+              "timeStamp": "1782770051",
+              "transactionIndex": "38",
+              "providerEventIndex": 40
             },
             {
               "hash": "0x3c049b8e025fc7dd77c5e1f41c0bebee155be96c728697aa106b1f1efbcbc9f5",
@@ -847,7 +929,9 @@
               "value": "132739000000",
               "tokenDecimal": "6",
               "blockNumber": "25426139",
-              "timeStamp": "1782770051"
+              "timeStamp": "1782770051",
+              "transactionIndex": "38",
+              "providerEventIndex": 41
             },
             {
               "hash": "0x3c049b8e025fc7dd77c5e1f41c0bebee155be96c728697aa106b1f1efbcbc9f5",
@@ -857,7 +941,9 @@
               "value": "2000000000000",
               "tokenDecimal": "6",
               "blockNumber": "25426139",
-              "timeStamp": "1782770051"
+              "timeStamp": "1782770051",
+              "transactionIndex": "38",
+              "providerEventIndex": 42
             },
             {
               "hash": "0x3c049b8e025fc7dd77c5e1f41c0bebee155be96c728697aa106b1f1efbcbc9f5",
@@ -867,7 +953,9 @@
               "value": "150000000000000000000000",
               "tokenDecimal": "18",
               "blockNumber": "25426139",
-              "timeStamp": "1782770051"
+              "timeStamp": "1782770051",
+              "transactionIndex": "38",
+              "providerEventIndex": 43
             },
             {
               "hash": "0x3c049b8e025fc7dd77c5e1f41c0bebee155be96c728697aa106b1f1efbcbc9f5",
@@ -877,7 +965,9 @@
               "value": "10000000000000000000000",
               "tokenDecimal": "18",
               "blockNumber": "25426139",
-              "timeStamp": "1782770051"
+              "timeStamp": "1782770051",
+              "transactionIndex": "38",
+              "providerEventIndex": 44
             },
             {
               "hash": "0x3c049b8e025fc7dd77c5e1f41c0bebee155be96c728697aa106b1f1efbcbc9f5",
@@ -887,7 +977,9 @@
               "value": "10000001361935464357432",
               "tokenDecimal": "18",
               "blockNumber": "25426139",
-              "timeStamp": "1782770051"
+              "timeStamp": "1782770051",
+              "transactionIndex": "38",
+              "providerEventIndex": 45
             },
             {
               "hash": "0x7147ce75fc590038079169557460c7d7b437ab23bb36abe57f216757b62b7cca",
@@ -897,7 +989,9 @@
               "value": "6632522057485860665350",
               "tokenDecimal": "18",
               "blockNumber": "25594517",
-              "timeStamp": "1784798663"
+              "timeStamp": "1784798663",
+              "transactionIndex": "32",
+              "providerEventIndex": 46
             },
             {
               "hash": "0x7147ce75fc590038079169557460c7d7b437ab23bb36abe57f216757b62b7cca",
@@ -907,7 +1001,9 @@
               "value": "1027416311573873328200690",
               "tokenDecimal": "18",
               "blockNumber": "25594517",
-              "timeStamp": "1784798663"
+              "timeStamp": "1784798663",
+              "transactionIndex": "32",
+              "providerEventIndex": 47
             },
             {
               "hash": "0x7147ce75fc590038079169557460c7d7b437ab23bb36abe57f216757b62b7cca",
@@ -917,7 +1013,9 @@
               "value": "569047446998897043989965",
               "tokenDecimal": "18",
               "blockNumber": "25594517",
-              "timeStamp": "1784798663"
+              "timeStamp": "1784798663",
+              "transactionIndex": "32",
+              "providerEventIndex": 48
             },
             {
               "hash": "0xe21f78d41f052bed59712d57daa8c0418166da939a1430803d363110200b0b39",
@@ -927,7 +1025,9 @@
               "value": "1000000000000000000",
               "tokenDecimal": "18",
               "blockNumber": "25616677",
-              "timeStamp": "1785065435"
+              "timeStamp": "1785065435",
+              "transactionIndex": "162",
+              "providerEventIndex": 49
             },
             {
               "hash": "0xe2e9556a24687bd724c5eab47346671b5d72a106aaf294966347b854a9a2a49d",
@@ -937,7 +1037,9 @@
               "value": "500000000000000000000000",
               "tokenDecimal": "18",
               "blockNumber": "25650520",
-              "timeStamp": "1785472979"
+              "timeStamp": "1785472979",
+              "transactionIndex": "66",
+              "providerEventIndex": 50
             },
             {
               "hash": "0xe2e9556a24687bd724c5eab47346671b5d72a106aaf294966347b854a9a2a49d",
@@ -947,7 +1049,9 @@
               "value": "500000000000000000000000",
               "tokenDecimal": "18",
               "blockNumber": "25650520",
-              "timeStamp": "1785472979"
+              "timeStamp": "1785472979",
+              "transactionIndex": "66",
+              "providerEventIndex": 51
             },
             {
               "hash": "0x8b41f8a103857460f713a24aef8d55e843eab94669bd17116b30ef568c92bfbd",
@@ -957,7 +1061,9 @@
               "value": "1000000000000000000",
               "tokenDecimal": "18",
               "blockNumber": "25665349",
-              "timeStamp": "1785651395"
+              "timeStamp": "1785651395",
+              "transactionIndex": "54",
+              "providerEventIndex": 52
             },
             {
               "hash": "0x924e2579dd8b32d96c23df2242ae73702c219339640059a7c5e695a06aa1f0b7",
@@ -967,7 +1073,9 @@
               "value": "1027416311573873328200690",
               "tokenDecimal": "18",
               "blockNumber": "25776591",
-              "timeStamp": "1786991231"
+              "timeStamp": "1786991231",
+              "transactionIndex": "124",
+              "providerEventIndex": 53
             },
             {
               "hash": "0x924e2579dd8b32d96c23df2242ae73702c219339640059a7c5e695a06aa1f0b7",
@@ -977,7 +1085,9 @@
               "value": "1027416311573873328200690",
               "tokenDecimal": "18",
               "blockNumber": "25776591",
-              "timeStamp": "1786991231"
+              "timeStamp": "1786991231",
+              "transactionIndex": "124",
+              "providerEventIndex": 54
             },
             {
               "hash": "0x924e2579dd8b32d96c23df2242ae73702c219339640059a7c5e695a06aa1f0b7",
@@ -987,7 +1097,9 @@
               "value": "569047446998897043989965",
               "tokenDecimal": "18",
               "blockNumber": "25776591",
-              "timeStamp": "1786991231"
+              "timeStamp": "1786991231",
+              "transactionIndex": "124",
+              "providerEventIndex": 55
             },
             {
               "hash": "0x924e2579dd8b32d96c23df2242ae73702c219339640059a7c5e695a06aa1f0b7",
@@ -997,7 +1109,9 @@
               "value": "575244049690013583944446",
               "tokenDecimal": "18",
               "blockNumber": "25776591",
-              "timeStamp": "1786991231"
+              "timeStamp": "1786991231",
+              "transactionIndex": "124",
+              "providerEventIndex": 56
             },
             {
               "hash": "0x924e2579dd8b32d96c23df2242ae73702c219339640059a7c5e695a06aa1f0b7",
@@ -1007,7 +1121,9 @@
               "value": "1602645114139986162852806",
               "tokenDecimal": "18",
               "blockNumber": "25776591",
-              "timeStamp": "1786991231"
+              "timeStamp": "1786991231",
+              "transactionIndex": "124",
+              "providerEventIndex": 57
             },
             {
               "hash": "0x924e2579dd8b32d96c23df2242ae73702c219339640059a7c5e695a06aa1f0b7",
@@ -1017,7 +1133,9 @@
               "value": "1602663833114691552696626",
               "tokenDecimal": "18",
               "blockNumber": "25776591",
-              "timeStamp": "1786991231"
+              "timeStamp": "1786991231",
+              "transactionIndex": "124",
+              "providerEventIndex": 58
             },
             {
               "hash": "0x924e2579dd8b32d96c23df2242ae73702c219339640059a7c5e695a06aa1f0b7",
@@ -1027,7 +1145,9 @@
               "value": "1612664292445412658889736",
               "tokenDecimal": "18",
               "blockNumber": "25776591",
-              "timeStamp": "1786991231"
+              "timeStamp": "1786991231",
+              "transactionIndex": "124",
+              "providerEventIndex": 59
             }
           ],
           "pageCount": 1
@@ -1044,7 +1164,8 @@
               "value": 100000,
               "rawContract": {
                 "address": "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x152d02c7e14af6800000"
               },
               "metadata": {
                 "blockTimestamp": "2026-05-26T21:30:23.000Z"
@@ -1060,7 +1181,8 @@
               "value": 150000,
               "rawContract": {
                 "address": "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x1fc3842bd1f071c00000"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-04T18:11:35.000Z"
@@ -1076,7 +1198,8 @@
               "value": 250000,
               "rawContract": {
                 "address": "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x34f086f3b33b68400000"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-18T02:27:47.000Z"
@@ -1092,7 +1215,8 @@
               "value": 1062232.647543,
               "rawContract": {
                 "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0xf751ffe777"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-18T11:19:59.000Z"
@@ -1108,7 +1232,8 @@
               "value": 1062232.647543,
               "rawContract": {
                 "address": "0x98c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0xf751ffe777"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-18T11:19:59.000Z"
@@ -1124,7 +1249,8 @@
               "value": 12805.966538159071,
               "rawContract": {
                 "address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x2b6367c7d897e36e3b9"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-18T11:19:59.000Z"
@@ -1140,7 +1266,8 @@
               "value": 205181.660292,
               "rawContract": {
                 "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0x2fc5c7ac84"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-19T17:32:11.000Z"
@@ -1156,7 +1283,8 @@
               "value": 205181.660292,
               "rawContract": {
                 "address": "0x98c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0x2fc5c7ac84"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-19T17:32:11.000Z"
@@ -1172,7 +1300,8 @@
               "value": 123863.542884,
               "rawContract": {
                 "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0x1cd6d7ac64"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-19T17:32:11.000Z"
@@ -1188,7 +1317,8 @@
               "value": 123863.542883,
               "rawContract": {
                 "address": "0x23878914efe38d27c4d67ab83ed1b93a74d4086a",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0x1cd6d7ac63"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-19T17:32:11.000Z"
@@ -1204,7 +1334,8 @@
               "value": 66.96280356383377,
               "rawContract": {
                 "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x3a14bab0ea292c3f5"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-19T17:32:11.000Z"
@@ -1220,7 +1351,8 @@
               "value": 66.96280356383377,
               "rawContract": {
                 "address": "0x4d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x3a14bab0ea292c3f4"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-19T17:32:11.000Z"
@@ -1236,7 +1368,8 @@
               "value": 1338.2255359806193,
               "rawContract": {
                 "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x488b9c2ac0698991cf"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-24T21:54:59.000Z"
@@ -1252,7 +1385,8 @@
               "value": 150000,
               "rawContract": {
                 "address": "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x1fc3842bd1f071c00000"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-25T08:37:59.000Z"
@@ -1268,7 +1402,8 @@
               "value": 7388,
               "rawContract": {
                 "address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x1908118a8b2c9f00000"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-29T21:54:11.000Z"
@@ -1284,7 +1419,8 @@
               "value": 132739,
               "rawContract": {
                 "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0x1ee7dc66c0"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-29T21:54:11.000Z"
@@ -1300,7 +1436,8 @@
               "value": 132739,
               "rawContract": {
                 "address": "0x98c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0x1ee7dc66c0"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-29T21:54:11.000Z"
@@ -1316,7 +1453,8 @@
               "value": 2000000,
               "rawContract": {
                 "address": "0x98c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0x1d1a94a2000"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-29T21:54:11.000Z"
@@ -1332,7 +1470,8 @@
               "value": 150000,
               "rawContract": {
                 "address": "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x1fc3842bd1f071c00000"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-29T21:54:11.000Z"
@@ -1348,7 +1487,8 @@
               "value": 10000,
               "rawContract": {
                 "address": "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x21e19e0c9bab2400000"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-29T21:54:11.000Z"
@@ -1364,7 +1504,8 @@
               "value": 500000,
               "rawContract": {
                 "address": "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x69e10de76676d0800000"
               },
               "metadata": {
                 "blockTimestamp": "2026-07-31T04:42:59.000Z"
@@ -1380,7 +1521,8 @@
               "value": 1027416.3115738733,
               "rawContract": {
                 "address": "0x1a88df1cfe15af22b3c4c783d4e6f7f9e0c1885d",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0xd990598ff38597651bf2"
               },
               "metadata": {
                 "blockTimestamp": "2026-08-17T18:27:11.000Z"
@@ -1396,7 +1538,8 @@
               "value": 569047.446998897,
               "rawContract": {
                 "address": "0xe1753f2e00940cc31213dd92013cf019dfe4ca1d",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x78801fb8d6e8764865cd"
               },
               "metadata": {
                 "blockTimestamp": "2026-08-17T18:27:11.000Z"
@@ -1412,7 +1555,8 @@
               "value": 1602645.1141399862,
               "rawContract": {
                 "address": "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x1535f90d34496561ba3c6"
               },
               "metadata": {
                 "blockTimestamp": "2026-08-17T18:27:11.000Z"
@@ -1428,7 +1572,8 @@
               "value": 1612664.2924454126,
               "rawContract": {
                 "address": "0x18efe565a5373f430e2f809b97de30335b3ad96a",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x1557eb4db157dac99c408"
               },
               "metadata": {
                 "blockTimestamp": "2026-08-17T18:27:11.000Z"
@@ -1446,7 +1591,8 @@
               "value": 100000,
               "rawContract": {
                 "address": "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x152d02c7e14af6800000"
               },
               "metadata": {
                 "blockTimestamp": "2026-05-26T21:30:23.000Z"
@@ -1462,7 +1608,8 @@
               "value": 11240.332981271704,
               "rawContract": {
                 "address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x26156f4bca14f62877f"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-15T18:42:47.000Z"
@@ -1478,7 +1625,8 @@
               "value": 100226.345227,
               "rawContract": {
                 "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0x1755f4a90b"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-15T18:42:47.000Z"
@@ -1494,7 +1642,8 @@
               "value": 786996.302316,
               "rawContract": {
                 "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0xb73ca291ec"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-15T19:08:23.000Z"
@@ -1510,7 +1659,8 @@
               "value": 175000,
               "rawContract": {
                 "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0x28bed01600"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-15T20:28:47.000Z"
@@ -1526,7 +1676,8 @@
               "value": 10,
               "rawContract": {
                 "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0x989680"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-16T18:17:47.000Z"
@@ -1542,7 +1693,8 @@
               "value": 0.15,
               "rawContract": {
                 "address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x214e8348c4f0000"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-16T18:19:35.000Z"
@@ -1558,7 +1710,8 @@
               "value": 500000,
               "rawContract": {
                 "address": "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x69e10de76676d0800000"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-18T02:27:47.000Z"
@@ -1574,7 +1727,8 @@
               "value": 1077910.764079,
               "rawContract": {
                 "address": "0x98c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0xfaf87cfa2f"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-18T11:19:59.000Z"
@@ -1590,7 +1744,8 @@
               "value": 12805.966538159071,
               "rawContract": {
                 "address": "0xa700b4eb416be35b2911fd5dee80678ff64ff6c9",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x2b6367c7d897e36e3b9"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-18T11:19:59.000Z"
@@ -1606,7 +1761,8 @@
               "value": 45000,
               "rawContract": {
                 "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0xa7a358200"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-18T14:35:11.000Z"
@@ -1622,7 +1778,8 @@
               "value": 39.97259874887648,
               "rawContract": {
                 "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x22abb32c738019bf0"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-19T14:09:59.000Z"
@@ -1638,7 +1795,8 @@
               "value": 122964.1064,
               "rawContract": {
                 "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0x1ca13b5ca0"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-19T14:20:23.000Z"
@@ -1654,7 +1812,8 @@
               "value": 26.99020481495729,
               "rawContract": {
                 "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x1769078476a912805"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-19T14:24:11.000Z"
@@ -1670,7 +1829,8 @@
               "value": 123863.542884,
               "rawContract": {
                 "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0x1cd6d7ac64"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-19T14:25:11.000Z"
@@ -1686,7 +1846,8 @@
               "value": 37217.553892,
               "rawContract": {
                 "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0x8aa56cde4"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-19T14:31:59.000Z"
@@ -1702,7 +1863,8 @@
               "value": 205550.760297,
               "rawContract": {
                 "address": "0x98c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0x2fdbc7b169"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-19T17:32:11.000Z"
@@ -1718,7 +1880,8 @@
               "value": 123863.542883,
               "rawContract": {
                 "address": "0x23878914efe38d27c4d67ab83ed1b93a74d4086a",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0x1cd6d7ac63"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-19T17:32:11.000Z"
@@ -1734,7 +1897,8 @@
               "value": 66.96280356383377,
               "rawContract": {
                 "address": "0x4d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x3a14bab0ea292c3f4"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-19T17:32:11.000Z"
@@ -1750,7 +1914,8 @@
               "value": 1405,
               "rawContract": {
                 "address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x4c2a4ab7fdafd40000"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-24T18:59:23.000Z"
@@ -1766,7 +1931,8 @@
               "value": 132739,
               "rawContract": {
                 "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0x1ee7dc66c0"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-24T18:59:59.000Z"
@@ -1782,7 +1948,8 @@
               "value": 5983,
               "rawContract": {
                 "address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x14456cdf0b51a1c0000"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-24T19:00:35.000Z"
@@ -1798,7 +1965,8 @@
               "value": 1338.2255359806193,
               "rawContract": {
                 "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x488b9c2ac0698991cf"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-24T21:54:59.000Z"
@@ -1814,7 +1982,8 @@
               "value": 7388,
               "rawContract": {
                 "address": "0xa700b4eb416be35b2911fd5dee80678ff64ff6c9",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x1908118a8b2c9f00000"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-29T21:54:11.000Z"
@@ -1830,7 +1999,8 @@
               "value": 135808.895866,
               "rawContract": {
                 "address": "0x98c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0x1f9ed74b7a"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-29T21:54:11.000Z"
@@ -1846,7 +2016,8 @@
               "value": 10000.001361935465,
               "rawContract": {
                 "address": "0x18efe565a5373f430e2f809b97de30335b3ad96a",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x21e19e5a06701cf5e38"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-29T21:54:11.000Z"
@@ -1862,7 +2033,8 @@
               "value": 6632.52205748586,
               "rawContract": {
                 "address": "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x1678cbbd6acebaef806"
               },
               "metadata": {
                 "blockTimestamp": "2026-07-23T09:24:23.000Z"
@@ -1878,7 +2050,8 @@
               "value": 1027416.3115738733,
               "rawContract": {
                 "address": "0x1a88df1cfe15af22b3c4c783d4e6f7f9e0c1885d",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0xd990598ff38597651bf2"
               },
               "metadata": {
                 "blockTimestamp": "2026-07-23T09:24:23.000Z"
@@ -1894,7 +2067,8 @@
               "value": 569047.446998897,
               "rawContract": {
                 "address": "0xe1753f2e00940cc31213dd92013cf019dfe4ca1d",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x78801fb8d6e8764865cd"
               },
               "metadata": {
                 "blockTimestamp": "2026-07-23T09:24:23.000Z"
@@ -1910,7 +2084,8 @@
               "value": 1,
               "rawContract": {
                 "address": "0xf82d598ce6fce9f2d46f046fc46653e3284040aa",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0xde0b6b3a7640000"
               },
               "metadata": {
                 "blockTimestamp": "2026-07-26T11:30:35.000Z"
@@ -1926,7 +2101,8 @@
               "value": 500000,
               "rawContract": {
                 "address": "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x69e10de76676d0800000"
               },
               "metadata": {
                 "blockTimestamp": "2026-07-31T04:42:59.000Z"
@@ -1942,7 +2118,8 @@
               "value": 1,
               "rawContract": {
                 "address": "0x16613999219f9b56bededbf3722e44c4c2045300",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0xde0b6b3a7640000"
               },
               "metadata": {
                 "blockTimestamp": "2026-08-02T06:16:35.000Z"
@@ -1958,7 +2135,8 @@
               "value": 1027416.3115738733,
               "rawContract": {
                 "address": "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0xd990598ff38597651bf2"
               },
               "metadata": {
                 "blockTimestamp": "2026-08-17T18:27:11.000Z"
@@ -1974,7 +2152,8 @@
               "value": 575244.0496900136,
               "rawContract": {
                 "address": "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x79d00adbfb786d3e2afe"
               },
               "metadata": {
                 "blockTimestamp": "2026-08-17T18:27:11.000Z"
@@ -1990,7 +2169,8 @@
               "value": 1602663.8331146915,
               "rawContract": {
                 "address": "0x18efe565a5373f430e2f809b97de30335b3ad96a",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x15360949a6ce788645932"
               },
               "metadata": {
                 "blockTimestamp": "2026-08-17T18:27:11.000Z"
@@ -2116,7 +2296,9 @@
               "value": "48500000",
               "tokenDecimal": "0",
               "blockNumber": "46535228",
-              "timeStamp": "1779859803"
+              "timeStamp": "1779859803",
+              "transactionIndex": "46",
+              "providerEventIndex": 0
             },
             {
               "hash": "0x62bb40b56dcdfa8f4425233cb4c8ee1bb97e04cc06a75dcca322f6ab115f0a1d",
@@ -2126,7 +2308,9 @@
               "value": "1850",
               "tokenDecimal": "0",
               "blockNumber": "46962782",
-              "timeStamp": "1780714911"
+              "timeStamp": "1780714911",
+              "transactionIndex": "20",
+              "providerEventIndex": 1
             },
             {
               "hash": "0xf3838bf1ca479c12aa85e9eee0fb272e371057e6af4077b1d24a5600772be9db",
@@ -2136,7 +2320,9 @@
               "value": "783759965247",
               "tokenDecimal": "6",
               "blockNumber": "47379816",
-              "timeStamp": "1781548979"
+              "timeStamp": "1781548979",
+              "transactionIndex": "9",
+              "providerEventIndex": 2
             },
             {
               "hash": "0xf3838bf1ca479c12aa85e9eee0fb272e371057e6af4077b1d24a5600772be9db",
@@ -2146,7 +2332,9 @@
               "value": "786998680509",
               "tokenDecimal": "6",
               "blockNumber": "47379816",
-              "timeStamp": "1781548979"
+              "timeStamp": "1781548979",
+              "transactionIndex": "9",
+              "providerEventIndex": 3
             },
             {
               "hash": "0xf3838bf1ca479c12aa85e9eee0fb272e371057e6af4077b1d24a5600772be9db",
@@ -2156,7 +2344,9 @@
               "value": "786996302316",
               "tokenDecimal": "6",
               "blockNumber": "47379816",
-              "timeStamp": "1781548979"
+              "timeStamp": "1781548979",
+              "transactionIndex": "9",
+              "providerEventIndex": 4
             },
             {
               "hash": "0xf3838bf1ca479c12aa85e9eee0fb272e371057e6af4077b1d24a5600772be9db",
@@ -2166,7 +2356,9 @@
               "value": "39891141640247591943",
               "tokenDecimal": "18",
               "blockNumber": "47379816",
-              "timeStamp": "1781548979"
+              "timeStamp": "1781548979",
+              "transactionIndex": "9",
+              "providerEventIndex": 5
             },
             {
               "hash": "0xf3838bf1ca479c12aa85e9eee0fb272e371057e6af4077b1d24a5600772be9db",
@@ -2176,7 +2368,9 @@
               "value": "39980831553609838408",
               "tokenDecimal": "18",
               "blockNumber": "47379816",
-              "timeStamp": "1781548979"
+              "timeStamp": "1781548979",
+              "transactionIndex": "9",
+              "providerEventIndex": 6
             },
             {
               "hash": "0xf3838bf1ca479c12aa85e9eee0fb272e371057e6af4077b1d24a5600772be9db",
@@ -2186,7 +2380,9 @@
               "value": "36353382458",
               "tokenDecimal": "6",
               "blockNumber": "47379816",
-              "timeStamp": "1781548979"
+              "timeStamp": "1781548979",
+              "transactionIndex": "9",
+              "providerEventIndex": 7
             },
             {
               "hash": "0xf3838bf1ca479c12aa85e9eee0fb272e371057e6af4077b1d24a5600772be9db",
@@ -2196,7 +2392,9 @@
               "value": "37228603946",
               "tokenDecimal": "6",
               "blockNumber": "47379816",
-              "timeStamp": "1781548979"
+              "timeStamp": "1781548979",
+              "transactionIndex": "9",
+              "providerEventIndex": 8
             },
             {
               "hash": "0xcc2c4e05240a318c0a4748b37b15c83ccf33532d56c4bb8b060048998f93a7f2",
@@ -2206,7 +2404,9 @@
               "value": "2470",
               "tokenDecimal": "0",
               "blockNumber": "47384720",
-              "timeStamp": "1781558787"
+              "timeStamp": "1781558787",
+              "transactionIndex": "239",
+              "providerEventIndex": 9
             },
             {
               "hash": "0x417dab37c30e8d446e2e0fb3bc0d283e5eccea1189a0827da7b368d2aab6e72d",
@@ -2216,7 +2416,9 @@
               "value": "39980831553609838408",
               "tokenDecimal": "18",
               "blockNumber": "47544422",
-              "timeStamp": "1781878191"
+              "timeStamp": "1781878191",
+              "transactionIndex": "112",
+              "providerEventIndex": 10
             },
             {
               "hash": "0xee5abf46e89d17986221100b003f2f6e8426dad741d947e659f6bcf12d032834",
@@ -2226,7 +2428,9 @@
               "value": "37228603946",
               "tokenDecimal": "6",
               "blockNumber": "47545068",
-              "timeStamp": "1781879483"
+              "timeStamp": "1781879483",
+              "transactionIndex": "63",
+              "providerEventIndex": 11
             },
             {
               "hash": "0x92eac573be6b1339b66e5a1bd8e171fcee1d1bbfb6fe5aa3e63ce773baa52630",
@@ -2236,7 +2440,9 @@
               "value": "1000000000000000000",
               "tokenDecimal": "18",
               "blockNumber": "47673805",
-              "timeStamp": "1782136957"
+              "timeStamp": "1782136957",
+              "transactionIndex": "122",
+              "providerEventIndex": 12
             },
             {
               "hash": "0x94da65536b002cd66bba3209a92b04d4c36c4d5acf5905db341c7e39dac13878",
@@ -2246,7 +2452,9 @@
               "value": "1000000000000000000",
               "tokenDecimal": "18",
               "blockNumber": "47683767",
-              "timeStamp": "1782156881"
+              "timeStamp": "1782156881",
+              "transactionIndex": "176",
+              "providerEventIndex": 13
             },
             {
               "hash": "0x44b013ebdfedd7525f5de3c3b99bc36a155356b3766ed2bbecb4cabfc3e89ca6",
@@ -2256,7 +2464,9 @@
               "value": "6232",
               "tokenDecimal": "8",
               "blockNumber": "48928625",
-              "timeStamp": "1784646597"
+              "timeStamp": "1784646597",
+              "transactionIndex": "78",
+              "providerEventIndex": 14
             },
             {
               "hash": "0x44b013ebdfedd7525f5de3c3b99bc36a155356b3766ed2bbecb4cabfc3e89ca6",
@@ -2266,7 +2476,9 @@
               "value": "4605184",
               "tokenDecimal": "8",
               "blockNumber": "48928625",
-              "timeStamp": "1784646597"
+              "timeStamp": "1784646597",
+              "transactionIndex": "78",
+              "providerEventIndex": 15
             },
             {
               "hash": "0x63a2e9c3b05461ea7ab8bb40478f65d3680d0b11d90cc5472008dedefb8344f3",
@@ -2276,7 +2488,9 @@
               "value": "3370",
               "tokenDecimal": "0",
               "blockNumber": "49516858",
-              "timeStamp": "1785823063"
+              "timeStamp": "1785823063",
+              "transactionIndex": "30",
+              "providerEventIndex": 16
             }
           ],
           "pageCount": 1
@@ -2293,7 +2507,8 @@
               "value": 783759.965247,
               "rawContract": {
                 "address": "0x4e65fe4dba92790696d040ac24aa414708f5c0ab",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0xb67bbbfc3f"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-15T18:42:59.000Z"
@@ -2309,7 +2524,8 @@
               "value": 786996.302316,
               "rawContract": {
                 "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0xb73ca291ec"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-15T18:42:59.000Z"
@@ -2325,7 +2541,8 @@
               "value": 39.89114164024759,
               "rawContract": {
                 "address": "0xd4a0e0b9149bcee3c920d2e00b5de09138fd8bb7",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x22999cdf82fc04407"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-15T18:42:59.000Z"
@@ -2341,7 +2558,8 @@
               "value": 36353.382458,
               "rawContract": {
                 "address": "0x0a1d576f3efef75b330424287a95a366e8281d54",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0x876d4983a"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-15T18:42:59.000Z"
@@ -2357,7 +2575,8 @@
               "value": 39.98083155360984,
               "rawContract": {
                 "address": "0x4200000000000000000000000000000000000006",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x22ad8727871a4af48"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-19T14:09:51.000Z"
@@ -2373,7 +2592,8 @@
               "value": 37228.603946,
               "rawContract": {
                 "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0x8aaff6a2a"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-19T14:31:23.000Z"
@@ -2391,7 +2611,8 @@
               "value": 48500000,
               "rawContract": {
                 "address": "0xe132499880311b5d1dbe6c3a45402126eea05597",
-                "decimal": "0x0"
+                "decimal": "0x0",
+                "value": "0x2e40d20"
               },
               "metadata": {
                 "blockTimestamp": "2026-05-27T05:30:03.000Z"
@@ -2407,7 +2628,8 @@
               "value": 1850,
               "rawContract": {
                 "address": "0x65755ed15ea1285172db2bca5b8af93e1fccf31f",
-                "decimal": "0x0"
+                "decimal": "0x0",
+                "value": "0x73a"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-06T03:01:51.000Z"
@@ -2423,7 +2645,8 @@
               "value": 786998.680509,
               "rawContract": {
                 "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0xb73cc6dbbd"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-15T18:42:59.000Z"
@@ -2439,7 +2662,8 @@
               "value": 39.98083155360984,
               "rawContract": {
                 "address": "0x4200000000000000000000000000000000000006",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x22ad8727871a4af48"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-15T18:42:59.000Z"
@@ -2455,7 +2679,8 @@
               "value": 37228.603946,
               "rawContract": {
                 "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca",
-                "decimal": "0x6"
+                "decimal": "0x6",
+                "value": "0x8aaff6a2a"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-15T18:42:59.000Z"
@@ -2471,7 +2696,8 @@
               "value": 2470,
               "rawContract": {
                 "address": "0xd8163cca0a1f3704c93c20cf2fe974db770a7695",
-                "decimal": "0x0"
+                "decimal": "0x0",
+                "value": "0x9a6"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-15T21:26:27.000Z"
@@ -2487,7 +2713,8 @@
               "value": 1,
               "rawContract": {
                 "address": "0xea435cce2ff482ee2e7b4e3795383f2ec2e2e8bc",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0xde0b6b3a7640000"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-22T14:02:37.000Z"
@@ -2503,7 +2730,8 @@
               "value": 1,
               "rawContract": {
                 "address": "0x6abc46cb32d8dff95b0af7b746a2fa5d0d8b25ae",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0xde0b6b3a7640000"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-22T19:34:41.000Z"
@@ -2519,7 +2747,8 @@
               "value": 0.00006232,
               "rawContract": {
                 "address": "0xbdb9300b7cde636d9cd4aff00f6f009ffbbc8ee6",
-                "decimal": "0x8"
+                "decimal": "0x8",
+                "value": "0x1858"
               },
               "metadata": {
                 "blockTimestamp": "2026-07-21T15:09:57.000Z"
@@ -2535,7 +2764,8 @@
               "value": 0.04605184,
               "rawContract": {
                 "address": "0xbdb9300b7cde636d9cd4aff00f6f009ffbbc8ee6",
-                "decimal": "0x8"
+                "decimal": "0x8",
+                "value": "0x464500"
               },
               "metadata": {
                 "blockTimestamp": "2026-07-21T15:09:57.000Z"
@@ -2551,7 +2781,8 @@
               "value": 3370,
               "rawContract": {
                 "address": "0xfa2c3b559d6056343b8548420c95657a62ecfd0d",
-                "decimal": "0x0"
+                "decimal": "0x0",
+                "value": "0xd2a"
               },
               "metadata": {
                 "blockTimestamp": "2026-08-04T05:57:43.000Z"
@@ -2597,7 +2828,9 @@
               "value": "1336000000000000000000",
               "tokenDecimal": "18",
               "blockNumber": "473837395",
-              "timeStamp": "1781548939"
+              "timeStamp": "1781548939",
+              "transactionIndex": "2",
+              "providerEventIndex": 0
             },
             {
               "hash": "0x0f3550214fc98e436a3648260184d438106040694d711971815a64f6b4228a07",
@@ -2607,7 +2840,9 @@
               "value": "1338225535980619272655",
               "tokenDecimal": "18",
               "blockNumber": "473837395",
-              "timeStamp": "1781548939"
+              "timeStamp": "1781548939",
+              "transactionIndex": "2",
+              "providerEventIndex": 1
             },
             {
               "hash": "0x4d63d86767de26e81e49ba4d7a1920bb90befaaa83dc40838ef242ad2758174f",
@@ -2617,7 +2852,9 @@
               "value": "1338225535980619272655",
               "tokenDecimal": "18",
               "blockNumber": "473869325",
-              "timeStamp": "1781556946"
+              "timeStamp": "1781556946",
+              "transactionIndex": "3",
+              "providerEventIndex": 2
             }
           ],
           "pageCount": 1
@@ -2634,7 +2871,8 @@
               "value": 1336,
               "rawContract": {
                 "address": "0xe50fa9b3c56ffb159cb0fca61f5c9d750e8128c8",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x486cb9799191e00000"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-15T18:42:19.000Z"
@@ -2650,7 +2888,8 @@
               "value": 1338.2255359806193,
               "rawContract": {
                 "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x488b9c2ac0698991cf"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-15T20:55:46.000Z"
@@ -2668,7 +2907,8 @@
               "value": 1338.2255359806193,
               "rawContract": {
                 "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
-                "decimal": "0x12"
+                "decimal": "0x12",
+                "value": "0x488b9c2ac0698991cf"
               },
               "metadata": {
                 "blockTimestamp": "2026-06-15T18:42:19.000Z"
@@ -2730,7 +2970,9 @@
               "value": "1400000000000000000000000",
               "tokenDecimal": "18",
               "blockNumber": "88298318",
-              "timeStamp": "1781788474"
+              "timeStamp": "1781788474",
+              "transactionIndex": "13",
+              "providerEventIndex": 0
             },
             {
               "hash": "0x011780515d37e8dc7d7a7562965e5fed6b98a7a9b26c00508d9ae2ee9179ea35",
@@ -2740,7 +2982,9 @@
               "value": "1406568147169762244655695",
               "tokenDecimal": "18",
               "blockNumber": "88298318",
-              "timeStamp": "1781788474"
+              "timeStamp": "1781788474",
+              "transactionIndex": "13",
+              "providerEventIndex": 1
             },
             {
               "hash": "0x011780515d37e8dc7d7a7562965e5fed6b98a7a9b26c00508d9ae2ee9179ea35",
@@ -2750,7 +2994,9 @@
               "value": "238000000000000000000",
               "tokenDecimal": "18",
               "blockNumber": "88298318",
-              "timeStamp": "1781788474"
+              "timeStamp": "1781788474",
+              "transactionIndex": "13",
+              "providerEventIndex": 2
             },
             {
               "hash": "0x011780515d37e8dc7d7a7562965e5fed6b98a7a9b26c00508d9ae2ee9179ea35",
@@ -2760,7 +3006,9 @@
               "value": "237999999999999999999",
               "tokenDecimal": "18",
               "blockNumber": "88298318",
-              "timeStamp": "1781788474"
+              "timeStamp": "1781788474",
+              "transactionIndex": "13",
+              "providerEventIndex": 3
             }
           ],
           "pageCount": 1

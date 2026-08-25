@@ -1,7 +1,7 @@
-import { formatEther, toHex, type Address } from 'viem'
-import { CHAINS, NAV_TOKEN_ALLOWLIST, TREASURY_WALLETS } from '../config.js'
+import { formatEther, toHex } from 'viem'
+import { CHAINS, TREASURY_WALLETS } from '../config.js'
 import { collectManifest } from './manifest.js'
-import { discoverErc20s, publicClient } from '../lib/alchemy.js'
+import { discoverErc20s, getTokenMetadata, publicClient } from '../lib/alchemy.js'
 import { ERC20_ABI } from '../lib/abis.js'
 import { fixturePath, isMain, writeJson } from '../lib/io.js'
 import type {
@@ -18,14 +18,6 @@ export async function collectBalances(): Promise<BalancesFixture> {
 
   for (const chain of Object.values(CHAINS)) {
     const client = publicClient(chain.id)
-    const spotAllowlist = NAV_TOKEN_ALLOWLIST[chain.id]
-    const aavePositionTokens = new Set(
-      Object.values(chain.aave.ASSETS ?? {}).flatMap((asset) =>
-        [asset.A_TOKEN, asset.V_TOKEN]
-          .filter((address): address is Address => address !== undefined)
-          .map((address) => address.toLowerCase()),
-      ),
-    )
     const blockNumber = BigInt(manifest.chains[chain.id].blockNumber)
     chains[chain.id] = {}
 
@@ -36,13 +28,6 @@ export async function collectBalances(): Promise<BalancesFixture> {
       const erc20: Erc20BalanceFixture[] = []
 
       for (const contractAddress of discovery.contracts) {
-        const asset = spotAllowlist[contractAddress.toLowerCase()]
-        if (!asset) continue
-
-        // Aave wrapper balances are canonicalized in defi_positions.json. Keeping
-        // them here as spot ERC-20s would count the same position twice.
-        if (aavePositionTokens.has(contractAddress.toLowerCase())) continue
-
         try {
           const balance = await client.readContract({
             address: contractAddress,
@@ -54,16 +39,23 @@ export async function collectBalances(): Promise<BalancesFixture> {
 
           if (balance === 0n) continue
 
+          let metadata: unknown = null
+          try {
+            metadata = await getTokenMetadata(chain.id, contractAddress)
+          } catch {
+            // Raw collection keeps balances even when display metadata fails.
+          }
+
           erc20.push({
             contractAddress,
-            asset,
             tokenBalance: toHex(balance),
             tokenBalanceDecimal: balance.toString(),
+            metadata,
+            metadataTrust: 'untrusted',
           })
         } catch (error) {
           erc20.push({
             contractAddress,
-            asset,
             error: String(error),
           })
         }
@@ -77,10 +69,8 @@ export async function collectBalances(): Promise<BalancesFixture> {
           formatted: formatEther(native),
         },
         erc20,
-        discovery: {
-          contractCount: discovery.contracts.length,
-          pageCount: discovery.pages.length,
-        },
+        // Non-reproducible Token API discovery evidence. Never use as NAV input.
+        discoveryRaw: discovery.pages,
       }
     }
   }
