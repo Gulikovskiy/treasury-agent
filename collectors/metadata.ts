@@ -1,7 +1,7 @@
 import { keccak256, type Address, type Hex } from 'viem'
 import { CHAINS } from '../config.js'
 import { collectManifest } from './manifest.js'
-import { getTokenMetadata, publicClient } from '../lib/alchemy.js'
+import { publicClient } from '../lib/alchemy.js'
 import { fixturePath, isMain, readJson, writeJson } from '../lib/io.js'
 import type { BalancesFixture, ChainMap } from '../types/fixture.js'
 import type { TransactionsFixture } from './transactions.js'
@@ -10,7 +10,6 @@ interface ContractMetadataFixture {
   isContract?: boolean
   runtimeCodeHash?: Hex | null
   runtimeCodeSize?: number | null
-  tokenMetadata?: unknown
   error?: string
 }
 
@@ -33,13 +32,11 @@ export async function collectMetadata(): Promise<ContractsFixture> {
     const blockNumber = BigInt(manifest.chains[chain.id].blockNumber)
     const client = publicClient(chain.id)
     const candidates = new Set<Address>()
-    const tokenContracts = new Set<Address>()
 
     for (const walletData of Object.values(balances.chains[chain.id])) {
       if (!walletData) continue
       for (const token of walletData.erc20) {
         addAddress(candidates, token.contractAddress)
-        addAddress(tokenContracts, token.contractAddress)
       }
     }
 
@@ -54,18 +51,14 @@ export async function collectMetadata(): Promise<ContractsFixture> {
         addAddress(candidates, transfer.from)
         addAddress(candidates, transfer.to)
         addAddress(candidates, transfer.contractAddress)
-        addAddress(tokenContracts, transfer.contractAddress)
       }
 
       if (walletTx.alchemyTransfers) {
         for (const direction of ['incoming', 'outgoing'] as const) {
-          for (const page of walletTx.alchemyTransfers[direction]) {
-            for (const transfer of page.transfers ?? []) {
-              addAddress(candidates, transfer.from)
-              addAddress(candidates, transfer.to)
-              addAddress(candidates, transfer.rawContract?.address)
-              addAddress(tokenContracts, transfer.rawContract?.address)
-            }
+          for (const transfer of walletTx.alchemyTransfers[direction]) {
+            addAddress(candidates, transfer.from)
+            addAddress(candidates, transfer.to)
+            addAddress(candidates, transfer.rawContract?.address)
           }
         }
       }
@@ -78,21 +71,10 @@ export async function collectMetadata(): Promise<ContractsFixture> {
       try {
         const code = await client.getCode({ address, blockNumber })
         const isContract = Boolean(code && code !== '0x')
-        let tokenMetadata: unknown = null
-
-        if (tokenContracts.has(address)) {
-          try {
-            tokenMetadata = await getTokenMetadata(chain.id, address)
-          } catch {
-            // Preserve the contract record even if token metadata is unavailable.
-          }
-        }
-
         chainOut[address] = {
           isContract,
           runtimeCodeHash: isContract && code ? keccak256(code) : null,
           runtimeCodeSize: isContract && code ? (code.length - 2) / 2 : null,
-          tokenMetadata,
         }
       } catch (error) {
         chainOut[address] = { error: String(error) }

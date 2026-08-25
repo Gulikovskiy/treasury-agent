@@ -7,7 +7,6 @@
         "wallets": {
           "0x22740deba78d5a0c24c58c740e3715ec29de1bfa": [
             {
-              "symbol": "USDC",
               "underlyingAsset": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
               "currentATokenBalance": "1278966539617",
               "currentStableDebt": "0",
@@ -17,10 +16,13 @@
               "stableBorrowRate": "0",
               "liquidityRate": "38850006919935541257015250",
               "stableRateLastUpdated": 0,
-              "usageAsCollateralEnabled": true
+              "usageAsCollateralEnabled": true,
+              "assetId": "1:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+              "canonicalSymbol": "USDC",
+              "decimals": 6,
+              "labelSource": "aave-address-book"
             },
             {
-              "symbol": "AAVE",
               "underlyingAsset": "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
               "currentATokenBalance": "240502341729069193528383",
               "currentStableDebt": "0",
@@ -30,10 +32,13 @@
               "stableBorrowRate": "0",
               "liquidityRate": "0",
               "stableRateLastUpdated": 0,
-              "usageAsCollateralEnabled": true
+              "usageAsCollateralEnabled": true,
+              "assetId": "1:0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+              "canonicalSymbol": "AAVE",
+              "decimals": 18,
+              "labelSource": "aave-address-book"
             },
             {
-              "symbol": "GHO",
               "underlyingAsset": "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
               "currentATokenBalance": "0",
               "currentStableDebt": "0",
@@ -43,7 +48,11 @@
               "stableBorrowRate": "0",
               "liquidityRate": "0",
               "stableRateLastUpdated": 0,
-              "usageAsCollateralEnabled": false
+              "usageAsCollateralEnabled": false,
+              "assetId": "1:0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f",
+              "canonicalSymbol": "GHO",
+              "decimals": 18,
+              "labelSource": "aave-address-book"
             }
           ]
         }
@@ -54,7 +63,6 @@
         "wallets": {
           "0x22740deba78d5a0c24c58c740e3715ec29de1bfa": [
             {
-              "symbol": "wstETH",
               "underlyingAsset": "0xc1CBa3fCea344f92D9239c08C0568f6F2F0ee452",
               "currentATokenBalance": "242947107654627286",
               "currentStableDebt": "0",
@@ -64,10 +72,13 @@
               "stableBorrowRate": "0",
               "liquidityRate": "5279994845782594123790",
               "stableRateLastUpdated": 0,
-              "usageAsCollateralEnabled": false
+              "usageAsCollateralEnabled": false,
+              "assetId": "8453:0xc1cba3fcea344f92d9239c08c0568f6f2f0ee452",
+              "canonicalSymbol": "wstETH",
+              "decimals": 18,
+              "labelSource": "aave-address-book"
             },
             {
-              "symbol": "cbBTC",
               "underlyingAsset": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
               "currentATokenBalance": "137996096",
               "currentStableDebt": "0",
@@ -77,10 +88,13 @@
               "stableBorrowRate": "0",
               "liquidityRate": "107248503828883813860679",
               "stableRateLastUpdated": 0,
-              "usageAsCollateralEnabled": true
+              "usageAsCollateralEnabled": true,
+              "assetId": "8453:0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf",
+              "canonicalSymbol": "cbBTC",
+              "decimals": 8,
+              "labelSource": "aave-address-book"
             },
             {
-              "symbol": "GHO",
               "underlyingAsset": "0x6Bb7a212910682DCFdbd5BCBb3e28FB4E8da10Ee",
               "currentATokenBalance": "3082891104654593767183",
               "currentStableDebt": "0",
@@ -90,7 +104,11 @@
               "stableBorrowRate": "0",
               "liquidityRate": "33763515416642853609374908",
               "stableRateLastUpdated": 0,
-              "usageAsCollateralEnabled": false
+              "usageAsCollateralEnabled": false,
+              "assetId": "8453:0x6bb7a212910682dcfdbd5bcbb3e28fb4e8da10ee",
+              "canonicalSymbol": "GHO",
+              "decimals": 18,
+              "labelSource": "aave-address-book"
             }
           ]
         }
@@ -101,7 +119,6 @@
         "wallets": {
           "0x22740deba78d5a0c24c58c740e3715ec29de1bfa": [
             {
-              "symbol": "USD₮0",
               "underlyingAsset": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
               "currentATokenBalance": "55289660",
               "currentStableDebt": "0",
@@ -111,10 +128,13 @@
               "stableBorrowRate": "0",
               "liquidityRate": "31679806248146918045596524",
               "stableRateLastUpdated": 0,
-              "usageAsCollateralEnabled": false
+              "usageAsCollateralEnabled": false,
+              "assetId": "42161:0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+              "canonicalSymbol": "USDT",
+              "decimals": 6,
+              "labelSource": "aave-address-book"
             },
             {
-              "symbol": "wstETH",
               "underlyingAsset": "0x5979D7b546E38E414F7E9822514be443A4800529",
               "currentATokenBalance": "113554609294",
               "currentStableDebt": "0",
@@ -124,10 +144,13 @@
               "stableBorrowRate": "0",
               "liquidityRate": "248256734366944040515",
               "stableRateLastUpdated": 0,
-              "usageAsCollateralEnabled": false
+              "usageAsCollateralEnabled": false,
+              "assetId": "42161:0x5979d7b546e38e414f7e9822514be443a4800529",
+              "canonicalSymbol": "wstETH",
+              "decimals": 18,
+              "labelSource": "aave-address-book"
             },
             {
-              "symbol": "USDC",
               "underlyingAsset": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
               "currentATokenBalance": "120188487",
               "currentStableDebt": "0",
@@ -137,7 +160,11 @@
               "stableBorrowRate": "0",
               "liquidityRate": "21483490814582425750114801",
               "stableRateLastUpdated": 0,
-              "usageAsCollateralEnabled": false
+              "usageAsCollateralEnabled": false,
+              "assetId": "42161:0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+              "canonicalSymbol": "USDCn",
+              "decimals": 6,
+              "labelSource": "aave-address-book"
             }
           ]
         }
@@ -148,7 +175,6 @@
         "wallets": {
           "0x22740deba78d5a0c24c58c740e3715ec29de1bfa": [
             {
-              "symbol": "DAI.e",
               "underlyingAsset": "0xd586E7F844cEa2F87f50152665BCbc2C279D8d70",
               "currentATokenBalance": "2764255819719244349043876",
               "currentStableDebt": "0",
@@ -158,10 +184,13 @@
               "stableBorrowRate": "0",
               "liquidityRate": "16618403915515714275176535",
               "stableRateLastUpdated": 0,
-              "usageAsCollateralEnabled": false
+              "usageAsCollateralEnabled": false,
+              "assetId": "43114:0xd586e7f844cea2f87f50152665bcbc2c279d8d70",
+              "canonicalSymbol": "DAIe",
+              "decimals": 18,
+              "labelSource": "aave-address-book"
             },
             {
-              "symbol": "WETH.e",
               "underlyingAsset": "0x49D5c2BdFfac6CE2BFdB6640F4F80f226bc10bAB",
               "currentATokenBalance": "238499247378081881650",
               "currentStableDebt": "0",
@@ -171,7 +200,11 @@
               "stableBorrowRate": "0",
               "liquidityRate": "14479569043320598122510169",
               "stableRateLastUpdated": 0,
-              "usageAsCollateralEnabled": true
+              "usageAsCollateralEnabled": true,
+              "assetId": "43114:0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab",
+              "canonicalSymbol": "WETHe",
+              "decimals": 18,
+              "labelSource": "aave-address-book"
             }
           ]
         }

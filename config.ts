@@ -7,10 +7,16 @@ import {
   AaveV3Arbitrum,
   AaveV3Base,
 } from '@aave-dao/aave-address-book'
-import type { ChainId, ChainMap, AddressLabel } from './types/fixture.js'
+import type {
+  AddressLabel,
+  CanonicalAsset,
+  ChainId,
+  ChainMap,
+} from './types/fixture.js'
 
 export const FIXTURE_DIR = process.env.FIXTURE_DIR ?? './fixtures/treasury_v1'
 export const LOOKBACK_DAYS = Number(process.env.LOOKBACK_DAYS ?? 90)
+export const NAV_DUST_USD = 1
 
 if (!Number.isFinite(LOOKBACK_DAYS) || LOOKBACK_DAYS <= 0) {
   throw new Error(`LOOKBACK_DAYS must be a positive number; got ${process.env.LOOKBACK_DAYS}`)
@@ -41,6 +47,38 @@ export const TEST_ADDRESSES = {
   },
 } as const
 
+type SpotAssetAllowlist = ChainMap<Record<string, CanonicalAsset>>
+
+// Only these spot ERC-20 contract addresses can enter NAV. Symbols and names
+// returned by token contracts/providers are never used for identity.
+export const NAV_TOKEN_ALLOWLIST: SpotAssetAllowlist = {
+  1: {
+    '0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f': {
+      canonicalSymbol: 'GHO', decimals: 18, labelSource: 'config',
+    },
+    '0xdb25f211ab05b1c97d595516f45794528a807ad8': {
+      canonicalSymbol: 'EURS', decimals: 2, labelSource: 'config',
+    },
+  },
+  43114: {
+    '0x152b9d0fdc40c096757f570a51e494bd4b943e50': {
+      canonicalSymbol: 'BTC.b', decimals: 8, labelSource: 'config',
+    },
+    '0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664': {
+      canonicalSymbol: 'USDC.e', decimals: 6, labelSource: 'config',
+    },
+    '0xc7198437980c041c805a1edcba50c1ce5db95118': {
+      canonicalSymbol: 'USDT.e', decimals: 6, labelSource: 'config',
+    },
+  },
+  42161: {},
+  8453: {
+    '0x833589fcd6edb6e08f4c7c32d4f71b54bda02913': {
+      canonicalSymbol: 'USDC', decimals: 6, labelSource: 'config',
+    },
+  },
+}
+
 type AaveAddressBook = {
   AAVE_PROTOCOL_DATA_PROVIDER?: Address
   POOL?: Address
@@ -48,6 +86,7 @@ type AaveAddressBook = {
   POOL_ADDRESSES_PROVIDER?: Address
   ORACLE?: Address
   ASSETS?: Record<string, {
+    decimals: number
     UNDERLYING: Address
     A_TOKEN?: Address
     V_TOKEN?: Address

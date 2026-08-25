@@ -1,9 +1,10 @@
 import type { Address } from 'viem'
-import { CHAINS } from '../config.js'
+import { CHAINS, NAV_TOKEN_ALLOWLIST } from '../config.js'
 import { collectManifest } from './manifest.js'
 import { historicalPrice } from '../lib/alchemy.js'
 import { fixturePath, isMain, readJson, writeJson } from '../lib/io.js'
 import type { BalancesFixture, ChainMap } from '../types/fixture.js'
+import type { DefiPositionsFixture } from './defi-positions.js'
 
 const NATIVE_SYMBOL: ChainMap<string> = {
   1: 'ETH',
@@ -17,19 +18,22 @@ interface PriceOrError {
   error?: string
 }
 
-interface ChainPricesFixture {
+export interface ChainPricesFixture {
   native: unknown | { error: string }
   tokens: Record<string, unknown | { error: string }>
 }
 
-interface PricesFixture {
+export interface PricesFixture {
   snapshotTimestamp: string
   chains: ChainMap<ChainPricesFixture>
 }
 
 export async function collectPrices(): Promise<PricesFixture> {
   const manifest = await collectManifest()
-  const balances = await readJson<BalancesFixture>(fixturePath('balances.json'))
+  const [balances, defiPositions] = await Promise.all([
+    readJson<BalancesFixture>(fixturePath('balances.json')),
+    readJson<DefiPositionsFixture>(fixturePath('defi_positions.json')),
+  ])
   const t = new Date(manifest.snapshotTimestamp)
   const start = new Date(t.getTime() - 60 * 60_000).toISOString()
   const end = new Date(t.getTime() + 60 * 60_000).toISOString()
@@ -41,7 +45,18 @@ export async function collectPrices(): Promise<PricesFixture> {
     for (const walletData of Object.values(balances.chains[chain.id])) {
       if (!walletData) continue
       for (const token of walletData.erc20) {
-        if (token.contractAddress && !token.error) tokens.add(token.contractAddress)
+        if (
+          token.contractAddress
+          && !token.error
+          && NAV_TOKEN_ALLOWLIST[chain.id][token.contractAddress.toLowerCase()]
+        ) tokens.add(token.contractAddress)
+      }
+    }
+
+    const aaveChain = defiPositions.protocols.aave_v3[chain.id]
+    if (aaveChain) {
+      for (const positions of Object.values(aaveChain.wallets)) {
+        for (const position of positions) tokens.add(position.underlyingAsset)
       }
     }
 

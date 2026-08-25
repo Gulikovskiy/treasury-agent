@@ -14,6 +14,7 @@ The collector is TypeScript-first: run source directly with `tsx`, or compile it
 - `transactions.json` — normal transactions, ERC-20 transfers, Alchemy transfers where supported, and receipts
 - `prices.json` — historical prices around the snapshot timestamp
 - `defi_positions.json` — Aave V3 user reserve state at the pinned block
+- `nav_positions.json` — canonical priced positions after allowlist and dust filters
 - `address_labels.json` — controlled/manual/known-protocol labels
 - `contracts.json` — code presence + token metadata for encountered addresses
 - `protocols.json` — known Aave V3 contracts by chain
@@ -77,7 +78,17 @@ the treasury.
 
 ## Why balances are collected in two stages
 
-`alchemy_getTokenBalances` is used only to discover ERC-20 contracts. For each discovered contract, the collector performs `balanceOf(wallet)` at the block pinned in `manifest.json`; native balances are read at that same block. This prevents current-head balances from leaking into a historical fixture.
+`alchemy_getTokenBalances` is used only to discover ERC-20 contracts. Only
+contract addresses in `NAV_TOKEN_ALLOWLIST` proceed to pinned-block `balanceOf`
+collection; native balances are read at that same block. Discovery is retained
+as counts only. This prevents spam airdrops and current-head balances from
+entering model-facing holdings.
+
+Token identity is always `chainId + contractAddress`. Symbols and names are
+attacker-controlled display strings, so provider/on-chain token metadata is not
+stored in model-facing fixtures. Allowlisted assets receive canonical labels
+from configuration; configured Aave reserves receive labels from the pinned
+address-book package.
 
 Aave V3 aTokens and variable-debt tokens for markets represented in
 `defi_positions.json` are excluded from the canonical `erc20` arrays in
@@ -90,12 +101,17 @@ duplicate DeFi position. This policy is machine-readable in
 
 ## Transactions
 
-The fixture preserves raw evidence instead of pre-classifying treasury semantics:
+The fixture preserves bounded transaction evidence instead of pre-classifying treasury semantics:
 
 1. normal account transactions for zero-value calls/calldata,
 2. ERC-20 transfer history (Routescan on Ethereum/Avalanche; Blockscout on Arbitrum/Base),
 3. Alchemy asset transfers on configured supported chains,
 4. receipts for outgoing normal transactions so gas can be calculated exactly.
+
+Transaction provider responses are projected through explicit field allowlists.
+Token names, symbols, Alchemy `asset` labels, raw provider pages, and other
+open-ended metadata are discarded before writing the fixture, preventing token
+metadata from becoming prompt-injection content.
 
 Both ends of every transaction range are pinned in `manifest.json`: the snapshot
 block and `chains.<chainId>.historyFrom`. Transaction collection consumes those
@@ -129,7 +145,17 @@ pinned block.
 
 ## Prices
 
-Prices are frozen with Alchemy's historical price API around `snapshotTimestamp`. Provider responses are preserved as fixture truth. If price retrieval fails, the fixture records the error instead of inventing a value.
+Prices are frozen with Alchemy's historical price API around
+`snapshotTimestamp`. Spot prices are requested only for address-allowlisted
+assets. Aave positions are priced by `underlyingAsset`, never by their aToken or
+debt-token wrapper. If retrieval fails, the fixture records the error instead of
+inventing a value.
+
+`nav_positions.json` is the canonical accounting projection. A position appears
+there only when its address is trusted (explicit spot allowlist or configured
+Aave reserve), it has a historical price, and its absolute value is at least the
+manifest's `minimumUsdValue`. Excluded positions retain only an identity and an
+explicit `unpriced` or `below_dust` reason.
 
 ## Type boundaries
 

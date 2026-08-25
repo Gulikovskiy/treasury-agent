@@ -3,408 +3,236 @@
     "1": {
       "0x00e2b6d170740c15bf9fb01d0b6e77c0d4510e32": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Royal Dog",
-          "symbol": "DOG"
-        },
         "runtimeCodeHash": "0x3ee7301c82f825021b568b6e38eab6bb5a5197dcc8335eca1c39a16707422a28",
         "runtimeCodeSize": 13636
       },
       "0x16613999219f9b56bededbf3722e44c4c2045300": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Bull Dog",
-          "symbol": "DOG"
-        },
         "runtimeCodeHash": "0x5047a4c0059fe927174090c44c2d9f58ac906b00d769b3e296d31762b1cc844a",
         "runtimeCodeSize": 12552
       },
       "0x18efe565a5373f430e2f809b97de30335b3ad96a": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Aave Ethereum Lido GHO",
-          "symbol": "aEthLidoGHO"
-        },
         "runtimeCodeHash": "0xc9cddf88f86a54e1d2dda61dcfdbe314ec398987af4c6795721231b1fc827e7c",
         "runtimeCodeSize": 1853
       },
       "0x1bab804803159ad84b8854581aa53ac72455614e": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Syndicate",
-          "symbol": "SYND"
-        },
         "runtimeCodeHash": "0x6d171f5b3a53ddaa63e221b49336aca15de36bd3c1f6ef362b3db5f9bee2ec38",
         "runtimeCodeSize": 16598
       },
       "0x2b591e99afe9f32eaa6214f7b7629768c40eeb39": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 8,
-          "logo": "https://static.alchemyapi.io/images/assets/5015.png",
-          "name": "HEX",
-          "symbol": "HEX"
-        },
         "runtimeCodeHash": "0x072dc3ede6578c96b5b547786fa670d627a18c956b0993a19c4435b8999563a6",
         "runtimeCodeSize": 20989
       },
       "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": "https://static.alchemyapi.io/images/assets/23508.png",
-          "name": "GHO",
-          "symbol": "GHO"
-        },
         "runtimeCodeHash": "0xdd51428dd1ef13362e52bfc1689ed8e011730e6c6d5b50aaf96165ccd7bf0172",
         "runtimeCodeSize": 8046
       },
       "0x43afe27f3b7c12ff1c36c7721d5a5bdbc34758f3": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Visit website nanoether .net to claim rewards",
-          "symbol": "Visit website nanoether .net to claim rewards"
-        },
         "runtimeCodeHash": "0xdee28454fb21d03b69b0e815e07b0340901437add2cc3148df0781ce7b4e2926",
         "runtimeCodeSize": 1661
       },
       "0x53fdca91fd33b9131b5ceade42a3edbd9b38edff": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": null,
-          "logo": null,
-          "name": "",
-          "symbol": ""
-        },
         "runtimeCodeHash": "0x4be7e9ae4114c95eefd9d0602196697ba8a55800a304a01161a61093e6aa865e",
         "runtimeCodeSize": 14983
       },
       "0x786dbff3f1292ae8f92ea68cf93c30b34b1ed04b": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Aave Ethereum Variable Debt GHO",
-          "symbol": "variableDebtEthGHO"
-        },
         "runtimeCodeHash": "0x82c6d153799b3226525e3b7ec27b843ef44c5f6bca21fcf8b3c80db61ba64881",
         "runtimeCodeSize": 2400
       },
       "0x83819bf7e906bcf57e9f5b20453a2eff43f3845c": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "DePORT",
-          "symbol": "PORT"
-        },
         "runtimeCodeHash": "0xf46f711fd7204ef347e7ada6d95dfeb2686a29b5588c078f03e2bfd7b6301f4e",
         "runtimeCodeSize": 13442
       },
       "0x98c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 6,
-          "logo": null,
-          "name": "Aave Ethereum USDC",
-          "symbol": "aEthUSDC"
-        },
         "runtimeCodeHash": "0x82c6d153799b3226525e3b7ec27b843ef44c5f6bca21fcf8b3c80db61ba64881",
         "runtimeCodeSize": 2400
       },
       "0xa3e7833775a9cc022db2c72eb900378f90ce89b4": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 9,
-          "logo": null,
-          "name": "Malamute.Finance",
-          "symbol": "MALLY"
-        },
         "runtimeCodeHash": "0x5f45334bb2a2e504aac1b8685505cbfab8f842aeff6e1ba832fb4aed0e23a53b",
         "runtimeCodeSize": 13173
       },
       "0xa4c6984e817c086ddc3ebaeedbdcc01469586918": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Peaches.Finance",
-          "symbol": "PCHS"
-        },
         "runtimeCodeHash": "0xd2800f20645ea5c119766d2de8e9e0d615a7f884220f80f917efb386df9e9863",
         "runtimeCodeSize": 7180
       },
       "0xa700b4eb416be35b2911fd5dee80678ff64ff6c9": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Aave Ethereum AAVE",
-          "symbol": "aEthAAVE"
-        },
         "runtimeCodeHash": "0x82c6d153799b3226525e3b7ec27b843ef44c5f6bca21fcf8b3c80db61ba64881",
         "runtimeCodeSize": 2400
       },
       "0xd3e8695d2bef061eab38b5ef526c0f714108119c": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": "https://static.alchemyapi.io/images/assets/6812.png",
-          "name": "YFIVE FINANCE",
-          "symbol": "YFIVE"
-        },
         "runtimeCodeHash": "0xf563e3d370e1f594ee8b79bdb1272f87065a3665ee8f03c367ed51d05aecda00",
         "runtimeCodeSize": 3894
       },
       "0xdb25f211ab05b1c97d595516f45794528a807ad8": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 2,
-          "logo": "https://static.alchemyapi.io/images/assets/2989.png",
-          "name": "STASIS EURO",
-          "symbol": "EURS"
-        },
         "runtimeCodeHash": "0x8dddfd3c077268d84f636f0f57baf71053dabedc11a1c98cd4b49b6205f99aa8",
         "runtimeCodeSize": 5872
       },
       "0xf82d598ce6fce9f2d46f046fc46653e3284040aa": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Crown Dog",
-          "symbol": "DOG"
-        },
         "runtimeCodeHash": "0xba958c7d437855d4d1908549544b3747d38eb8b0b0be268763f65bd8c2c2abf0",
         "runtimeCodeSize": 14983
       },
       "0x45d11217458aee68a4d976a8f17e2e24fc5898a1": {
         "isContract": false,
-        "tokenMetadata": null,
         "runtimeCodeHash": null,
         "runtimeCodeSize": null
       },
       "0x22740deba78d5a0c24c58c740e3715ec29de1bfa": {
         "isContract": true,
-        "tokenMetadata": null,
         "runtimeCodeHash": "0xb89c1b3bdf2cf8827818646bce9a8f6e372885f8c55e5c07acbd307cb133b000",
         "runtimeCodeSize": 171
       },
       "0xb647055a9915bf9c8021a684e175a353525b9890": {
         "isContract": false,
-        "tokenMetadata": null,
         "runtimeCodeHash": null,
         "runtimeCodeSize": null
       },
       "0xcac616fffb687cbddd250b2ae6f672449462985c": {
         "isContract": false,
-        "tokenMetadata": null,
         "runtimeCodeHash": null,
         "runtimeCodeSize": null
       },
       "0x05466fc96ba8dbb4b0f3f360adfdd7c14e828a5f": {
         "isContract": false,
-        "tokenMetadata": null,
         "runtimeCodeHash": null,
         "runtimeCodeSize": null
       },
       "0xe26a63dcb9fa4fdf5d6fd1a688eab65d9b4e3387": {
         "isContract": false,
-        "tokenMetadata": null,
         "runtimeCodeHash": null,
         "runtimeCodeSize": null
       },
       "0x329c54289ff5d6b7b7dae13592c6b1eda1543ed4": {
         "isContract": false,
-        "tokenMetadata": null,
         "runtimeCodeHash": null,
         "runtimeCodeSize": null
       },
       "0x3a56ebb7b85fe7dd2af2756252c64701ef8614b7": {
         "isContract": false,
-        "tokenMetadata": null,
         "runtimeCodeHash": null,
         "runtimeCodeSize": null
       },
       "0xdc1a9ecc75aba95f7ff491909928596c7245cd45": {
         "isContract": false,
-        "tokenMetadata": null,
         "runtimeCodeHash": null,
         "runtimeCodeSize": null
       },
       "0x464c71f6c2f760dda6093dcb91c24c39e5d6e18c": {
         "isContract": true,
-        "tokenMetadata": null,
         "runtimeCodeHash": "0xd74f48b4da1761bacfc04bba86699cc1933a7514c35e067168dc9d70c6d0a295",
         "runtimeCodeSize": 2309
       },
       "0xe1753f2e00940cc31213dd92013cf019dfe4ca1d": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "sGho",
-          "symbol": "sGho"
-        },
         "runtimeCodeHash": "0x2a7f24499ad53e5cdae0788e9a18af4671cbaf39544b2dfbe8e74c9d96dc5828",
         "runtimeCodeSize": 1126
       },
       "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": "https://static.alchemyapi.io/images/assets/7278.png",
-          "name": "Aave",
-          "symbol": "AAVE"
-        },
         "runtimeCodeHash": "0x98a3150c9759d754a4b31f6fb3f4828371c60c2c07fb0754cfa2b230cb601001",
         "runtimeCodeSize": 2491
       },
       "0xf1af3b23de0a5ca3cab7261cb0061c0d779a5c7b": {
         "isContract": true,
-        "tokenMetadata": null,
         "runtimeCodeHash": "0x50ad64267be9207db2de1d483afed5e40c7c2ca4647e4a161e7ac199390da7ee",
         "runtimeCodeSize": 2206
       },
       "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 6,
-          "logo": "https://static.alchemyapi.io/images/assets/3408.png",
-          "name": "USDC",
-          "symbol": "USDC"
-        },
         "runtimeCodeHash": "0xd80d4b7c890cb9d6a4893e6b52bc34b56b25335cb13716e0d1d31383e6b41505",
         "runtimeCodeSize": 2186
       },
       "0x0000000000000000000000000000000000000000": {
         "isContract": false,
-        "tokenMetadata": null,
         "runtimeCodeHash": null,
         "runtimeCodeSize": null
       },
       "0xe26acd332dab8c64b70dc95da74b07a5265f3387": {
         "isContract": false,
-        "tokenMetadata": null,
         "runtimeCodeHash": null,
         "runtimeCodeSize": null
       },
       "0xb92fe925dc43a0ecde6c8b1a2709c170ec4fff4f": {
         "isContract": true,
-        "tokenMetadata": null,
         "runtimeCodeHash": "0xde894e5c12e9513d50613c8fff375ecbf19b5d9a53bec0662e2b9667e3ec8f15",
         "runtimeCodeSize": 4720
       },
       "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": "https://static.alchemyapi.io/images/assets/2396.png",
-          "name": "WETH",
-          "symbol": "WETH"
-        },
         "runtimeCodeHash": "0xd0a06b12ac47863b5c7be4185c2deaad1c61557033f56c7d4ea74429cbb25e23",
         "runtimeCodeSize": 3124
       },
       "0x07ae8551be970cb1cca11dd7a11f47ae82e70e67": {
         "isContract": false,
-        "tokenMetadata": null,
         "runtimeCodeHash": null,
         "runtimeCodeSize": null
       },
       "0x5c7bcd6e7de5423a257d81b442095a1a6ced35c5": {
         "isContract": true,
-        "tokenMetadata": null,
         "runtimeCodeHash": "0x932cddc50793da935ccf915651ad67f6b746e9936fcc5614f0ff492563782c75",
         "runtimeCodeSize": 680
       },
       "0xf70da97812cb96acdf810712aa562db8dfa3dbef": {
         "isContract": false,
-        "tokenMetadata": null,
         "runtimeCodeHash": null,
         "runtimeCodeSize": null
       },
       "0xdac17f958d2ee523a2206206994597c13d831ec7": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 6,
-          "logo": "https://static.alchemyapi.io/images/assets/825.png",
-          "name": "Tether USDt",
-          "symbol": "USDT"
-        },
         "runtimeCodeHash": "0xb44fb4e949d0f78f87f79ee46428f23a2a5713ce6fc6e0beb3dda78c2ac1ea55",
         "runtimeCodeSize": 11075
       },
       "0x0f7ae28de1c8532170ad4ee566b5801485c13a0e": {
         "isContract": true,
-        "tokenMetadata": null,
         "runtimeCodeHash": "0x2a70f9d1b1c80cc0430bbffe16283cf067d915bee05f9812715cd94ad082b76a",
         "runtimeCodeSize": 3758
       },
       "0x23878914efe38d27c4d67ab83ed1b93a74d4086a": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 6,
-          "logo": null,
-          "name": "Aave Ethereum USDT",
-          "symbol": "aEthUSDT"
-        },
         "runtimeCodeHash": "0x82c6d153799b3226525e3b7ec27b843ef44c5f6bca21fcf8b3c80db61ba64881",
         "runtimeCodeSize": 2400
       },
       "0x4d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Aave Ethereum WETH",
-          "symbol": "aEthWETH"
-        },
         "runtimeCodeHash": "0x82c6d153799b3226525e3b7ec27b843ef44c5f6bca21fcf8b3c80db61ba64881",
         "runtimeCodeSize": 2400
       },
       "0xb191aeebe29a38704d849690aa8973e12677b982": {
         "isContract": false,
-        "tokenMetadata": null,
         "runtimeCodeHash": null,
         "runtimeCodeSize": null
       },
       "0xaff94a1706ef11c0ddd1af83d17456423539b342": {
         "isContract": false,
-        "tokenMetadata": null,
         "runtimeCodeHash": null,
         "runtimeCodeSize": null
       },
       "0xd92023e9d9911199a6711321d1277285e6d4e2db": {
         "isContract": true,
-        "tokenMetadata": null,
         "runtimeCodeHash": "0x685718cbe6f1ee62236ffbab640612cebc70c6cc69a54aacb83d0790d42e247a",
         "runtimeCodeSize": 2092
       },
       "0x3b3d598d2a4811b9cbd40cfc6722f79ccfda2f49": {
         "isContract": true,
-        "tokenMetadata": null,
         "runtimeCodeHash": "0xd7d408ebcd99b2b70be43e20253d6d92a8ea8fab29bd3be7f55b10032331fb4c",
         "runtimeCodeSize": 171
       },
       "0x1a88df1cfe15af22b3c4c783d4e6f7f9e0c1885d": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "stk GHO",
-          "symbol": "stkGHO"
-        },
         "runtimeCodeHash": "0xd7aa7ce390578e74a5e48d4f530f22cbd75db8437fd6a1ae0a983e550483d972",
         "runtimeCodeSize": 2161
       }
@@ -412,1168 +240,561 @@
     "8453": {
       "0x05b38ae87331a0f113b6d6694fab70dfc56f40a2": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅NEVERSOL NFT AIRDROP",
-          "symbol": "NEVERSOL | fli.so/NEVER | visit to claim"
-        },
         "runtimeCodeHash": "0x12ce697c209291387fb0bf2240b2751b4cf253a2fbba590e252eb14aa5dd433a",
         "runtimeCodeSize": 3003
       },
       "0x067ae75628177fd257c2b1e500993e1a0babcbd1": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Aave Base GHO",
-          "symbol": "aBasGHO"
-        },
         "runtimeCodeHash": "0x343259a6f8a4c386ad5b9407536fbf70fd913ca9ac046d7abf635476357c748b",
         "runtimeCodeSize": 1853
       },
       "0x07d15798a67253d76cea61f0ea6f57aedc59dffb": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Based Coin",
-          "symbol": "BASED"
-        },
         "runtimeCodeHash": "0xb2aed704d8567acfd1385f4f07850621fc7cb054d5d6f6af41c373d3ed9d7f5f",
         "runtimeCodeSize": 11852
       },
       "0x0b873b3214c76bb29fc4ce164497b88a5b6e67f6": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Crypto Pump Meme",
-          "symbol": "CPM"
-        },
         "runtimeCodeHash": "0xfc0bc875ce7aa626d23b38962ff4f49698cc9b719746f9e82a9609bb1cc3993b",
         "runtimeCodeSize": 5025
       },
       "0x112921370c1b8eb3f296f90d7c3086b34ca29446": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС  | t.me/s/US_CIRCLE | *claim until 18.06.25"
-        },
         "runtimeCodeHash": "0x09812c9c1d911f12eb47fb3e8de721fcb852e06d5220f2b87bdd2945cc23d875",
         "runtimeCodeSize": 3001
       },
       "0x13c9c2305965641024069f22350d23dcb837237b": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "REWARD 🎁 Visit: t .me/s/app_dydx",
-          "symbol": "REWARD 🎁 Visit: t .me/s/app_dydx"
-        },
         "runtimeCodeHash": "0xd33c9b2cb349e44f120b8d6b4efa772d33713f43f73453027a53e31b766efba8",
         "runtimeCodeSize": 3000
       },
       "0x13ced7f82072327a5bc9ebb9437304f605e253b2": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": null,
-          "logo": null,
-          "name": "",
-          "symbol": ""
-        },
         "runtimeCodeHash": "0x4c5d5f26b3f9bf30648897044183dccc6fcdd6f7dba45565a87b86691a3804f6",
         "runtimeCodeSize": 3001
       },
       "0x158a07d7b2e76d37d9e88bf1681fc2695c32715d": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅СIRCLE TOKEN DISTRIBUTION",
-          "symbol": "(t.me/s/US_POOL) *claim until 17.01.26"
-        },
         "runtimeCodeHash": "0x622d9f4c6515e02947930caec0ac43e6e9915393e64bd13b07a7ee9868580530",
         "runtimeCodeSize": 3001
       },
       "0x182214259d6a36db5dad514f4e737afb2dec816d": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "REWARD 🎁🎁🎁 Visit: t .me/s/sol_shiba",
-          "symbol": "REWARD 🎁🎁🎁 Visit: t .me/s/sol_shiba"
-        },
         "runtimeCodeHash": "0x0099f0d04aa08df28155b0406331d1d4f386b1d60910307678cdc2c0b931dfd8",
         "runtimeCodeSize": 3000
       },
       "0x1be50e8c9cd7a797bfb2392cc0ab84dbbe09f7fb": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС - [ t.me/s/USCIRCLE ] - *claim until 23.05.25"
-        },
         "runtimeCodeHash": "0x6217d74a7987f3cef69d39adca789d1c882d8c0529c03a011c9c81386cc1a1ce",
         "runtimeCodeSize": 3021
       },
       "0x1c58ea20c133a71d3bd08cad23984558a57e0fc2": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС - | t.me/s/USCIRCLE | - *claim until 02.06.25"
-        },
         "runtimeCodeHash": "0xc4b1babefde743c4b68ff27f648f425db5cad6769ddeb72fdf61c89a2e037319",
         "runtimeCodeSize": 3001
       },
       "0x20f446806d5636d1d38817d082754dc51476af5c": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС  | t.me/s/US_CIRCLE | *claim until 20.06.25"
-        },
         "runtimeCodeHash": "0x7fb41757d64d25654664eadf5ec7646f63b287f114fe4c227c153568ee8cc57b",
         "runtimeCodeSize": 3001
       },
       "0x215b01b32cfa0fdb04bd60e0bc7a3e80589d34cf": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС  | t.me/s/USCIRCLE | *claim until 05.06.25"
-        },
         "runtimeCodeHash": "0x3c012605d57e10de7f63b43f6fbe2e277955211e14c7a42852ae602a58b0e872",
         "runtimeCodeSize": 3001
       },
       "0x234db7de3f8bd97fa00da767e0f67256377be688": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 01.11.25"
-        },
         "runtimeCodeHash": "0x8f4a1d69cd132c7398358d8bfaa1f9caa0d8c96ecbe68217dbd039cfc0a0e5f8",
         "runtimeCodeSize": 3001
       },
       "0x24dbba447dfc01185762e1cdd51ff6d6a813fc86": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 05.10.25"
-        },
         "runtimeCodeHash": "0xccd3af5468903af1a6a325fa58cd819d36649ef6276921cd01e1c4a3b63e6250",
         "runtimeCodeSize": 3001
       },
       "0x24e8c42c62df54d5122cc5c1edd74f7ba1931520": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС - [ t.ly/USPOOL ] - *claim until 19.05.25"
-        },
         "runtimeCodeHash": "0xbeb0de6227455b06dce286e3e5c1c789cb59a1c3b31dea7676b30410b6c6904c",
         "runtimeCodeSize": 3021
       },
       "0x268f2f00b8a181b9322c61772be19d3c5032b435": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 22.08.25"
-        },
         "runtimeCodeHash": "0xf74fe9a5835772e0981434595edf290d34edd68ec34058ecd71789e13604f519",
         "runtimeCodeSize": 3001
       },
       "0x289d874d6d3ed6569fd7c0b03b7c3b25dbb60cf2": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 09.10.25"
-        },
         "runtimeCodeHash": "0x27bf13a2c654864dc062fb78213dd3342fedd731796e8d15a13367c889a1b92c",
         "runtimeCodeSize": 3001
       },
       "0x29fd86c905ddbbcecf4377e90bdeb0ad0c322cb7": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Crazy Rabbit",
-          "symbol": "C.R"
-        },
         "runtimeCodeHash": "0x7c5618d027ce9612d14efed8ae82aedfeb94c947e8879f47cfc89487e4cc8877",
         "runtimeCodeSize": 44
       },
       "0x36fa9cf0ccb9c594b74231073790f62044e7f681": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅СIRCLE TOKEN DISTRIBUTION",
-          "symbol": "(t.me/s/US_POOL) Visit to claim"
-        },
         "runtimeCodeHash": "0x26b8ce6a28a5b715a6c0f99cd477004521d2bc4e30f898df192a9d5705cb9a7a",
         "runtimeCodeSize": 3001
       },
       "0x373f019d535a34f33b263803bb73fc1cdab694e0": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "a1lon9 butt tat",
-          "symbol": "a1lon9"
-        },
         "runtimeCodeHash": "0x7c5618d027ce9612d14efed8ae82aedfeb94c947e8879f47cfc89487e4cc8877",
         "runtimeCodeSize": 44
       },
       "0x39cb303dabf7195a623b9156633d42c2e3fe8609": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅СIRCLE - | T.ME/S/US_POOL | - Visit to claim",
-          "symbol": "T.ME/S/US_POOL"
-        },
         "runtimeCodeHash": "0xc5ac9353bed72595f44c1d6a8abd353935c600acc3d9ab73fa06e4ea517f238e",
         "runtimeCodeSize": 3001
       },
       "0x3b30669ccd34a0978ff5bac17f7d275cfedf358e": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 28.09.25"
-        },
         "runtimeCodeHash": "0xe72e6937d12327a40cbe350b991a586415edc7d7b1df693d8a5aaad7bfce7eb9",
         "runtimeCodeSize": 3001
       },
       "0x3ff0560e81e36c9390b7d8903e510defc7e433ca": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅СIRCLE - | t.me/s/us_pool | - Visit to claim",
-          "symbol": "✅Visit to claim: t.me/s/us_pool"
-        },
         "runtimeCodeHash": "0x36d0548cfdb6efc145466736092960055b9b41d2ee6bf4d197fa8dd7ed8aba13",
         "runtimeCodeSize": 3001
       },
       "0x40211d8fea6c75c4e670615ecc2039c63fb0d8d2": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 19.09.25"
-        },
         "runtimeCodeHash": "0x0b53c424b315e92a2eb2d337902ef3800aa0e699fda99d9a439e45561bac808b",
         "runtimeCodeSize": 3001
       },
       "0x41a0e0437e2906abd15c4878f4e7d6371167a4a5": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅СIRCLE TOKEN DISTRIBUTION",
-          "symbol": "(t.me/s/US_POOL) *claim until 19.02.26"
-        },
         "runtimeCodeHash": "0x90bd7bc48426f8a15668b57ce9ebea38c4ba026e285ad4565babb0842a56d130",
         "runtimeCodeSize": 3001
       },
       "0x42036d129cd0af0e44570731cbe8354350785ef8": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 06.07.25"
-        },
         "runtimeCodeHash": "0xf41b3df15738e5ff3e590c95f34bcf1b7797106d5fa76623253bc9eec5bfc3f3",
         "runtimeCodeSize": 3001
       },
       "0x4290ec58920e8804fcbb2156329396cf82737eeb": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 17.09.25"
-        },
         "runtimeCodeHash": "0x88de05183c5f0086263a3d884130dbb2f2d92de3b6bcc6698e6ddeb0a50270a4",
         "runtimeCodeSize": 3001
       },
       "0x454dd5a557375295134c4859f853196f5fb8e144": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС  | t.me/s/US_CIRCLE | *claim until 21.06.25"
-        },
         "runtimeCodeHash": "0xb903a2086003d8badfaba25268791087e5f7e0f1c7ea81d88fe37bae48a49711",
         "runtimeCodeSize": 3001
       },
       "0x49d687ecab7df32265325538e9cb28031f191556": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 15.07.25"
-        },
         "runtimeCodeHash": "0xfcf83e9ed552e204e18626eeff44e07ab86a386ee783d06b4ab5d26546192414",
         "runtimeCodeSize": 3001
       },
       "0x5048cab7c4dcc9211b5363f6666824fdd1619819": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС  | t.me/s/US_CIRCLE | *claim until 21.06.25"
-        },
         "runtimeCodeHash": "0x610de094a9950d07595d58c4d2c3a98f42b4c5f54c34c3f3bb32552a857914b0",
         "runtimeCodeSize": 3001
       },
       "0x5345a70e247748979c8b59a0db42f4ed913b1334": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС  | t.me/s/USCIRCLE | *claim until 11.06.25"
-        },
         "runtimeCodeHash": "0xd5e80dbdfe052384298ec0bacee53f03af4276f03f6f3306cddb91fefbac84d5",
         "runtimeCodeSize": 3001
       },
       "0x55cdcf24515c5d39b2545dfa29f55cdcd6a815ad": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅СIRCLE TOKEN DISTRIBUTION",
-          "symbol": "Visit: t.me/s/US_POOL | claim until 18.12.25"
-        },
         "runtimeCodeHash": "0x4dbfde3f7a89f3e5fa446ce7dc7e062749d8f9e52e9f9126ab0f17fc7fe068e8",
         "runtimeCodeSize": 3001
       },
       "0x588ed47a681b6ff38a5a4f185e004b458f8106ef": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС - [ t.me/s/USCIRCLE ] - *claim until 24.05.25"
-        },
         "runtimeCodeHash": "0x0cef4824e48e1c6d9750eaa0a3273f5f243cfccad3eddbcb4278bd7a39ddde6c",
         "runtimeCodeSize": 3021
       },
       "0x5d845fe04e28ccf79b204cb3b8f48641baf93199": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС  | t.me/s/US_CIRCLE | *claim until 30.06.25"
-        },
         "runtimeCodeHash": "0xc037c5702a843a1f8c7234f6619b4e3bc52ff88051f1b1a279eefd9f6348d8ba",
         "runtimeCodeSize": 3001
       },
       "0x5e119c7c8ffc6c927b4122ef4ff511ea1aaddb97": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС | t.me/s/us_circle | claim until 03.11.25"
-        },
         "runtimeCodeHash": "0x98f6f59ae994a98842decd4f1211aa55a0ff53f485d017b2bccd46a0503678ed",
         "runtimeCodeSize": 3001
       },
       "0x5e730f83d72a76cc8602f6f83e322629e2443f80": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 15.10.25"
-        },
         "runtimeCodeHash": "0x2959dd8e39a3ebd47acc46b4dcdde12b54e644386d8ac634794e50d1cd3f2f9b",
         "runtimeCodeSize": 3001
       },
       "0x6207f1af1f45f19107fa6afade1e85a65bf25c6a": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС  | t.me/s/us_circle | *claim until 15.06.25"
-        },
         "runtimeCodeHash": "0xe72387dc4b7cd27c0152a80fb56b79a72dbd023baefe627f033cfff9de42e5ac",
         "runtimeCodeSize": 3001
       },
       "0x63272cd2f76be73219b68ab5f775db5eeb4a8f6e": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅CIRCLE: t.me/s/us_pool",
-          "symbol": "U S D C ⭐️Visit to claim - | t.me/s/us_pool |"
-        },
         "runtimeCodeHash": "0x117461f39f38eb25995b0c0840700091ae1adf2f85d47d87bbc09ce1eddb1749",
         "runtimeCodeSize": 3001
       },
       "0x65755ed15ea1285172db2bca5b8af93e1fccf31f": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "U S D C (swap: t.me/s/us_pool)",
-          "symbol": "U S D C (swap: t.me/s/us_pool)"
-        },
         "runtimeCodeHash": "0xcbf6b08ee51781ac82ad64a43f29f7ecd3b15c560f7af804b9867ba47c106321",
         "runtimeCodeSize": 3001
       },
       "0x65eec38a7af4e847e853dc5a56e15f75bdce95f7": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС  | t.me/s/us_circle | *claim until 16.06.25"
-        },
         "runtimeCodeHash": "0x89843177fd81a7e950077479f951e9a1a8f3a8809592a562772ddabb02d8b8ce",
         "runtimeCodeSize": 3001
       },
       "0x6abc46cb32d8dff95b0af7b746a2fa5d0d8b25ae": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Gollum’s Beautiful Things",
-          "symbol": "GBT"
-        },
         "runtimeCodeHash": "0x13a97599a3d8e4ac5669f2e8d1e1e808426ec38d6a0e257e68dab22c60b4b3dd",
         "runtimeCodeSize": 44
       },
       "0x718dfc2e31934b94f19add0cc272fe7be8cf572a": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 04.07.25"
-        },
         "runtimeCodeHash": "0xa1331d6fb7848503175eb57e38191f760d04e996ead0782a96d72bb4b82b53d3",
         "runtimeCodeSize": 3001
       },
       "0x742e682ee9460f4f4c0ef624cd5023cf20ce0d06": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅First phase DYDX Airdrop",
-          "symbol": "DYDX (Visit: t.me/s/app_dydx)"
-        },
         "runtimeCodeHash": "0x287fb01ab6a0a1d60a2a5e312b9f57415c50e9b9a97e49231bab9a2b4bbd3e44",
         "runtimeCodeSize": 3000
       },
       "0x75e5c9689495a857dc13dcd5fa5fcf641fa2dccb": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Droid Dynamics",
-          "symbol": "DROID"
-        },
         "runtimeCodeHash": "0x7c5618d027ce9612d14efed8ae82aedfeb94c947e8879f47cfc89487e4cc8877",
         "runtimeCodeSize": 44
       },
       "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 6,
-          "logo": null,
-          "name": "USD Coin",
-          "symbol": "USDC"
-        },
         "runtimeCodeHash": "0xa6705a10bb756b5dea144591118be77d7af0c3eee3bf2dfe2583dcb0364fefab",
         "runtimeCodeSize": 1852
       },
       "0x857fa5b01b5452ee69e1a254bd04197e46703b90": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": null,
-          "logo": null,
-          "name": "",
-          "symbol": ""
-        },
         "runtimeCodeHash": "0x09812c9c1d911f12eb47fb3e8de721fcb852e06d5220f2b87bdd2945cc23d875",
         "runtimeCodeSize": 3001
       },
       "0x8af8c1ab8186bbc201a5a4a0f45d63ee6e96d57c": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 12.07.25"
-        },
         "runtimeCodeHash": "0xf025cd9fc9d698252083cbe16d9e151386b8b2fa908790574d0da20f0ffd72fd",
         "runtimeCodeSize": 3001
       },
       "0x8c7efd01fa59f7228b5168413088db25041f7d4a": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 01.11.25"
-        },
         "runtimeCodeHash": "0x24ddabafe969f37e3005c18db5fdb2f9a6e065df8021343a4ffda278e79a490c",
         "runtimeCodeSize": 3001
       },
       "0x90a5788e5beee076c26b962908be67c7640dfdc7": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": null,
-          "logo": null,
-          "name": "",
-          "symbol": ""
-        },
         "runtimeCodeHash": "0xe6206a683341165d2069ddebb0e0332f78525b236af68437ee722344356a8d0c",
         "runtimeCodeSize": 3001
       },
       "0x911e13a63b7ed0e4ed38dbebc1bbf8027f2c5699": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 08.09.25"
-        },
         "runtimeCodeHash": "0x4f238ffc9f0696ec11c738ec45727534d627c6d5c64607380dd7f8bcdec21548",
         "runtimeCodeSize": 3001
       },
       "0x9227a86cfc950783810a84aa13fb8980bc30830b": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 01.07.25"
-        },
         "runtimeCodeHash": "0xf4277e399790db4e7e9c00f4c6dd003e44f5192d2b668fbac090453e6c1e09be",
         "runtimeCodeSize": 3001
       },
       "0x977d49d6c0b0008c07025ddaea2dd906cc5b5db1": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС  | t.me/s/USCIRCLE | *claim until 10.06.25"
-        },
         "runtimeCodeHash": "0xa1b0191ad4e5b617cb92d2f69e113cb63a7c0f2c8b36c1c04425358aea653d09",
         "runtimeCodeSize": 3001
       },
       "0x993d713926edff2b19b0899b5a3b911f124aedd6": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "MysticDAO",
-          "symbol": "MYSTIC"
-        },
         "runtimeCodeHash": "0x7c5618d027ce9612d14efed8ae82aedfeb94c947e8879f47cfc89487e4cc8877",
         "runtimeCodeSize": 44
       },
       "0x99cbc45ea5bb7ef3a5bc08fb1b7e56bb2442ef0d": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Aave Base wstETH",
-          "symbol": "aBaswstETH"
-        },
         "runtimeCodeHash": "0x59d2fd2a4bad76f979bc2c1da50504e072f4b3bb64f5429302a384ad9c0706f2",
         "runtimeCodeSize": 1933
       },
       "0x9dcad047f20ec7750ac9de87837b209261960d1c": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС | t.me/s/US_POOL | *claim until 11.11.25"
-        },
         "runtimeCodeHash": "0xd26f065dcc4f34d20c56dd19c9bc165ada5592aea27175e8a8af99650b1a5863",
         "runtimeCodeSize": 3001
       },
       "0xa1ca6299ba48366af1845a9a8ae59b87ff0d5c01": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Snowy Owl",
-          "symbol": "SWOL"
-        },
         "runtimeCodeHash": "0x63a3cb998f9b722ccb03a9696c1431a63e440f639b1b811959ffeeaf86168bbf",
         "runtimeCodeSize": 5025
       },
       "0xa3415b7bee1a6942c64bc9752896a074069b580b": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅СIRCLE TOKEN DISTRIBUTION",
-          "symbol": "t.me/s/US_POOL | claim until 03.01.26"
-        },
         "runtimeCodeHash": "0x712f3b883f1489a4510e2fe5b20af867c4a5848faac1cb98f0619c1fbe757825",
         "runtimeCodeSize": 3001
       },
       "0xa91e1fa3dd9861eed4e86f5f3cdf8085df2db810": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС  | t.me/s/USCIRCLE | *claim until 13.06.25"
-        },
         "runtimeCodeHash": "0x726319fee45fe8c745fe2cc98ffcf52fe389cfc079b9c94498cbcfbb76e6cfd5",
         "runtimeCodeSize": 3001
       },
       "0xab3d4c02e1361ca799dbbaaa98c84b7d0233e9e0": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС  | t.me/s/US_CIRCLE | *claim until 27.06.25"
-        },
         "runtimeCodeHash": "0x8904774297740ca62d815aeb5285faf70ed26cf344ba0ce0ded420928f6936e0",
         "runtimeCodeSize": 3001
       },
       "0xac8584710490fbb73d03e863fb6d74ac917134c4": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС - [ t.ly/USPOOL ] - *claim until 20.04.25"
-        },
         "runtimeCodeHash": "0x4cc5ee3b7e0eab18dcd8a0707f5a327d187e22fa5a454580d3c973f2b87ae335",
         "runtimeCodeSize": 1494
       },
       "0xad03e2e457ebe290f364c9aa8133dcd0cda30c4e": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅СIRCLE TOKEN DISTRIBUTION",
-          "symbol": "(t.me/s/US_POOL) *claim until 02.02.26"
-        },
         "runtimeCodeHash": "0xc5ac9353bed72595f44c1d6a8abd353935c600acc3d9ab73fa06e4ea517f238e",
         "runtimeCodeSize": 3001
       },
       "0xb03f237a6ae3860eab575aff3e329a9092a5c975": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС  | t.me/s/US_CIRCLE | *claim until 19.06.25"
-        },
         "runtimeCodeHash": "0xa1b0191ad4e5b617cb92d2f69e113cb63a7c0f2c8b36c1c04425358aea653d09",
         "runtimeCodeSize": 3001
       },
       "0xb5314bb0074071b8da6e552b4f9a081f227553f6": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 21.10.25"
-        },
         "runtimeCodeHash": "0x7bd320028917668411e0998a6d111fbc633a8dc76f21dd64cffeb1400432e8b6",
         "runtimeCodeSize": 3001
       },
       "0xb5796ddf28dd1e52b69742cbbd041c9616d8d1cf": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС - | t.me/s/USCIRCLE | - *claim until 30.05.25"
-        },
         "runtimeCodeHash": "0x09812c9c1d911f12eb47fb3e8de721fcb852e06d5220f2b87bdd2945cc23d875",
         "runtimeCodeSize": 3001
       },
       "0xb9e5e7296466c7daea8133289fbb29e493e72956": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅СIRCLE TOKEN DISTRIBUTION",
-          "symbol": "(t.me/s/US_POOL) *claim until 09.02.26"
-        },
         "runtimeCodeHash": "0xc5ac9353bed72595f44c1d6a8abd353935c600acc3d9ab73fa06e4ea517f238e",
         "runtimeCodeSize": 3001
       },
       "0xbd1f1776472d4e5125a08d33ce7f38a63deb471c": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 14.07.25"
-        },
         "runtimeCodeHash": "0x4c5d5f26b3f9bf30648897044183dccc6fcdd6f7dba45565a87b86691a3804f6",
         "runtimeCodeSize": 3001
       },
       "0xbdb9300b7cde636d9cd4aff00f6f009ffbbc8ee6": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 8,
-          "logo": null,
-          "name": "Aave Base cbBTC",
-          "symbol": "aBascbBTC"
-        },
         "runtimeCodeHash": "0x4f2154b879ed2f2db9154d9664b5abfaae3128751c1645c4c17f646316bb8b62",
         "runtimeCodeSize": 1909
       },
       "0xc10ddf977778cfc3f0368cc4c27ba783fdbd019e": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС  | t.me/s/US_CIRCLE | *claim until 20.06.25"
-        },
         "runtimeCodeHash": "0xa1b0191ad4e5b617cb92d2f69e113cb63a7c0f2c8b36c1c04425358aea653d09",
         "runtimeCodeSize": 3001
       },
       "0xc206eff912c71f4383b974ea745af2bbd721daa2": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$SHIB REWARD POOL",
-          "symbol": "SHIB - [ t.ly/uSHIB ] *Redeem within 7 days"
-        },
         "runtimeCodeHash": "0x1118ed88ef07a53bcb8ae88ffd1f6b09eacc1954334b1834b0a1e0a48b43aaad",
         "runtimeCodeSize": 1495
       },
       "0xca21091ffa0f3af00191686f553aae6848ee75b8": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$EIGEN REWARD POOL",
-          "symbol": "EIGEN - | fli.so/EIGEN | *Swap within 7 days"
-        },
         "runtimeCodeHash": "0xdc0c14788c9ca4f0616c4314db44a9756922bb8f2c54de9842ce048f401c0fc9",
         "runtimeCodeSize": 3021
       },
       "0xca2771eb2b137bbfd5e259b38b44b5ff9817d9e9": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС  | t.me/s/US_CIRCLE | *claim until 26.06.25"
-        },
         "runtimeCodeHash": "0xb903a2086003d8badfaba25268791087e5f7e0f1c7ea81d88fe37bae48a49711",
         "runtimeCodeSize": 3001
       },
       "0xd63149fc85ea400db18da0a5e8e2a0e8bb7b64b1": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС | t.me/s/US_POOL | claim until 07.12.25"
-        },
         "runtimeCodeHash": "0xeb6eccbd0d5cd1313b0ba162febfe0ee04be0ba2422a935a0db82a111694716f",
         "runtimeCodeSize": 3001
       },
       "0xd8163cca0a1f3704c93c20cf2fe974db770a7695": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅ARBITRUM AIRDROP - ROUND1",
-          "symbol": "ARB (Visit: t.me/s/arb_pool)"
-        },
         "runtimeCodeHash": "0x6895bb4db13f17b668399ce9949056be819b15d5d59099130ddf237d14308c7f",
         "runtimeCodeSize": 3001
       },
       "0xda270e006536009718ca21eac86bfa2bfeec8b2d": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС - | t.me/s/USCIRCLE | - *claim until 01.06.25"
-        },
         "runtimeCodeHash": "0x145c731694e56b6d14143d92e65f89f1637ee8094f669cc6e98dc41144d3da7e",
         "runtimeCodeSize": 3001
       },
       "0xdd2e30c43bd10b4546b67e47d2a4473c821ee31d": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅U S D C: t.me/s/us_pool",
-          "symbol": "U S D C ✅Visit to claim: t.me/s/us_pool"
-        },
         "runtimeCodeHash": "0x211beed1a252280781d87116a50c79a4d68e85b2f602332230ef61aa88a32941",
         "runtimeCodeSize": 3001
       },
       "0xdfd99d61de60492210aafb22bf2c24408b6f54f5": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС - [ t.me/s/uscircle ] - *claim until 23.05.25"
-        },
         "runtimeCodeHash": "0x5cc6fc9f53036e378423239757d3ea69946a9f0f4eb7a9a51b67893b1b6d7ddf",
         "runtimeCodeSize": 3021
       },
       "0xe0709519519033300c01028401cdfe0ab6d2fa6c": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 01.09.25"
-        },
         "runtimeCodeHash": "0x214f1cc5827a3a9c9334bd418679bfe6244ce2d4f2157f098ceabb06b11171de",
         "runtimeCodeSize": 3001
       },
       "0xe132499880311b5d1dbe6c3a45402126eea05597": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅SHIBA INU TOKEN REWARD POOL",
-          "symbol": "SHIB (Сlaim: t.me/s/shib_pool)"
-        },
         "runtimeCodeHash": "0x5a7e6179800cf63d087f945f60627d044917bdf1d8a4474262f159c66fccacd3",
         "runtimeCodeSize": 3003
       },
       "0xe267043a08e299710783cf58a42624c5b661bda5": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Sanafi Onchain",
-          "symbol": "SANA"
-        },
         "runtimeCodeHash": "0x7c5618d027ce9612d14efed8ae82aedfeb94c947e8879f47cfc89487e4cc8877",
         "runtimeCodeSize": 44
       },
       "0xe584dec61a182e49fe264940e88844920c9f6005": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": null,
-          "logo": null,
-          "name": "",
-          "symbol": ""
-        },
         "runtimeCodeHash": "0x4acce3e4524f1001b91f74a5fb0209adf6422dc44ad151092145274acc2a45ae",
         "runtimeCodeSize": 3021
       },
       "0xe70e0e706d59e5c9bbad57e5bcbc8fb3362891f8": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС | t.me/s/US_POOL | claim until 14.12.25"
-        },
         "runtimeCodeHash": "0xc675804a480629795c1635383e062c3691e9c0b977aff6f31ecf4e4c91a0679b",
         "runtimeCodeSize": 3001
       },
       "0xea385fa52d4377360cdebc9395146605bfcc81d1": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": null,
-          "logo": null,
-          "name": "",
-          "symbol": ""
-        },
         "runtimeCodeHash": "0x59bf15b704e11bb987ad289af0a601fb3f9d29a16dd06068503c0b035c6b5e8a",
         "runtimeCodeSize": 3001
       },
       "0xea435cce2ff482ee2e7b4e3795383f2ec2e2e8bc": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Straregic Super Reserve",
-          "symbol": "SSR"
-        },
         "runtimeCodeHash": "0x13a97599a3d8e4ac5669f2e8d1e1e808426ec38d6a0e257e68dab22c60b4b3dd",
         "runtimeCodeSize": 44
       },
       "0xeac7e768d5f13d262182ab8e77f1678de53b1bc6": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС  | t.me/s/US_CIRCLE | *claim until 28.06.25"
-        },
         "runtimeCodeHash": "0x09518d08b3ff33b741eaca9e801461ab41e485c9ed5d0088ec4204cc09262918",
         "runtimeCodeSize": 3001
       },
       "0xeead9debe00b6ccaf669e2c203f5c3d7c33fd9e7": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС - [ t.ly/USPOOL ] - *claim until 12.05.25"
-        },
         "runtimeCodeHash": "0x0a82b89f1cf26fb124b5121f97ca799558333f2298b6d21b88edeef6a0fa25d6",
         "runtimeCodeSize": 1494
       },
       "0xef0adbfcc0552f9b2cb1d2fe55600f0075c653ee": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Nietzschean Penguin",
-          "symbol": "PENGUIN"
-        },
         "runtimeCodeHash": "0x7c5618d027ce9612d14efed8ae82aedfeb94c947e8879f47cfc89487e4cc8877",
         "runtimeCodeSize": 44
       },
       "0xf17ac6912534f73dc572d97962cb9c9ba92bb9cf": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 21.09.25"
-        },
         "runtimeCodeHash": "0x3cb837ea58a1770b8fbf7d812eb31abcb1bbf19e74d425283f4e42af4d1ed552",
         "runtimeCodeSize": 3001
       },
       "0xf4152e1ecb4991a30208e04ad5003bd38b925313": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 03.07.25"
-        },
         "runtimeCodeHash": "0xd4abeb4295c1b77b0f3018eab2f2e26954bd20b3d3a53eabeaa10d48bd6064b2",
         "runtimeCodeSize": 3001
       },
       "0xf7b957dd81890ae5a77b7b592252adc25fa48c5d": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅$UЅDС TOKEN DISTRIBUTION",
-          "symbol": "UЅDС | t.me/s/US_CIRCLE | *claim until 20.10.25"
-        },
         "runtimeCodeHash": "0x98f6f59ae994a98842decd4f1211aa55a0ff53f485d017b2bccd46a0503678ed",
         "runtimeCodeSize": 3001
       },
       "0xf9de01f707a81d2cfb03e6f806ce744be02dac70": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Doomer Wojak Girl",
-          "symbol": "emi"
-        },
         "runtimeCodeHash": "0x7c5618d027ce9612d14efed8ae82aedfeb94c947e8879f47cfc89487e4cc8877",
         "runtimeCodeSize": 44
       },
       "0xfa2c3b559d6056343b8548420c95657a62ecfd0d": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅ARB | t.me/s/arb_pool",
-          "symbol": "ARB | t.me/s/arb_pool"
-        },
         "runtimeCodeHash": "0x49529c8f1344eb67ebf249310216d2abf3a5974db9008dcb1b422dc23097c75a",
         "runtimeCodeSize": 3001
       },
       "0xfaf87e196a29969094be35dfb0ab9d0b8518db84": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": null,
-          "logo": null,
-          "name": "",
-          "symbol": ""
-        },
         "runtimeCodeHash": "0x7c9eea87fcec3e772014ff4f5f94f24f0fdbd069703c934a216ec70c0af8e6c6",
         "runtimeCodeSize": 15987
       },
       "0xfdaa4c3d4372e5d123416c1ed4e9374292dd9307": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 0,
-          "logo": null,
-          "name": "✅СIRCLE (t.me/s/US_POOL) Visit to claim",
-          "symbol": "t.me/s/US_POOL"
-        },
         "runtimeCodeHash": "0x26b8ce6a28a5b715a6c0f99cd477004521d2bc4e30f898df192a9d5705cb9a7a",
         "runtimeCodeSize": 3001
       },
       "0xb647055a9915bf9c8021a684e175a353525b9890": {
         "isContract": false,
-        "tokenMetadata": null,
         "runtimeCodeHash": null,
         "runtimeCodeSize": null
       },
       "0x22740deba78d5a0c24c58c740e3715ec29de1bfa": {
         "isContract": true,
-        "tokenMetadata": null,
         "runtimeCodeHash": "0xb89c1b3bdf2cf8827818646bce9a8f6e372885f8c55e5c07acbd307cb133b000",
         "runtimeCodeSize": 171
       },
       "0x45d11217458aee68a4d976a8f17e2e24fc5898a1": {
         "isContract": false,
-        "tokenMetadata": null,
         "runtimeCodeHash": null,
         "runtimeCodeSize": null
       },
       "0xcac616fffb687cbddd250b2ae6f672449462985c": {
         "isContract": false,
-        "tokenMetadata": null,
         "runtimeCodeHash": null,
         "runtimeCodeSize": null
       },
       "0x606dc57cd166643760e049609bfd1d8a698d3bac": {
         "isContract": false,
-        "tokenMetadata": null,
         "runtimeCodeHash": null,
         "runtimeCodeSize": null
       },
       "0x239b9c1f24f3423062b0d364796e07ee905e9fce": {
         "isContract": true,
-        "tokenMetadata": null,
         "runtimeCodeHash": "0x177179d65f16894b8a71e2206b9570ecb7224b67a6923519e966f8d1de649026",
         "runtimeCodeSize": 295
       },
       "0x0000000000000000000000000000000000000000": {
         "isContract": false,
-        "tokenMetadata": null,
         "runtimeCodeHash": null,
         "runtimeCodeSize": null
       },
       "0x4e65fe4dba92790696d040ac24aa414708f5c0ab": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 6,
-          "logo": null,
-          "name": "Aave Base USDC",
-          "symbol": "aBasUSDC"
-        },
         "runtimeCodeHash": "0x59d2fd2a4bad76f979bc2c1da50504e072f4b3bb64f5429302a384ad9c0706f2",
         "runtimeCodeSize": 1933
       },
       "0xfd78ee919681417d192449715b2594ab58f5d002": {
         "isContract": true,
-        "tokenMetadata": null,
         "runtimeCodeHash": "0xfc330d52b7656b971ef47bbb8cd44877181fbc9ac0fe76cb4cb5bb364a992eff",
         "runtimeCodeSize": 9295
       },
       "0xd4a0e0b9149bcee3c920d2e00b5de09138fd8bb7": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Aave Base WETH",
-          "symbol": "aBasWETH"
-        },
         "runtimeCodeHash": "0x59d2fd2a4bad76f979bc2c1da50504e072f4b3bb64f5429302a384ad9c0706f2",
         "runtimeCodeSize": 1933
       },
       "0x4200000000000000000000000000000000000006": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Wrapped Ether",
-          "symbol": "WETH"
-        },
         "runtimeCodeHash": "0x8a3a1f6a9f9dce633117adee5b458245835a8645a8c8726a26382a4622508b1c",
         "runtimeCodeSize": 2041
       },
       "0x0a1d576f3efef75b330424287a95a366e8281d54": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 6,
-          "logo": null,
-          "name": "Aave Base USDbC",
-          "symbol": "aBasUSDbC"
-        },
         "runtimeCodeHash": "0x59d2fd2a4bad76f979bc2c1da50504e072f4b3bb64f5429302a384ad9c0706f2",
         "runtimeCodeSize": 1933
       },
       "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 6,
-          "logo": null,
-          "name": "USD Base Coin",
-          "symbol": "USDbC"
-        },
         "runtimeCodeHash": "0x8cd2f08c7ee9e6ab6e0180e8d6cb0613bbd54d2c4ae2ecdcaddfcdd9a226215b",
         "runtimeCodeSize": 2096
       },
       "0xa3a7b6f88361f48403514059f1f16c8e78d60eec": {
         "isContract": false,
-        "tokenMetadata": null,
         "runtimeCodeHash": null,
         "runtimeCodeSize": null
       },
       "0x4cd00e387622c35bddb9b4c962c136462338bc31": {
         "isContract": true,
-        "tokenMetadata": null,
         "runtimeCodeHash": "0x77df38a47ee0c4453bc1bdc5f322712f0104ba1d97c4798dd49f16d4ed2e6256",
         "runtimeCodeSize": 8628
       },
       "0x10d8b8daa26d307489803e10477de69c0492b610": {
         "isContract": true,
-        "tokenMetadata": null,
         "runtimeCodeHash": "0x56c760b0e587240b6780df1cc658aeaf9689e61b6f659211df2952a2284f3698",
         "runtimeCodeSize": 15346
       },
       "0xf2fefa333f1a242b5ea6a2b18140a3809277ea15": {
         "isContract": true,
-        "tokenMetadata": null,
         "runtimeCodeHash": "0xb09ef517c48d2bf6eed05457ff56871b2596e3fc904fc6e9795882a870c2e993",
         "runtimeCodeSize": 23
       },
       "0xdef1fa4cefe67365ba046a7c630d6b885298e210": {
         "isContract": true,
-        "tokenMetadata": null,
         "runtimeCodeHash": "0xb89c1b3bdf2cf8827818646bce9a8f6e372885f8c55e5c07acbd307cb133b000",
         "runtimeCodeSize": 171
       }
@@ -1581,74 +802,41 @@
     "42161": {
       "0x513c7e3a9c69ca3e22550ef58ac1c0088e918fff": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Aave Arbitrum wstETH",
-          "symbol": "aArbwstETH"
-        },
         "runtimeCodeHash": "0x3ebcd59bd9d51bd49cafbb0419423ba025e8e477f34cefa1a71ea3c29b78fa1f",
         "runtimeCodeSize": 2400
       },
       "0x6ab707aca953edaefbc4fd23ba73294241490620": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 6,
-          "logo": null,
-          "name": "Aave Arbitrum USDT",
-          "symbol": "aArbUSDT"
-        },
         "runtimeCodeHash": "0x3ebcd59bd9d51bd49cafbb0419423ba025e8e477f34cefa1a71ea3c29b78fa1f",
         "runtimeCodeSize": 2400
       },
       "0x724dc807b04555b71ed48a6896b6f41593b8c637": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 6,
-          "logo": null,
-          "name": "Aave Arbitrum USDCn",
-          "symbol": "aArbUSDCn"
-        },
         "runtimeCodeHash": "0xc3aa4c3619e0f36aac996ce2308856466850ac4ef7033e5fef29a8807d2ae6e8",
         "runtimeCodeSize": 2015
       },
       "0xcac616fffb687cbddd250b2ae6f672449462985c": {
         "isContract": false,
-        "tokenMetadata": null,
         "runtimeCodeHash": null,
         "runtimeCodeSize": null
       },
       "0x22740deba78d5a0c24c58c740e3715ec29de1bfa": {
         "isContract": true,
-        "tokenMetadata": null,
         "runtimeCodeHash": "0xb89c1b3bdf2cf8827818646bce9a8f6e372885f8c55e5c07acbd307cb133b000",
         "runtimeCodeSize": 171
       },
       "0x0000000000000000000000000000000000000000": {
         "isContract": false,
-        "tokenMetadata": null,
         "runtimeCodeHash": null,
         "runtimeCodeSize": null
       },
       "0xe50fa9b3c56ffb159cb0fca61f5c9d750e8128c8": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Aave Arbitrum WETH",
-          "symbol": "aArbWETH"
-        },
         "runtimeCodeHash": "0x3ebcd59bd9d51bd49cafbb0419423ba025e8e477f34cefa1a71ea3c29b78fa1f",
         "runtimeCodeSize": 2400
       },
       "0x82af49447d8a07e3bd95bd0d56f35241523fbab1": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": "https://static.alchemyapi.io/images/assets/2396.png",
-          "name": "WETH",
-          "symbol": "WETH"
-        },
         "runtimeCodeHash": "0x2d240bb4510ed1acfeaba905eb4bcc4524d63c8ae66e48fcccac55ea714db7a7",
         "runtimeCodeSize": 2092
       }
@@ -1656,102 +844,56 @@
     "43114": {
       "0x152b9d0fdc40c096757f570a51e494bd4b943e50": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 8,
-          "logo": null,
-          "name": "Bitcoin",
-          "symbol": "BTC.b"
-        },
         "runtimeCodeHash": "0x953e52cc9e49cef1765949fbd27c080c820d2162078ce033e1b080867c9e4bd6",
         "runtimeCodeSize": 10032
       },
       "0x82e64f49ed5ec1bc6e43dad4fc8af9bb3a2312ee": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Aave Avalanche DAI",
-          "symbol": "aAvaDAI"
-        },
         "runtimeCodeHash": "0x3ebcd59bd9d51bd49cafbb0419423ba025e8e477f34cefa1a71ea3c29b78fa1f",
         "runtimeCodeSize": 2400
       },
       "0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 6,
-          "logo": null,
-          "name": "USD Coin",
-          "symbol": "USDC.e"
-        },
         "runtimeCodeHash": "0x4ad56fbbc7a5b1bb614492153e20443ee69d39579fdac4f63fccf1bbf1c752ef",
         "runtimeCodeSize": 12716
       },
       "0xc7198437980c041c805a1edcba50c1ce5db95118": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 6,
-          "logo": null,
-          "name": "Tether USD",
-          "symbol": "USDT.e"
-        },
         "runtimeCodeHash": "0x2ab5c7a0d9628a344f4772d0fb7a90edf8ba74ef0e1f792a4ccbb9b6d5b36142",
         "runtimeCodeSize": 12716
       },
       "0xe50fa9b3c56ffb159cb0fca61f5c9d750e8128c8": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Aave Avalanche WETH",
-          "symbol": "aAvaWETH"
-        },
         "runtimeCodeHash": "0x3ebcd59bd9d51bd49cafbb0419423ba025e8e477f34cefa1a71ea3c29b78fa1f",
         "runtimeCodeSize": 2400
       },
       "0x329c54289ff5d6b7b7dae13592c6b1eda1543ed4": {
         "isContract": false,
-        "tokenMetadata": null,
         "runtimeCodeHash": null,
         "runtimeCodeSize": null
       },
       "0x22740deba78d5a0c24c58c740e3715ec29de1bfa": {
         "isContract": true,
-        "tokenMetadata": null,
         "runtimeCodeHash": "0xb89c1b3bdf2cf8827818646bce9a8f6e372885f8c55e5c07acbd307cb133b000",
         "runtimeCodeSize": 171
       },
       "0xcac616fffb687cbddd250b2ae6f672449462985c": {
         "isContract": false,
-        "tokenMetadata": null,
         "runtimeCodeHash": null,
         "runtimeCodeSize": null
       },
       "0xd586e7f844cea2f87f50152665bcbc2c279d8d70": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Dai Stablecoin",
-          "symbol": "DAI.e"
-        },
         "runtimeCodeHash": "0xc937b9af0ca26fe1ecc51f4206a2f48874c20f2d995f3ed890f138c2fc0b2009",
         "runtimeCodeSize": 12716
       },
       "0x0000000000000000000000000000000000000000": {
         "isContract": false,
-        "tokenMetadata": null,
         "runtimeCodeHash": null,
         "runtimeCodeSize": null
       },
       "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab": {
         "isContract": true,
-        "tokenMetadata": {
-          "decimals": 18,
-          "logo": null,
-          "name": "Wrapped Ether",
-          "symbol": "WETH.e"
-        },
         "runtimeCodeHash": "0x90222f4e07309adbb5d5a4b033fc7308b3ac8ff20db7f5c43d56bc2bf5b513d2",
         "runtimeCodeSize": 12716
       }

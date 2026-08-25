@@ -1,6 +1,6 @@
 {
   "fixtureId": "treasury_v1",
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "snapshotTimestamp": "2026-08-24T15:00:00Z",
   "lookbackDays": 90,
   "historyFromTimestamp": "2026-05-26T15:00:00.000Z",
@@ -15,11 +15,57 @@
         "aave_v3_variable_debt_token"
       ],
       "rules": [
+        "A token can enter NAV only when its chain/address is allowlisted, it has a price, and its absolute USD value meets minimumUsdValue.",
+        "Token symbols and names are display labels, never identity keys, and provider/on-chain labels are excluded from model-facing balance metadata.",
         "Use currentATokenBalance from defi_positions.json as the Aave V3 supplied asset.",
+        "Price Aave V3 positions by underlyingAsset, never by the aToken or debt-token wrapper address.",
         "Subtract currentStableDebt and currentVariableDebt from defi_positions.json as Aave V3 liabilities.",
         "Never add wrapper ERC-20 balances for Aave V3 markets represented in defi_positions.json; those wrappers are excluded from the canonical erc20 arrays in balances.json.",
-        "discoveryRaw in balances.json is provider provenance only and is never an accounting input."
-      ]
+        "discovery data in balances.json is counts-only provenance and is never an accounting input."
+      ],
+      "identityKey": "chainId + contractAddress",
+      "symbolPolicy": "display-only; never identity; attacker-controlled unless canonicalized",
+      "minimumUsdValue": 1,
+      "spotAssetAllowlist": {
+        "1": {
+          "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f": {
+            "canonicalSymbol": "GHO",
+            "decimals": 18,
+            "labelSource": "config"
+          },
+          "0xdb25f211ab05b1c97d595516f45794528a807ad8": {
+            "canonicalSymbol": "EURS",
+            "decimals": 2,
+            "labelSource": "config"
+          }
+        },
+        "8453": {
+          "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913": {
+            "canonicalSymbol": "USDC",
+            "decimals": 6,
+            "labelSource": "config"
+          }
+        },
+        "42161": {},
+        "43114": {
+          "0x152b9d0fdc40c096757f570a51e494bd4b943e50": {
+            "canonicalSymbol": "BTC.b",
+            "decimals": 8,
+            "labelSource": "config"
+          },
+          "0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664": {
+            "canonicalSymbol": "USDC.e",
+            "decimals": 6,
+            "labelSource": "config"
+          },
+          "0xc7198437980c041c805a1edcba50c1ce5db95118": {
+            "canonicalSymbol": "USDT.e",
+            "decimals": 6,
+            "labelSource": "config"
+          }
+        }
+      },
+      "canonicalNavSource": "nav_positions.json"
     }
   },
   "chains": {
@@ -171,5 +217,17 @@
     "prices": "Alchemy Historical Prices API",
     "defi": "Aave V3 ProtocolDataProvider at pinned block",
     "aaveAddressBook": "@aave-dao/aave-address-book@4.66.0"
+  },
+  "inputTrustPolicy": {
+    "tokenIdentity": "chainId + contractAddress",
+    "tokenDisplayMetadata": "untrusted and excluded unless canonicalized",
+    "transactionProjection": "explicit field allowlist",
+    "discardedFields": [
+      "token name",
+      "token symbol",
+      "Alchemy asset label",
+      "raw provider pages",
+      "open-ended token metadata"
+    ]
   }
 }

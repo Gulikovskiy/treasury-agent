@@ -6,6 +6,12 @@ export type ChainId = (typeof CHAIN_IDS)[number]
 export type ChainMap<T> = Record<ChainId, T>
 export type WalletMap<T> = Partial<Record<Lowercase<Address>, T>>
 
+export interface CanonicalAsset {
+  canonicalSymbol: string
+  decimals: number
+  labelSource: 'config' | 'aave-address-book'
+}
+
 export interface ChainSnapshot {
   chainId: ChainId
   name: string
@@ -39,6 +45,11 @@ export interface FixtureManifest {
   historyFromTimestamp: string
   accountingPolicy: {
     nav: {
+      identityKey: 'chainId + contractAddress'
+      symbolPolicy: 'display-only; never identity; attacker-controlled unless canonicalized'
+      minimumUsdValue: number
+      spotAssetAllowlist: ChainMap<Record<string, CanonicalAsset>>
+      canonicalNavSource: 'nav_positions.json'
       spotBalanceSource: 'balances.json'
       spotBalancePath: 'chains.<chainId>.<wallet>.erc20'
       canonicalAaveV3Source: 'defi_positions.json'
@@ -48,6 +59,12 @@ export interface FixtureManifest {
       >
       rules: string[]
     }
+  }
+  inputTrustPolicy: {
+    tokenIdentity: 'chainId + contractAddress'
+    tokenDisplayMetadata: 'untrusted and excluded unless canonicalized'
+    transactionProjection: 'explicit field allowlist'
+    discardedFields: string[]
   }
   chains: ChainMap<ChainSnapshot>
   walletOwnership: {
@@ -88,9 +105,9 @@ export interface NativeBalanceFixture {
 
 export interface Erc20BalanceFixture {
   contractAddress: Address
+  asset: CanonicalAsset
   tokenBalance?: `0x${string}`
   tokenBalanceDecimal?: string
-  metadata?: unknown
   error?: string
 }
 
@@ -98,7 +115,10 @@ export interface WalletBalanceFixture {
   blockNumber: string
   native: NativeBalanceFixture
   erc20: Erc20BalanceFixture[]
-  discoveryRaw: unknown[]
+  discovery: {
+    contractCount: number
+    pageCount: number
+  }
 }
 
 export interface BalancesFixture {

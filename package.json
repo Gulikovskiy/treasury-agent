@@ -13,6 +13,7 @@
     "balances": "tsx collectors/balances.ts",
     "transactions": "tsx collectors/transactions.ts",
     "prices": "tsx collectors/prices.ts",
+    "nav": "tsx collectors/nav.ts",
     "defi": "tsx collectors/defi-positions.ts",
     "metadata": "tsx collectors/metadata.ts",
     "labels": "tsx collectors/labels.ts"

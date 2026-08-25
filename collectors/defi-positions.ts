@@ -6,8 +6,11 @@ import { AAVE_DATA_PROVIDER_ABI } from '../lib/abis.js'
 import { fixturePath, isMain, writeJson } from '../lib/io.js'
 import type { ChainId } from '../types/fixture.js'
 
-interface AavePositionFixture {
-  symbol: string
+export interface AavePositionFixture {
+  assetId: string
+  canonicalSymbol: string
+  decimals: number
+  labelSource: 'aave-address-book'
   underlyingAsset: Address
   currentATokenBalance: bigint
   currentStableDebt: bigint
@@ -20,13 +23,13 @@ interface AavePositionFixture {
   usageAsCollateralEnabled: boolean
 }
 
-interface AaveChainFixture {
+export interface AaveChainFixture {
   dataProvider: Address
   blockNumber: string
   wallets: Record<string, AavePositionFixture[]>
 }
 
-interface DefiPositionsFixture {
+export interface DefiPositionsFixture {
   protocols: {
     aave_v3: Partial<Record<ChainId, AaveChainFixture>>
   }
@@ -42,6 +45,12 @@ export async function collectDefiPositions(): Promise<DefiPositionsFixture> {
 
     const client = publicClient(chain.id)
     const blockNumber = BigInt(manifest.chains[chain.id].blockNumber)
+    const assetsByUnderlying = new Map(
+      Object.entries(chain.aave.ASSETS ?? {}).map(([canonicalSymbol, asset]) => [
+        asset.UNDERLYING.toLowerCase(),
+        { canonicalSymbol, decimals: asset.decimals },
+      ] as const),
+    )
 
     const reserves = await client.readContract({
       address: provider,
@@ -62,6 +71,9 @@ export async function collectDefiPositions(): Promise<DefiPositionsFixture> {
       const positions: AavePositionFixture[] = []
 
       for (const reserve of reserves) {
+        const canonicalAsset = assetsByUnderlying.get(reserve.tokenAddress.toLowerCase())
+        if (!canonicalAsset) continue
+
         const result = await client.readContract({
           address: provider,
           abi: AAVE_DATA_PROVIDER_ABI,
@@ -89,7 +101,10 @@ export async function collectDefiPositions(): Promise<DefiPositionsFixture> {
         ) continue
 
         positions.push({
-          symbol: reserve.symbol,
+          assetId: `${chain.id}:${reserve.tokenAddress.toLowerCase()}`,
+          canonicalSymbol: canonicalAsset.canonicalSymbol,
+          decimals: canonicalAsset.decimals,
+          labelSource: 'aave-address-book',
           underlyingAsset: reserve.tokenAddress,
           currentATokenBalance,
           currentStableDebt,

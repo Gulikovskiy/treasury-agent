@@ -39,6 +39,11 @@ export interface AccountHistoryResult<T> {
   pages: AccountPage<T>[]
 }
 
+export interface AccountHistoryFixtureResult<T> {
+  items: T[]
+  pageCount: number
+}
+
 export interface AccountHistoryRange {
   fromBlock: string
   toBlock: string

@@ -4,6 +4,8 @@ import {
   CHAINS,
   FIXTURE_DIR,
   LOOKBACK_DAYS,
+  NAV_DUST_USD,
+  NAV_TOKEN_ALLOWLIST,
   TEST_ADDRESSES,
   TREASURY_WALLETS,
 } from '../config.js'
@@ -132,12 +134,17 @@ export async function collectManifest(): Promise<FixtureManifest> {
 
   const manifest: FixtureManifest = {
     fixtureId: basename(FIXTURE_DIR),
-    schemaVersion: 3,
+    schemaVersion: 4,
     snapshotTimestamp: requested,
     lookbackDays: LOOKBACK_DAYS,
     historyFromTimestamp,
     accountingPolicy: {
       nav: {
+        identityKey: 'chainId + contractAddress',
+        symbolPolicy: 'display-only; never identity; attacker-controlled unless canonicalized',
+        minimumUsdValue: NAV_DUST_USD,
+        spotAssetAllowlist: NAV_TOKEN_ALLOWLIST,
+        canonicalNavSource: 'nav_positions.json',
         spotBalanceSource: 'balances.json',
         spotBalancePath: 'chains.<chainId>.<wallet>.erc20',
         canonicalAaveV3Source: 'defi_positions.json',
@@ -147,12 +154,27 @@ export async function collectManifest(): Promise<FixtureManifest> {
           'aave_v3_variable_debt_token',
         ],
         rules: [
+          'A token can enter NAV only when its chain/address is allowlisted, it has a price, and its absolute USD value meets minimumUsdValue.',
+          'Token symbols and names are display labels, never identity keys, and provider/on-chain labels are excluded from model-facing balance metadata.',
           'Use currentATokenBalance from defi_positions.json as the Aave V3 supplied asset.',
+          'Price Aave V3 positions by underlyingAsset, never by the aToken or debt-token wrapper address.',
           'Subtract currentStableDebt and currentVariableDebt from defi_positions.json as Aave V3 liabilities.',
           'Never add wrapper ERC-20 balances for Aave V3 markets represented in defi_positions.json; those wrappers are excluded from the canonical erc20 arrays in balances.json.',
           'discoveryRaw in balances.json is provider provenance only and is never an accounting input.',
         ],
       },
+    },
+    inputTrustPolicy: {
+      tokenIdentity: 'chainId + contractAddress',
+      tokenDisplayMetadata: 'untrusted and excluded unless canonicalized',
+      transactionProjection: 'explicit field allowlist',
+      discardedFields: [
+        'token name',
+        'token symbol',
+        'Alchemy asset label',
+        'raw provider pages',
+        'open-ended token metadata',
+      ],
     },
     chains,
     walletOwnership: {
