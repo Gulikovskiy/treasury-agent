@@ -18,6 +18,7 @@ The collector is TypeScript-first: run source directly with `tsx`, or compile it
 - `address_labels.json` — controlled/manual/known-protocol labels
 - `contracts.json` — code presence, runtime code hash, and runtime code size
 - `protocols.json` — known Aave V3 contracts by chain
+- `ground_truth.json` — deterministic metrics and generated expected answers for `questions.jsonl`
 
 ## Install and run
 
@@ -27,6 +28,7 @@ cp .env.example .env
 npm install
 npm run typecheck
 npm run collect
+npm run ground-truth:update
 ```
 
 You can also run one collector at a time:
@@ -39,7 +41,23 @@ npm run prices
 npm run defi
 npm run metadata
 npm run labels
+npm run ground-truth
 ```
+
+## Ground truth
+
+`ground-truth.ts` is a plain TypeScript accounting program: it reads committed
+fixture JSON only, makes no RPC or LLM calls, and calculates NAV, concentration,
+liquidity, stablecoin exposure, chain allocation, flows, spend coverage, gas,
+and stress scenarios. It uses the canonical transfer source and classification
+policy declared in the manifest, address-keyed daily prices, and the pinned Aave
+address-book package.
+
+Run `npm run ground-truth` for a read-only JSON report. Run
+`npm run ground-truth:update` to write `fixtures/treasury_v1/ground_truth.json`
+and replace each question's `expected_answer` and `must_include` fields with the
+computed result. Unsupported metrics remain explicitly unsupported; for example,
+the script does not invent burn or runway when no operating-expense labels exist.
 
 ## Snapshot behavior
 

@@ -16,7 +16,9 @@
     "nav": "tsx collectors/nav.ts",
     "defi": "tsx collectors/defi-positions.ts",
     "metadata": "tsx collectors/metadata.ts",
-    "labels": "tsx collectors/labels.ts"
+    "labels": "tsx collectors/labels.ts",
+    "ground-truth": "tsx ground-truth.ts",
+    "ground-truth:update": "tsx ground-truth.ts --write"
   },
   "dependencies": {
     "@aave-dao/aave-address-book": "4.66.0",
