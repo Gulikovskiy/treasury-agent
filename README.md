@@ -58,9 +58,9 @@ Run `npm run ground-truth` for a read-only JSON report. Run
 and replace each question's `expected_answer` and `must_include` fields with the
 computed result. Unsupported metrics remain explicitly unsupported; for example,
 the script does not invent burn or runway when no operating-expense labels exist.
-Run `npm test` for independent oracle checks covering debt-sign NAV arithmetic,
-a known DeFi transfer classification, date-window boundaries, and stablecoin
-currency treatment.
+Run `npm test` for independent oracle checks covering raw-balance valuation,
+date-window boundaries, NAV cross-footing by accounting bucket, chain and asset,
+signed allocation percentages, and collateral-component reconciliation.
 
 The accounting policy includes EURS in the broad stablecoin total because it is
 EUR-pegged, but reports it separately as EUR/USD FX exposure. The
