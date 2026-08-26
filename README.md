@@ -66,6 +66,16 @@ The accounting policy includes EURS in the broad stablecoin total because it is
 EUR-pegged, but reports it separately as EUR/USD FX exposure. The
 `usdPeggedGrossAssets` subtotal excludes EURS.
 
+## Eval tool boundary
+
+Runtime tools never read `ground_truth.json`; that file belongs exclusively to
+the grader. `getPositions({ chainId? })` projects canonical position rows from
+`nav_positions.json` without totals or allocations. `getPrices({ assetIds })`
+returns only requested address-keyed prices from `prices.json`, nearest the
+snapshot. `calculator({ expression })` evaluates arithmetic with a restricted
+parser and cannot execute JavaScript. This leaves NAV, concentration, chain
+allocation, leverage, and scenario reasoning to the evaluated agent.
+
 ## Snapshot behavior
 
 On the first run, `manifest.json` pins one block per chain at or immediately before `SNAPSHOT_TIMESTAMP`. Later runs reuse the existing manifest, so the on-chain state remains deterministic.
@@ -78,7 +88,9 @@ SNAPSHOT_TIMESTAMP=2026-08-24T15:00:00Z \
 npm run collect
 ```
 
-After collection, commit the whole fixture directory. Eval/CI mode should read these JSON files only and never call live providers.
+After collection, commit the whole fixture directory. The grader may read the
+answer key, but the evaluated agent's runtime tool allowlist is limited to the
+non-grader fixture projections documented above and never calls live providers.
 
 ## Treasury addresses
 

@@ -1356,12 +1356,26 @@ function questionTruth(
 
 async function updateQuestions(questions: Record<string, QuestionTruth>): Promise<void> {
   const lines = (await readFile(QUESTIONS_PATH, 'utf8')).trimEnd().split('\n')
+  const toolRenames: Record<string, string> = {
+    getTokenBalances: 'getPositions',
+    getDeFiPositions: 'getPositions',
+    getTokenPrices: 'getPrices',
+  }
+  const calculatorQuestions = new Set(['q11', 'q17', 'q18', 'q27'])
   const updated = lines.map((line) => {
     const question = JSON.parse(line) as JsonQuestion
     const truth = questions[question.id]
     if (!truth) throw new Error(`No ground truth generated for ${question.id}`)
+    const expectedTools = [...new Set(
+      ((question.expected_tools as string[] | undefined) ?? [])
+        .map((tool) => toolRenames[tool] ?? tool),
+    )]
+    if (calculatorQuestions.has(question.id) && !expectedTools.includes('calculator')) {
+      expectedTools.push('calculator')
+    }
     return JSON.stringify({
       ...question,
+      expected_tools: expectedTools,
       expected_answer: truth.expected_answer,
       must_include: truth.must_include,
     })
