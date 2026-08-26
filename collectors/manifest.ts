@@ -21,7 +21,7 @@ import type {
   WalletsFixture,
 } from '../types/fixture.js'
 
-const SCHEMA_VERSION = 5
+const SCHEMA_VERSION = 6
 const AFC_WALLET = '0x22740deBa78d5a0c24C58C740e3715ec29de1bFa' as const
 
 function accountingPolicy(): FixtureManifest['accountingPolicy'] {
@@ -30,6 +30,19 @@ function accountingPolicy(): FixtureManifest['accountingPolicy'] {
       identityKey: 'chainId + contractAddress',
       symbolPolicy: 'display-only; never identity; attacker-controlled unless canonicalized',
       minimumUsdValue: NAV_DUST_USD,
+      stablecoinExposure: {
+        reportingCurrency: 'USD',
+        broadStablecoinSymbols: [
+          'DAI', 'DAIe', 'EURS', 'GHO', 'USDC', 'USDC.e', 'USDCn', 'USDbC',
+          'USDT', 'USDT.e', 'USDt',
+        ],
+        usdPeggedSymbols: [
+          'DAI', 'DAIe', 'GHO', 'USDC', 'USDC.e', 'USDCn', 'USDbC',
+          'USDT', 'USDT.e', 'USDt',
+        ],
+        fxExposedSymbols: ['EURS'],
+        treatment: 'include_in_broad_total_and_disclose_fx_separately',
+      },
       spotAssetAllowlist: NAV_TOKEN_ALLOWLIST,
       canonicalNavSource: 'nav_positions.json',
       spotBalanceSource: 'balances.json',
@@ -42,6 +55,7 @@ function accountingPolicy(): FixtureManifest['accountingPolicy'] {
       ],
       rules: [
         'A token can enter NAV only when its chain/address is allowlisted, it has a price, and its absolute USD value meets minimumUsdValue.',
+        'Broad stablecoin exposure includes EURS, but USD-pegged liquidity excludes it and EURS is disclosed separately as EUR/USD FX exposure.',
         'Every raw ERC-20 rejected by the spot allowlist is retained in balances.json and recorded in nav_positions.json with reason not_allowlisted.',
         'Token symbols and names are display labels, never identity keys, and raw provider/on-chain labels never enter canonical NAV positions.',
         'Use currentATokenBalance from defi_positions.json as the Aave V3 supplied asset.',

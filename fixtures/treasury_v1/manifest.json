@@ -1,6 +1,6 @@
 {
   "fixtureId": "treasury_v1",
-  "schemaVersion": 5,
+  "schemaVersion": 6,
   "snapshotTimestamp": "2026-08-24T15:00:00Z",
   "lookbackDays": 90,
   "historyFromTimestamp": "2026-05-26T15:00:00.000Z",
@@ -9,6 +9,38 @@
       "identityKey": "chainId + contractAddress",
       "symbolPolicy": "display-only; never identity; attacker-controlled unless canonicalized",
       "minimumUsdValue": 1,
+      "stablecoinExposure": {
+        "reportingCurrency": "USD",
+        "broadStablecoinSymbols": [
+          "DAI",
+          "DAIe",
+          "EURS",
+          "GHO",
+          "USDC",
+          "USDC.e",
+          "USDCn",
+          "USDbC",
+          "USDT",
+          "USDT.e",
+          "USDt"
+        ],
+        "usdPeggedSymbols": [
+          "DAI",
+          "DAIe",
+          "GHO",
+          "USDC",
+          "USDC.e",
+          "USDCn",
+          "USDbC",
+          "USDT",
+          "USDT.e",
+          "USDt"
+        ],
+        "fxExposedSymbols": [
+          "EURS"
+        ],
+        "treatment": "include_in_broad_total_and_disclose_fx_separately"
+      },
       "spotAssetAllowlist": {
         "1": {
           "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f": {
@@ -59,6 +91,7 @@
       ],
       "rules": [
         "A token can enter NAV only when its chain/address is allowlisted, it has a price, and its absolute USD value meets minimumUsdValue.",
+        "Broad stablecoin exposure includes EURS, but USD-pegged liquidity excludes it and EURS is disclosed separately as EUR/USD FX exposure.",
         "Every raw ERC-20 rejected by the spot allowlist is retained in balances.json and recorded in nav_positions.json with reason not_allowlisted.",
         "Token symbols and names are display labels, never identity keys, and raw provider/on-chain labels never enter canonical NAV positions.",
         "Use currentATokenBalance from defi_positions.json as the Aave V3 supplied asset.",

@@ -5,7 +5,39 @@
     "navSource": "nav_positions.json signed fixed-point USD values",
     "transferIdentity": "manifest accountingPolicy.flows canonical source per chain",
     "pricing": "nearest daily historical price by chainId + contractAddress",
-    "operatingSpend": "successful external outflow with explicit expense-kind address label"
+    "operatingSpend": "successful external outflow with explicit expense-kind address label",
+    "stablecoinExposure": {
+      "reportingCurrency": "USD",
+      "broadStablecoinSymbols": [
+        "DAI",
+        "DAIe",
+        "EURS",
+        "GHO",
+        "USDC",
+        "USDC.e",
+        "USDCn",
+        "USDbC",
+        "USDT",
+        "USDT.e",
+        "USDt"
+      ],
+      "usdPeggedSymbols": [
+        "DAI",
+        "DAIe",
+        "GHO",
+        "USDC",
+        "USDC.e",
+        "USDCn",
+        "USDbC",
+        "USDT",
+        "USDT.e",
+        "USDt"
+      ],
+      "fxExposedSymbols": [
+        "EURS"
+      ],
+      "treatment": "include_in_broad_total_and_disclose_fx_separately"
+    }
   },
   "nav": {
     "total": "$36,659,437.35",
@@ -17,6 +49,8 @@
     "defiGrossAssets": "$37,414,820.15",
     "defiLiabilities": "$4,068,892.66",
     "stableGrossAssets": "$7,041,552.68",
+    "usdPeggedGrossAssets": "$6,946,538.36",
+    "fxExposedStableAssets": "$95,014.32",
     "stableNet": "$2,972,660.02",
     "stableLiabilities": "$4,068,892.66",
     "byAsset": {
@@ -189,7 +223,7 @@
   "expectedAnswers": {
     "q01": "At the pinned 2026-08-24T15:00:00Z snapshot, canonical reported NAV is $36,659,437.35: $40,728,330.01 of assets less $4,068,892.66 of GHO debt. AAVE is the dominant holding at $32,658,754.64. This is reported-fixture NAV, not a completeness claim: the Ethereum Lido Aave market is still outside the DeFi adapter.",
     "q02": "$3,313,509.86 is directly wallet-held spot/native value, 9.04% of NAV. Aave accounts for $33,345,927.49 net, or 90.96%, consisting of $37,414,820.15 supplied assets less $4,068,892.66 of debt.",
-    "q03": "Stablecoin assets total $7,041,552.68, 17.29% of gross assets. After the $4,068,892.66 GHO liability, net stablecoin exposure is $2,972,660.02, 8.11% of NAV. USDC-family assets contribute $3,522,543.17.",
+    "q03": "Broad stablecoin assets total $7,041,552.68, 17.29% of gross assets. Policy explicitly includes $95,014.32 of EURS as a EUR-pegged stablecoin with EUR/USD FX risk; USD-pegged stablecoin assets alone are $6,946,538.36. After the $4,068,892.66 GHO liability, net broad stablecoin exposure is $2,972,660.02, 8.11% of NAV. USDC-family assets contribute $3,522,543.17.",
     "q04": "Yes. AAVE is $32,658,754.64, or 89.09% of NAV—the largest single-asset concentration by far. The next net exposures are GHO -$4,059,174.02 (-11.07%), DAIe $2,764,401.07 (7.54%), USDC.e $2,243,645.90 (6.12%), USDC $1,278,777.10 (3.49%).",
     "q05": "ethereum holds the most net value: $29,970,903.92, 81.75% of NAV. The remaining chains are avalanche $6,574,909.93 (17.94%), base $113,436.34 (0.31%), arbitrum $187.16 (0.00%).",
     "q06": "Over the 30 days ending at the snapshot, priced external inflows were $499,374.89 and priced external outflows were $0.00, for net external flow of $499,374.89. The largest priced inflow is GHO funding from Aave V3 collector on 2026-07-31; subsequent Aave/Safety Module movements are excluded. 3 external token event(s) were unpriced and are disclosed rather than treated as zero.",

@@ -48,6 +48,13 @@ export interface FixtureManifest {
       identityKey: 'chainId + contractAddress'
       symbolPolicy: 'display-only; never identity; attacker-controlled unless canonicalized'
       minimumUsdValue: number
+      stablecoinExposure: {
+        reportingCurrency: 'USD'
+        broadStablecoinSymbols: string[]
+        usdPeggedSymbols: string[]
+        fxExposedSymbols: string[]
+        treatment: 'include_in_broad_total_and_disclose_fx_separately'
+      }
       spotAssetAllowlist: ChainMap<Record<string, CanonicalAsset>>
       canonicalNavSource: 'nav_positions.json'
       spotBalanceSource: 'balances.json'

@@ -1,5 +1,6 @@
 import { readFile, writeFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
+import { isMain } from './lib/io.js'
 import {
   AaveSafetyModule,
   AaveV3Arbitrum,
@@ -14,7 +15,7 @@ type ChainId = 1 | 43114 | 42161 | 8453
 type Direction = 'in' | 'out' | 'internal'
 type FlowClass = 'internal_transfer' | 'bridge' | 'defi_movement' | 'external_flow'
 
-interface NavPosition {
+export interface NavPosition {
   chainId: ChainId
   wallet: string
   assetId: string
@@ -109,6 +110,15 @@ interface ManifestFixture {
   historyFromTimestamp: string
   chains: Record<string, { name: string }>
   accountingPolicy: {
+    nav: {
+      stablecoinExposure: {
+        reportingCurrency: 'USD'
+        broadStablecoinSymbols: string[]
+        usdPeggedSymbols: string[]
+        fxExposedSymbols: string[]
+        treatment: 'include_in_broad_total_and_disclose_fx_separately'
+      }
+    }
     flows: {
       transferEventSource: Record<string, 'alchemyTransfers' | 'erc20Transfers'>
       externalFlow: { windowDays: number }
@@ -211,10 +221,6 @@ const NATIVE_SYMBOL: Record<ChainId, string> = {
   8453: 'ETH',
 }
 
-const STABLE_SYMBOLS = new Set([
-  'DAI', 'DAIe', 'EURS', 'GHO', 'USDC', 'USDC.e', 'USDCn', 'USDbC',
-  'USDT', 'USDT.e', 'USDt',
-])
 const USDC_SYMBOLS = new Set(['USDC', 'USDC.e', 'USDCn', 'USDbC'])
 const ETH_SYMBOLS = new Set(['ETH', 'WETH', 'WETHe', 'wstETH'])
 const BTC_SYMBOLS = new Set(['BTC.b', 'BTCb', 'WBTC', 'WBTCe', 'cbBTC'])
@@ -663,11 +669,33 @@ function sortedGroups(groups: Map<string, bigint>): Array<[string, bigint]> {
   })
 }
 
-function eventsInRange(events: TransferEvent[], start: number, end: number): TransferEvent[] {
+export function eventsInRange<T extends { timestamp: string }>(
+  events: T[],
+  start: number,
+  end: number,
+): T[] {
   return events.filter((event) => {
     const timestamp = Date.parse(event.timestamp)
     return timestamp >= start && timestamp <= end
   })
+}
+
+export function summarizeNav(positions: NavPosition[]): {
+  grossAssets: bigint
+  liabilities: bigint
+  net: bigint
+} {
+  const grossAssets = sumCents(positions
+    .filter((position) => position.positionType === 'asset')
+    .map((position) => parseUsdCents(position.valueUsd)))
+  const signedLiabilities = sumCents(positions
+    .filter((position) => position.positionType === 'liability')
+    .map((position) => parseUsdCents(position.valueUsd)))
+  return {
+    grossAssets,
+    liabilities: abs(signedLiabilities),
+    net: grossAssets + signedLiabilities,
+  }
 }
 
 function eventValue(events: TransferEvent[]): bigint {
@@ -777,13 +805,10 @@ function questionTruth(
   const burnStart = addUtcMonths(currentMonthStart,
     -(manifest.accountingPolicy.flows.burnRate.trailingMonths - 1))
 
-  const totalNav = sumCents(positions.map((position) => parseUsdCents(position.valueUsd)))
-  const grossAssets = sumCents(positions
-    .filter((position) => position.positionType === 'asset')
-    .map((position) => parseUsdCents(position.valueUsd)))
-  const liabilities = abs(sumCents(positions
-    .filter((position) => position.positionType === 'liability')
-    .map((position) => parseUsdCents(position.valueUsd))))
+  const navSummary = summarizeNav(positions)
+  const totalNav = navSummary.net
+  const grossAssets = navSummary.grossAssets
+  const liabilities = navSummary.liabilities
   const walletLiquid = sumCents(positions
     .filter((position) => position.source !== 'aave_v3')
     .map((position) => parseUsdCents(position.valueUsd)))
@@ -801,14 +826,26 @@ function questionTruth(
 
   const byAsset = navGroup(positions, (position) => position.canonicalSymbol)
   const byChain = navGroup(positions, (position) => String(position.chainId))
+  const stablePolicy = manifest.accountingPolicy.nav.stablecoinExposure
+  const stableSymbols = new Set(stablePolicy.broadStablecoinSymbols)
+  const usdPeggedSymbols = new Set(stablePolicy.usdPeggedSymbols)
+  const fxExposedSymbols = new Set(stablePolicy.fxExposedSymbols)
   const stableGrossAssets = sumCents(positions
     .filter((position) =>
-      position.positionType === 'asset' && STABLE_SYMBOLS.has(position.canonicalSymbol))
+      position.positionType === 'asset' && stableSymbols.has(position.canonicalSymbol))
     .map((position) => parseUsdCents(position.valueUsd)))
   const stableNet = sumCents(positions
-    .filter((position) => STABLE_SYMBOLS.has(position.canonicalSymbol))
+    .filter((position) => stableSymbols.has(position.canonicalSymbol))
     .map((position) => parseUsdCents(position.valueUsd)))
   const stableLiabilities = stableGrossAssets - stableNet
+  const usdPeggedGrossAssets = sumCents(positions
+    .filter((position) => position.positionType === 'asset'
+      && usdPeggedSymbols.has(position.canonicalSymbol))
+    .map((position) => parseUsdCents(position.valueUsd)))
+  const fxExposedStableAssets = sumCents(positions
+    .filter((position) => position.positionType === 'asset'
+      && fxExposedSymbols.has(position.canonicalSymbol))
+    .map((position) => parseUsdCents(position.valueUsd)))
   const usdcValue = sumCents(positions
     .filter((position) => USDC_SYMBOLS.has(position.canonicalSymbol))
     .map((position) => parseUsdCents(position.valueUsd)))
@@ -920,9 +957,11 @@ function questionTruth(
       ],
     },
     q03: {
-      expected_answer: `Stablecoin assets total ${usd(stableGrossAssets)}, ${pct(percent(stableGrossAssets, grossAssets))} of gross assets. After the ${usd(stableLiabilities)} GHO liability, net stablecoin exposure is ${usd(stableNet)}, ${pct(percent(stableNet, totalNav))} of NAV. USDC-family assets contribute ${usd(usdcValue)}.`,
+      expected_answer: `Broad stablecoin assets total ${usd(stableGrossAssets)}, ${pct(percent(stableGrossAssets, grossAssets))} of gross assets. Policy explicitly includes ${usd(fxExposedStableAssets)} of EURS as a EUR-pegged stablecoin with EUR/USD FX risk; USD-pegged stablecoin assets alone are ${usd(usdPeggedGrossAssets)}. After the ${usd(stableLiabilities)} GHO liability, net broad stablecoin exposure is ${usd(stableNet)}, ${pct(percent(stableNet, totalNav))} of NAV. USDC-family assets contribute ${usd(usdcValue)}.`,
       must_include: [
         `gross stablecoin assets ${usd(stableGrossAssets)}`,
+        `USD-pegged stablecoin assets ${usd(usdPeggedGrossAssets)}`,
+        `EURS ${usd(fxExposedStableAssets)} carries EUR/USD FX risk`,
         `net stablecoin exposure ${usd(stableNet)}`,
         `GHO liability ${usd(stableLiabilities)}`,
       ],
@@ -1139,6 +1178,7 @@ function questionTruth(
       transferIdentity: 'manifest accountingPolicy.flows canonical source per chain',
       pricing: 'nearest daily historical price by chainId + contractAddress',
       operatingSpend: 'successful external outflow with explicit expense-kind address label',
+      stablecoinExposure: stablePolicy,
     },
     nav: {
       total: usd(totalNav),
@@ -1150,6 +1190,8 @@ function questionTruth(
       defiGrossAssets: usd(defiGrossAssets),
       defiLiabilities: usd(defiLiabilities),
       stableGrossAssets: usd(stableGrossAssets),
+      usdPeggedGrossAssets: usd(usdPeggedGrossAssets),
+      fxExposedStableAssets: usd(fxExposedStableAssets),
       stableNet: usd(stableNet),
       stableLiabilities: usd(stableLiabilities),
       byAsset: Object.fromEntries(sortedGroups(byAsset).map(([key, value]) => [key, {
@@ -1228,17 +1270,20 @@ async function updateQuestions(questions: Record<string, QuestionTruth>): Promis
   await writeFile(QUESTIONS_PATH, `${updated.join('\n')}\n`)
 }
 
-async function main(): Promise<void> {
+export async function generateGroundTruth(fixtureDir = FIXTURE_DIR): Promise<{
+  report: Record<string, unknown>
+  questions: Record<string, QuestionTruth>
+}> {
   const [nav, manifest, transactions, prices, wallets, labels, balances, contracts] =
     await Promise.all([
-      readJson<NavFixture>(resolve(FIXTURE_DIR, 'nav_positions.json')),
-      readJson<ManifestFixture>(resolve(FIXTURE_DIR, 'manifest.json')),
-      readJson<TransactionsFixture>(resolve(FIXTURE_DIR, 'transactions.json')),
-      readJson<PricesFixture>(resolve(FIXTURE_DIR, 'prices.json')),
-      readJson<WalletsFixture>(resolve(FIXTURE_DIR, 'wallets.json')),
-      readJson<AddressLabelsFixture>(resolve(FIXTURE_DIR, 'address_labels.json')),
-      readJson<BalancesFixture>(resolve(FIXTURE_DIR, 'balances.json')),
-      readJson<ContractsFixture>(resolve(FIXTURE_DIR, 'contracts.json')),
+      readJson<NavFixture>(resolve(fixtureDir, 'nav_positions.json')),
+      readJson<ManifestFixture>(resolve(fixtureDir, 'manifest.json')),
+      readJson<TransactionsFixture>(resolve(fixtureDir, 'transactions.json')),
+      readJson<PricesFixture>(resolve(fixtureDir, 'prices.json')),
+      readJson<WalletsFixture>(resolve(fixtureDir, 'wallets.json')),
+      readJson<AddressLabelsFixture>(resolve(fixtureDir, 'address_labels.json')),
+      readJson<BalancesFixture>(resolve(fixtureDir, 'balances.json')),
+      readJson<ContractsFixture>(resolve(fixtureDir, 'contracts.json')),
     ])
   const registry = buildAaveRegistry()
   const events = collectTransferEvents(
@@ -1251,7 +1296,11 @@ async function main(): Promise<void> {
     contracts,
     registry,
   )
-  const groundTruth = questionTruth(nav, manifest, transactions, prices, wallets, events)
+  return questionTruth(nav, manifest, transactions, prices, wallets, events)
+}
+
+async function main(): Promise<void> {
+  const groundTruth = await generateGroundTruth()
   const output = {
     ...groundTruth.report,
     expectedAnswers: Object.fromEntries(Object.entries(groundTruth.questions)
@@ -1268,4 +1317,4 @@ async function main(): Promise<void> {
   }
 }
 
-await main()
+if (isMain(import.meta.url)) await main()
