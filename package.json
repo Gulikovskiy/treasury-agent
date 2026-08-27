@@ -19,6 +19,7 @@
     "labels": "tsx collectors/labels.ts",
     "ground-truth": "tsx ground-truth.ts",
     "ground-truth:update": "tsx ground-truth.ts --write",
+    "groundedness": "tsx src/groundedness.ts",
     "test": "vitest run",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
