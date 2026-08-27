@@ -29,7 +29,7 @@ describe("ground-truth oracle checks", () => {
     ]);
     const address = "0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664";
     const wallet = Object.values(
-      balances.chains["43114"] as Record<
+      (balances.chains as Record<string, unknown>)["43114"] as Record<
         string,
         {
           erc20: Array<{
@@ -42,7 +42,7 @@ describe("ground-truth oracle checks", () => {
     )[0]!;
     const balance = wallet.erc20.find((token) => token.contractAddress === address)!;
     const priceSeries = (
-      prices.chains["43114"] as {
+      (prices.chains as Record<string, unknown>)["43114"] as {
         tokens: Record<string, { data: Array<{ timestamp: string; value: string }> }>;
       }
     ).tokens[address]!.data;
@@ -92,11 +92,13 @@ describe("ground-truth oracle checks", () => {
   describe("generated report cross-foots", () => {
     let nav: GroundTruthNav;
     let leverage: GroundTruthLeverage;
+    let q10Answer: string;
 
     beforeAll(async () => {
       const generated = await generateGroundTruth(FIXTURE_DIR);
       nav = generated.report.nav as GroundTruthNav;
       leverage = generated.report.leverage as GroundTruthLeverage;
+      q10Answer = generated.questions.q10!.expected_answer;
     });
 
     it("cross-foots gross assets less liabilities to NAV", () => {
@@ -134,11 +136,18 @@ describe("ground-truth oracle checks", () => {
         parseUsdCents(leverage.ethereumEnabledCollateral),
       );
     });
+
+    it("keeps portfolio debt-to-supply distinct from Ethereum collateral leverage", () => {
+      expect(q10Answer).toContain("10.88% is a portfolio debt-to-supply ratio, not an LTV");
+      expect(q10Answer).toContain("$33,937,519.36 is enabled as collateral");
+      expect(q10Answer).toContain("debt is 11.99% of that collateral");
+      expect(q10Answer).toContain("safety margin cannot be assessed");
+    });
   });
 });
 
-async function readJson(name: string): Promise<Record<string, any>> {
-  return JSON.parse(await readFile(resolve(FIXTURE_DIR, name), "utf8")) as Record<string, any>;
+async function readJson(name: string): Promise<Record<string, unknown>> {
+  return JSON.parse(await readFile(resolve(FIXTURE_DIR, name), "utf8")) as Record<string, unknown>;
 }
 
 function parseUsdCents(value: string): bigint {

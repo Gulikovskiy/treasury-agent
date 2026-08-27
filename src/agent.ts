@@ -6,7 +6,10 @@ export const tools = {
   getPositions: tool({
     description:
       "Treasury positions with amount, price, and USD value. " +
-      'positionType "liability" means debt owed — subtract it. Omit chainId for all chains.',
+      'positionType "liability" means debt owed — subtract it. ' +
+      "Aave collateral and debt are isolated by marketId and account; never treat assets in a " +
+      "different market or account as collateral for a liability. usageAsCollateralEnabled is " +
+      "meaningful only for Aave asset positions. Omit chainId for all chains.",
     inputSchema: z.object({
       chainId: z.coerce
         .number()

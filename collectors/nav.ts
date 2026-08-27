@@ -17,6 +17,11 @@ interface NavPosition {
   amount: string;
   priceUsd: string;
   valueUsd: string;
+  protocol?: "aave_v3";
+  marketId?: string;
+  account?: string;
+  usageAsCollateralEnabled?: boolean;
+  debtType?: "stable" | "variable" | "mixed";
 }
 
 interface ExcludedPosition {
@@ -219,6 +224,9 @@ export async function collectNavPositions(): Promise<NavPositionsFixture> {
           canonicalSymbol: position.canonicalSymbol,
           decimals: position.decimals,
           source: "aave_v3" as const,
+          protocol: "aave_v3" as const,
+          marketId: `aave_v3:${chainId}`,
+          account: wallet,
           price: prices.chains[chainId].tokens[position.underlyingAsset.toLowerCase()],
         };
         const supplied = BigInt(position.currentATokenBalance);
@@ -226,6 +234,7 @@ export async function collectNavPositions(): Promise<NavPositionsFixture> {
           addPosition({
             ...common,
             positionType: "asset",
+            usageAsCollateralEnabled: position.usageAsCollateralEnabled,
             rawAmount: supplied,
           });
         const debt = BigInt(position.currentStableDebt) + BigInt(position.currentVariableDebt);
@@ -233,6 +242,13 @@ export async function collectNavPositions(): Promise<NavPositionsFixture> {
           addPosition({
             ...common,
             positionType: "liability",
+            usageAsCollateralEnabled: false,
+            debtType:
+              BigInt(position.currentStableDebt) > 0n && BigInt(position.currentVariableDebt) > 0n
+                ? "mixed"
+                : BigInt(position.currentStableDebt) > 0n
+                  ? "stable"
+                  : "variable",
             rawAmount: debt,
           });
       }

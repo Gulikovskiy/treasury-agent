@@ -12,6 +12,11 @@ const POSITION_FIELDS = [
   "valueUsd",
   "positionType",
   "source",
+  "protocol",
+  "marketId",
+  "account",
+  "usageAsCollateralEnabled",
+  "debtType",
 ] as const;
 
 interface StoredPosition {
@@ -23,6 +28,11 @@ interface StoredPosition {
   valueUsd: string;
   positionType: "asset" | "liability";
   source: "native" | "spot" | "aave_v3";
+  protocol?: "aave_v3";
+  marketId?: string;
+  account?: string;
+  usageAsCollateralEnabled?: boolean;
+  debtType?: "stable" | "variable" | "mixed";
 }
 
 interface PositionsFixture {
@@ -67,7 +77,10 @@ export async function getPositions(input: { chainId?: ChainId } = {}): Promise<{
     positions: selected.map(
       (position) =>
         Object.fromEntries(
-          POSITION_FIELDS.map((field) => [field, position[field]]),
+          POSITION_FIELDS.filter((field) => position[field] !== undefined).map((field) => [
+            field,
+            position[field],
+          ]),
         ) as unknown as Position,
     ),
   };

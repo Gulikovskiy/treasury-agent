@@ -70,7 +70,9 @@ EUR-pegged, but reports it separately as EUR/USD FX exposure. The
 
 Runtime tools never read `ground_truth.json`; that file belongs exclusively to
 the grader. `getPositions({ chainId? })` projects canonical position rows from
-`nav_positions.json` without totals or allocations. `getPrices({ assetIds })`
+`nav_positions.json` without totals or allocations. Aave rows retain their
+`marketId`, `account`, collateral-enabled flag, and debt type so market-scoped
+collateral analysis does not pool unrelated chains or accounts. `getPrices({ assetIds })`
 returns only requested address-keyed prices from `prices.json`, nearest the
 snapshot. `calculator({ expression })` evaluates arithmetic with a restricted
 parser and cannot execute JavaScript. This leaves NAV, concentration, chain

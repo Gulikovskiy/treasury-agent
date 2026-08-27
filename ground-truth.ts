@@ -1158,12 +1158,15 @@ function questionTruth(
       ],
     },
     q10: {
-      expected_answer: `Configured Aave exposure is ${usd(defiGrossAssets)} supplied against ${usd(defiLiabilities)} borrowed, leaving ${usd(defiNet)} net. Debt is ${pct(percent(defiLiabilities, defiGrossAssets))} of supplied assets. The AAVE position alone covers the marked GHO debt ${aaveDebtCoverage.toFixed(2)}×, but that concentration is not the same as an Aave health factor.`,
+      expected_answer: `Across configured Aave markets, balance-sheet exposure is ${usd(defiGrossAssets)} supplied against ${usd(defiLiabilities)} borrowed, leaving ${usd(defiNet)} net; the resulting ${pct(percent(defiLiabilities, defiGrossAssets))} is a portfolio debt-to-supply ratio, not an LTV. The GHO debt is isolated to the Ethereum market and account, where ${usd(ethereumCollateral)} is enabled as collateral and debt is ${pct(percent(defiLiabilities, ethereumCollateral))} of that collateral. Exact leverage-to-liquidation or safety margin cannot be assessed without reserve thresholds and account health-factor data.`,
       must_include: [
         `gross Aave supply ${usd(defiGrossAssets)}`,
         `Aave debt ${usd(defiLiabilities)}`,
         `Aave net ${usd(defiNet)}`,
-        `AAVE debt coverage ${aaveDebtCoverage.toFixed(2)}x`,
+        `Ethereum enabled collateral ${usd(ethereumCollateral)}`,
+        `Ethereum debt-to-collateral ${pct(percent(defiLiabilities, ethereumCollateral))}`,
+        "distinguishes portfolio debt-to-supply from market LTV",
+        "does not claim a liquidation safety margin",
       ],
     },
     q11: {
@@ -1464,7 +1467,29 @@ async function updateQuestions(questions: Record<string, QuestionTruth>): Promis
     getDeFiPositions: "getPositions",
     getTokenPrices: "getPrices",
   };
-  const calculatorQuestions = new Set(["q11", "q17", "q18", "q27"]);
+  const calculatorQuestions = new Set([
+    "q01",
+    "q02",
+    "q03",
+    "q04",
+    "q05",
+    "q06",
+    "q07",
+    "q09",
+    "q10",
+    "q11",
+    "q12",
+    "q16",
+    "q17",
+    "q18",
+    "q19",
+    "q20",
+    "q23",
+    "q24",
+    "q27",
+    "q28",
+    "q29",
+  ]);
   const updated = lines.map((line) => {
     const question = JSON.parse(line) as JsonQuestion;
     const truth = questions[question.id];

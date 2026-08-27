@@ -36,6 +36,30 @@ describe("treasury tool boundary", () => {
     expect(result.prices[2]).toEqual({ assetId: assetIds[2], error: "not_found" });
   });
 
+  it("preserves Aave market, account, collateral, and debt metadata", async () => {
+    const { positions } = await getPositions({ chainId: 1 });
+    const collateral = positions.find(
+      (position) => position.canonicalSymbol === "AAVE" && position.positionType === "asset",
+    );
+    const debt = positions.find(
+      (position) => position.canonicalSymbol === "GHO" && position.positionType === "liability",
+    );
+
+    expect(collateral).toMatchObject({
+      protocol: "aave_v3",
+      marketId: "aave_v3:1",
+      usageAsCollateralEnabled: true,
+    });
+    expect(collateral?.account).toBeTruthy();
+    expect(debt).toMatchObject({
+      protocol: "aave_v3",
+      marketId: "aave_v3:1",
+      usageAsCollateralEnabled: false,
+      debtType: "variable",
+    });
+    expect(debt?.account).toBe(collateral?.account);
+  });
+
   it("evaluates arithmetic without executing JavaScript", () => {
     expect(calculator({ expression: "(32658754.64 * 0.2) / 36659437.35 * 100" }).result).toBe(
       "17.817379098427434",
