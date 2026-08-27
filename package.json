@@ -19,17 +19,28 @@
     "labels": "tsx collectors/labels.ts",
     "ground-truth": "tsx ground-truth.ts",
     "ground-truth:update": "tsx ground-truth.ts --write",
-    "test": "vitest run"
+    "test": "vitest run",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@aave-dao/aave-address-book": "4.66.0",
+    "@ai-sdk/anthropic": "^4.0.44",
+    "ai": "^7.0.83",
     "dotenv": "17.2.2",
-    "viem": "2.55.19"
+    "viem": "2.55.19",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/node": "24.3.0",
+    "eslint": "^10.9.1",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.6",
     "tsx": "4.20.5",
     "typescript": "5.9.2",
+    "typescript-eslint": "^8.68.0",
     "vitest": "^4.1.11"
   }
 }

@@ -1,28 +1,28 @@
-import type { Address } from 'viem'
+import type { Address } from "viem";
 import type {
   AccountHistoryRange,
   AccountHistoryResult,
   AccountPage,
   Erc20Transfer,
   NormalTransaction,
-} from './account-history.js'
-import type { ChainId } from '../types/fixture.js'
+} from "./account-history.js";
+import type { ChainId } from "../types/fixture.js";
 
-const key = process.env.ROUTESCAN_API_KEY
-const REQUEST_INTERVAL_MS = 550
+const key = process.env.ROUTESCAN_API_KEY;
+const REQUEST_INTERVAL_MS = 550;
 
-let requestQueue = Promise.resolve()
-let lastRequestStartedAt = 0
+let requestQueue = Promise.resolve();
+let lastRequestStartedAt = 0;
 
 async function waitForRateLimit(): Promise<void> {
   const turn = requestQueue.then(async () => {
-    const waitMs = Math.max(0, REQUEST_INTERVAL_MS - (Date.now() - lastRequestStartedAt))
-    if (waitMs > 0) await new Promise((resolve) => setTimeout(resolve, waitMs))
-    lastRequestStartedAt = Date.now()
-  })
+    const waitMs = Math.max(0, REQUEST_INTERVAL_MS - (Date.now() - lastRequestStartedAt));
+    if (waitMs > 0) await new Promise((resolve) => setTimeout(resolve, waitMs));
+    lastRequestStartedAt = Date.now();
+  });
 
-  requestQueue = turn.catch(() => undefined)
-  await turn
+  requestQueue = turn.catch(() => undefined);
+  await turn;
 }
 
 async function etherscanAccount<T>(
@@ -30,48 +30,48 @@ async function etherscanAccount<T>(
   action: string,
   params: Record<string, string | number | undefined>,
 ): Promise<AccountHistoryResult<T>> {
-  const all: T[] = []
-  const pages: AccountPage<T>[] = []
-  const offset = 100
-  let page = 1
+  const all: T[] = [];
+  const pages: AccountPage<T>[] = [];
+  const offset = 100;
+  let page = 1;
 
   while (true) {
-    const url = new URL(`https://api.routescan.io/v2/network/mainnet/evm/${chainId}/etherscan/api`)
-    url.searchParams.set('module', 'account')
-    url.searchParams.set('action', action)
-    url.searchParams.set('page', String(page))
-    url.searchParams.set('offset', String(offset))
-    url.searchParams.set('sort', 'asc')
+    const url = new URL(`https://api.routescan.io/v2/network/mainnet/evm/${chainId}/etherscan/api`);
+    url.searchParams.set("module", "account");
+    url.searchParams.set("action", action);
+    url.searchParams.set("page", String(page));
+    url.searchParams.set("offset", String(offset));
+    url.searchParams.set("sort", "asc");
 
     for (const [k, v] of Object.entries(params)) {
-      if (v != null) url.searchParams.set(k, String(v))
+      if (v != null) url.searchParams.set(k, String(v));
     }
 
     // Routescan's free tier permits at most two request starts per second.
     // Throttle here so back-to-back transaction types and pagination are covered.
-    await waitForRateLimit()
-    const response = await fetch(url, { headers: key ? { apikey: key } : {} })
-    const json = await response.json() as AccountPage<T>
+    await waitForRateLimit();
+    const response = await fetch(url, { headers: key ? { apikey: key } : {} });
+    const json = (await response.json()) as AccountPage<T>;
     if (!response.ok) {
-      throw new Error(`Routescan ${action} ${chainId} failed: ${JSON.stringify(json)}`)
+      throw new Error(`Routescan ${action} ${chainId} failed: ${JSON.stringify(json)}`);
     }
 
-    if (json.status === '0' && /no transactions/i.test(json.message ?? '')) {
-      pages.push(json)
-      break
+    if (json.status === "0" && /no transactions/i.test(json.message ?? "")) {
+      pages.push(json);
+      break;
     }
 
     if (!Array.isArray(json.result)) {
-      throw new Error(`Routescan ${action} unexpected response: ${JSON.stringify(json)}`)
+      throw new Error(`Routescan ${action} unexpected response: ${JSON.stringify(json)}`);
     }
 
-    pages.push(json)
-    all.push(...json.result)
-    if (json.result.length < offset) break
-    page += 1
+    pages.push(json);
+    all.push(...json.result);
+    if (json.result.length < offset) break;
+    page += 1;
   }
 
-  return { items: all, pages }
+  return { items: all, pages };
 }
 
 export function routescanNormalTransactions(
@@ -79,11 +79,11 @@ export function routescanNormalTransactions(
   address: Address,
   { fromBlock, toBlock }: AccountHistoryRange,
 ): Promise<AccountHistoryResult<NormalTransaction>> {
-  return etherscanAccount(chainId, 'txlist', {
+  return etherscanAccount(chainId, "txlist", {
     address,
     startblock: fromBlock,
     endblock: toBlock,
-  })
+  });
 }
 
 export function routescanErc20Transfers(
@@ -91,9 +91,9 @@ export function routescanErc20Transfers(
   address: Address,
   { fromBlock, toBlock }: AccountHistoryRange,
 ): Promise<AccountHistoryResult<Erc20Transfer>> {
-  return etherscanAccount(chainId, 'tokentx', {
+  return etherscanAccount(chainId, "tokentx", {
     address,
     startblock: fromBlock,
     endblock: toBlock,
-  })
+  });
 }

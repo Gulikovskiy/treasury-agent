@@ -1,146 +1,156 @@
-import 'dotenv/config'
-import type { Address, Chain } from 'viem'
-import { mainnet, avalanche, arbitrum, base } from 'viem/chains'
+import "dotenv/config";
+import type { Address, Chain } from "viem";
+import { mainnet, avalanche, arbitrum, base } from "viem/chains";
 import {
   AaveV3Ethereum,
   AaveV3Avalanche,
   AaveV3Arbitrum,
   AaveV3Base,
-} from '@aave-dao/aave-address-book'
-import type {
-  AddressLabel,
-  CanonicalAsset,
-  ChainId,
-  ChainMap,
-} from './types/fixture.js'
+} from "@aave-dao/aave-address-book";
+import type { AddressLabel, CanonicalAsset, ChainId, ChainMap } from "./types/fixture.js";
 
-export const FIXTURE_DIR = process.env.FIXTURE_DIR ?? './fixtures/treasury_v1'
-export const LOOKBACK_DAYS = Number(process.env.LOOKBACK_DAYS ?? 90)
-export const NAV_DUST_USD = 1
+export const FIXTURE_DIR = process.env.FIXTURE_DIR ?? "./fixtures/treasury_v1";
+export const LOOKBACK_DAYS = Number(process.env.LOOKBACK_DAYS ?? 90);
+export const NAV_DUST_USD = 1;
 
 if (!Number.isFinite(LOOKBACK_DAYS) || LOOKBACK_DAYS <= 0) {
-  throw new Error(`LOOKBACK_DAYS must be a positive number; got ${process.env.LOOKBACK_DAYS}`)
+  throw new Error(`LOOKBACK_DAYS must be a positive number; got ${process.env.LOOKBACK_DAYS}`);
 }
 
-const EXAMPLE_TREASURY = '0x22740deBa78d5a0c24C58C740e3715ec29de1bFa' as Address
+const EXAMPLE_TREASURY = "0x22740deBa78d5a0c24C58C740e3715ec29de1bFa" as Address;
 
 export const TREASURY_WALLETS = {
   1: [EXAMPLE_TREASURY],
   43114: [EXAMPLE_TREASURY],
   42161: [EXAMPLE_TREASURY],
   8453: [EXAMPLE_TREASURY],
-} satisfies ChainMap<readonly Address[]>
+} satisfies ChainMap<readonly Address[]>;
 
 // Eval-only wallet identifiers from questions.jsonl. These are deliberate
 // non-address sentinels and must never be sent to an RPC or added to treasury
 // ownership lists.
 export const TEST_ADDRESSES = {
   q25: {
-    wallet: '0xEmptyWalletAddress',
+    wallet: "0xEmptyWalletAddress",
     controlled: false,
-    behavior: 'empty_data',
+    behavior: "empty_data",
   },
   q26: {
-    wallet: '0xExternalWallet',
+    wallet: "0xExternalWallet",
     controlled: false,
-    behavior: 'external_entity',
+    behavior: "external_entity",
   },
-} as const
+} as const;
 
-type SpotAssetAllowlist = ChainMap<Record<string, CanonicalAsset>>
+type SpotAssetAllowlist = ChainMap<Record<string, CanonicalAsset>>;
 
 // Only these spot ERC-20 contract addresses can enter NAV. Symbols and names
 // returned by token contracts/providers are never used for identity.
 export const NAV_TOKEN_ALLOWLIST: SpotAssetAllowlist = {
   1: {
-    '0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f': {
-      canonicalSymbol: 'GHO', decimals: 18, labelSource: 'config',
+    "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f": {
+      canonicalSymbol: "GHO",
+      decimals: 18,
+      labelSource: "config",
     },
-    '0xdb25f211ab05b1c97d595516f45794528a807ad8': {
-      canonicalSymbol: 'EURS', decimals: 2, labelSource: 'config',
+    "0xdb25f211ab05b1c97d595516f45794528a807ad8": {
+      canonicalSymbol: "EURS",
+      decimals: 2,
+      labelSource: "config",
     },
   },
   43114: {
-    '0x152b9d0fdc40c096757f570a51e494bd4b943e50': {
-      canonicalSymbol: 'BTC.b', decimals: 8, labelSource: 'config',
+    "0x152b9d0fdc40c096757f570a51e494bd4b943e50": {
+      canonicalSymbol: "BTC.b",
+      decimals: 8,
+      labelSource: "config",
     },
-    '0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664': {
-      canonicalSymbol: 'USDC.e', decimals: 6, labelSource: 'config',
+    "0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664": {
+      canonicalSymbol: "USDC.e",
+      decimals: 6,
+      labelSource: "config",
     },
-    '0xc7198437980c041c805a1edcba50c1ce5db95118': {
-      canonicalSymbol: 'USDT.e', decimals: 6, labelSource: 'config',
+    "0xc7198437980c041c805a1edcba50c1ce5db95118": {
+      canonicalSymbol: "USDT.e",
+      decimals: 6,
+      labelSource: "config",
     },
   },
   42161: {},
   8453: {
-    '0x833589fcd6edb6e08f4c7c32d4f71b54bda02913': {
-      canonicalSymbol: 'USDC', decimals: 6, labelSource: 'config',
+    "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913": {
+      canonicalSymbol: "USDC",
+      decimals: 6,
+      labelSource: "config",
     },
   },
-}
+};
 
 type AaveAddressBook = {
-  AAVE_PROTOCOL_DATA_PROVIDER?: Address
-  POOL?: Address
-  COLLECTOR?: Address
-  POOL_ADDRESSES_PROVIDER?: Address
-  ORACLE?: Address
-  ASSETS?: Record<string, {
-    decimals: number
-    UNDERLYING: Address
-    A_TOKEN?: Address
-    V_TOKEN?: Address
-  }>
-}
+  AAVE_PROTOCOL_DATA_PROVIDER?: Address;
+  POOL?: Address;
+  COLLECTOR?: Address;
+  POOL_ADDRESSES_PROVIDER?: Address;
+  ORACLE?: Address;
+  ASSETS?: Record<
+    string,
+    {
+      decimals: number;
+      UNDERLYING: Address;
+      A_TOKEN?: Address;
+      V_TOKEN?: Address;
+    }
+  >;
+};
 
 export interface ChainConfig {
-  id: ChainId
-  name: string
-  alchemyNetwork: string
-  rpcHost: string
-  viemChain: Chain
-  aave: AaveAddressBook
+  id: ChainId;
+  name: string;
+  alchemyNetwork: string;
+  rpcHost: string;
+  viemChain: Chain;
+  aave: AaveAddressBook;
 }
 
 export const CHAINS = {
   1: {
     id: 1,
-    name: 'ethereum',
-    alchemyNetwork: 'eth-mainnet',
-    rpcHost: 'eth-mainnet.g.alchemy.com',
+    name: "ethereum",
+    alchemyNetwork: "eth-mainnet",
+    rpcHost: "eth-mainnet.g.alchemy.com",
     viemChain: mainnet,
     aave: AaveV3Ethereum,
   },
   43114: {
     id: 43114,
-    name: 'avalanche',
-    alchemyNetwork: 'avax-mainnet',
-    rpcHost: 'avax-mainnet.g.alchemy.com',
+    name: "avalanche",
+    alchemyNetwork: "avax-mainnet",
+    rpcHost: "avax-mainnet.g.alchemy.com",
     viemChain: avalanche,
     aave: AaveV3Avalanche,
   },
   42161: {
     id: 42161,
-    name: 'arbitrum',
-    alchemyNetwork: 'arb-mainnet',
-    rpcHost: 'arb-mainnet.g.alchemy.com',
+    name: "arbitrum",
+    alchemyNetwork: "arb-mainnet",
+    rpcHost: "arb-mainnet.g.alchemy.com",
     viemChain: arbitrum,
     aave: AaveV3Arbitrum,
   },
   8453: {
     id: 8453,
-    name: 'base',
-    alchemyNetwork: 'base-mainnet',
-    rpcHost: 'base-mainnet.g.alchemy.com',
+    name: "base",
+    alchemyNetwork: "base-mainnet",
+    rpcHost: "base-mainnet.g.alchemy.com",
     viemChain: base,
     aave: AaveV3Base,
   },
-} satisfies ChainMap<ChainConfig>
+} satisfies ChainMap<ChainConfig>;
 
-export type ManualLabel = Omit<AddressLabel, 'source'>
+export type ManualLabel = Omit<AddressLabel, "source">;
 
 // Human-curated labels are intentionally an overlay. Never infer ownership or
 // identity from an unlabeled address during fixture collection.
 export const MANUAL_LABELS: Record<string, ManualLabel> = {
   // '1:0x...': { label: 'Coinbase Prime', kind: 'exchange' },
-}
+};

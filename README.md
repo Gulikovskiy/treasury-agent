@@ -98,11 +98,11 @@ Edit `TREASURY_WALLETS` in `config.ts`:
 
 ```ts
 export const TREASURY_WALLETS = {
-  1: ['0x...'],
-  43114: ['0x...'],
-  42161: ['0x...'],
-  8453: ['0x...'],
-} satisfies ChainMap<readonly Address[]>
+  1: ["0x..."],
+  43114: ["0x..."],
+  42161: ["0x..."],
+  8453: ["0x..."],
+} satisfies ChainMap<readonly Address[]>;
 ```
 
 It is intentionally a per-chain map rather than `ADDRESSES × CHAINS`, because treasury-controlled addresses can differ by network.

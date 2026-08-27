@@ -1,26 +1,29 @@
-import { tool } from 'ai'
-import { z } from 'zod'
-import * as t from '../tools/index.js'
+import { tool } from "ai";
+import { z } from "zod";
+import * as t from "../tools/index.js";
 
 export const tools = {
   getPositions: tool({
-    description: 'Treasury positions with amount, price, and USD value. ' +
+    description:
+      "Treasury positions with amount, price, and USD value. " +
       'positionType "liability" means debt owed — subtract it. Omit chainId for all chains.',
     inputSchema: z.object({
-      chainId: z.coerce.number().pipe(z.union([
-        z.literal(1), z.literal(8453), z.literal(42161), z.literal(43114),
-      ])).optional(),
+      chainId: z.coerce
+        .number()
+        .pipe(z.union([z.literal(1), z.literal(8453), z.literal(42161), z.literal(43114)]))
+        .optional(),
     }),
     execute: t.getPositions,
   }),
   getPrices: tool({
-    description: 'Snapshot USD prices by assetId ("<chainId>:<contractAddress>" or "<chainId>:native").',
+    description:
+      'Snapshot USD prices by assetId ("<chainId>:<contractAddress>" or "<chainId>:native").',
     inputSchema: z.object({ assetIds: z.array(z.string()).min(1).max(100) }),
     execute: t.getPrices,
   }),
   calculator: tool({
-    description: 'Evaluate arithmetic. Use this for every calculation — do not compute mentally.',
+    description: "Evaluate arithmetic. Use this for every calculation — do not compute mentally.",
     inputSchema: z.object({ expression: z.string().min(1).max(500) }),
     execute: async (i) => t.calculator(i),
   }),
-}
+};
