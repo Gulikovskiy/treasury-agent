@@ -21,3 +21,5 @@ coverage/
 
 # Traces
 traces.jsonl
+eval-traces.jsonl
+eval-results.jsonl

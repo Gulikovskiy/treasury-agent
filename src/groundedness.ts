@@ -5,12 +5,19 @@ export interface TraceStep {
   runId: string;
   question?: string;
   step: number;
+  toolCalls?: Array<{ toolName?: string; [key: string]: unknown }>;
   toolResults?: Array<{ toolName?: string; output?: unknown }>;
   text?: string;
 }
 
 export type FigureKind = "dollar" | "percentage";
-export interface Figure { kind: FigureKind; raw: string; value: number; roundingUnit: number }
+export interface Figure {
+  kind: FigureKind;
+  raw: string;
+  value: number;
+  roundingUnit: number;
+  signExplicit: boolean;
+}
 export interface SignMismatch { figure: Figure; source: number }
 export interface Evidence {
   kinds: FigureKind[];
@@ -62,16 +69,15 @@ export function extractDollarFigures(text: string): Figure[] {
   return [...text.matchAll(DOLLAR_RE)].map((match) => {
     const groups = match.groups!;
     const scale = scaleFor(groups.scale);
-    const negative =
-      isNegative(groups.leadingSign) ||
-      isNegative(groups.trailingSign) ||
-      (groups.accounting === "(" && groups.close === ")");
+    const sign = groups.leadingSign ?? groups.trailingSign;
+    const negative = isNegative(sign);
     const magnitude = Number(groups.amount!.replaceAll(",", "")) * scale;
     return {
       kind: "dollar",
       raw: match[0].trim(),
       value: negative ? -magnitude : magnitude,
       roundingUnit: displayedUnit(groups.amount!, scale),
+      signExplicit: sign !== undefined,
     };
   });
 }
@@ -85,6 +91,7 @@ export function extractPercentageFigures(text: string): Figure[] {
       raw: match[0].trim(),
       value: isNegative(groups.sign) ? -magnitude : magnitude,
       roundingUnit: displayedUnit(groups.amount!, 1),
+      signExplicit: groups.sign !== undefined,
     };
   });
 }
@@ -163,16 +170,22 @@ export function checkGroundedness(answer: string, steps: TraceStep[]): Groundedn
   for (const figure of figures) {
     const candidates = evidence.filter((item) => item.kinds.includes(figure.kind));
     const tolerance = toleranceFor(figure);
-    const match = candidates.find((item) => Math.abs(item.value - figure.value) <= tolerance);
+    const match = candidates.find((item) =>
+      figure.signExplicit
+        ? Math.abs(item.value - figure.value) <= tolerance
+        : Math.abs(Math.abs(item.value) - figure.value) <= tolerance,
+    );
     if (match) {
       verified.push({ figure, evidence: match });
       continue;
     }
-    const opposite = candidates.find(
+    const opposite = figure.signExplicit
+      ? candidates.find(
       (item) =>
         Math.sign(item.value) !== Math.sign(figure.value) &&
         Math.abs(Math.abs(item.value) - Math.abs(figure.value)) <= tolerance,
-    );
+        )
+      : undefined;
     if (opposite) signMismatches.push({ figure, source: opposite.value });
     else unverified.push(figure);
   }

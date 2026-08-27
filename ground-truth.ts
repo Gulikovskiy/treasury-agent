@@ -1494,13 +1494,18 @@ async function updateQuestions(questions: Record<string, QuestionTruth>): Promis
     const question = JSON.parse(line) as JsonQuestion;
     const truth = questions[question.id];
     if (!truth) throw new Error(`No ground truth generated for ${question.id}`);
-    const expectedTools = [
+    let expectedTools = [
       ...new Set(
         ((question.expected_tools as string[] | undefined) ?? []).map(
           (tool) => toolRenames[tool] ?? tool,
         ),
       ),
     ];
+    // getPositions already returns pinned priceUsd and valueUsd. Requiring a
+    // duplicate getPrices call rewards unnecessary trajectory steps.
+    if (expectedTools.includes("getPositions")) {
+      expectedTools = expectedTools.filter((tool) => tool !== "getPrices");
+    }
     if (calculatorQuestions.has(question.id) && !expectedTools.includes("calculator")) {
       expectedTools.push("calculator");
     }

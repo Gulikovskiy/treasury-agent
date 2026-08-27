@@ -78,6 +78,27 @@ snapshot. `calculator({ expression })` evaluates arithmetic with a restricted
 parser and cannot execute JavaScript. This leaves NAV, concentration, chain
 allocation, leverage, and scenario reasoning to the evaluated agent.
 
+## Evaluation runner
+
+Run all questions and write fresh traces plus detailed JSONL scores:
+
+```bash
+npm run eval
+```
+
+Score existing traces without making model calls:
+
+```bash
+npm run eval:score
+```
+
+Use `--questions q01,q04,q10` to run or score a subset. Fresh runs write
+`eval-traces.jsonl`; both modes write `eval-results.jsonl`. The console table
+keeps trajectory, numeric groundedness, and value-versus-oracle scores
+separate. Detailed results retain semantic `must_include` and
+`must_not_include` requirements for human or judge review rather than treating
+them as deterministic substring checks.
+
 ## Snapshot behavior
 
 On the first run, `manifest.json` pins one block per chain at or immediately before `SNAPSHOT_TIMESTAMP`. Later runs reuse the existing manifest, so the on-chain state remains deterministic.
