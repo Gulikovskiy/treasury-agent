@@ -43,6 +43,17 @@ general balance-sheet requirement fixed oracle coverage 3/3 in sweep
 ratios. The prompt changes improve required accounting completeness, but do not
 reliably eliminate unsolicited presentation arithmetic.
 
+At ten samples, variant B (the explicit omit consequence) grounded 4/10 and met
+the original oracle 2/10. Variant C (B plus mandatory gross/liabilities/net)
+grounded 1/10 and met the oracle 9/10. The groundedness difference is not
+statistically distinguishable at this sample size (two-sided Fisher exact
+`p≈0.303`), while the oracle difference is (`p≈0.0055`). Variant C also produced
+an unverified `80%` in 9/10 answers. Because q01 asks for current money rather
+than a full balance-sheet reconciliation, its oracle now requires canonical
+NAV, explicit debt treatment, dominant AAVE value, and the coverage caveat, but
+does not require gross assets. Variant B remains in the prompt; F-001 remains
+open because 4/10 grounded answers is not an acceptable fix.
+
 ## F-002 — Cross-market collateral pooling
 
 - Status: Closed for the reproduced q10 case

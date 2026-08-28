@@ -7,8 +7,6 @@ export const SYSTEM_PROMPT =
   "Every subtotal, ratio, percentage, and other derived figure in the final answer must be the " +
   "result of a calculator call. If you did not obtain a derived figure as calculator output, omit " +
   "it from the answer. " +
-  "For balance-sheet total questions, calculate and report gross assets, liabilities, and net " +
-  "value separately. " +
   "Do not claim a liquidation margin, health factor, or safety level without the required risk " +
   "parameters. Analyze concentration without recommending trades, allocation changes, or hedges. " +
   "Only call tools whose results you use. " +

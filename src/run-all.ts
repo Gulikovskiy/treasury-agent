@@ -9,12 +9,7 @@ import { isMain } from "../lib/io.js";
 import { POSITION_FIELDS } from "../tools/treasury.js";
 import { SYSTEM_PROMPT } from "./agent.js";
 import { groupTraceRuns } from "./groundedness.js";
-import {
-  EVAL_MODEL,
-  runQuestion,
-  scoreRun,
-  type EvalQuestion,
-} from "./eval.js";
+import { EVAL_MODEL, runQuestion, scoreRun, type EvalQuestion } from "./eval.js";
 
 const execFileAsync = promisify(execFile);
 
@@ -31,14 +26,17 @@ interface SweepManifest {
   status: "running" | "complete" | "complete_with_errors";
   gitSha: string;
   gitDirty: boolean;
+  gitDiffSha256: string;
   model: string;
   systemPromptSha256: string;
   systemPrompt: string;
   toolFields: readonly string[];
   fixtureId: string;
   questionSetSha256: string;
+  questionIds: string[];
   questionCount: number;
   samplesPerQuestion: number;
+  requestedSamples: number;
 }
 
 interface FailedSample {
@@ -106,22 +104,49 @@ function parseArgs(argv: string[]): Options {
 }
 
 export function sweepId(date = new Date()): string {
-  return date.toISOString().replace(/\.\d{3}Z$/, "Z").replaceAll(":", "-");
+  return date
+    .toISOString()
+    .replace(/\.\d{3}Z$/, "Z")
+    .replaceAll(":", "-");
 }
 
 export function sha256(value: string): string {
   return createHash("sha256").update(value).digest("hex");
 }
 
-async function gitMetadata(): Promise<{ gitSha: string; gitDirty: boolean }> {
+async function gitMetadata(): Promise<{
+  gitSha: string;
+  gitDirty: boolean;
+  gitDiffSha256: string;
+}> {
   try {
-    const [{ stdout: sha }, { stdout: status }] = await Promise.all([
-      execFileAsync("git", ["rev-parse", "--short", "HEAD"]),
-      execFileAsync("git", ["status", "--porcelain"]),
-    ]);
-    return { gitSha: sha.trim(), gitDirty: status.trim().length > 0 };
+    const [{ stdout: sha }, { stdout: status }, { stdout: diff }, { stdout: untracked }] =
+      await Promise.all([
+        execFileAsync("git", ["rev-parse", "--short", "HEAD"]),
+        execFileAsync("git", ["status", "--porcelain"]),
+        execFileAsync("git", ["diff", "--binary", "HEAD", "--", ".", ":(exclude)runs"]),
+        execFileAsync("git", [
+          "ls-files",
+          "--others",
+          "--exclude-standard",
+          "--",
+          ".",
+          ":(exclude)runs",
+        ]),
+      ]);
+    const hash = createHash("sha256").update(diff);
+    const untrackedPaths = untracked.split("\n").filter(Boolean).sort();
+    for (const path of untrackedPaths) {
+      hash.update(`\0${path}\0`);
+      hash.update(await readFile(path));
+    }
+    return {
+      gitSha: sha.trim(),
+      gitDirty: status.trim().length > 0,
+      gitDiffSha256: hash.digest("hex"),
+    };
   } catch {
-    return { gitSha: "unknown", gitDirty: true };
+    return { gitSha: "unknown", gitDirty: true, gitDiffSha256: "unknown" };
   }
 }
 
@@ -136,7 +161,11 @@ function errorMessage(error: unknown): string {
   return error instanceof Error ? `${error.name}: ${error.message}` : String(error);
 }
 
-function compactScore(id: string, sample: number, score: ReturnType<typeof scoreRun>): ScoredSample {
+function compactScore(
+  id: string,
+  sample: number,
+  score: ReturnType<typeof scoreRun>,
+): ScoredSample {
   return {
     id,
     sample,
@@ -199,8 +228,10 @@ export async function runAll(options: Options): Promise<string> {
     toolFields: POSITION_FIELDS,
     fixtureId: basename(resolve(FIXTURE_DIR)),
     questionSetSha256: sha256(questionContents),
+    questionIds: questions.map(({ id: questionId }) => questionId),
     questionCount: questions.length,
     samplesPerQuestion: options.samplesPerQuestion,
+    requestedSamples: questions.length * options.samplesPerQuestion,
   };
   await writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
   await writeFile(tracesPath, "", { flag: "wx" });

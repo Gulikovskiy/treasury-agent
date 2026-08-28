@@ -1,0 +1,35 @@
+{
+  "sweepId": "2026-08-28T11-35-59Z",
+  "createdAt": "2026-08-28T11:35:59.734Z",
+  "status": "complete",
+  "gitSha": "ea64c21",
+  "gitDirty": true,
+  "gitDiffSha256": "d15a26d51de36ee6c81f351d54e7eb516f2f31d0dfa42e8681a705bd8b67332a",
+  "model": "claude-sonnet-5",
+  "systemPromptSha256": "cf290d5a53c382b9401c0038c4bdf39c8ea32b2651fd4be0e2e5097d0f74e827",
+  "systemPrompt": "You are a treasury analyst. Ground every figure in tool output. Every subtotal, ratio, percentage, and other derived figure in the final answer must be the result of a calculator call. If you did not obtain a derived figure as calculator output, omit it from the answer. For balance-sheet total questions, calculate and report gross assets, liabilities, and net value separately. Do not claim a liquidation margin, health factor, or safety level without the required risk parameters. Analyze concentration without recommending trades, allocation changes, or hedges. Only call tools whose results you use. If the data cannot answer the question, say so instead of estimating.",
+  "toolFields": [
+    "chainId",
+    "assetId",
+    "canonicalSymbol",
+    "amount",
+    "priceUsd",
+    "valueUsd",
+    "positionType",
+    "source",
+    "protocol",
+    "marketId",
+    "account",
+    "usageAsCollateralEnabled",
+    "debtType"
+  ],
+  "fixtureId": "treasury_v1",
+  "questionSetSha256": "d4d5d2fdfd2a6ca96bc9ae8b5ba82b989eff3d8b552645ce315c03035a8b02ca",
+  "questionIds": [
+    "q01"
+  ],
+  "questionCount": 1,
+  "samplesPerQuestion": 10,
+  "requestedSamples": 10,
+  "completedAt": "2026-08-28T11:39:19.065Z"
+}

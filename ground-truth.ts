@@ -1066,10 +1066,9 @@ function questionTruth(
 
   const questions: Record<string, QuestionTruth> = {
     q01: {
-      expected_answer: `At the pinned ${manifest.snapshotTimestamp} snapshot, canonical reported NAV is ${usd(totalNav)}: ${usd(grossAssets)} of assets less ${usd(liabilities)} of GHO debt. AAVE is the dominant holding at ${usd(aaveValue)}. This is reported-fixture NAV, not a completeness claim: the Ethereum Lido Aave market is still outside the DeFi adapter.`,
+      expected_answer: `At the pinned ${manifest.snapshotTimestamp} snapshot, canonical reported NAV is ${usd(totalNav)}, after the ${usd(liabilities)} GHO debt. AAVE is the dominant holding at ${usd(aaveValue)}. This is reported-fixture NAV, not a completeness claim: the Ethereum Lido Aave market is still outside the DeFi adapter.`,
       must_include: [
         `canonical NAV ${usd(totalNav)}`,
-        `${usd(grossAssets)} of assets`,
         `${usd(liabilities)} of debt`,
         "notes the Lido-market coverage gap",
       ],
