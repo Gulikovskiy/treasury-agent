@@ -41,24 +41,38 @@ reported 10.88% as effective LTV. Assets in other Aave markets cannot
 collateralize that liability.
 
 The runtime now exposes `marketId`, `account`, `usageAsCollateralEnabled`, and
-`debtType`. The q10 oracle distinguishes portfolio debt-to-supply (10.88%, not
-LTV) from Ethereum debt-to-enabled-collateral (11.99%). In the post-fix trace,
-the agent isolated `$33,937,519.36` of Ethereum collateral, reported 11.99%, and
-kept the other markets separate.
+`debtType`, and the `getPositions` tool description explicitly instructs the
+model not to pool markets or accounts. The q10 oracle distinguishes portfolio
+debt-to-supply (10.88%, not LTV) from Ethereum debt-to-enabled-collateral
+(11.99%). In the post-fix trace, the agent isolated `$33,937,519.36` of Ethereum
+collateral, reported 11.99%, and kept the other markets separate.
+
+Ablation run `6dd775cc-f709-47cb-8c10-516b0ba6e609` restored the original
+two-sentence system prompt while retaining both the richer fields and the tool
+description. Market scoping still passed. This shows that the duplicated
+market-scoping sentence is unnecessary in `SYSTEM_PROMPT` under the current
+tool configuration. It does **not** establish that richer data alone caused the
+improvement, because the tool description independently states the same rule.
 
 ## F-003 — Unsupported liquidation-safety conclusion
 
-- Status: Closed for the reproduced q10 case
+- Status: Prompt-dependent; regression reproduced by ablation
 - Severity: Critical
 - Detection: required-data/capability boundary
 - Before: run `b6bf56e6-aaa5-4c12-b7f2-64293e4d1b89`
 - After: run `e340ab28-9364-41ab-a3ab-4f11d3214bfa`
+- Ablation regression: run `6dd775cc-f709-47cb-8c10-516b0ba6e609`
 
 The pre-fix answer asserted a “large margin of safety before approaching
 liquidation thresholds” even though reserve thresholds and account health
-factor were unavailable. The system prompt and q10 oracle now forbid that
-inference. The post-fix answer explicitly declined to state a health factor or
-liquidation margin for lack of those inputs.
+factor were unavailable. The post-fix answer explicitly declined to state a
+health factor or liquidation margin for lack of those inputs.
+
+Ablation run `6dd775cc-f709-47cb-8c10-516b0ba6e609` removed the liquidation
+boundary from the system prompt while retaining the richer runtime fields. The
+answer regressed to “a healthy buffer well below typical liquidation
+thresholds.” This is direct evidence that the liquidation/safety instruction is
+load-bearing for this case, so that sentence remains in `SYSTEM_PROMPT`.
 
 ## F-004 — Abandoned computation
 
