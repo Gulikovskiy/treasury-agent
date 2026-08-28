@@ -1,0 +1,303 @@
+{
+  "sweepId": "2026-08-28T12-04-28Z",
+  "summary": {
+    "requestedSamples": 10,
+    "completedSamples": 10,
+    "failedSamples": 0,
+    "passedSamples": 9,
+    "passRate": 0.9,
+    "trajectoryPassed": 10,
+    "answerPresent": 10,
+    "groundednessPassed": 10,
+    "oraclePassed": 9
+  },
+  "samples": [
+    {
+      "id": "q01",
+      "sample": 1,
+      "runId": "95d8265e-dcd7-43a1-8c95-db557b29678f",
+      "passed": true,
+      "answer": {
+        "passed": true,
+        "characterCount": 1193
+      },
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 3
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 14,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": true,
+        "expectedFigureCount": 3,
+        "missingFigures": []
+      }
+    },
+    {
+      "id": "q01",
+      "sample": 2,
+      "runId": "8e24ce1e-768d-4327-8340-850487015905",
+      "passed": false,
+      "answer": {
+        "passed": true,
+        "characterCount": 921
+      },
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 2
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 3,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": false,
+        "expectedFigureCount": 3,
+        "missingFigures": [
+          {
+            "raw": "$32,658,754.64",
+            "kind": "dollar",
+            "value": 32658754.64
+          }
+        ]
+      }
+    },
+    {
+      "id": "q01",
+      "sample": 3,
+      "runId": "7128e0ae-97c3-4926-9c66-93cc373384aa",
+      "passed": true,
+      "answer": {
+        "passed": true,
+        "characterCount": 1140
+      },
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 2
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 10,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": true,
+        "expectedFigureCount": 3,
+        "missingFigures": []
+      }
+    },
+    {
+      "id": "q01",
+      "sample": 4,
+      "runId": "e45a6c5f-4fea-40dd-8e63-7dfd9c676d1d",
+      "passed": true,
+      "answer": {
+        "passed": true,
+        "characterCount": 1698
+      },
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 3
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 15,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": true,
+        "expectedFigureCount": 3,
+        "missingFigures": []
+      }
+    },
+    {
+      "id": "q01",
+      "sample": 5,
+      "runId": "b0e87b21-0a0e-4ee5-bb6c-92eaa4910a5f",
+      "passed": true,
+      "answer": {
+        "passed": true,
+        "characterCount": 1110
+      },
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 5
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 10,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": true,
+        "expectedFigureCount": 3,
+        "missingFigures": []
+      }
+    },
+    {
+      "id": "q01",
+      "sample": 6,
+      "runId": "dc79d9ba-6523-44fb-ad33-e5651b64b9e4",
+      "passed": true,
+      "answer": {
+        "passed": true,
+        "characterCount": 1217
+      },
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 3
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 14,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": true,
+        "expectedFigureCount": 3,
+        "missingFigures": []
+      }
+    },
+    {
+      "id": "q01",
+      "sample": 7,
+      "runId": "3dfffa95-5cba-45d7-b279-d47599e18efe",
+      "passed": true,
+      "answer": {
+        "passed": true,
+        "characterCount": 1036
+      },
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 2
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 21,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": true,
+        "expectedFigureCount": 3,
+        "missingFigures": []
+      }
+    },
+    {
+      "id": "q01",
+      "sample": 8,
+      "runId": "20cacf46-227b-4f3b-aa0b-2fae3214d33d",
+      "passed": true,
+      "answer": {
+        "passed": true,
+        "characterCount": 1188
+      },
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 2
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 11,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": true,
+        "expectedFigureCount": 3,
+        "missingFigures": []
+      }
+    },
+    {
+      "id": "q01",
+      "sample": 9,
+      "runId": "19ef051c-e8d3-4c56-a3e1-43b331bf7199",
+      "passed": true,
+      "answer": {
+        "passed": true,
+        "characterCount": 806
+      },
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 2
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 8,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": true,
+        "expectedFigureCount": 3,
+        "missingFigures": []
+      }
+    },
+    {
+      "id": "q01",
+      "sample": 10,
+      "runId": "9f06e5d6-05dc-4d8c-934f-b570923b044a",
+      "passed": true,
+      "answer": {
+        "passed": true,
+        "characterCount": 1339
+      },
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 3
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 13,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": true,
+        "expectedFigureCount": 3,
+        "missingFigures": []
+      }
+    }
+  ],
+  "errors": []
+}

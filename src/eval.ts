@@ -4,6 +4,7 @@ import "dotenv/config";
 import { readFile, writeFile } from "node:fs/promises";
 import { isMain } from "../lib/io.js";
 import { SYSTEM_PROMPT, tools } from "./agent.js";
+import { generateGroundedAnswer } from "./generate.js";
 import {
   checkGroundedness,
   extractDollarFigures,
@@ -127,7 +128,9 @@ export function scoreTrajectory(steps: TraceStep[], question: EvalQuestion): Tra
       ),
     ),
   ];
-  const missingTools = question.expected_tools.filter((toolName) => !calledTools.includes(toolName));
+  const missingTools = question.expected_tools.filter(
+    (toolName) => !calledTools.includes(toolName),
+  );
   const unexpectedTools = calledTools.filter(
     (toolName) => !question.expected_tools.includes(toolName),
   );
@@ -180,24 +183,6 @@ async function readQuestions(path: string): Promise<EvalQuestion[]> {
     .map((line) => JSON.parse(line) as EvalQuestion);
 }
 
-function traceRecords(runId: string, question: string, steps: unknown[]): TraceStep[] {
-  return steps.map((rawStep, step) => {
-    const value = rawStep as {
-      toolCalls?: TraceStep["toolCalls"];
-      toolResults?: TraceStep["toolResults"];
-      text?: string;
-    };
-    return {
-      runId,
-      question,
-      step,
-      toolCalls: value.toolCalls ?? [],
-      toolResults: value.toolResults ?? [],
-      text: value.text ?? "",
-    };
-  });
-}
-
 export async function runQuestion(
   question: EvalQuestion,
 ): Promise<{ runId: string; steps: TraceStep[] }> {
@@ -205,16 +190,23 @@ export async function runQuestion(
   const content = question.context
     ? `${question.question}\n\nContext: ${JSON.stringify(question.context)}`
     : question.question;
-  const result = await generateText({
-    model: anthropic(EVAL_MODEL),
-    tools,
-    // Question max_steps is an evaluation constraint, not a generation cutoff.
-    // Stopping on it can strand the model after tool results with no final text.
-    stopWhen: stepCountIs(10),
-    system: SYSTEM_PROMPT,
-    messages: [{ role: "user", content }],
+  const messages = [{ role: "user" as const, content }];
+  const result = await generateGroundedAnswer({
+    runId,
+    question: question.question,
+    messages,
+    generate: async (generationMessages) =>
+      generateText({
+        model: anthropic(EVAL_MODEL),
+        tools,
+        // Question max_steps is an evaluation constraint, not a generation cutoff.
+        // Stopping on it can strand the model after tool results with no final text.
+        stopWhen: stepCountIs(10),
+        system: SYSTEM_PROMPT,
+        messages: generationMessages,
+      }),
   });
-  return { runId, steps: traceRecords(runId, question.question, result.steps) };
+  return { runId, steps: result.steps };
 }
 
 function mark(value: boolean): string {
@@ -300,7 +292,10 @@ async function main(): Promise<void> {
     await writeFile(options.tracesPath, `${traceLines.join("\n")}\n`);
   }
 
-  await writeFile(options.resultsPath, `${scores.map((score) => JSON.stringify(score)).join("\n")}\n`);
+  await writeFile(
+    options.resultsPath,
+    `${scores.map((score) => JSON.stringify(score)).join("\n")}\n`,
+  );
   printTable(scores);
   if (scores.some((score) => !score.passed)) process.exitCode = 1;
 }

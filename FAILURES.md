@@ -7,7 +7,7 @@ does not prove the broader failure class is impossible.
 
 ## F-001 — Unverified presentation arithmetic
 
-- Status: Open
+- Status: Structurally mitigated; verified on q01
 - Severity: High for financial reporting
 - Detection: deterministic groundedness check
 - First evidence: run `d32fdf4b-6caa-4217-bb8c-b0d803d311cf` (q01)
@@ -43,6 +43,13 @@ general balance-sheet requirement fixed oracle coverage 3/3 in sweep
 ratios. The prompt changes improve required accounting completeness, but do not
 reliably eliminate unsolicited presentation arithmetic.
 
+The initial n=3 result was misleading. Variant B appeared to fix groundedness
+at 3/3, but fell to 4/10 when remeasured; variant C remained at 1/10 after its
+initial 1/3. Had B been accepted at n=3, F-001 would have been closed on noise.
+This is direct evidence that a short successful prompt ablation is not enough to
+establish a mitigation for this agent. The remeasurement overturned the working
+conclusion rather than confirming it.
+
 At ten samples, variant B (the explicit omit consequence) grounded 4/10 and met
 the original oracle 2/10. Variant C (B plus mandatory gross/liabilities/net)
 grounded 1/10 and met the oracle 9/10. The groundedness difference is not
@@ -51,8 +58,23 @@ statistically distinguishable at this sample size (two-sided Fisher exact
 an unverified `80%` in 9/10 answers. Because q01 asks for current money rather
 than a full balance-sheet reconciliation, its oracle now requires canonical
 NAV, explicit debt treatment, dominant AAVE value, and the coverage caveat, but
-does not require gross assets. Variant B remains in the prompt; F-001 remains
-open because 4/10 grounded answers is not an acceptable fix.
+does not require gross assets. Variant B remains in the prompt; the prompt-only
+approach is rejected because 4/10 grounded answers is not an acceptable fix.
+
+Structural mitigation: final answers now pass through `checkGroundedness` before
+they are returned. An unsupported or missing answer receives one repair pass
+with the original tool transcript and the exact unsupported figures; the model
+may call calculator or omit them. If the repair still fails, the output layer
+returns an explicit figure-free fallback and retains both attempts plus the
+guardrail verdict in the trace.
+
+Sweep `2026-08-28T12-04-28Z` verified this boundary on ten q01 samples: 7 were
+grounded initially, 3 were intercepted and repaired, and none reached fallback.
+Groundedness passed 10/10. Oracle coverage passed 9/10; the remaining answer
+omitted AAVE's value and was not a grounding failure. This closes the reproduced
+q01 presentation-arithmetic path, not the broader correctness problem:
+calculator laundering and semantically misused source values remain outside the
+groundedness guardrail's claim.
 
 ## F-002 — Cross-market collateral pooling
 
