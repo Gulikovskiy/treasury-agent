@@ -105,9 +105,57 @@ recommendations as forbidden, but the fix has not yet been verified on q04.
 - Evidence: q01, q04, and q05 traces above
 
 Answers inconsistently interpreted “assets” as gross assets, net NAV, or net
-chain exposure. The prompt now requires explicit gross/net labels and named
-ratio denominators. The q10 oracle was corrected because it previously rewarded
-a portfolio debt-to-supply ratio presented as market LTV.
+chain exposure. The q10 oracle now requires explicit scope and was corrected
+because it previously rewarded a portfolio debt-to-supply ratio presented as
+market LTV.
+
+## F-007 — Final answer contradicts a successful tool computation
+
+- Status: Open
+- Severity: Critical
+- Detection: value-versus-tool consistency, beyond provenance alone
+- Evidence: run `946a0792-f687-4a1b-bd6c-aae07e3c9fd5` (q20)
+
+The agent calculated a `$6,936,631.86` basket and a 17.03% share, then stated a
+headline of approximately `$8.87M` and 22%. Even the broader canonical
+stablecoin total is only `$7,041,552.68` (17.29% of gross assets). The answer
+therefore contradicts a calculator result it successfully obtained. This is
+more dangerous than ordinary unverified arithmetic because the trajectory
+looks diligent while the presentation discards its own evidence.
+
+Groundedness flags the invented figures as unverified, but provenance alone
+does not express the stronger contradiction between the calculation's purpose
+and the final claim. A dedicated value-versus-tool consistency check remains to
+be designed.
+
+## F-008 — Tool trajectory terminates without a final answer
+
+- Status: Open
+- Severity: High
+- Detection: explicit final-answer presence score
+- Evidence: run `822e70bd-439d-4f29-94ef-6b0d4bc717eb` (q23)
+
+The agent completed five steps and received its final calculator results but
+emitted no response text. This is neither an incorrect answer nor an
+unanswerable-data refusal; it is an incomplete generation. The evaluator now
+scores final-answer presence independently so this failure cannot collapse into
+a generic oracle miss.
+
+Clean sweep `2026-08-28T10-14-58Z` reproduced the failure as run
+`50e47fc4-9d69-4315-bd5b-fe0940b0e845`, revealing a harness cause: `max_steps`
+was incorrectly used as the model-generation stop condition. The final allowed
+step returned tool results, and generation stopped before an answer step.
+`max_steps` is now used only for trajectory scoring; generation retains the
+normal ten-step ceiling.
+
+That harness fix was necessary but not sufficient. Clean sweep
+`2026-08-28T10-30-57Z` reproduced the failure again as run
+`4484ed49-7cd4-4599-bc3a-34e7c3827fef`: the agent exhausted all ten generation
+steps, including an invalid calculator call followed by another calculation,
+and still emitted no final text. The failure therefore remains open as a tool
+loop/termination failure. A future mitigation must guarantee an answer step or
+return an explicit incomplete-generation result; merely separating the scoring
+limit from the generation limit does not resolve it.
 
 ## Scoring boundaries
 

@@ -8,6 +8,7 @@ import { FIXTURE_DIR } from "../config.js";
 import { isMain } from "../lib/io.js";
 import { POSITION_FIELDS } from "../tools/treasury.js";
 import { SYSTEM_PROMPT } from "./agent.js";
+import { groupTraceRuns } from "./groundedness.js";
 import {
   EVAL_MODEL,
   runQuestion,
@@ -51,6 +52,10 @@ interface ScoredSample {
   sample: number;
   runId: string;
   passed: boolean;
+  answer: {
+    passed: boolean;
+    characterCount: number;
+  };
   trajectory: {
     passed: boolean;
     missingTools: string[];
@@ -137,6 +142,7 @@ function compactScore(id: string, sample: number, score: ReturnType<typeof score
     sample,
     runId: score.runId,
     passed: score.passed,
+    answer: score.answer,
     trajectory: {
       passed: score.trajectory.passed,
       missingTools: score.trajectory.missingTools,
@@ -197,6 +203,7 @@ export async function runAll(options: Options): Promise<string> {
     samplesPerQuestion: options.samplesPerQuestion,
   };
   await writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
+  await writeFile(tracesPath, "", { flag: "wx" });
 
   const scored: ScoredSample[] = [];
   const failed: FailedSample[] = [];
@@ -220,6 +227,16 @@ export async function runAll(options: Options): Promise<string> {
   }
 
   const passed = scored.filter(({ passed: samplePassed }) => samplePassed).length;
+  const traceRuns = groupTraceRuns(await readFile(tracesPath, "utf8"));
+  const scoredRunIds = new Set(scored.map(({ runId }) => runId));
+  const unexpectedRunIds = [...traceRuns.keys()].filter((runId) => !scoredRunIds.has(runId));
+  const missingRunIds = [...scoredRunIds].filter((runId) => !traceRuns.has(runId));
+  if (unexpectedRunIds.length > 0 || missingRunIds.length > 0) {
+    throw new Error(
+      `Sweep trace integrity failure: unexpected=${unexpectedRunIds.join(",") || "none"}; ` +
+        `missing=${missingRunIds.join(",") || "none"}`,
+    );
+  }
   const scores = {
     sweepId: id,
     summary: {
@@ -229,6 +246,7 @@ export async function runAll(options: Options): Promise<string> {
       passedSamples: passed,
       passRate: scored.length === 0 ? null : passed / scored.length,
       trajectoryPassed: scored.filter(({ trajectory }) => trajectory.passed).length,
+      answerPresent: scored.filter(({ answer }) => answer.passed).length,
       groundednessPassed: scored.filter(({ groundedness }) => groundedness.passed).length,
       oraclePassed: scored.filter(({ oracle }) => oracle.passed).length,
     },

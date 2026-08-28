@@ -52,6 +52,10 @@ export interface EvalScore {
   runId: string;
   question: string;
   passed: boolean;
+  answer: {
+    passed: boolean;
+    characterCount: number;
+  };
   trajectory: TrajectoryScore;
   groundedness: ReturnType<typeof checkGroundedness>;
   oracle: OracleScore;
@@ -148,6 +152,7 @@ export function scoreTrajectory(steps: TraceStep[], question: EvalQuestion): Tra
 
 export function scoreRun(runId: string, steps: TraceStep[], question: EvalQuestion): EvalScore {
   const answer = [...steps].reverse().find((step) => step.text?.trim())?.text ?? "";
+  const answerScore = { passed: answer.trim().length > 0, characterCount: answer.length };
   const trajectory = scoreTrajectory(steps, question);
   const groundedness = checkGroundedness(answer, steps);
   const oracle = scoreOracle(answer, question);
@@ -155,7 +160,8 @@ export function scoreRun(runId: string, steps: TraceStep[], question: EvalQuesti
     id: question.id,
     runId,
     question: question.question,
-    passed: trajectory.passed && groundedness.passed && oracle.passed,
+    passed: answerScore.passed && trajectory.passed && groundedness.passed && oracle.passed,
+    answer: answerScore,
     trajectory,
     groundedness,
     oracle,
@@ -199,11 +205,12 @@ export async function runQuestion(
   const content = question.context
     ? `${question.question}\n\nContext: ${JSON.stringify(question.context)}`
     : question.question;
-  const maximumToolSteps = question.max_steps ?? 10;
   const result = await generateText({
     model: anthropic(EVAL_MODEL),
     tools,
-    stopWhen: stepCountIs(Math.max(1, maximumToolSteps + 1)),
+    // Question max_steps is an evaluation constraint, not a generation cutoff.
+    // Stopping on it can strand the model after tool results with no final text.
+    stopWhen: stepCountIs(10),
     system: SYSTEM_PROMPT,
     messages: [{ role: "user", content }],
   });
@@ -217,12 +224,13 @@ function mark(value: boolean): string {
 function printTable(scores: EvalScore[]): void {
   const rows = scores.map((score) => [
     score.id,
+    mark(score.answer.passed),
     mark(score.trajectory.passed),
     mark(score.groundedness.passed),
     mark(score.oracle.passed),
     mark(score.passed),
   ]);
-  const headers = ["ID", "TRAJECTORY", "GROUNDED", "ORACLE", "OVERALL"];
+  const headers = ["ID", "ANSWER", "TRAJECTORY", "GROUNDED", "ORACLE", "OVERALL"];
   const widths = headers.map((header, index) =>
     Math.max(header.length, ...rows.map((row) => row[index]!.length)),
   );

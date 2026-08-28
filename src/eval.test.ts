@@ -68,8 +68,17 @@ describe("eval scoring", () => {
   it("keeps the three mechanical score dimensions independent", () => {
     const result = scoreRun("run", steps, question);
     expect(result.trajectory.passed).toBe(true);
+    expect(result.answer.passed).toBe(true);
     expect(result.groundedness.passed).toBe(true);
     expect(result.oracle.passed).toBe(true);
     expect(result.semanticReview.automated).toBe(false);
+  });
+
+  it("distinguishes a missing final answer from an incorrect answer", () => {
+    const withoutAnswer = steps.map((step) => ({ ...step, text: "" }));
+    const result = scoreRun("run", withoutAnswer, question);
+    expect(result.answer).toEqual({ passed: false, characterCount: 0 });
+    expect(result.oracle.passed).toBe(false);
+    expect(result.passed).toBe(false);
   });
 });
