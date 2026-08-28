@@ -1,0 +1,95 @@
+{
+  "sweepId": "2026-08-28T12-59-15Z",
+  "summary": {
+    "requestedSamples": 1,
+    "completedSamples": 1,
+    "failedSamples": 0,
+    "passedSamples": 0,
+    "passRate": 0,
+    "trajectoryPassed": 1,
+    "answerPresent": 1,
+    "groundednessPassed": 1,
+    "oraclePassed": 0,
+    "guardrail": {
+      "repairRequested": 1,
+      "repaired": 0,
+      "rejected": 1,
+      "initialElapsedMs": 23111,
+      "repairElapsedMs": 7250,
+      "initialTokens": 26240,
+      "repairTokens": 7084
+    }
+  },
+  "samples": [
+    {
+      "id": "q11",
+      "sample": 1,
+      "runId": "b4d5094c-b1d2-47c6-b440-b11ba1dcf796",
+      "passed": false,
+      "answer": {
+        "passed": true,
+        "characterCount": 102
+      },
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 5
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 0,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": false,
+        "expectedFigureCount": 8,
+        "missingFigures": [
+          {
+            "raw": "$6,531,750.93",
+            "kind": "dollar",
+            "value": 6531750.93
+          },
+          {
+            "raw": "$30,127,686.42",
+            "kind": "dollar",
+            "value": 30127686.42
+          },
+          {
+            "raw": "$16,329,377.32",
+            "kind": "dollar",
+            "value": 16329377.32
+          },
+          {
+            "raw": "$20,330,060.03",
+            "kind": "dollar",
+            "value": 20330060.03
+          },
+          {
+            "raw": "20%",
+            "kind": "percentage",
+            "value": 20
+          },
+          {
+            "raw": "17.82%",
+            "kind": "percentage",
+            "value": 17.82
+          },
+          {
+            "raw": "50%",
+            "kind": "percentage",
+            "value": 50
+          },
+          {
+            "raw": "44.54%",
+            "kind": "percentage",
+            "value": 44.54
+          }
+        ]
+      }
+    }
+  ],
+  "errors": []
+}

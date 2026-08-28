@@ -70,6 +70,7 @@ describe("figure groundedness", () => {
     ];
 
     expect(checkGroundedness("Scenario: AAVE falls 20%.", scenarioSteps).passed).toBe(true);
+    expect(checkGroundedness("Scenario: AAVE is −20%.", scenarioSteps).passed).toBe(true);
     expect(checkGroundedness("Remaining share: 100% − 89.09%.", percentSteps).passed).toBe(true);
   });
 
