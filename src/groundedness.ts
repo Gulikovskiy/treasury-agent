@@ -228,7 +228,7 @@ export function checkGroundedness(answer: string, steps: TraceStep[]): Groundedn
     const match = candidates.find((item) =>
       figure.signExplicit && item.signSensitive !== false
         ? Math.abs(item.value - figure.value) <= tolerance
-        : Math.abs(Math.abs(item.value) - figure.value) <= tolerance,
+        : Math.abs(Math.abs(item.value) - Math.abs(figure.value)) <= tolerance,
     );
     if (match) {
       verified.push({ figure, evidence: match });
