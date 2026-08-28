@@ -93,6 +93,15 @@ Generation traces now record elapsed milliseconds and token usage separately
 for initial and repair attempts, and the sweep summary aggregates both. Repair
 is capped at one pass to bound this cost surface.
 
+The first full guarded sweep, `2026-08-28T12-38-44Z`, grounded 30/30 answers.
+Fourteen answers requested repair, thirteen repaired successfully, and one
+failed closed. Repair added 215.4 seconds to 577.4 seconds of initial generation
+time (37.3%) and 196,967 tokens to 514,936 initial tokens (38.3%). These are
+single-sweep measurements, not stable production estimates. The sole rejection
+also exposed checker false positives around user-supplied scenario percentages,
+the `100%` constant, and a binary subtraction sign; those are now treated as
+valid provenance/syntax rather than derived claims.
+
 ## F-002 — Cross-market collateral pooling
 
 - Status: Closed for the reproduced q10 case
@@ -196,7 +205,7 @@ be designed.
 
 ## F-008 — Tool trajectory terminates without a final answer
 
-- Status: Open
+- Status: Structurally mitigated; verified on q23
 - Severity: High
 - Detection: explicit final-answer presence score
 - Evidence: run `822e70bd-439d-4f29-94ef-6b0d4bc717eb` (q23)
@@ -218,15 +227,23 @@ That harness fix was necessary but not sufficient. Clean sweep
 `2026-08-28T10-30-57Z` reproduced the failure again as run
 `4484ed49-7cd4-4599-bc3a-34e7c3827fef`: the agent exhausted all ten generation
 steps, including an invalid calculator call followed by another calculation,
-and still emitted no final text. The failure therefore remains open as a tool
-loop/termination failure. A future mitigation must guarantee an answer step or
-return an explicit incomplete-generation result; merely separating the scoring
-limit from the generation limit does not resolve it.
+and still emitted no final text. At that point the failure remained open as a
+tool-loop/termination failure: a complete mitigation needed to guarantee an
+answer step or return an explicit incomplete-generation result.
+
+The output guardrail now treats missing final text as a repair condition. In
+clean sweep `2026-08-28T12-38-44Z`, q23 run
+`5bbdc89d-1540-4e02-8846-d552b26f3fec` again exhausted ten tool steps without
+an answer; the single repair pass produced a complete grounded response. This
+closes the reproduced empty-answer path. If repair also returns no answer, the
+same bounded guardrail emits an explicit fallback rather than returning an
+empty response.
 
 ## Scoring boundaries
 
 The deterministic groundedness grader answers whether a presented figure can be
-traced to an allowed tool field or calculator result. It does not prove that a
+traced to the user's stated scenario, an allowed tool field, or calculator
+result. Model-chosen tool inputs are never evidence. It does not prove that a
 calculator expression was correct or that the evidence was used with the right
 financial meaning. The eval runner therefore reports trajectory, groundedness,
 and oracle-value correctness independently. Semantic requirements and

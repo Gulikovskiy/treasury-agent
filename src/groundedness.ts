@@ -31,15 +31,22 @@ export interface Figure {
   roundingUnit: number;
   signExplicit: boolean;
 }
-export interface SignMismatch { figure: Figure; source: number }
+export interface SignMismatch {
+  figure: Figure;
+  source: number;
+}
 export interface Evidence {
   kinds: FigureKind[];
   value: number;
   toolName: string;
   field: string;
   path: string;
+  signSensitive?: boolean;
 }
-export interface VerifiedFigure { figure: Figure; evidence: Evidence }
+export interface VerifiedFigure {
+  figure: Figure;
+  evidence: Evidence;
+}
 export interface GroundednessResult {
   passed: boolean;
   figures: Figure[];
@@ -98,13 +105,15 @@ export function extractDollarFigures(text: string): Figure[] {
 export function extractPercentageFigures(text: string): Figure[] {
   return [...text.matchAll(PERCENT_RE)].map((match) => {
     const groups = match.groups!;
+    const previousCharacter = text.slice(0, match.index).trimEnd().at(-1);
+    const binaryOperator = groups.sign !== undefined && /[\d%)]/.test(previousCharacter ?? "");
     const magnitude = Number(groups.amount!.replaceAll(",", ""));
     return {
       kind: "percentage",
       raw: match[0].trim(),
-      value: isNegative(groups.sign) ? -magnitude : magnitude,
+      value: isNegative(groups.sign) && !binaryOperator ? -magnitude : magnitude,
       roundingUnit: displayedUnit(groups.amount!, 1),
-      signExplicit: groups.sign !== undefined,
+      signExplicit: groups.sign !== undefined && !binaryOperator,
     };
   });
 }
@@ -133,10 +142,22 @@ function collectFieldEvidence(
     const parsed = parseNumeric(child);
     const childPath = [...path, key];
     if (parsed !== undefined && DOLLAR_FIELDS.has(key)) {
-      into.push({ kinds: ["dollar"], value: parsed, toolName, field: key, path: childPath.join(".") });
+      into.push({
+        kinds: ["dollar"],
+        value: parsed,
+        toolName,
+        field: key,
+        path: childPath.join("."),
+      });
     }
     if (parsed !== undefined && PERCENT_FIELDS.has(key)) {
-      into.push({ kinds: ["percentage"], value: parsed, toolName, field: key, path: childPath.join(".") });
+      into.push({
+        kinds: ["percentage"],
+        value: parsed,
+        toolName,
+        field: key,
+        path: childPath.join("."),
+      });
     }
     collectFieldEvidence(child, toolName, into, childPath);
   }
@@ -144,6 +165,27 @@ function collectFieldEvidence(
 
 export function sourceNumbers(steps: TraceStep[]): Evidence[] {
   const evidence: Evidence[] = [];
+  const question = steps.find(({ question: text }) => text)?.question ?? "";
+  for (const figure of [...extractDollarFigures(question), ...extractPercentageFigures(question)]) {
+    evidence.push({
+      kinds: [figure.kind],
+      value: figure.value,
+      toolName: "user",
+      field: "question",
+      path: "question",
+      signSensitive: false,
+    });
+  }
+  for (const value of [0, 100]) {
+    evidence.push({
+      kinds: ["percentage"],
+      value,
+      toolName: "constant",
+      field: "percentage",
+      path: "percentage",
+      signSensitive: false,
+    });
+  }
   for (const step of steps) {
     for (const result of step.toolResults ?? []) {
       // Only tool output is evidence. Inputs and calculator expressions are not.
@@ -184,7 +226,7 @@ export function checkGroundedness(answer: string, steps: TraceStep[]): Groundedn
     const candidates = evidence.filter((item) => item.kinds.includes(figure.kind));
     const tolerance = toleranceFor(figure);
     const match = candidates.find((item) =>
-      figure.signExplicit
+      figure.signExplicit && item.signSensitive !== false
         ? Math.abs(item.value - figure.value) <= tolerance
         : Math.abs(Math.abs(item.value) - figure.value) <= tolerance,
     );
@@ -194,9 +236,9 @@ export function checkGroundedness(answer: string, steps: TraceStep[]): Groundedn
     }
     const opposite = figure.signExplicit
       ? candidates.find(
-      (item) =>
-        Math.sign(item.value) !== Math.sign(figure.value) &&
-        Math.abs(Math.abs(item.value) - Math.abs(figure.value)) <= tolerance,
+          (item) =>
+            Math.sign(item.value) !== Math.sign(figure.value) &&
+            Math.abs(Math.abs(item.value) - Math.abs(figure.value)) <= tolerance,
         )
       : undefined;
     if (opposite) signMismatches.push({ figure, source: opposite.value });
@@ -218,7 +260,8 @@ export function groupTraceRuns(lines: string): Map<string, TraceStep[]> {
   for (const [index, line] of lines.split("\n").entries()) {
     if (!line.trim()) continue;
     const step = JSON.parse(line) as TraceStep;
-    if (!step.runId || !Number.isInteger(step.step)) throw new Error(`Invalid trace record on line ${index + 1}`);
+    if (!step.runId || !Number.isInteger(step.step))
+      throw new Error(`Invalid trace record on line ${index + 1}`);
     const run = runs.get(step.runId) ?? [];
     run.push(step);
     runs.set(step.runId, run);
@@ -233,15 +276,17 @@ async function main(): Promise<void> {
   for (const [runId, steps] of runs) {
     const answer = [...steps].reverse().find((step) => step.text?.trim())?.text ?? "";
     const result = checkGroundedness(answer, steps);
-    console.log(JSON.stringify({
-      runId,
-      question: steps[0]?.question,
-      passed: result.passed,
-      figures: result.figures.length,
-      verified: result.verified,
-      unverified: result.unverified,
-      signMismatches: result.signMismatches,
-    }));
+    console.log(
+      JSON.stringify({
+        runId,
+        question: steps[0]?.question,
+        passed: result.passed,
+        figures: result.figures.length,
+        verified: result.verified,
+        unverified: result.unverified,
+        signMismatches: result.signMismatches,
+      }),
+    );
     failed ||= !result.passed;
   }
   if (failed) process.exitCode = 1;

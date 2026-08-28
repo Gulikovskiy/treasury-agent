@@ -25,3 +25,4 @@ eval-traces.jsonl
 eval-results.jsonl
 runs/*/traces.jsonl
 !runs/2026-08-28T12-04-28Z/traces.jsonl
+!runs/2026-08-28T12-38-44Z/traces.jsonl

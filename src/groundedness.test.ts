@@ -13,13 +13,10 @@ const steps = [...groupTraceRuns(fixture).values()][0]!;
 describe("figure groundedness", () => {
   it("extracts signed, scaled dollar figures and percentages", () => {
     expect(extractDollarFigures("$1,000.20, -$4.50, $36.7 million").map((x) => x.value)).toEqual([
-      1000.2,
-      -4.5,
-      36_700_000,
+      1000.2, -4.5, 36_700_000,
     ]);
     expect(extractPercentageFigures("89.09% and -11.07 percent").map((x) => x.value)).toEqual([
-      89.09,
-      -11.07,
+      89.09, -11.07,
     ]);
   });
 
@@ -62,7 +59,23 @@ describe("figure groundedness", () => {
     expect(checkGroundedness("AAVE is 91.2% of NAV.", percentSteps).unverified).toHaveLength(1);
   });
 
+  it("accepts user-supplied scenario figures and percentage constants", () => {
+    const percentSteps = structuredClone(steps);
+    percentSteps[1]!.toolResults![0]!.output = { result: "89.09" };
+    const scenarioSteps = [
+      {
+        ...steps[0]!,
+        question: "What happens if AAVE falls 20% or 50%?",
+      },
+    ];
+
+    expect(checkGroundedness("Scenario: AAVE falls 20%.", scenarioSteps).passed).toBe(true);
+    expect(checkGroundedness("Remaining share: 100% − 89.09%.", percentSteps).passed).toBe(true);
+  });
+
   it("still catches the fabricated q01 subtotal", () => {
-    expect(checkGroundedness("The unsupported subtotal is ~$16,900.", steps).unverified).toHaveLength(1);
+    expect(
+      checkGroundedness("The unsupported subtotal is ~$16,900.", steps).unverified,
+    ).toHaveLength(1);
   });
 });
