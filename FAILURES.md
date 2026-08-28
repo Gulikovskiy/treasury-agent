@@ -22,10 +22,26 @@ $11,310.32 and q04 “All other” at approximately $13.5K instead of $11,177.77
 Some unverified figures happened to be correct, which is why correctness and
 groundedness are scored separately.
 
-Mitigation: the system prompt requires calculator use for every presented
-derived figure, and the groundedness grader reports unsourced figures. The
-post-fix q10 trace still contains correct but unverified two-term presentation
-arithmetic, so this entry remains open.
+Mitigation under test: the system prompt again requires calculator use for every
+presented derived figure, and the groundedness grader reports unsourced figures.
+This sentence had been removed during the prompt ablation; two identical-config
+baseline sweeps then reproduced q01 presentation arithmetic outside calculator
+output. The post-fix q10 trace also contains correct but unverified two-term
+presentation arithmetic, so this entry remains open until repeated targeted
+runs establish whether the restored instruction changes behavior beyond the
+measured variance floor.
+
+Targeted q01 ablations keep the entry open. With the softer restored calculator
+instruction, sweep `2026-08-28T11-05-06Z` grounded 1/3 answers and all three
+omitted the required gross-assets figure. Tightening the instruction to omit any
+derived figure not returned by calculator grounded 3/3 in sweep
+`2026-08-28T11-06-45Z`, but all three still omitted gross assets. Adding the
+general balance-sheet requirement fixed oracle coverage 3/3 in sweep
+`2026-08-28T11-09-31Z`; groundedness was only 1/3 because runs
+`76235dbc-e308-4ae9-878c-6c7d84017c2f` and
+`e8df8796-08b9-4053-b9c4-ff4b20e37316` introduced new unverified subtotals and
+ratios. The prompt changes improve required accounting completeness, but do not
+reliably eliminate unsolicited presentation arithmetic.
 
 ## F-002 — Cross-market collateral pooling
 

@@ -1,0 +1,119 @@
+{
+  "sweepId": "2026-08-28T11-06-45Z",
+  "summary": {
+    "requestedSamples": 3,
+    "completedSamples": 3,
+    "failedSamples": 0,
+    "passedSamples": 0,
+    "passRate": 0,
+    "trajectoryPassed": 3,
+    "answerPresent": 3,
+    "groundednessPassed": 3,
+    "oraclePassed": 0
+  },
+  "samples": [
+    {
+      "id": "q01",
+      "sample": 1,
+      "runId": "d72b2b02-c6a3-44ae-b8b1-c86eaba72e53",
+      "passed": false,
+      "answer": {
+        "passed": true,
+        "characterCount": 1102
+      },
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 2
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 12,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": false,
+        "expectedFigureCount": 4,
+        "missingFigures": [
+          {
+            "raw": "$40,728,330.01",
+            "kind": "dollar",
+            "value": 40728330.01
+          }
+        ]
+      }
+    },
+    {
+      "id": "q01",
+      "sample": 2,
+      "runId": "01a27451-1bb9-46c0-af4c-705705daa7f4",
+      "passed": false,
+      "answer": {
+        "passed": true,
+        "characterCount": 1154
+      },
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 2
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 11,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": false,
+        "expectedFigureCount": 4,
+        "missingFigures": [
+          {
+            "raw": "$40,728,330.01",
+            "kind": "dollar",
+            "value": 40728330.01
+          }
+        ]
+      }
+    },
+    {
+      "id": "q01",
+      "sample": 3,
+      "runId": "4b01a7dd-7337-4748-ba2a-2ce2f41a79ff",
+      "passed": false,
+      "answer": {
+        "passed": true,
+        "characterCount": 1123
+      },
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 2
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 12,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": false,
+        "expectedFigureCount": 4,
+        "missingFigures": [
+          {
+            "raw": "$40,728,330.01",
+            "kind": "dollar",
+            "value": 40728330.01
+          }
+        ]
+      }
+    }
+  ],
+  "errors": []
+}

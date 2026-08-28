@@ -1,0 +1,123 @@
+{
+  "sweepId": "2026-08-28T11-09-31Z",
+  "summary": {
+    "requestedSamples": 3,
+    "completedSamples": 3,
+    "failedSamples": 0,
+    "passedSamples": 1,
+    "passRate": 0.3333333333333333,
+    "trajectoryPassed": 3,
+    "answerPresent": 3,
+    "groundednessPassed": 1,
+    "oraclePassed": 3
+  },
+  "samples": [
+    {
+      "id": "q01",
+      "sample": 1,
+      "runId": "3ecb1faa-bff8-4183-ae93-7fe976e1bc82",
+      "passed": true,
+      "answer": {
+        "passed": true,
+        "characterCount": 1857
+      },
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 4
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 28,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": true,
+        "expectedFigureCount": 4,
+        "missingFigures": []
+      }
+    },
+    {
+      "id": "q01",
+      "sample": 2,
+      "runId": "76235dbc-e308-4ae9-878c-6c7d84017c2f",
+      "passed": false,
+      "answer": {
+        "passed": true,
+        "characterCount": 1590
+      },
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 3
+      },
+      "groundedness": {
+        "passed": false,
+        "figureCount": 15,
+        "unverified": [
+          {
+            "raw": "$10,300",
+            "kind": "dollar",
+            "value": 10300
+          },
+          {
+            "raw": "80%",
+            "kind": "percentage",
+            "value": 80
+          }
+        ],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": true,
+        "expectedFigureCount": 4,
+        "missingFigures": []
+      }
+    },
+    {
+      "id": "q01",
+      "sample": 3,
+      "runId": "e8df8796-08b9-4053-b9c4-ff4b20e37316",
+      "passed": false,
+      "answer": {
+        "passed": true,
+        "characterCount": 1342
+      },
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 3
+      },
+      "groundedness": {
+        "passed": false,
+        "figureCount": 17,
+        "unverified": [
+          {
+            "raw": "$1,100",
+            "kind": "dollar",
+            "value": 1100
+          },
+          {
+            "raw": "80%",
+            "kind": "percentage",
+            "value": 80
+          }
+        ],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": true,
+        "expectedFigureCount": 4,
+        "missingFigures": []
+      }
+    }
+  ],
+  "errors": []
+}
