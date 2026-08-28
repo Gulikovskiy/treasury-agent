@@ -8,6 +8,19 @@ export interface TraceStep {
   toolCalls?: Array<{ toolName?: string; [key: string]: unknown }>;
   toolResults?: Array<{ toolName?: string; output?: unknown }>;
   text?: string;
+  generation?: {
+    attempt: "initial" | "repair";
+    elapsedMs: number;
+    inputTokens?: number;
+    outputTokens?: number;
+    totalTokens?: number;
+  };
+  guardrail?: {
+    status: "repair_requested" | "repaired" | "rejected";
+    unverified: string[];
+    signMismatches: string[];
+    missingAnswer: boolean;
+  };
 }
 
 export type FigureKind = "dollar" | "percentage";

@@ -268,6 +268,23 @@ export async function runAll(options: Options): Promise<string> {
         `missing=${missingRunIds.join(",") || "none"}`,
     );
   }
+  const traceSteps = [...traceRuns.values()].flat();
+  const generationAttempts = traceSteps.flatMap(({ generation }) =>
+    generation ? [generation] : [],
+  );
+  const repairRequested = traceSteps.filter(
+    ({ guardrail }) => guardrail?.status === "repair_requested",
+  ).length;
+  const repaired = traceSteps.filter(({ guardrail }) => guardrail?.status === "repaired").length;
+  const rejectedRunIds = new Set(
+    traceSteps
+      .filter(({ guardrail }) => guardrail?.status === "rejected")
+      .map(({ runId }) => runId),
+  );
+  const sumMetric = (attempt: "initial" | "repair", field: "elapsedMs" | "totalTokens") =>
+    generationAttempts
+      .filter((generation) => generation.attempt === attempt)
+      .reduce((totalValue, generation) => totalValue + (generation[field] ?? 0), 0);
   const scores = {
     sweepId: id,
     summary: {
@@ -280,6 +297,15 @@ export async function runAll(options: Options): Promise<string> {
       answerPresent: scored.filter(({ answer }) => answer.passed).length,
       groundednessPassed: scored.filter(({ groundedness }) => groundedness.passed).length,
       oraclePassed: scored.filter(({ oracle }) => oracle.passed).length,
+      guardrail: {
+        repairRequested,
+        repaired,
+        rejected: rejectedRunIds.size,
+        initialElapsedMs: sumMetric("initial", "elapsedMs"),
+        repairElapsedMs: sumMetric("repair", "elapsedMs"),
+        initialTokens: sumMetric("initial", "totalTokens"),
+        repairTokens: sumMetric("repair", "totalTokens"),
+      },
     },
     samples: scored,
     errors: failed,

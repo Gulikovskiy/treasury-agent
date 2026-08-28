@@ -5,6 +5,7 @@ function result(text: string, toolResult?: string) {
   return {
     text,
     responseMessages: [],
+    usage: { inputTokens: 100, outputTokens: 20, totalTokens: 120 },
     steps: [
       {
         text,
@@ -29,6 +30,10 @@ describe("grounded generation guardrail", () => {
     expect(output.text).toBe("The position is $100.");
     expect(generate).toHaveBeenCalledOnce();
     expect(output.steps.at(-1)?.guardrail).toBeUndefined();
+    expect(output.steps.at(-1)?.generation).toMatchObject({
+      attempt: "initial",
+      totalTokens: 120,
+    });
   });
 
   it("repairs an unsupported figure using new calculator evidence", async () => {
@@ -48,6 +53,10 @@ describe("grounded generation guardrail", () => {
     expect(generate).toHaveBeenCalledTimes(2);
     expect(output.steps[0]?.guardrail?.status).toBe("repair_requested");
     expect(output.steps.at(-1)?.guardrail?.status).toBe("repaired");
+    expect(output.steps.at(-1)?.generation).toMatchObject({
+      attempt: "repair",
+      totalTokens: 120,
+    });
   });
 
   it("fails closed when the repaired answer is still unsupported", async () => {

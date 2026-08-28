@@ -76,6 +76,23 @@ q01 presentation-arithmetic path, not the broader correctness problem:
 calculator laundering and semantically misused source values remain outside the
 groundedness guardrail's claim.
 
+The repair preserved answer richness rather than merely deleting unsupported
+rows. Run `b0e87b21-0a0e-4ee5-bb6c-92eaa4910a5f` initially presented six
+unsupported per-chain figures and omitted a $12.38 Base USDC position from its
+own subtotals. The repair made five calculator calls, noticed the omission, and
+returned the same table shape with exact calculator-derived rows; for example,
+`~$102,277`became`$102,277.22`. Run
+`dc79d9ba-6523-44fb-ad33-e5651b64b9e4` demonstrates the complementary boundary:
+the guardrail intercepted the exactly correct `$40,728,330.01` gross-assets
+figure because it lacked provenance. The check intentionally enforces evidence,
+not truth, and may therefore repair correct mental arithmetic.
+
+Three of ten q01 runs required a second model invocation. That 30% repair rate
+is an observed invocation-rate cost, not yet a 30% latency or token estimate.
+Generation traces now record elapsed milliseconds and token usage separately
+for initial and repair attempts, and the sweep summary aggregates both. Repair
+is capped at one pass to bound this cost surface.
+
 ## F-002 — Cross-market collateral pooling
 
 - Status: Closed for the reproduced q10 case

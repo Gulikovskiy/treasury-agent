@@ -8,6 +8,11 @@ interface GenerationResult {
   text: string;
   steps: unknown[];
   responseMessages: ModelMessage[];
+  usage?: {
+    inputTokens?: number;
+    outputTokens?: number;
+    totalTokens?: number;
+  };
 }
 
 interface GenerateGroundedOptions {
@@ -17,13 +22,14 @@ interface GenerateGroundedOptions {
   generate: (messages: ModelMessage[]) => Promise<GenerationResult>;
 }
 
-export interface GuardrailTraceStep extends TraceStep {
-  guardrail?: {
-    status: "repair_requested" | "repaired" | "rejected";
-    unverified: string[];
-    signMismatches: string[];
-    missingAnswer: boolean;
-  };
+export type GuardrailTraceStep = TraceStep;
+
+interface GenerationMetrics {
+  attempt: "initial" | "repair";
+  elapsedMs: number;
+  inputTokens?: number;
+  outputTokens?: number;
+  totalTokens?: number;
 }
 
 function traceRecords(
@@ -31,8 +37,9 @@ function traceRecords(
   question: string,
   rawSteps: unknown[],
   offset = 0,
+  generation?: GenerationMetrics,
 ): GuardrailTraceStep[] {
-  return rawSteps.map((rawStep, index) => {
+  const records: GuardrailTraceStep[] = rawSteps.map((rawStep, index) => {
     const value = rawStep as {
       toolCalls?: TraceStep["toolCalls"];
       toolResults?: TraceStep["toolResults"];
@@ -47,6 +54,27 @@ function traceRecords(
       text: value.text ?? "",
     };
   });
+  if (generation && records.length > 0) records.at(-1)!.generation = generation;
+  return records;
+}
+
+async function timedGeneration(
+  attempt: GenerationMetrics["attempt"],
+  generate: GenerateGroundedOptions["generate"],
+  messages: ModelMessage[],
+): Promise<{ result: GenerationResult; metrics: GenerationMetrics }> {
+  const startedAt = performance.now();
+  const result = await generate(messages);
+  return {
+    result,
+    metrics: {
+      attempt,
+      elapsedMs: Math.round(performance.now() - startedAt),
+      inputTokens: result.usage?.inputTokens,
+      outputTokens: result.usage?.outputTokens,
+      totalTokens: result.usage?.totalTokens,
+    },
+  };
 }
 
 function issues(answer: string, steps: TraceStep[]) {
@@ -95,20 +123,30 @@ export async function generateGroundedAnswer({
   messages,
   generate,
 }: GenerateGroundedOptions): Promise<{ text: string; steps: GuardrailTraceStep[] }> {
-  const initial = await generate(messages);
-  const initialSteps = traceRecords(runId, question, initial.steps);
+  const { result: initial, metrics: initialMetrics } = await timedGeneration(
+    "initial",
+    generate,
+    messages,
+  );
+  const initialSteps = traceRecords(runId, question, initial.steps, 0, initialMetrics);
   const initialIssues = issues(initial.text, initialSteps);
   if (initialIssues.passed) return { text: initial.text, steps: initialSteps };
 
   if (initialSteps.length > 0) {
     initialSteps.at(-1)!.guardrail = guardrailMetadata("repair_requested", initialIssues);
   }
-  const repaired = await generate([
+  const { result: repaired, metrics: repairMetrics } = await timedGeneration("repair", generate, [
     ...messages,
     ...initial.responseMessages,
     { role: "user", content: repairInstruction(initialIssues) },
   ]);
-  const repairedSteps = traceRecords(runId, question, repaired.steps, initialSteps.length);
+  const repairedSteps = traceRecords(
+    runId,
+    question,
+    repaired.steps,
+    initialSteps.length,
+    repairMetrics,
+  );
   const allSteps = [...initialSteps, ...repairedSteps];
   const repairedIssues = issues(repaired.text, allSteps);
   if (repairedIssues.passed) {

@@ -33,6 +33,7 @@ for (const s of steps) {
       toolResults: s.toolResults,
       text: s.text,
       guardrail: s.guardrail,
+      generation: s.generation,
     }) + "\n",
   );
 }
