@@ -23,3 +23,4 @@ coverage/
 traces.jsonl
 eval-traces.jsonl
 eval-results.jsonl
+runs/*/traces.jsonl

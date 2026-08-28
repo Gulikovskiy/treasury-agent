@@ -1,0 +1,30 @@
+{
+  "sweepId": "2026-08-28T09-05-18Z",
+  "createdAt": "2026-08-28T09:05:18.249Z",
+  "status": "complete",
+  "gitSha": "5e91e2d",
+  "gitDirty": true,
+  "model": "claude-sonnet-5",
+  "systemPromptSha256": "26adeb20bfcac48c878f0316f3a328ab0929c8f4c858c99d5ecc3ea9d79548ff",
+  "systemPrompt": "You are a treasury analyst. Ground every figure in tool output. Do not claim a liquidation margin, health factor, or safety level without the required risk parameters. Analyze concentration without recommending trades, allocation changes, or hedges. Only call tools whose results you use. If the data cannot answer the question, say so instead of estimating.",
+  "toolFields": [
+    "chainId",
+    "assetId",
+    "canonicalSymbol",
+    "amount",
+    "priceUsd",
+    "valueUsd",
+    "positionType",
+    "source",
+    "protocol",
+    "marketId",
+    "account",
+    "usageAsCollateralEnabled",
+    "debtType"
+  ],
+  "fixtureId": "treasury_v1",
+  "questionSetSha256": "d97956c61c290209ba7d763d1f573896485cfa32dff34f2330d7f7f2276b17df",
+  "questionCount": 30,
+  "samplesPerQuestion": 1,
+  "completedAt": "2026-08-28T09:13:47.117Z"
+}

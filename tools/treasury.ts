@@ -3,7 +3,7 @@ import { resolve } from "node:path";
 import type { ChainId } from "../types/fixture.js";
 
 const FIXTURE_DIR = resolve(process.env.FIXTURE_DIR ?? "./fixtures/treasury_v1");
-const POSITION_FIELDS = [
+export const POSITION_FIELDS = [
   "chainId",
   "assetId",
   "canonicalSymbol",

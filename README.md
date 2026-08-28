@@ -99,6 +99,23 @@ separate. Detailed results retain semantic `must_include` and
 `must_not_include` requirements for human or judge review rather than treating
 them as deterministic substring checks.
 
+To run every question sequentially as one identifiable sweep:
+
+```bash
+npm run run:all
+```
+
+Each invocation creates `runs/<UTC sweep ID>/` containing `manifest.json`,
+`traces.jsonl`, and `scores.json`. The manifest records the Git revision and
+dirty state, model, full system prompt and its hash, projected tool fields,
+fixture ID, exact question-set hash, and sample count. Sweep traces are ignored
+by default; manifests and scores remain commit-visible. Force-add a trace when
+it is cited as evidence in `FAILURES.md`.
+
+Use `--samples 3` for repeated samples or `--runs-dir another-directory` to
+choose a different sweep root. The top-level `traces.jsonl` remains scratch
+space for single-question runs.
+
 ## Snapshot behavior
 
 On the first run, `manifest.json` pins one block per chain at or immediately before `SNAPSHOT_TIMESTAMP`. Later runs reuse the existing manifest, so the on-chain state remains deterministic.

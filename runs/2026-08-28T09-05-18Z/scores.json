@@ -1,0 +1,1482 @@
+{
+  "sweepId": "2026-08-28T09-05-18Z",
+  "summary": {
+    "requestedSamples": 30,
+    "completedSamples": 30,
+    "failedSamples": 0,
+    "passedSamples": 2,
+    "passRate": 0.06666666666666667,
+    "trajectoryPassed": 17,
+    "groundednessPassed": 15,
+    "oraclePassed": 14
+  },
+  "samples": [
+    {
+      "id": "q01",
+      "sample": 1,
+      "runId": "11986759-ffc5-4d4c-a801-7f9368bdda5e",
+      "passed": false,
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 2
+      },
+      "groundedness": {
+        "passed": false,
+        "figureCount": 16,
+        "unverified": [
+          {
+            "raw": "$29,913,911",
+            "kind": "dollar",
+            "value": 29913911
+          },
+          {
+            "raw": "$4,275,059",
+            "kind": "dollar",
+            "value": 4275059
+          },
+          {
+            "raw": "$113,436",
+            "kind": "dollar",
+            "value": 113436
+          },
+          {
+            "raw": "$187",
+            "kind": "dollar",
+            "value": 187
+          }
+        ],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": false,
+        "expectedFigureCount": 4,
+        "missingFigures": [
+          {
+            "raw": "$40,728,330.01",
+            "kind": "dollar",
+            "value": 40728330.01
+          }
+        ]
+      }
+    },
+    {
+      "id": "q02",
+      "sample": 1,
+      "runId": "2df11c7b-801b-4cc6-b8eb-e970ca06bfe0",
+      "passed": false,
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 3
+      },
+      "groundedness": {
+        "passed": false,
+        "figureCount": 31,
+        "unverified": [
+          {
+            "raw": "$36,659,437.35",
+            "kind": "dollar",
+            "value": 36659437.35
+          },
+          {
+            "raw": "$6.79M",
+            "kind": "dollar",
+            "value": 6790000
+          },
+          {
+            "raw": "$658",
+            "kind": "dollar",
+            "value": 658
+          },
+          {
+            "raw": "$175",
+            "kind": "dollar",
+            "value": 175
+          },
+          {
+            "raw": "$33.94M",
+            "kind": "dollar",
+            "value": 33940000
+          },
+          {
+            "raw": "$33.9M",
+            "kind": "dollar",
+            "value": 33900000
+          },
+          {
+            "raw": "$6.79M",
+            "kind": "dollar",
+            "value": 6790000
+          },
+          {
+            "raw": "($33.9M)",
+            "kind": "dollar",
+            "value": 33900000
+          }
+        ],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": false,
+        "expectedFigureCount": 6,
+        "missingFigures": [
+          {
+            "raw": "$3,313,509.86",
+            "kind": "dollar",
+            "value": 3313509.86
+          },
+          {
+            "raw": "$33,345,927.49",
+            "kind": "dollar",
+            "value": 33345927.49
+          },
+          {
+            "raw": "$37,414,820.15",
+            "kind": "dollar",
+            "value": 37414820.15
+          },
+          {
+            "raw": "9.04%",
+            "kind": "percentage",
+            "value": 9.04
+          },
+          {
+            "raw": "90.96%",
+            "kind": "percentage",
+            "value": 90.96
+          }
+        ]
+      }
+    },
+    {
+      "id": "q03",
+      "sample": 1,
+      "runId": "ae95d162-be16-4920-b774-bdf30d2ce02e",
+      "passed": false,
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 3
+      },
+      "groundedness": {
+        "passed": false,
+        "figureCount": 23,
+        "unverified": [
+          {
+            "raw": "$7,041,553",
+            "kind": "dollar",
+            "value": 7041553
+          },
+          {
+            "raw": "$40.73M",
+            "kind": "dollar",
+            "value": 40730000
+          },
+          {
+            "raw": "89%",
+            "kind": "percentage",
+            "value": 89
+          },
+          {
+            "raw": "19.2%",
+            "kind": "percentage",
+            "value": 19.2
+          }
+        ],
+        "signMismatches": [
+          {
+            "raw": "+ $4.07M",
+            "source": -4068892.66
+          }
+        ]
+      },
+      "oracle": {
+        "passed": false,
+        "expectedFigureCount": 8,
+        "missingFigures": [
+          {
+            "raw": "$6,946,538.36",
+            "kind": "dollar",
+            "value": 6946538.36
+          },
+          {
+            "raw": "$3,522,543.17",
+            "kind": "dollar",
+            "value": 3522543.17
+          },
+          {
+            "raw": "17.29%",
+            "kind": "percentage",
+            "value": 17.29
+          }
+        ]
+      }
+    },
+    {
+      "id": "q04",
+      "sample": 1,
+      "runId": "73e47f8a-4c2f-4000-af70-6eea126a5543",
+      "passed": false,
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 8
+      },
+      "groundedness": {
+        "passed": false,
+        "figureCount": 13,
+        "unverified": [
+          {
+            "raw": "$427,319",
+            "kind": "dollar",
+            "value": 427319
+          },
+          {
+            "raw": "0.1%",
+            "kind": "percentage",
+            "value": 0.1
+          }
+        ],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": false,
+        "expectedFigureCount": 10,
+        "missingFigures": [
+          {
+            "raw": "-$4,059,174.02",
+            "kind": "dollar",
+            "value": -4059174.02
+          },
+          {
+            "raw": "$2,764,401.07",
+            "kind": "dollar",
+            "value": 2764401.07
+          },
+          {
+            "raw": "$2,243,645.90",
+            "kind": "dollar",
+            "value": 2243645.9
+          },
+          {
+            "raw": "$1,278,777.10",
+            "kind": "dollar",
+            "value": 1278777.1
+          },
+          {
+            "raw": "-11.07%",
+            "kind": "percentage",
+            "value": -11.07
+          },
+          {
+            "raw": "7.54%",
+            "kind": "percentage",
+            "value": 7.54
+          },
+          {
+            "raw": "6.12%",
+            "kind": "percentage",
+            "value": 6.12
+          },
+          {
+            "raw": "3.49%",
+            "kind": "percentage",
+            "value": 3.49
+          }
+        ]
+      }
+    },
+    {
+      "id": "q05",
+      "sample": 1,
+      "runId": "ccc09873-e430-485d-a811-3c2d049df989",
+      "passed": false,
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 3
+      },
+      "groundedness": {
+        "passed": false,
+        "figureCount": 25,
+        "unverified": [
+          {
+            "raw": "$34.04M)",
+            "kind": "dollar",
+            "value": 34040000
+          },
+          {
+            "raw": "0.3%",
+            "kind": "percentage",
+            "value": 0.3
+          },
+          {
+            "raw": "0.0%",
+            "kind": "percentage",
+            "value": 0
+          },
+          {
+            "raw": "0.4%",
+            "kind": "percentage",
+            "value": 0.4
+          }
+        ],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": true,
+        "expectedFigureCount": 8,
+        "missingFigures": []
+      }
+    },
+    {
+      "id": "q06",
+      "sample": 1,
+      "runId": "aba2b273-9ea2-4381-b685-3eedf6e0a60b",
+      "passed": false,
+      "trajectory": {
+        "passed": false,
+        "missingTools": [
+          "getTransactions",
+          "classifyTransfers",
+          "calculator"
+        ],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [
+          "getTransactions",
+          "classifyTransfers"
+        ],
+        "toolSteps": 0
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 0,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": false,
+        "expectedFigureCount": 2,
+        "missingFigures": [
+          {
+            "raw": "$499,374.89",
+            "kind": "dollar",
+            "value": 499374.89
+          },
+          {
+            "raw": "$0.00",
+            "kind": "dollar",
+            "value": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "q07",
+      "sample": 1,
+      "runId": "d992bc15-c78d-4fb7-991c-b835b84536f1",
+      "passed": false,
+      "trajectory": {
+        "passed": false,
+        "missingTools": [
+          "getPositions",
+          "getTransactions",
+          "getAddressLabels",
+          "classifyTransfers",
+          "calculator"
+        ],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [
+          "getTransactions",
+          "getAddressLabels",
+          "classifyTransfers"
+        ],
+        "toolSteps": 0
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 0,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": false,
+        "expectedFigureCount": 1,
+        "missingFigures": [
+          {
+            "raw": "$3,522,543.17",
+            "kind": "dollar",
+            "value": 3522543.17
+          }
+        ]
+      }
+    },
+    {
+      "id": "q08",
+      "sample": 1,
+      "runId": "1207b478-9681-4d6a-a131-922a22232050",
+      "passed": false,
+      "trajectory": {
+        "passed": false,
+        "missingTools": [
+          "getTransactions",
+          "getAddressLabels"
+        ],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [
+          "getTransactions",
+          "getAddressLabels"
+        ],
+        "toolSteps": 0
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 0,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": false,
+        "expectedFigureCount": 1,
+        "missingFigures": [
+          {
+            "raw": "$1,610,467.63",
+            "kind": "dollar",
+            "value": 1610467.63
+          }
+        ]
+      }
+    },
+    {
+      "id": "q09",
+      "sample": 1,
+      "runId": "a75b8192-aff8-4be9-9bbe-7d1da832ad41",
+      "passed": false,
+      "trajectory": {
+        "passed": false,
+        "missingTools": [
+          "calculator"
+        ],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 1
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 3,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": false,
+        "expectedFigureCount": 2,
+        "missingFigures": [
+          {
+            "raw": "10.88%",
+            "kind": "percentage",
+            "value": 10.88
+          }
+        ]
+      }
+    },
+    {
+      "id": "q10",
+      "sample": 1,
+      "runId": "9e521116-8cea-437e-a09c-98c670c787bd",
+      "passed": false,
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 2
+      },
+      "groundedness": {
+        "passed": false,
+        "figureCount": 11,
+        "unverified": [
+          {
+            "raw": "12.0%",
+            "kind": "percentage",
+            "value": 12
+          },
+          {
+            "raw": "96%",
+            "kind": "percentage",
+            "value": 96
+          },
+          {
+            "raw": "12%",
+            "kind": "percentage",
+            "value": 12
+          }
+        ],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": false,
+        "expectedFigureCount": 6,
+        "missingFigures": [
+          {
+            "raw": "$37,414,820.15",
+            "kind": "dollar",
+            "value": 37414820.15
+          },
+          {
+            "raw": "$33,345,927.49",
+            "kind": "dollar",
+            "value": 33345927.49
+          },
+          {
+            "raw": "10.88%",
+            "kind": "percentage",
+            "value": 10.88
+          }
+        ]
+      }
+    },
+    {
+      "id": "q11",
+      "sample": 1,
+      "runId": "ea5e6a1a-1ea3-438f-ac12-5e92a7b40003",
+      "passed": false,
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 3
+      },
+      "groundedness": {
+        "passed": false,
+        "figureCount": 22,
+        "unverified": [
+          {
+            "raw": "$26,127,003.71",
+            "kind": "dollar",
+            "value": 26127003.71
+          },
+          {
+            "raw": "$4.0M",
+            "kind": "dollar",
+            "value": 4000000
+          },
+          {
+            "raw": "−20%",
+            "kind": "percentage",
+            "value": -20
+          },
+          {
+            "raw": "−50%",
+            "kind": "percentage",
+            "value": -50
+          },
+          {
+            "raw": "20%",
+            "kind": "percentage",
+            "value": 20
+          },
+          {
+            "raw": "50%",
+            "kind": "percentage",
+            "value": 50
+          }
+        ],
+        "signMismatches": [
+          {
+            "raw": "−$6,531,750.93",
+            "source": 6531750.928
+          },
+          {
+            "raw": "−$16,329,377.32",
+            "source": 16329377.32
+          },
+          {
+            "raw": "-45%",
+            "source": 44.54344774606858
+          }
+        ]
+      },
+      "oracle": {
+        "passed": true,
+        "expectedFigureCount": 8,
+        "missingFigures": []
+      }
+    },
+    {
+      "id": "q12",
+      "sample": 1,
+      "runId": "03d6a1ad-597e-44b1-b8b6-ba48196261a6",
+      "passed": false,
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 2
+      },
+      "groundedness": {
+        "passed": false,
+        "figureCount": 9,
+        "unverified": [
+          {
+            "raw": "$33,937,519.36",
+            "kind": "dollar",
+            "value": 33937519.36
+          },
+          {
+            "raw": "100%",
+            "kind": "percentage",
+            "value": 100
+          }
+        ],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": false,
+        "expectedFigureCount": 5,
+        "missingFigures": [
+          {
+            "raw": "11.99%",
+            "kind": "percentage",
+            "value": 11.99
+          }
+        ]
+      }
+    },
+    {
+      "id": "q13",
+      "sample": 1,
+      "runId": "8c94667b-9267-447f-84a4-9fc277722d3c",
+      "passed": false,
+      "trajectory": {
+        "passed": false,
+        "missingTools": [
+          "getTransactions",
+          "getAddressLabels",
+          "getCounterpartyHistory"
+        ],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [
+          "getTransactions",
+          "getAddressLabels",
+          "getCounterpartyHistory"
+        ],
+        "toolSteps": 0
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 0,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": true,
+        "expectedFigureCount": 0,
+        "missingFigures": []
+      }
+    },
+    {
+      "id": "q14",
+      "sample": 1,
+      "runId": "41d13c22-88b5-4fce-b5bc-2f834c347c20",
+      "passed": false,
+      "trajectory": {
+        "passed": false,
+        "missingTools": [
+          "getTransactions",
+          "getAddressLabels",
+          "getCounterpartyHistory",
+          "getContractMetadata"
+        ],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [
+          "getTransactions",
+          "getAddressLabels",
+          "getCounterpartyHistory",
+          "getContractMetadata"
+        ],
+        "toolSteps": 0
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 0,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": true,
+        "expectedFigureCount": 0,
+        "missingFigures": []
+      }
+    },
+    {
+      "id": "q15",
+      "sample": 1,
+      "runId": "d9db0cbc-3c26-476c-9bad-7f6ed4b1d39b",
+      "passed": false,
+      "trajectory": {
+        "passed": false,
+        "missingTools": [
+          "getTransactions",
+          "getContractMetadata",
+          "getProtocolLabels"
+        ],
+        "unexpectedTools": [
+          "getPositions"
+        ],
+        "unavailableExpectedTools": [
+          "getTransactions",
+          "getContractMetadata",
+          "getProtocolLabels"
+        ],
+        "toolSteps": 1
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 0,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": true,
+        "expectedFigureCount": 0,
+        "missingFigures": []
+      }
+    },
+    {
+      "id": "q16",
+      "sample": 1,
+      "runId": "f85c2e43-dcf8-45d0-95b2-6848d6cd6c6f",
+      "passed": false,
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 2
+      },
+      "groundedness": {
+        "passed": false,
+        "figureCount": 18,
+        "unverified": [
+          {
+            "raw": "$29,868,626.70",
+            "kind": "dollar",
+            "value": 29868626.7
+          },
+          {
+            "raw": "$113,423.96",
+            "kind": "dollar",
+            "value": 113423.96
+          },
+          {
+            "raw": "$175.48",
+            "kind": "dollar",
+            "value": 175.48
+          },
+          {
+            "raw": "$3,363,701.35",
+            "kind": "dollar",
+            "value": 3363701.35
+          }
+        ],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": false,
+        "expectedFigureCount": 5,
+        "missingFigures": [
+          {
+            "raw": "$37,414,820.15",
+            "kind": "dollar",
+            "value": 37414820.15
+          },
+          {
+            "raw": "90.96%",
+            "kind": "percentage",
+            "value": 90.96
+          }
+        ]
+      }
+    },
+    {
+      "id": "q17",
+      "sample": 1,
+      "runId": "a9a3f781-80bf-40df-8c38-ca4e59901ba3",
+      "passed": false,
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 6
+      },
+      "groundedness": {
+        "passed": false,
+        "figureCount": 31,
+        "unverified": [
+          {
+            "raw": "$498.67",
+            "kind": "dollar",
+            "value": 498.67
+          },
+          {
+            "raw": "$124.67",
+            "kind": "dollar",
+            "value": 124.67
+          },
+          {
+            "raw": "$9.34",
+            "kind": "dollar",
+            "value": 9.34
+          },
+          {
+            "raw": "$2.34",
+            "kind": "dollar",
+            "value": 2.34
+          },
+          {
+            "raw": "$606.10",
+            "kind": "dollar",
+            "value": 606.1
+          },
+          {
+            "raw": "$151.53",
+            "kind": "dollar",
+            "value": 151.53
+          },
+          {
+            "raw": "$479,440.22",
+            "kind": "dollar",
+            "value": 479440.22
+          },
+          {
+            "raw": "$119,860.06",
+            "kind": "dollar",
+            "value": 119860.06
+          },
+          {
+            "raw": "$480,554.35",
+            "kind": "dollar",
+            "value": 480554.35
+          },
+          {
+            "raw": "$427K)",
+            "kind": "dollar",
+            "value": 427000
+          },
+          {
+            "raw": "20%",
+            "kind": "percentage",
+            "value": 20
+          },
+          {
+            "raw": "-20%",
+            "kind": "percentage",
+            "value": -20
+          },
+          {
+            "raw": "20%",
+            "kind": "percentage",
+            "value": 20
+          },
+          {
+            "raw": "99.8%",
+            "kind": "percentage",
+            "value": 99.8
+          },
+          {
+            "raw": "20%",
+            "kind": "percentage",
+            "value": 20
+          },
+          {
+            "raw": "20%",
+            "kind": "percentage",
+            "value": 20
+          }
+        ],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": true,
+        "expectedFigureCount": 5,
+        "missingFigures": []
+      }
+    },
+    {
+      "id": "q18",
+      "sample": 1,
+      "runId": "ce9bec52-4faf-4368-b5db-35102519bc32",
+      "passed": false,
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 7
+      },
+      "groundedness": {
+        "passed": false,
+        "figureCount": 28,
+        "unverified": [
+          {
+            "raw": "$0.95",
+            "kind": "dollar",
+            "value": 0.95
+          },
+          {
+            "raw": "$0.95",
+            "kind": "dollar",
+            "value": 0.95
+          },
+          {
+            "raw": "$11.76",
+            "kind": "dollar",
+            "value": 11.76
+          },
+          {
+            "raw": "$2,131,800.00",
+            "kind": "dollar",
+            "value": 2131800
+          },
+          {
+            "raw": "$114.18",
+            "kind": "dollar",
+            "value": 114.18
+          },
+          {
+            "raw": "$0.95",
+            "kind": "dollar",
+            "value": 0.95
+          },
+          {
+            "raw": "‑5%",
+            "kind": "percentage",
+            "value": -5
+          },
+          {
+            "raw": "64%",
+            "kind": "percentage",
+            "value": 64
+          }
+        ],
+        "signMismatches": [
+          {
+            "raw": "‑$0.62",
+            "source": 0.6207166500000021
+          },
+          {
+            "raw": "‑$63,746.51",
+            "source": 63746.50736385002
+          },
+          {
+            "raw": "‑$111,845.90",
+            "source": 111845.8999999999
+          },
+          {
+            "raw": "‑$5.99",
+            "source": 5.99093735000001
+          },
+          {
+            "raw": "‑$175,599.02",
+            "source": 175599.01901785005
+          }
+        ]
+      },
+      "oracle": {
+        "passed": false,
+        "expectedFigureCount": 4,
+        "missingFigures": [
+          {
+            "raw": "$176,154.96",
+            "kind": "dollar",
+            "value": 176154.96
+          }
+        ]
+      }
+    },
+    {
+      "id": "q19",
+      "sample": 1,
+      "runId": "a40ef27a-8760-4974-9c57-a265d86f0f99",
+      "passed": false,
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 3
+      },
+      "groundedness": {
+        "passed": false,
+        "figureCount": 15,
+        "unverified": [
+          {
+            "raw": "$2.88M",
+            "kind": "dollar",
+            "value": 2880000
+          }
+        ],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": true,
+        "expectedFigureCount": 3,
+        "missingFigures": []
+      }
+    },
+    {
+      "id": "q20",
+      "sample": 1,
+      "runId": "946a0792-f687-4a1b-bd6c-aae07e3c9fd5",
+      "passed": false,
+      "trajectory": {
+        "passed": false,
+        "missingTools": [
+          "getTransactions",
+          "getAddressLabels",
+          "getCounterpartyHistory",
+          "classifyTransfers"
+        ],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [
+          "getTransactions",
+          "getAddressLabels",
+          "getCounterpartyHistory",
+          "classifyTransfers"
+        ],
+        "toolSteps": 4
+      },
+      "groundedness": {
+        "passed": false,
+        "figureCount": 24,
+        "unverified": [
+          {
+            "raw": "$8.87M",
+            "kind": "dollar",
+            "value": 8870000
+          },
+          {
+            "raw": "$9.7K)",
+            "kind": "dollar",
+            "value": 9700
+          },
+          {
+            "raw": "22%",
+            "kind": "percentage",
+            "value": 22
+          },
+          {
+            "raw": "1%",
+            "kind": "percentage",
+            "value": 1
+          },
+          {
+            "raw": "1.5%",
+            "kind": "percentage",
+            "value": 1.5
+          },
+          {
+            "raw": "82%",
+            "kind": "percentage",
+            "value": 82
+          }
+        ],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": false,
+        "expectedFigureCount": 7,
+        "missingFigures": [
+          {
+            "raw": "$33,345,927.49",
+            "kind": "dollar",
+            "value": 33345927.49
+          },
+          {
+            "raw": "$6,531,750.93",
+            "kind": "dollar",
+            "value": 6531750.93
+          },
+          {
+            "raw": "$499,374.89",
+            "kind": "dollar",
+            "value": 499374.89
+          },
+          {
+            "raw": "89.09%",
+            "kind": "percentage",
+            "value": 89.09
+          },
+          {
+            "raw": "20%",
+            "kind": "percentage",
+            "value": 20
+          }
+        ]
+      }
+    },
+    {
+      "id": "q21",
+      "sample": 1,
+      "runId": "b04ba62d-e42a-42f9-b84d-c798db0ac1b3",
+      "passed": true,
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 0,
+        "maxSteps": 0
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 0,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": true,
+        "expectedFigureCount": 0,
+        "missingFigures": []
+      }
+    },
+    {
+      "id": "q22",
+      "sample": 1,
+      "runId": "abf3a343-e9df-4d64-8ee3-0c3f537c374a",
+      "passed": false,
+      "trajectory": {
+        "passed": false,
+        "missingTools": [
+          "getTransactions"
+        ],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [
+          "getTransactions"
+        ],
+        "toolSteps": 0,
+        "maxSteps": 2
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 0,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": true,
+        "expectedFigureCount": 0,
+        "missingFigures": []
+      }
+    },
+    {
+      "id": "q23",
+      "sample": 1,
+      "runId": "822e70bd-439d-4f29-94ef-6b0d4bc717eb",
+      "passed": false,
+      "trajectory": {
+        "passed": false,
+        "missingTools": [],
+        "unexpectedTools": [
+          "getPositions"
+        ],
+        "unavailableExpectedTools": [],
+        "toolSteps": 5,
+        "maxSteps": 4
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 0,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": false,
+        "expectedFigureCount": 8,
+        "missingFigures": [
+          {
+            "raw": "$36,659,437.35",
+            "kind": "dollar",
+            "value": 36659437.35
+          },
+          {
+            "raw": "$4,068,892.66",
+            "kind": "dollar",
+            "value": 4068892.66
+          },
+          {
+            "raw": "$6,531,750.93",
+            "kind": "dollar",
+            "value": 6531750.93
+          },
+          {
+            "raw": "$499,374.89",
+            "kind": "dollar",
+            "value": 499374.89
+          },
+          {
+            "raw": "89.09%",
+            "kind": "percentage",
+            "value": 89.09
+          },
+          {
+            "raw": "9.04%",
+            "kind": "percentage",
+            "value": 9.04
+          },
+          {
+            "raw": "10.88%",
+            "kind": "percentage",
+            "value": 10.88
+          },
+          {
+            "raw": "20%",
+            "kind": "percentage",
+            "value": 20
+          }
+        ]
+      }
+    },
+    {
+      "id": "q24",
+      "sample": 1,
+      "runId": "42e08a07-a882-4952-9936-8752d9efffbf",
+      "passed": false,
+      "trajectory": {
+        "passed": false,
+        "missingTools": [
+          "getPositions",
+          "calculator"
+        ],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 0,
+        "maxSteps": 3
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 0,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": false,
+        "expectedFigureCount": 4,
+        "missingFigures": [
+          {
+            "raw": "$600,692.93",
+            "kind": "dollar",
+            "value": 600692.93
+          },
+          {
+            "raw": "$7,041,552.68",
+            "kind": "dollar",
+            "value": 7041552.68
+          },
+          {
+            "raw": "1.64%",
+            "kind": "percentage",
+            "value": 1.64
+          },
+          {
+            "raw": "89.09%",
+            "kind": "percentage",
+            "value": 89.09
+          }
+        ]
+      }
+    },
+    {
+      "id": "q25",
+      "sample": 1,
+      "runId": "c0c43478-7fea-48cb-9331-37f3cce79645",
+      "passed": false,
+      "trajectory": {
+        "passed": false,
+        "missingTools": [
+          "getTransactions"
+        ],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [
+          "getTransactions"
+        ],
+        "toolSteps": 0,
+        "maxSteps": 1
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 0,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": true,
+        "expectedFigureCount": 0,
+        "missingFigures": []
+      }
+    },
+    {
+      "id": "q26",
+      "sample": 1,
+      "runId": "042ca3ac-7737-46b4-8dff-91ef0352af8a",
+      "passed": false,
+      "trajectory": {
+        "passed": false,
+        "missingTools": [
+          "getTreasuryWallets"
+        ],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [
+          "getTreasuryWallets"
+        ],
+        "toolSteps": 0,
+        "maxSteps": 1
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 0,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": true,
+        "expectedFigureCount": 0,
+        "missingFigures": []
+      }
+    },
+    {
+      "id": "q27",
+      "sample": 1,
+      "runId": "30248e66-32b5-4dfd-b4f3-aab9652769ea",
+      "passed": false,
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 2
+      },
+      "groundedness": {
+        "passed": false,
+        "figureCount": 10,
+        "unverified": [
+          {
+            "raw": "87.5%",
+            "kind": "percentage",
+            "value": 87.5
+          }
+        ],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": true,
+        "expectedFigureCount": 2,
+        "missingFigures": []
+      }
+    },
+    {
+      "id": "q28",
+      "sample": 1,
+      "runId": "46b0192e-714d-47db-98ee-0892c4b298c8",
+      "passed": false,
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 3
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 3,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": false,
+        "expectedFigureCount": 4,
+        "missingFigures": [
+          {
+            "raw": "$4,756,065.51",
+            "kind": "dollar",
+            "value": 4756065.51
+          }
+        ]
+      }
+    },
+    {
+      "id": "q29",
+      "sample": 1,
+      "runId": "3b08136b-e39a-4d4a-b83e-ba9dd5c4f31e",
+      "passed": false,
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 4
+      },
+      "groundedness": {
+        "passed": false,
+        "figureCount": 26,
+        "unverified": [
+          {
+            "raw": "100%",
+            "kind": "percentage",
+            "value": 100
+          },
+          {
+            "raw": "0.4%",
+            "kind": "percentage",
+            "value": 0.4
+          }
+        ],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": true,
+        "expectedFigureCount": 4,
+        "missingFigures": []
+      }
+    },
+    {
+      "id": "q30",
+      "sample": 1,
+      "runId": "3657a2a5-fb22-4864-b34d-8a5ddf3ed062",
+      "passed": true,
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 1
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 5,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": true,
+        "expectedFigureCount": 0,
+        "missingFigures": []
+      }
+    }
+  ],
+  "errors": []
+}

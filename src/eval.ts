@@ -13,6 +13,8 @@ import {
   type TraceStep,
 } from "./groundedness.js";
 
+export const EVAL_MODEL = process.env.EVAL_MODEL ?? "claude-sonnet-5";
+
 export interface EvalQuestion {
   id: string;
   tier: string;
@@ -190,14 +192,16 @@ function traceRecords(runId: string, question: string, steps: unknown[]): TraceS
   });
 }
 
-async function runQuestion(question: EvalQuestion): Promise<{ runId: string; steps: TraceStep[] }> {
+export async function runQuestion(
+  question: EvalQuestion,
+): Promise<{ runId: string; steps: TraceStep[] }> {
   const runId = crypto.randomUUID();
   const content = question.context
     ? `${question.question}\n\nContext: ${JSON.stringify(question.context)}`
     : question.question;
   const maximumToolSteps = question.max_steps ?? 10;
   const result = await generateText({
-    model: anthropic(process.env.EVAL_MODEL ?? "claude-sonnet-5"),
+    model: anthropic(EVAL_MODEL),
     tools,
     stopWhen: stepCountIs(Math.max(1, maximumToolSteps + 1)),
     system: SYSTEM_PROMPT,

@@ -22,6 +22,7 @@
     "groundedness": "node --import tsx src/groundedness.ts",
     "eval": "node --import tsx src/eval.ts",
     "eval:score": "node --import tsx src/eval.ts --score-only traces.jsonl",
+    "run:all": "node --import tsx src/run-all.ts",
     "test": "vitest run",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
