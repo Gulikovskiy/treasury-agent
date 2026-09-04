@@ -102,6 +102,13 @@ also exposed checker false positives around user-supplied scenario percentages,
 the `100%` constant, and a binary subtraction sign; those are now treated as
 valid provenance/syntax rather than derived claims.
 
+The false-positive correction is narrowly verified by q11 run
+`a117971e-3db8-48d4-8db7-fe39db49afc3` in targeted sweep
+`2026-09-04T13-04-26Z`: answer presence, trajectory, groundedness, and oracle
+all passed on the initial response, with no repair or fallback. This one sample
+confirms the reproducing case is accepted; it does not estimate the corrected
+checker's false-positive rate.
+
 Against clean baseline `2026-08-28T10-14-58Z`, the full-set dimensions moved as
 follows: groundedness 15→30, answer presence 29→30, oracle coverage 14→13, and
 trajectory compliance 18→17. The oracle and trajectory changes are within the

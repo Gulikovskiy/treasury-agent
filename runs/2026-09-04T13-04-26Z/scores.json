@@ -1,0 +1,54 @@
+{
+  "sweepId": "2026-09-04T13-04-26Z",
+  "summary": {
+    "requestedSamples": 1,
+    "completedSamples": 1,
+    "failedSamples": 0,
+    "passedSamples": 1,
+    "passRate": 1,
+    "trajectoryPassed": 1,
+    "answerPresent": 1,
+    "groundednessPassed": 1,
+    "oraclePassed": 1,
+    "guardrail": {
+      "repairRequested": 0,
+      "repaired": 0,
+      "rejected": 0,
+      "initialElapsedMs": 22523,
+      "repairElapsedMs": 0,
+      "initialTokens": 21680,
+      "repairTokens": 0
+    }
+  },
+  "samples": [
+    {
+      "id": "q11",
+      "sample": 1,
+      "runId": "a117971e-3db8-48d4-8db7-fe39db49afc3",
+      "passed": true,
+      "answer": {
+        "passed": true,
+        "characterCount": 1396
+      },
+      "trajectory": {
+        "passed": true,
+        "missingTools": [],
+        "unexpectedTools": [],
+        "unavailableExpectedTools": [],
+        "toolSteps": 4
+      },
+      "groundedness": {
+        "passed": true,
+        "figureCount": 14,
+        "unverified": [],
+        "signMismatches": []
+      },
+      "oracle": {
+        "passed": true,
+        "expectedFigureCount": 8,
+        "missingFigures": []
+      }
+    }
+  ],
+  "errors": []
+}
