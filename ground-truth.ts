@@ -1117,35 +1117,28 @@ function questionTruth(
       ],
     },
     q06: {
-      expected_answer: `Over the 30 days ending at the snapshot, priced external inflows were ${usd(pricedInflows30)} and priced external outflows were ${usd(pricedOutflows30)}, for net external flow of ${usd(netExternal30)}. The largest priced inflow is ${largestPricedExternalInflow30 ? `${largestPricedExternalInflow30.symbol} funding from ${largestPricedExternalInflow30.counterpartyLabel?.label ?? shortAddress(largestPricedExternalInflow30.counterparty)} on ${largestPricedExternalInflow30.timestamp.slice(0, 10)}` : "none"}; subsequent Aave/Safety Module movements are excluded. ${unpricedExternal30.length} external token event(s) were unpriced and are disclosed rather than treated as zero.`,
+      expected_answer:
+        "The current tool surface cannot determine the treasury's 30-day change because it has no historical position snapshots or transaction history. A current snapshot alone is insufficient, so the answer should decline rather than estimate.",
       must_include: [
-        `external inflows ${usd(pricedInflows30)}`,
-        `external outflows ${usd(pricedOutflows30)}`,
-        `net external flow ${usd(netExternal30)}`,
-        "identifies Aave V3 collector funding",
-        `${unpricedExternal30.length} unpriced external event`,
+        "cannot determine 30-day change from the current tool surface",
+        "requires historical positions or transaction history",
       ],
     },
     q07: {
       expected_answer:
-        usdcCurrentMonth.length === 0
-          ? `The pinned ${currentMonthName} transaction window shows no USDC-family transfers, so the fixture does not support the premise that USDC decreased this month. The current canonical USDC-family position is ${usd(usdcValue)}; explaining a change would require an earlier balance snapshot or a specific transaction.`
-          : `The current month contains ${usdcCurrentMonth.length} USDC-family transfer events. Their classifications must be reviewed individually; the fixture does not support the old payroll/vendor narrative.`,
+        "The current tool surface cannot establish whether or why USDC decreased because it exposes neither transaction history nor historical balance snapshots. The premise should not be accepted or explained without that evidence.",
       must_include: [
-        "no USDC-family transfers in the pinned August window",
-        `current USDC-family value ${usd(usdcValue)}`,
-        "challenges the unsupported decrease premise",
+        "cannot determine the USDC change from the current tool surface",
+        "requires transaction history or historical balances",
+        "does not accept the decrease premise without evidence",
       ],
     },
     q08: {
       expected_answer:
-        largestCurrentTransaction?.valueCents != null
-          ? `The only material token-moving transaction in ${currentMonthName} through the snapshot was the ${largestCurrentTransaction.timestamp.slice(0, 10)} Aave/GHO batch ${largestCurrentTransaction.hash}, whose largest priced transfer leg was ${usd(largestCurrentTransaction.valueCents)}. The other current-month token receipts were unpriced unsolicited tokens, not Coinbase, payroll, grants, or vendor payments.`
-          : "There are no priced token-moving transactions in the current month.",
+        "The current tool surface has no transaction-history endpoint, so it cannot identify or rank this month's transactions. The answer should request a transaction log rather than substitute current holdings.",
       must_include: [
-        "identifies the August 17 Aave/GHO batch",
-        `largest priced leg ${largestCurrentTransaction?.valueCents == null ? "unpriced" : usd(largestCurrentTransaction.valueCents)}`,
-        "does not invent Coinbase or payroll counterparties",
+        "cannot rank transactions from the current tool surface",
+        "requires transaction history",
       ],
     },
     q09: {
@@ -1153,7 +1146,6 @@ function questionTruth(
       must_include: [
         `GHO debt ${usd(defiLiabilities)}`,
         "identifies variable-rate debt on Aave V3 Ethereum",
-        `debt-to-supplied-assets ${pct(percent(defiLiabilities, defiGrossAssets))}`,
       ],
     },
     q10: {
@@ -1218,11 +1210,7 @@ function questionTruth(
     },
     q16: {
       expected_answer: `${usd(defiNet)} net, or ${pct(percent(defiNet, totalNav))} of NAV, is represented in configured Aave markets. Gross supplied assets are ${usd(defiGrossAssets)}, led by AAVE at ${usd(aaveValue)}, against ${usd(defiLiabilities)} of GHO debt. The unqueried Ethereum Lido market remains a coverage caveat.`,
-      must_include: [
-        `net DeFi value ${usd(defiNet)}`,
-        `gross supplied value ${usd(defiGrossAssets)}`,
-        `GHO debt ${usd(defiLiabilities)}`,
-      ],
+      must_include: [`net DeFi value ${usd(defiNet)}`],
     },
     q17: {
       expected_answer: `Canonical ETH-linked exposure is ${usd(ethExposure)} (${pct(percent(ethExposure, totalNav))} of NAV), counting ETH, WETH/WETHe, and wstETH. A simple 20% parallel decline reduces NAV by ${usd(ethShockLoss)}, or ${pct(percent(ethShockLoss, totalNav))}, before protocol mechanics, basis differences, or correlated moves.`,
@@ -1255,7 +1243,6 @@ function questionTruth(
         `NAV ${usd(totalNav)}`,
         `AAVE concentration ${pct(percent(aaveValue, totalNav))}`,
         `net external flow ${usd(netExternal30)}`,
-        `20% AAVE shock ${usd(aaveShock20)}`,
         "flags untrusted token metadata",
       ],
     },
@@ -1283,7 +1270,6 @@ function questionTruth(
         "states the health-check interpretation",
         `NAV ${usd(totalNav)}`,
         `AAVE concentration ${pct(percent(aaveValue, totalNav))}`,
-        `20% AAVE shock ${usd(aaveShock20)}`,
       ],
     },
     q24: {
@@ -1312,17 +1298,12 @@ function questionTruth(
       expected_answer: `The marked AAVE position would equal the current GHO debt at about $${balanceSheetCoveragePrice.toFixed(2)} per AAVE, an ${balanceSheetCoverageDecline.toFixed(2)}% decline from its snapshot price. This is only a balance-sheet coverage point; it is not an Aave liquidation price because liquidation thresholds, correlated collateral, interest accrual, and health factor are not modeled.`,
       must_include: [
         `AAVE balance-sheet coverage price $${balanceSheetCoveragePrice.toFixed(2)}`,
-        `decline ${balanceSheetCoverageDecline.toFixed(2)}%`,
         "does not label the coverage point as a liquidation price",
       ],
     },
     q28: {
       expected_answer: `AAVE contributes ${usd(aaveValue)}, or ${pct(percent(aaveValue, defiGrossAssets))}, of the ${usd(defiGrossAssets)} gross configured Aave supply. The remaining configured supplied assets total ${usd(defiGrossAssets - aaveValue)}, so the lending position is overwhelmingly exposed to one governance token.`,
-      must_include: [
-        `AAVE supplied value ${usd(aaveValue)}`,
-        `AAVE share of supplied assets ${pct(percent(aaveValue, defiGrossAssets))}`,
-        `non-AAVE supplied value ${usd(defiGrossAssets - aaveValue)}`,
-      ],
+      must_include: [`AAVE share of supplied assets ${pct(percent(aaveValue, defiGrossAssets))}`],
     },
     q29: {
       expected_answer: `Configured Aave net exposure by chain is ${sortedGroups(defiByChain)
@@ -1474,7 +1455,6 @@ async function updateQuestions(questions: Record<string, QuestionTruth>): Promis
     "q05",
     "q06",
     "q07",
-    "q09",
     "q10",
     "q11",
     "q12",
@@ -1489,6 +1469,8 @@ async function updateQuestions(questions: Record<string, QuestionTruth>): Promis
     "q28",
     "q29",
   ]);
+  const unavailableToolQuestions = new Set(["q06", "q07", "q08"]);
+  const noCalculatorQuestions = new Set(["q09"]);
   const updated = lines.map((line) => {
     const question = JSON.parse(line) as JsonQuestion;
     const truth = questions[question.id];
@@ -1500,12 +1482,20 @@ async function updateQuestions(questions: Record<string, QuestionTruth>): Promis
         ),
       ),
     ];
+    if (unavailableToolQuestions.has(question.id)) expectedTools = [];
+    if (noCalculatorQuestions.has(question.id)) {
+      expectedTools = expectedTools.filter((tool) => tool !== "calculator");
+    }
     // getPositions already returns pinned priceUsd and valueUsd. Requiring a
     // duplicate getPrices call rewards unnecessary trajectory steps.
     if (expectedTools.includes("getPositions")) {
       expectedTools = expectedTools.filter((tool) => tool !== "getPrices");
     }
-    if (calculatorQuestions.has(question.id) && !expectedTools.includes("calculator")) {
+    if (
+      calculatorQuestions.has(question.id) &&
+      !unavailableToolQuestions.has(question.id) &&
+      !expectedTools.includes("calculator")
+    ) {
       expectedTools.push("calculator");
     }
     return JSON.stringify({

@@ -10,6 +10,7 @@ import {
   extractDollarFigures,
   extractPercentageFigures,
   groupTraceRuns,
+  sourceNumbers,
   type Figure,
   type TraceStep,
 } from "./groundedness.js";
@@ -41,11 +42,23 @@ interface TrajectoryScore {
   withinStepLimit: boolean;
 }
 
-interface OracleScore {
+interface CoverageScore {
   passed: boolean;
-  expectedFigures: Figure[];
-  matchedFigures: Figure[];
-  missingFigures: Figure[];
+  requiredFigures: Figure[];
+  matchedRequiredFigures: Figure[];
+  missingRequiredFigures: Figure[];
+  optionalFigures: Figure[];
+  matchedOptionalFigures: Figure[];
+}
+
+interface ContradictionScore {
+  passed: boolean;
+  contradictions: Figure[];
+}
+
+interface OracleScore {
+  coverage: CoverageScore;
+  contradiction: ContradictionScore;
 }
 
 export interface EvalScore {
@@ -103,19 +116,126 @@ function uniqueFigures(texts: string[]): Figure[] {
   );
 }
 
+const EXPRESSION_NUMBER_RE = /(?<![\w.])(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?/gi;
+const CALCULATOR_OPERAND_FIELDS = new Set(["amount", "priceUsd", "valueUsd"]);
+
+function collectCalculatorOperands(value: unknown, into: number[]): void {
+  if (Array.isArray(value)) {
+    value.forEach((item) => collectCalculatorOperands(item, into));
+    return;
+  }
+  if (!value || typeof value !== "object") return;
+  for (const [key, child] of Object.entries(value)) {
+    if (CALCULATOR_OPERAND_FIELDS.has(key)) {
+      const parsed = Number(child);
+      if (Number.isFinite(parsed)) into.push(parsed);
+    }
+    collectCalculatorOperands(child, into);
+  }
+}
+
+function calculatorLineageEvidence(steps: TraceStep[]): Array<{ value: number }> {
+  const trusted = sourceNumbers(steps)
+    .filter(({ toolName }) => toolName !== "calculator")
+    .map(({ value }) => value);
+  for (const step of steps) {
+    for (const result of step.toolResults ?? []) {
+      if (result.toolName !== "calculator") collectCalculatorOperands(result.output, trusted);
+    }
+  }
+  const questionPercentages = uniqueFigures([steps[0]?.question ?? ""])
+    .filter(({ kind }) => kind === "percentage")
+    .map(({ value }) => Math.abs(value));
+  const matchesTrusted = (literal: number) =>
+    [0, 1, 100, ...trusted].some(
+      (value) => Math.abs(Math.abs(value) - Math.abs(literal)) <= 0.01,
+    ) ||
+    questionPercentages.some(
+      (percentage) =>
+        Math.abs(literal - percentage / 100) <= 1e-12 ||
+        Math.abs(literal - (100 - percentage) / 100) <= 1e-12,
+    );
+  const validated: Array<{ value: number }> = [];
+  for (const step of steps) {
+    for (const result of step.toolResults ?? []) {
+      if (result.toolName !== "calculator") continue;
+      const input = result.input as { expression?: unknown } | undefined;
+      const output = result.output as { result?: unknown } | undefined;
+      if (typeof input?.expression !== "string") continue;
+      const value = Number(output?.result);
+      if (!Number.isFinite(value)) continue;
+      const literals = [...input.expression.matchAll(EXPRESSION_NUMBER_RE)].map((match) =>
+        Number(match[0]),
+      );
+      if (literals.every(matchesTrusted)) {
+        validated.push({ value });
+        trusted.push(value);
+      }
+    }
+  }
+  return validated;
+}
+
 export function scoreOracle(answer: string, question: EvalQuestion): OracleScore {
-  const expectedFigures = uniqueFigures([question.expected_answer, ...question.must_include]);
+  const questionFigures = uniqueFigures([question.question]);
+  const requiredFigures = uniqueFigures(question.must_include).filter(
+    (expected) => !questionFigures.some((supplied) => sameOracleValue(expected, supplied)),
+  );
+  const optionalFigures = uniqueFigures([question.expected_answer]).filter(
+    (expected) =>
+      !questionFigures.some((supplied) => sameOracleValue(expected, supplied)) &&
+      !requiredFigures.some((required) => sameOracleValue(expected, required)),
+  );
   const answerFigures = uniqueFigures([answer]);
-  const matchedFigures = expectedFigures.filter((expected) =>
+  const matchedRequiredFigures = requiredFigures.filter((expected) =>
     answerFigures.some((actual) => sameOracleValue(expected, actual)),
   );
-  const missingFigures = expectedFigures.filter((expected) => !matchedFigures.includes(expected));
+  const missingRequiredFigures = requiredFigures.filter(
+    (expected) => !matchedRequiredFigures.includes(expected),
+  );
+  const matchedOptionalFigures = optionalFigures.filter((expected) =>
+    answerFigures.some((actual) => sameOracleValue(expected, actual)),
+  );
   return {
-    passed: missingFigures.length === 0,
-    expectedFigures,
-    matchedFigures,
-    missingFigures,
+    coverage: {
+      passed: missingRequiredFigures.length === 0,
+      requiredFigures,
+      matchedRequiredFigures,
+      missingRequiredFigures,
+      optionalFigures,
+      matchedOptionalFigures,
+    },
+    contradiction: { passed: true, contradictions: [] },
   };
+}
+
+export function scoreContradictions(
+  answer: string,
+  steps: TraceStep[],
+  question: EvalQuestion,
+  oracle = scoreOracle(answer, question),
+): ContradictionScore {
+  const acceptedFigures = [
+    ...oracle.coverage.requiredFigures,
+    ...oracle.coverage.optionalFigures,
+    ...uniqueFigures([question.question]),
+  ];
+  const trustedEvidence = sourceNumbers(steps).filter(({ toolName }) => toolName !== "calculator");
+  const calculatorEvidence = calculatorLineageEvidence(steps);
+  const contradictions = uniqueFigures([answer]).filter(
+    (actual) =>
+      !acceptedFigures.some((expected) => sameOracleValue(expected, actual)) &&
+      !trustedEvidence.some(
+        (evidence) =>
+          evidence.kinds.includes(actual.kind) &&
+          Math.abs(Math.abs(evidence.value) - Math.abs(actual.value)) <= figureTolerance(actual),
+      ) &&
+      !calculatorEvidence.some(
+        ({ value }) =>
+          Math.abs(Math.abs(value) - Math.abs(actual.value)) <= figureTolerance(actual),
+      ),
+  );
+  return { passed: contradictions.length === 0, contradictions };
 }
 
 export function scoreTrajectory(steps: TraceStep[], question: EvalQuestion): TrajectoryScore {
@@ -159,11 +279,13 @@ export function scoreRun(runId: string, steps: TraceStep[], question: EvalQuesti
   const trajectory = scoreTrajectory(steps, question);
   const groundedness = checkGroundedness(answer, steps);
   const oracle = scoreOracle(answer, question);
+  oracle.contradiction = scoreContradictions(answer, steps, question, oracle);
   return {
     id: question.id,
     runId,
     question: question.question,
-    passed: answerScore.passed && trajectory.passed && groundedness.passed && oracle.passed,
+    passed:
+      answerScore.passed && trajectory.passed && groundedness.passed && oracle.contradiction.passed,
     answer: answerScore,
     trajectory,
     groundedness,
@@ -219,10 +341,19 @@ function printTable(scores: EvalScore[]): void {
     mark(score.answer.passed),
     mark(score.trajectory.passed),
     mark(score.groundedness.passed),
-    mark(score.oracle.passed),
+    mark(score.oracle.contradiction.passed),
+    mark(score.oracle.coverage.passed),
     mark(score.passed),
   ]);
-  const headers = ["ID", "ANSWER", "TRAJECTORY", "GROUNDED", "ORACLE", "OVERALL"];
+  const headers = [
+    "ID",
+    "ANSWER",
+    "TRAJECTORY",
+    "GROUNDED",
+    "CONTRADICTION",
+    "COVERAGE",
+    "OVERALL",
+  ];
   const widths = headers.map((header, index) =>
     Math.max(header.length, ...rows.map((row) => row[index]!.length)),
   );

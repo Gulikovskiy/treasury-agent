@@ -69,9 +69,18 @@ interface ScoredSample {
     signMismatches: Array<{ raw: string; source: number }>;
   };
   oracle: {
-    passed: boolean;
-    expectedFigureCount: number;
-    missingFigures: Array<{ raw: string; kind: string; value: number }>;
+    contradiction: {
+      passed: boolean;
+      contradictions: Array<{ raw: string; kind: string; value: number }>;
+    };
+    coverage: {
+      passed: boolean;
+      requiredFigureCount: number;
+      matchedRequiredFigureCount: number;
+      missingRequiredFigures: Array<{ raw: string; kind: string; value: number }>;
+      optionalFigureCount: number;
+      matchedOptionalFigureCount: number;
+    };
   };
 }
 
@@ -194,13 +203,24 @@ function compactScore(
       })),
     },
     oracle: {
-      passed: score.oracle.passed,
-      expectedFigureCount: score.oracle.expectedFigures.length,
-      missingFigures: score.oracle.missingFigures.map(({ raw, kind, value }) => ({
-        raw,
-        kind,
-        value,
-      })),
+      contradiction: {
+        passed: score.oracle.contradiction.passed,
+        contradictions: score.oracle.contradiction.contradictions.map(({ raw, kind, value }) => ({
+          raw,
+          kind,
+          value,
+        })),
+      },
+      coverage: {
+        passed: score.oracle.coverage.passed,
+        requiredFigureCount: score.oracle.coverage.requiredFigures.length,
+        matchedRequiredFigureCount: score.oracle.coverage.matchedRequiredFigures.length,
+        missingRequiredFigures: score.oracle.coverage.missingRequiredFigures.map(
+          ({ raw, kind, value }) => ({ raw, kind, value }),
+        ),
+        optionalFigureCount: score.oracle.coverage.optionalFigures.length,
+        matchedOptionalFigureCount: score.oracle.coverage.matchedOptionalFigures.length,
+      },
     },
   };
 }
@@ -296,7 +316,8 @@ export async function runAll(options: Options): Promise<string> {
       trajectoryPassed: scored.filter(({ trajectory }) => trajectory.passed).length,
       answerPresent: scored.filter(({ answer }) => answer.passed).length,
       groundednessPassed: scored.filter(({ groundedness }) => groundedness.passed).length,
-      oraclePassed: scored.filter(({ oracle }) => oracle.passed).length,
+      contradictionPassed: scored.filter(({ oracle }) => oracle.contradiction.passed).length,
+      requiredCoveragePassed: scored.filter(({ oracle }) => oracle.coverage.passed).length,
       guardrail: {
         repairRequested,
         repaired,

@@ -260,12 +260,59 @@ closes the reproduced empty-answer path. If repair also returns no answer, the
 same bounded guardrail emits an explicit fallback rather than returning an
 empty response.
 
+## F-009 — Oracle coverage mistaken for correctness
+
+- Status: Structurally corrected; existing full sweep re-scored
+- Severity: High for evaluation validity
+- Detection: scorer audit against concise correct answers
+- Evidence: committed sweep `2026-08-28T12-38-44Z`
+
+The original oracle extracted every figure from `expected_answer` and
+`must_include`, then failed an answer if any figure was absent. This measured
+whether the model repeated the oracle's preferred level of detail, not whether
+the answer contradicted it. A concise answer to q01 could state the exact NAV
+and still fail for omitting the AAVE holding; q09 similarly required an
+unasked-for debt-to-supply ratio and therefore a needless calculator call.
+
+The scorer now separates two outputs. Required-figure coverage comes only from
+numeric claims in `must_include`; figures that occur only in `expected_answer`
+are optional. Coverage remains visible but does not gate the overall score.
+Numeric contradiction is the hard-fail dimension: an answer figure must match
+the question-specific required or optional oracle, a figure supplied by the
+question, trusted tool output, or a calculator result whose numeric operands
+trace to those sources. Calculator inputs are inspected for lineage but are
+still not evidence by themselves, so routing an invented literal through the
+calculator does not launder it.
+
+Question-supplied dollar and percentage parameters are admissible in both the
+groundedness guardrail and the oracle and are removed from required coverage.
+Percentage constants such as `100%` are also admissible. This preserves the q11
+counterfactual repair without requiring the answer to restate the scenario.
+
+The question oracle was narrowed where its required figures exceeded the
+question: q01, q09, q16, q27, and q28 now require their direct answer while
+retaining supporting figures as optional context. q06–q08 are categorized as
+`unanswerable_tool_gap`, require no unavailable calls, and expect a refusal;
+their transaction-derived fixture answers remain unavailable to the runtime
+agent until a transaction tool exists.
+
+Re-scoring the same 30 committed guarded traces changed the reported dimensions
+to answer presence 30/30, trajectory 21/30, groundedness 30/30, numeric
+contradiction 30/30, and required coverage 23/30. Overall moved from the old
+coverage-gated 6/30 to 21/30. This is a correction to the measuring instrument,
+not an improvement in agent behavior: no model call was made and the traces are
+identical. The remaining seven coverage misses are retained as completeness
+signals rather than correctness failures.
+
 ## Scoring boundaries
 
 The deterministic groundedness grader answers whether a presented figure can be
 traced to the user's stated scenario, an allowed tool field, or calculator
-result. Model-chosen tool inputs are never evidence. It does not prove that a
-calculator expression was correct or that the evidence was used with the right
-financial meaning. The eval runner therefore reports trajectory, groundedness,
-and oracle-value correctness independently. Semantic requirements and
-prohibitions remain explicit review items unless a semantic judge is enabled.
+result. Model-chosen tool inputs are never evidence. The numeric contradiction
+check additionally verifies calculator-operand lineage and rejects figures that
+match none of the question-specific oracle or trusted evidence. Neither check
+proves that a valid number was attached to the right financial concept or that
+the model chose the correct basket of otherwise valid operands. The eval runner
+therefore reports trajectory, groundedness, numeric contradiction, and coverage
+independently. Semantic requirements and prohibitions remain explicit review
+items unless a semantic judge is enabled.

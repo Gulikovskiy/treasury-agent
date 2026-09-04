@@ -94,8 +94,14 @@ npm run eval:score
 
 Use `--questions q01,q04,q10` to run or score a subset. Fresh runs write
 `eval-traces.jsonl`; both modes write `eval-results.jsonl`. The console table
-keeps trajectory, numeric groundedness, and value-versus-oracle scores
-separate. Detailed results retain semantic `must_include` and
+keeps trajectory, numeric groundedness, numeric contradiction, and
+required-figure coverage separate. Figures in `must_include` are required
+coverage; additional figures in `expected_answer` are optional coverage.
+Missing optional detail never fails a run, and coverage itself is reported as a
+style or completeness signal rather than part of the overall conjunction. A
+stated figure that matches neither the question-specific oracle, trusted tool
+output, nor a calculator result with trusted operand lineage is a hard numeric
+contradiction. Detailed results retain semantic `must_include` and
 `must_not_include` requirements for human or judge review rather than treating
 them as deterministic substring checks.
 

@@ -6,7 +6,7 @@ export interface TraceStep {
   question?: string;
   step: number;
   toolCalls?: Array<{ toolName?: string; [key: string]: unknown }>;
-  toolResults?: Array<{ toolName?: string; output?: unknown }>;
+  toolResults?: Array<{ toolName?: string; input?: unknown; output?: unknown }>;
   text?: string;
   generation?: {
     attempt: "initial" | "repair";
