@@ -102,6 +102,20 @@ also exposed checker false positives around user-supplied scenario percentages,
 the `100%` constant, and a binary subtraction sign; those are now treated as
 valid provenance/syntax rather than derived claims.
 
+Against clean baseline `2026-08-28T10-14-58Z`, the full-set dimensions moved as
+follows: groundedness 15→30, answer presence 29→30, oracle coverage 14→13, and
+trajectory compliance 18→17. The oracle and trajectory changes are within the
+previously measured 7.5% identical-configuration flip rate. The guardrail fixed
+provenance and empty output; it did not improve demonstrated correctness or tool
+selection. The conjunction score rose from 2/30 to 6/30 only because
+groundedness stopped vetoing otherwise-passing answers, and must not be read as
+evidence that the underlying agent became smarter.
+
+The full sweep also establishes prevalence: 14/30 answers (47%) reached the
+guardrail with unsupported figures or missing text. That interception rate is a
+more direct measure of the underlying failure frequency than the original q01
+case study.
+
 ## F-002 — Cross-market collateral pooling
 
 - Status: Closed for the reproduced q10 case
