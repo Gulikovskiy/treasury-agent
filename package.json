@@ -7,7 +7,7 @@
   },
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "build": "tsc",
+    "build": "node api.js && tsc",
     "collect": "tsx collect-all.ts",
     "manifest": "tsx collectors/manifest.ts",
     "balances": "tsx collectors/balances.ts",
