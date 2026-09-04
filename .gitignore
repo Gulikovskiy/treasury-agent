@@ -6,8 +6,6 @@ dist/
 *.tsbuildinfo
 
 # Local environment files
-.env
-.env.*
 !.env.example
 
 # Logs and test output
@@ -17,7 +15,6 @@ coverage/
 # Editor and operating-system files
 .DS_Store
 .idea/
-.vscode/
 
 # Traces
 traces.jsonl
@@ -31,3 +28,4 @@ runs/*/traces.jsonl
 branch_structure.json
 temp_auto_push.bat
 temp_interactive_push.bat
+config.bat
